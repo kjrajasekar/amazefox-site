@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazefox Web App</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'infinite-scroll': 'infinite-scroll 25s linear infinite',
+          },
+          keyframes: {
+            'infinite-scroll': {
+              from: { transform: 'translateX(0)' },
+              to: { transform: 'translateX(-100%)' },
+            }
+          }
+        },
+      },
+    };
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 w-full bg-white shadow-md">
+    <!-- Top Contact Info -->
+    <div class="bg-black text-white px-4 py-2 text-sm hidden md:flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2">
+          <i class="ph-fill ph-whatsapp-logo text-green-500 text-lg"></i>
+          <span>+91 9786739966</span>
+        </div>
+        <span>|</span>
+        <div class="flex items-center gap-2">
+          <img src="./img/ic_mail.svg" alt="" class="w-4 h-4">
+          <span>support@amazefox.com</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <img src="./img/ic_whtsapp.svg" alt="" class="w-4 h-4">
+        <span>nikilfox / amazefox</span>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div x-data="{ open: false }" class="px-4 md:px-10 py-4 flex items-center justify-between bg-white">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="./img/alogo.png" alt="Logo" class="h-10">
+        <span class="font-semibold text-lg text-black">amazefox</span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-6 text-sm font-medium text-black">
+        <li><a href="#" class="hover:text-pink-500">Services</a></li>
+        <li><a href="#" class="hover:text-pink-500">About Us</a></li>
+        <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
+        <li><a href="#" class="hover:text-pink-500">Industries</a></li>
+        <li><a href="#" class="hover:text-pink-500">Testimonials</a></li>
+        <li><a href="#" class="hover:text-pink-500">Clients</a></li>
+        <li><a href="#" class="hover:text-pink-500">Blog</a></li>
+      </ul>
+
+      <!-- CTA + Toggle -->
+      <div class="flex items-center gap-4">
+        <button
+          class="hidden md:inline px-4 py-2 rounded-lg text-white text-sm font-medium bg-gradient-to-r from-purple-800 to-rose-600 hover:from-pink-500 hover:to-purple-600 transition">
+          Contact Us
+        </button>
+        <button @click="open = !open" class="md:hidden focus:outline-none">
+          <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-show="open" x-transition class="md:hidden px-4 pb-4">
+      <ul class="space-y-2 text-sm font-medium text-black">
+        <li><a href="#" class="block py-2 border-b">Services</a></li>
+        <li><a href="#" class="block py-2 border-b">About Us</a></li>
+        <li><a href="#" class="block py-2 border-b">Portfolio</a></li>
+        <li><a href="#" class="block py-2 border-b">Industries</a></li>
+        <li><a href="#" class="block py-2 border-b">Testimonials</a></li>
+        <li><a href="#" class="block py-2 border-b">Clients</a></li>
+        <li><a href="#" class="block py-2 border-b">Blog</a></li>
+        <li>
+          <button
+            class="mt-2 w-full text-center px-4 py-2 rounded-lg text-white bg-gradient-to-r from-purple-600 to-pink-500">
+            Contact Us
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+    <!-- Left Content -->
+    <div data-aos="fade-left">
+      <p class="uppercase text-sm tracking-widest font-medium text-gray-500">Web App Design Services | Since 2008</p>
+      <h1 class="mt-4 text-4xl sm:text-5xl font-black leading-tight">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-rose-600">Best Web<br />App
+          Designing</span><br />
+        <span class="text-black">Company</span>
+      </h1>
+      <p class="mt-4 text-gray-600 text-base leading-relaxed max-w-md">
+        A well-designed website not only attracts the right customers for your solution but keeps them engaged while
+        contributing to your revenue.
+      </p>
+      <button
+        class="mt-6 px-6 py-3 bg-gradient-to-r from-purple-800 to-rose-600 text-white rounded-full text-sm font-medium shadow hover:opacity-90 transition">
+        Get Free Quote →
+      </button>
+    </div>
+
+    <!-- Right Image -->
+    <div data-aos="fade-up" class="relative">
+      <!-- Main device mockup -->
+      <img src="./img/banner-right.png" alt="Web App UI" class="" />
+
+    </div>
+  </section>
+
+  <!-- Company Carosel -->
+  <main class="relative  flex flex-col justify-center  overflow-hidden shadow-xl inset-shadow-xs">
+    <div class="w-full max-w-7xl mx-auto px-4 md:px-6 py-8">
+      <div class="text-center">
+
+        <!-- Logo Carousel animation -->
+        <div x-data="{}" x-init="$nextTick(() => {
+                        let ul = $refs.logos;
+                        ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                        ul.nextSibling.setAttribute('aria-hidden', 'true');
+                    })"
+          class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+          <ul x-ref="logos"
+            class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+            <li>
+              <img src="./img/logos/ic_logo_bert.svg" alt="Facebook" />
+            </li>
+            <li>
+              <img src="./img/logos/ic_logo_eht.svg" alt="Disney" />
+            </li>
+            <li>
+              <img src="./img/logos/ic_logo_ex.svg" alt="Airbnb" />
+            </li>
+            <li>
+              <img src="./img/logos/ic_logo_exf.svg" alt="Apple" />
+            </li>
+            <li>
+              <img src="./img/logos/ic_logo_heart.svg" alt="Spark" />
+            </li>
+            <li>
+              <img src="./img/logos/ic_logo_htto.svg" alt="Samsung" />
+            </li>
+            <li>
+              <img src="./img/logos/ic_logo_s.svg" alt="Quora" />
+            </li>
+
+          </ul>
+        </div>
+        <!-- End: Logo Carousel animation -->
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Section 2 starts here  -->
+  <div class="relative overflow-hidden">
+    <!-- Left Background Image -->
+    <img src="./img/design_01.svg" alt=""
+      class="absolute left-0 top-0 h-full max-w-[300px] object-contain pointer-events-none z-0">
+
+    <!-- Right Background Image Rotated -->
+    <img src="./img/design_01.svg" alt=""
+      class="absolute right-0 top-0 h-full max-w-[300px] object-contain transform rotate-180 pointer-events-none z-0">
+
+    <!-- Content -->
+    <div class="relative z-10">
+      <!-- Top Section -->
+      <section data-aos="fade-up" class="text-center px-4 py-16 from-gray-100 via-white to-gray-100">
+        <div class="max-w-4xl mx-auto">
+          <img src="./img/alogo.png" alt="Logo" class="mx-auto w-20 mb-4">
+          <h1 class="text-3xl md:text-4xl font-black text-black mb-4">Web App Design Services</h1>
+          <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+            Professional branding is a powerful catalyst for company development which improves its image
+            and contributes to commercial success. We develop clear and vivid corporate designs that
+            remain in the consciousness of new and existing customers. The core of corporate identity is
+            shaped by distinctive and consistent color, form, symbology and typography. Based on this
+            you receive a logo design that reaches your target audience with brand recognition.
+          </p>
+        </div>
+      </section>
+
+      <!-- Explore Services Section -->
+      <section data-aos="fade-up" class="px-4 py-10">
+        <div
+          class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+          <!-- Background effect -->
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
+          </div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+            <!-- Left Side -->
+            <div class="lg:col-span-1">
+              <h3 class="text-2xl font-black text-black mb-2">UI / UX Design</h3>
+              <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
+                users.</p>
+              <button
+                class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+                Get a Free Quote!
+              </button>
+            </div>
+            <!-- mid Side -->
+            <div class="lg:col-span-2">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <ul class="space-y-1">
+                  <li>› Logo design</li>
+                  <li>› Brand guidelines</li>
+                  <li>› Label & packaging design</li>
+                  <li>› Illustrations</li>
+                  <li>› Iconography</li>
+                </ul>
+
+
+                <ul class="space-y-1">
+                  <li>› HTML email signatures</li>
+                  <li>› Business cards</li>
+                  <li>› Flyer & banner design</li>
+                  <li>› Report design</li>
+                  <li>› Presentations & pitch decks</li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <!-- Right Side Image -->
+            <div class="lg:col-span-1">
+              <img src="./img/card-right-group.svg" alt="Illustration" class="w-full max-w-xs">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-aos="fade-up" class="px-4 py-10">
+        <div
+          class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+          <!-- Background effect -->
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
+          </div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+            <!-- Left Side -->
+            <div class="lg:col-span-1">
+              <h3 class="text-2xl font-black text-black mb-2">Mobile Responsive Design</h3>
+              <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
+                users.</p>
+              <button
+                class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+                Get a Free Quote!
+              </button>
+            </div>
+            <!-- mid Side -->
+            <div class="lg:col-span-2">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <ul class="space-y-1">
+                  <li>› Logo design</li>
+                  <li>› Brand guidelines</li>
+                  <li>› Label & packaging design</li>
+                  <li>› Illustrations</li>
+                  <li>› Iconography</li>
+                </ul>
+
+
+                <ul class="space-y-1">
+                  <li>› HTML email signatures</li>
+                  <li>› Business cards</li>
+                  <li>› Flyer & banner design</li>
+                  <li>› Report design</li>
+                  <li>› Presentations & pitch decks</li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <!-- Right Side Image -->
+            <div class="lg:col-span-1">
+              <img src="./img/card-right-group.svg" alt="Illustration" class="w-full max-w-xs">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-aos="fade-up" class="px-4 py-10">
+        <div
+          class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+          <!-- Background effect -->
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
+          </div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+            <!-- Left Side -->
+            <div class="lg:col-span-1">
+              <h3 class="text-2xl font-black text-black mb-2">eCommerce Solutions</h3>
+              <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
+                users.</p>
+              <button
+                class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+                Get a Free Quote!
+              </button>
+            </div>
+            <!-- mid Side -->
+            <div class="lg:col-span-2">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <ul class="space-y-1">
+                  <li>› Logo design</li>
+                  <li>› Brand guidelines</li>
+                  <li>› Label & packaging design</li>
+                  <li>› Illustrations</li>
+                  <li>› Iconography</li>
+                </ul>
+
+
+                <ul class="space-y-1">
+                  <li>› HTML email signatures</li>
+                  <li>› Business cards</li>
+                  <li>› Flyer & banner design</li>
+                  <li>› Report design</li>
+                  <li>› Presentations & pitch decks</li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <!-- Right Side Image -->
+            <div class="lg:col-span-1">
+              <img src="./img/card-right-group.svg" alt="Illustration" class="w-full max-w-xs">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-aos="fade-up" class="px-4 py-10">
+        <div
+          class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+          <!-- Background effect -->
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
+          </div>
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+            <!-- Left Side -->
+            <div class="lg:col-span-1">
+              <h3 class="text-2xl font-black text-black mb-2">Custom Web Design</h3>
+              <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
+                users.</p>
+              <button
+                class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+                Get a Free Quote!
+              </button>
+            </div>
+            <!-- mid Side -->
+            <div class="lg:col-span-2">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <ul class="space-y-1">
+                  <li>› Logo design</li>
+                  <li>› Brand guidelines</li>
+                  <li>› Label & packaging design</li>
+                  <li>› Illustrations</li>
+                  <li>› Iconography</li>
+                </ul>
+
+
+                <ul class="space-y-1">
+                  <li>› HTML email signatures</li>
+                  <li>› Business cards</li>
+                  <li>› Flyer & banner design</li>
+                  <li>› Report design</li>
+                  <li>› Presentations & pitch decks</li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <!-- Right Side Image -->
+            <div class="lg:col-span-1">
+              <img src="./img/card-right-group.svg" alt="Illustration" class="w-full max-w-xs">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-aos="fade-up" class="px-4 py-10">
+        <div
+          class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+          <!-- Background effect -->
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
+          </div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+            <!-- Left Side -->
+            <div class="lg:col-span-1">
+              <h3 class="text-2xl font-black text-black mb-2">Website Redesign</h3>
+              <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
+                users.</p>
+              <button
+                class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+                Get a Free Quote!
+              </button>
+            </div>
+            <!-- mid Side -->
+            <div class="lg:col-span-2">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <ul class="space-y-1">
+                  <li>› Logo design</li>
+                  <li>› Brand guidelines</li>
+                  <li>› Label & packaging design</li>
+                  <li>› Illustrations</li>
+                  <li>› Iconography</li>
+                </ul>
+
+
+                <ul class="space-y-1">
+                  <li>› HTML email signatures</li>
+                  <li>› Business cards</li>
+                  <li>› Flyer & banner design</li>
+                  <li>› Report design</li>
+                  <li>› Presentations & pitch decks</li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <!-- Right Side Image -->
+            <div class="lg:col-span-1">
+              <img src="./img/card-right-group.svg" alt="Illustration" class="w-full max-w-xs">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-aos="fade-up" class="px-4 py-10">
+        <div
+          class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+          <!-- Background effect -->
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
+          </div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+            <!-- Left Side -->
+            <div class="lg:col-span-1">
+              <h3 class="text-2xl font-black text-black mb-2">Product Design</h3>
+              <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
+                users.</p>
+              <button
+                class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+                Get a Free Quote!
+              </button>
+            </div>
+            <!-- mid Side -->
+            <div class="lg:col-span-2">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <ul class="space-y-1">
+                  <li>› Logo design</li>
+                  <li>› Brand guidelines</li>
+                  <li>› Label & packaging design</li>
+                  <li>› Illustrations</li>
+                  <li>› Iconography</li>
+                </ul>
+
+
+                <ul class="space-y-1">
+                  <li>› HTML email signatures</li>
+                  <li>› Business cards</li>
+                  <li>› Flyer & banner design</li>
+                  <li>› Report design</li>
+                  <li>› Presentations & pitch decks</li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <!-- Right Side Image -->
+            <div class="lg:col-span-1">
+              <img src="./img/card-right-group.svg" alt="Illustration" class="w-full max-w-xs">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-aos="fade-up" class="px-4 py-10">
+        <div
+          class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+          <!-- Background effect -->
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
+          </div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+            <!-- Left Side -->
+            <div class="lg:col-span-1">
+              <h3 class="text-2xl font-black text-black mb-2 ">Brand Identity and Marketing Design</h3>
+              <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
+                users.</p>
+              <button
+                class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+                Get a Free Quote!
+              </button>
+            </div>
+            <!-- mid Side -->
+            <div class="lg:col-span-2">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <ul class="space-y-1">
+                  <li>› Logo design</li>
+                  <li>› Brand guidelines</li>
+                  <li>› Label & packaging design</li>
+                  <li>› Illustrations</li>
+                  <li>› Iconography</li>
+                </ul>
+                <ul class="space-y-1">
+                  <li>› HTML email signatures</li>
+                  <li>› Business cards</li>
+                  <li>› Flyer & banner design</li>
+                  <li>› Report design</li>
+                  <li>› Presentations & pitch decks</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Side Image -->
+            <div class="lg:col-span-1">
+              <img src="./img/card-right-group.svg" alt="Illustration" class="w-full max-w-xs">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+  <!-- section 3 starts here  -->
+  <div class="bg-[#090229] text-white section-bg-third">
+    <section class="py-20 px-4 md:px-10 lg:px-32 text-center">
+      <p class="text-sm text-gray-300 tracking-widest uppercase mb-3" data-aos="fade-up">
+        Ready to make your website work for your business with us?
+      </p>
+
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-8" data-aos="fade-up"
+        data-aos-delay="100">
+        Need Dedicated <br class="sm:hidden" />
+        designer a Team?
+      </h2>
+
+      <!-- CTA Button -->
+      <div class="mb-20" data-aos="zoom-in" data-aos-delay="200">
+        <a href="#"
+          class="inline-block bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold text-lg px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
+          Get a Free Quote →
+        </a>
+      </div>
+
+      <!-- Feature Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 text-center" data-aos="fade-up"
+        data-aos-delay="300">
+        <div class="text-gray-300">
+          <h3 class="font-extrabold text-lg md:text-xl text-white">Business</h3>
+          <p class="text-sm md:text-base font-semibold">Centered</p>
+        </div>
+        <div class="text-gray-300">
+          <h3 class="font-extrabold text-lg md:text-xl text-white">Time</h3>
+          <p class="text-sm md:text-base font-semibold">Saving</p>
+        </div>
+        <div class="text-gray-300">
+          <h3 class="font-extrabold text-lg md:text-xl text-white">Problem</h3>
+          <p class="text-sm md:text-base font-semibold">Solving</p>
+        </div>
+        <div class="text-gray-300">
+          <h3 class="font-extrabold text-lg md:text-xl text-white">Money</h3>
+          <p class="text-sm md:text-base font-semibold">Saving</p>
+        </div>
+        <div class="text-gray-300">
+          <h3 class="font-extrabold text-lg md:text-xl text-white">Risk</h3>
+          <p class="text-sm md:text-base font-semibold">Free</p>
+        </div>
+        <div class="text-gray-300">
+          <h3 class="font-extrabold text-lg md:text-xl text-white">User</h3>
+          <p class="text-sm md:text-base font-semibold">Oriented</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- sction 4 starts here  -->
+  <div class="bg-white text-gray-800">
+    <!-- Section -->
+    <section class="px-6 py-16 md:px-20 bg-white relative ">
+      <div class="max-w-7xl mx-auto">
+        <!-- Image + First Card -->
+        <div class="grid md:grid-cols-2 gap-10 items-start mb-10 ">
+          <!-- Title -->
+          <div class="md:h-[1800px] relative">
+            <div data-aos="fade-right" class="sticky top-40">
+              <div>
+                <p class="text-sm text-pink-600 font-semibold uppercase mb-2">Our Key Process</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Research-based process in our web app design company
+                </h2>
+                <img src="./img/img_scroll.svg" alt="Research image" class="rounded-xl shadow-xl">
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+          <div>
+            <!-- Stage Cards -->
+            <div class="space-y-10">
+              <p class="text-gray-600 max-w-2xl mb-10">
+                Our web application design experts will analyze your digital products’ target consumer process to ensure
+                intuitive
+                navigation and relevant design. Our web application design experts will analyze your digital products’
+                target
+                consumer process to ensure intuitive navigation and relevant design.
+              </p>
+              <div data-aos="fade-up" class="bg-white border rounded-xl p-6 shadow-xl relative">
+                <p class="text-xs text-gray-500 uppercase">Stage 1.</p>
+                <h3
+                  class="text-2xl font-bold bg-gradient-to-r from-purple-800 to-red-500 text-transparent bg-clip-text mb-4">
+                  Research and discovery
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  We delve into your product and niche to gain a deeper understanding of your industry, market,
+                  competitors, and users.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-800">
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Business analysis &
+                    requirements elicitation</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Defining the goals of the
+                    web app</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting business
+                    requirements</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting non-functional
+                    requirements</li>
+                </ul>
+                <div class="absolute top-4 right-4 text-3xl font-bold text-pink-300 opacity-30">01</div>
+              </div>
+
+
+
+              <!-- Reusable Card Component -->
+              <div class="relative bg-white border rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-xs text-gray-500 uppercase">Stage 2.</p>
+                <h3
+                  class="text-2xl font-bold bg-gradient-to-r from-purple-800 to-red-500 text-transparent bg-clip-text mb-4">
+                  Product ideation</h3>
+                <p class="text-gray-600 mb-4">
+                  Armed with valuable insights, our team moves on to brainstorming innovative ideas and concepts for
+                  your web app.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-800">
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Business analysis &
+                    requirements elicitation</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Defining the goals of the
+                    web app</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting business
+                    requirements</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting non-functional
+                    requirements</li>
+                </ul>
+                <div class="absolute top-4 right-4 text-3xl font-bold text-pink-300 opacity-30">02</div>
+              </div>
+
+              <div class="relative bg-white border rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-xs text-gray-500 uppercase">Stage 3.</p>
+                <h3
+                  class="text-2xl font-bold bg-gradient-to-r from-purple-800 to-red-500 text-transparent bg-clip-text mb-4">
+                  Prototyping and tests</h3>
+                <p class="text-gray-600 mb-4">
+                  We build and test prototypes to gather early feedback and refine the concept before development.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-800">
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Business analysis &
+                    requirements elicitation</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Defining the goals of the
+                    web app</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting business
+                    requirements</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting non-functional
+                    requirements</li>
+                </ul>
+                <div class="absolute top-4 right-4 text-3xl font-bold text-pink-300 opacity-30">03</div>
+              </div>
+
+              <div class="relative bg-white border rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="300">
+                <p class="text-xs text-gray-500 uppercase">Stage 4.</p>
+                <h3
+                  class="text-2xl font-bold bg-gradient-to-r from-purple-800 to-red-500 text-transparent bg-clip-text mb-4">
+                  UX/UI design</h3>
+                <p class="text-gray-600 mb-4">
+                  Crafting seamless and intuitive user experiences based on user behavior and usability principles.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-800">
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Business analysis &
+                    requirements elicitation</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Defining the goals of the
+                    web app</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting business
+                    requirements</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting non-functional
+                    requirements</li>
+                </ul>
+                <div class="absolute top-4 right-4 text-3xl font-bold text-pink-300 opacity-30">04</div>
+              </div>
+
+              <div class="relative bg-white border rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="400">
+                <p class="text-xs text-gray-500 uppercase">Stage 5.</p>
+                <h3
+                  class="text-2xl font-bold bg-gradient-to-r from-purple-800 to-red-500 text-transparent bg-clip-text mb-4">
+                  Launch and support</h3>
+                <p class="text-gray-600 mb-4">
+                  We help deploy your web application and provide continuous support for smooth operation.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-800">
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Business analysis &
+                    requirements elicitation</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Defining the goals of the
+                    web app</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting business
+                    requirements</li>
+                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting non-functional
+                    requirements</li>
+                </ul>
+                <div class="absolute top-4 right-4 text-3xl font-bold text-pink-300 opacity-30">05</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- section 5 goes here  -->
+  <section class="py-16 px-4 md:px-20 relative overflow-hidden">
+    <h3 class="text-sm text-red-500 font-semibold mb-2" data-aos="fade-up">TECHNOLOGY STACK</h3>
+    <h2 class="text-3xl md:text-4xl font-bold text-black mb-10" data-aos="fade-up" data-aos-delay="100">
+      Why choose Amazefox Web as your ideal partner?
+    </h2>
+
+    <!-- Counters Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-center text-black">
+      <!-- Years of Experience -->
+      <div data-aos="fade-up" data-aos-delay="200">
+        <img src="./img/exp-icon.svg" alt="" class="mx-auto h-10 mb-2">
+        <div class="stat-number text-purple-700"><span data-countup>16</span>+</div>
+        <p class="text-sm">Years of Experience</p>
+      </div>
+      <!-- Websites Designed -->
+      <div data-aos="fade-up" data-aos-delay="300">
+        <img src="./img/web-icon.svg" alt="" class="mx-auto h-10 mb-2">
+        <div class="stat-number text-purple-700"><span data-countup>2400</span>+</div>
+        <p class="text-sm">Website Designed</p>
+      </div>
+      <!-- Client Retention -->
+      <div data-aos="fade-up" data-aos-delay="400">
+        <img src="./img/retention-icon.svg" alt="" class="mx-auto h-10 mb-2">
+        <div class="stat-number text-pink-600"><span data-countup>99</span>%</div>
+        <p class="text-sm">Client Retention</p>
+      </div>
+      <!-- Happy Customers -->
+      <div data-aos="fade-up" data-aos-delay="500">
+        <img src="./img/customers-icon.svg" alt="" class="mx-auto h-10 mb-2">
+        <div class="stat-number text-pink-600"><span data-countup>300</span>+</div>
+        <p class="text-sm">Happy Customers</p>
+      </div>
+      <!-- Customisable Designs -->
+      <div data-aos="fade-up" data-aos-delay="600">
+        <img src="./img/design-icon.svg" alt="" class="mx-auto h-10 mb-2">
+        <div class="stat-number text-pink-600"><span data-countup>100</span>%</div>
+        <p class="text-sm">Customisable Designs</p>
+      </div>
+    </div>
+
+    <!-- CTA Box -->
+    <div
+      class="mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-purple-700 to-pink-500 text-white flex flex-col md:flex-row items-center justify-between gap-4"
+      data-aos="zoom-in-up" data-aos-delay="200">
+      <div>
+        <h3 class="text-2xl font-bold">Ready to innovate and drive and impact?</h3>
+        <p class="text-sm mt-1">Transforming Businesses with Technology that transcends geographies and Platforms</p>
+      </div>
+      <a href="#" class="bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
+        Get a Free Quote →
+      </a>
+    </div>
+  </section>
+
+
+
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <!-- Counter JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('[data-countup]');
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.textContent.replace(/[^\d]/g, '');
+          const speed = 200; // Lower is faster
+          let count = 0;
+          const increment = Math.ceil(target / speed);
+
+          const run = () => {
+            count += increment;
+            if (count < target) {
+              counter.innerText = count;
+              requestAnimationFrame(run);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          run();
+        };
+        updateCount();
+      });
+    });
+  </script>
+  <!-- scroll logo script  -->
+  <script>
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector("ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
+  </script>
+</body>
+
+</html>
