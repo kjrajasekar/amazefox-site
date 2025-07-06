@@ -2,73 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dedicated Designer Section</title>
-
-  <!-- Tailwind CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Navbar</title>
+  <!-- Include Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Include Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
-<body class="bg-[#090229] text-white">
+<body class="bg-white text-black">
 
-  <!-- Section -->
-  <section class="py-20 px-4 md:px-10 lg:px-32 text-center">
-    <p class="text-sm text-gray-300 tracking-widest uppercase mb-3" data-aos="fade-up">
-      Ready to make your website work for your business with us?
-    </p>
-
-    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-8" data-aos="fade-up" data-aos-delay="100">
-      Need Dedicated <br class="sm:hidden" />
-      designer a Team?
-    </h2>
-
-    <!-- CTA Button -->
-    <div class="mb-20" data-aos="zoom-in" data-aos-delay="200">
-      <a href="#"
-         class="inline-block bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold text-lg px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
-        Get a Free Quote →
-      </a>
+<!-- Navbar Start -->
+<nav x-data="{ open: false }" class="bg-white px-4 py-4 md:px-10 md:py-6 shadow-md">
+  <div class="flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
+      <span class="text-xl font-bold">amazefox</span>
     </div>
 
-    <!-- Feature Grid -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 text-center" data-aos="fade-up" data-aos-delay="300">
-      <div class="text-gray-300">
-        <h3 class="font-extrabold text-lg md:text-xl text-white">Business</h3>
-        <p class="text-sm md:text-base font-semibold">Centered</p>
-      </div>
-      <div class="text-gray-300">
-        <h3 class="font-extrabold text-lg md:text-xl text-white">Time</h3>
-        <p class="text-sm md:text-base font-semibold">Saving</p>
-      </div>
-      <div class="text-gray-300">
-        <h3 class="font-extrabold text-lg md:text-xl text-white">Problem</h3>
-        <p class="text-sm md:text-base font-semibold">Solving</p>
-      </div>
-      <div class="text-gray-300">
-        <h3 class="font-extrabold text-lg md:text-xl text-white">Money</h3>
-        <p class="text-sm md:text-base font-semibold">Saving</p>
-      </div>
-      <div class="text-gray-300">
-        <h3 class="font-extrabold text-lg md:text-xl text-white">Risk</h3>
-        <p class="text-sm md:text-base font-semibold">Free</p>
-      </div>
-      <div class="text-gray-300">
-        <h3 class="font-extrabold text-lg md:text-xl text-white">User</h3>
-        <p class="text-sm md:text-base font-semibold">Oriented</p>
-      </div>
-    </div>
-  </section>
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-6 text-sm font-medium">
+      <li><a href="#" class="hover:text-pink-500">Services</a></li>
+    <li><a href="#" class="hover:text-pink-500">About Us</a></li>
+    <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
+    <li><a href="#" class="hover:text-pink-500">Industries</a></li>
+    <li><a href="#" class="hover:text-pink-500">Testimonials</a></li>
+    <li><a href="#" class="hover:text-pink-500">Clients</a></li>
+    <li><a href="#" class="hover:text-pink-500">Blog</a></li>
+    </ul>
 
-  <!-- AOS Init -->
-  <script>
-    AOS.init({
-      once: true,
-      duration: 1000,
-    });
-  </script>
+    <!-- Button + Hamburger -->
+    <div class="flex items-center gap-4">
+      <button class="hidden md:inline px-4 py-2 rounded text-white bg-gradient-to-r from-purple-700 to-pink-500">
+        Contact Us
+      </button>
+      <button @click="open = !open" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div x-show="open" x-transition x-cloak class="md:hidden mt-4">
+    <ul class="space-y-2 text-sm font-medium">
+     <li><a @click="open = false" href="#" class="block py-2 border-b">Services</a></li>
+    <li><a @click="open = false" href="#" class="block py-2 border-b">About Us</a></li>
+    <li><a @click="open = false" href="#" class="block py-2 border-b">Portfolio</a></li>
+    <li><a @click="open = false" href="#" class="block py-2 border-b">Industries</a></li>
+    <li><a @click="open = false" href="#" class="block py-2 border-b">Testimonials</a></li>
+    <li><a @click="open = false" href="#" class="block py-2 border-b">Clients</a></li>
+    <li><a @click="open = false" href="#" class="block py-2 border-b">Blog</a></li>
+      <li>
+        <button class="mt-2 w-full px-4 py-2 rounded text-white bg-gradient-to-r from-purple-700 to-pink-500">
+          Contact Us
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Navbar End -->
 
 </body>
 </html>
