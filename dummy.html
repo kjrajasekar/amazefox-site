@@ -2,67 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test Navbar</title>
-  <!-- Include Tailwind CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recent Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Include Alpine.js -->
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
-<body class="bg-white text-black">
 
-<!-- Navbar Start -->
-<nav x-data="{ open: false }" class="bg-white px-4 py-4 md:px-10 md:py-6 shadow-md">
-  <div class="flex items-center justify-between">
-    <!-- Logo -->
-    <div class="flex items-center gap-2">
-      <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
-      <span class="text-xl font-bold">amazefox</span>
-    </div>
+<body class="bg-white text-black font-sans">
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <!-- Section Title -->
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-sm text-purple-600 font-medium uppercase">Portfolio</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-2">
+          Our recent <span class="text-black">web design projects</span>
+        </h2>
+        <p class="text-gray-500">Check out our projects where we made our clients win in the real world.</p>
+      </div>
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex gap-6 text-sm font-medium">
-      <li><a href="#" class="hover:text-pink-500">Services</a></li>
-    <li><a href="#" class="hover:text-pink-500">About Us</a></li>
-    <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
-    <li><a href="#" class="hover:text-pink-500">Industries</a></li>
-    <li><a href="#" class="hover:text-pink-500">Testimonials</a></li>
-    <li><a href="#" class="hover:text-pink-500">Clients</a></li>
-    <li><a href="#" class="hover:text-pink-500">Blog</a></li>
-    </ul>
-
-    <!-- Button + Hamburger -->
-    <div class="flex items-center gap-4">
-      <button class="hidden md:inline px-4 py-2 rounded text-white bg-gradient-to-r from-purple-700 to-pink-500">
-        Contact Us
-      </button>
-      <button @click="open = !open" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div x-show="open" x-transition x-cloak class="md:hidden mt-4">
-    <ul class="space-y-2 text-sm font-medium">
-     <li><a @click="open = false" href="#" class="block py-2 border-b">Services</a></li>
-    <li><a @click="open = false" href="#" class="block py-2 border-b">About Us</a></li>
-    <li><a @click="open = false" href="#" class="block py-2 border-b">Portfolio</a></li>
-    <li><a @click="open = false" href="#" class="block py-2 border-b">Industries</a></li>
-    <li><a @click="open = false" href="#" class="block py-2 border-b">Testimonials</a></li>
-    <li><a @click="open = false" href="#" class="block py-2 border-b">Clients</a></li>
-    <li><a @click="open = false" href="#" class="block py-2 border-b">Blog</a></li>
-      <li>
-        <button class="mt-2 w-full px-4 py-2 rounded text-white bg-gradient-to-r from-purple-700 to-pink-500">
-          Contact Us
+      <!-- Navigation Arrows -->
+      <div class="hidden md:flex items-center space-x-2">
+        <button class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+          ←
         </button>
-      </li>
-    </ul>
-  </div>
-</nav>
-<!-- Navbar End -->
+        <button class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+          →
+        </button>
+      </div>
+    </div>
 
+    <!-- Grid Projects -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+      <!-- Card 1 -->
+      <div class="relative rounded-xl overflow-hidden shadow-lg group">
+        <img src="https://via.placeholder.com/600x350?text=Chilliseeds" alt="Chilliseeds" class="w-full h-auto" />
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
+          <h3 class="text-white text-lg font-semibold">Chilliseeds</h3>
+          <p class="text-white text-sm">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative rounded-xl overflow-hidden shadow-lg group">
+        <img src="https://via.placeholder.com/600x350?text=Melodica" alt="Melodica" class="w-full h-auto" />
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
+          <h3 class="text-white text-lg font-semibold">Melodica</h3>
+          <p class="text-white text-sm">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative rounded-xl overflow-hidden shadow-lg group">
+        <img src="https://via.placeholder.com/600x350?text=AutoQ" alt="AutoQ" class="w-full h-auto" />
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
+          <h3 class="text-white text-lg font-semibold">AutoQ</h3>
+          <p class="text-white text-sm">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="relative rounded-xl overflow-hidden shadow-lg group">
+        <img src="https://via.placeholder.com/600x350?text=Look+Who's+Cooking" alt="Look Who's Cooking" class="w-full h-auto" />
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
+          <h3 class="text-white text-lg font-semibold">Look Who’s Cooking</h3>
+          <p class="text-white text-sm">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- View All Work Button -->
+    <div class="text-center mt-12">
+      <a href="#" class="inline-flex items-center px-6 py-3 border border-black rounded-full font-medium hover:bg-black hover:text-white transition">
+        View all Work →
+      </a>
+    </div>
+  </section>
 </body>
 </html>

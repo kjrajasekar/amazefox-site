@@ -86,6 +86,26 @@
   border: 2px solid #eee;
 }
 
+
+    /* Custom flicker keyframes */
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      45% { opacity: 0.6; }
+      55% { opacity: 1; }
+      65% { opacity: 0.7; }
+      75% { opacity: 1; }
+      85% { opacity: 0.8; }
+    }
+
+    .flicker {
+      animation: flicker 3s infinite ease-in-out;
+    }
+
+
+    
+
+
+
 @media (max-width: 600px) {
   html { font-size: 12px; }
   :root {
