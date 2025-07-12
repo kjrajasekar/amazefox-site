@@ -3,125 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazefox Footer</title>
+  <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
-<section class="bg-gradient-to-br from-[#1a0c2c] to-[#000018] text-white">
+<body>
+      <!-- Video Testimonials -->
+    <div class="flex flex-col md:flex-row gap-6 justify-center bg-[url(./img/video_bg.svg)]  p-16">
+      
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-br from-purple-800 to-purple-900 rounded-2xl p-6 w-full md:w-1/2 relative overflow-hidden">
+        <!-- Logo and Quote -->
+        <div class="flex items-center justify-between mb-4">
+          <img src="./img/alogo.png" alt="logo" class="h-6">
+        </div>
 
-  <!-- Contact Form Section -->
-  <div class="max-w-7xl mx-auto px-6 py-10 text-center md:text-left">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-      <h2 class="text-3xl font-bold">Speak with a Quick<br>Contact our Team</h2>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <input type="text" placeholder="Name" class="px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none">
-        <input type="email" placeholder="Email Address" class="px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none">
-        <button class="bg-gradient-to-r from-pink-500 to-red-500 px-6 py-2 rounded-full text-white font-semibold">Send →</button>
+        <!-- Quote Icon -->
+        <div class="text-purple-300 text-4xl font-serif mb-4">“</div>
+
+        <!-- Quote Text -->
+        <p class="text-white font-semibold leading-snug text-sm mb-4">
+          Our Clients are superheroes. We priorities Delivering excellent Products, through Training and Optimal Excusions
+        </p>
+
+        <!-- User -->
+        <div class="text-sm text-blue-400 font-bold">truecare24</div>
+        <div class="text-xs text-gray-300">CTO, Healthcare Solutions</div>
+
+        <!-- Hexagon Image w/ Play Button -->
+        <div class="absolute right-6 top-1/2 transform -translate-y-1/2 w-32 h-32">
+          <div class="relative">
+            <div class="bg-pink-500 hexagon w-32 h-32 flex items-center justify-center overflow-hidden relative z-10 rounded-xl">
+              <img src="https://i.imgur.com/jQGRD4f.jpg" alt="user" class="w-full h-full object-cover" />
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-10 h-10 bg-black/70 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-br from-purple-700 to-purple-900 rounded-2xl p-6 w-full md:w-1/2 relative overflow-hidden">
+        <div class="flex items-center justify-between mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Abstract_icon.svg/1024px-Abstract_icon.svg.png" alt="logo" class="h-6">
+        </div>
+        <div class="text-purple-300 text-4xl font-serif mb-4">“</div>
+        <p class="text-white font-semibold leading-snug text-sm mb-4">
+          Our Clients are superheroes. We priorities Delivering excellent Products, through Training and Optimal Excusions
+        </p>
+        <div class="text-sm text-blue-400 font-bold">truecare24</div>
+        <div class="text-xs text-gray-300">CTO, Healthcare Solutions</div>
+
+        <div class="absolute right-6 top-1/2 transform -translate-y-1/2 w-32 h-32">
+          <div class="relative">
+            <div class="bg-pink-500 hexagon w-32 h-32 flex items-center justify-center overflow-hidden relative z-10 rounded-xl">
+               <iframe height="480" width="500" 
+            src="https://www.youtube.com/watch?v=hu3X6G50PHc">
+      </iframe>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-10 h-10 bg-black/70 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-
-  <hr class="border-gray-700">
-
-  <!-- Footer Content -->
-  <footer class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-sm">
-    <!-- Company -->
-    <div>
-      <h4 class="font-bold mb-4">Company</h4>
-      <ul class="space-y-2">
-        <li>Home</li>
-        <li>About us</li>
-        <li>Services</li>
-        <li>Our Process</li>
-        <li>Portfolio</li>
-        <li>My showcase</li>
-        <li>Testimonials</li>
-        <li>Clients</li>
-      </ul>
-    </div>
-
-    <!-- Capabilities -->
-    <div>
-      <h4 class="font-bold mb-4">Capabilities</h4>
-      <ul class="space-y-2">
-        <li>Brand Identity Design</li>
-        <li>Mobile app Design</li>
-        <li>Web app Design</li>
-        <li>Product Design</li>
-        <li>UI / UX Design</li>
-        <li>Graphic Design</li>
-        <li>Website Redesign</li>
-        <li>Responsive Design</li>
-        <li>eCommerce Solutions</li>
-        <li>Full Stack Web App Design</li>
-      </ul>
-    </div>
-
-    <!-- Industries -->
-    <div>
-      <h4 class="font-bold mb-4">Industries</h4>
-      <ul class="space-y-2">
-        <li>AI Design</li>
-        <li>Finance</li>
-        <li>Travel</li>
-        <li>Real Estate</li>
-        <li>Ecommerce Design</li>
-        <li>Education</li>
-        <li>Life Sciences</li>
-        <li>Restaurants</li>
-        <li>Healthcare</li>
-        <li>Manufacturing</li>
-        <li>Automotive</li>
-        <li>Oil & Gas</li>
-        <li>Government</li>
-        <li>Construction</li>
-        <li>Communication</li>
-      </ul>
-    </div>
-
-    <!-- Support -->
-    <div>
-      <h4 class="font-bold mb-4">Support</h4>
-      <ul class="space-y-2">
-        <li>Contact us</li>
-        <li>Careers</li>
-        <li>FAQ</li>
-        <li>Terms and Conditions</li>
-        <li>Privacy Policy</li>
-        <li>Sitemap</li>
-      </ul>
-    </div>
-
-    <!-- Get in Touch -->
-    <div>
-      <h4 class="font-bold mb-4">Get in Touch</h4>
-      <ul class="space-y-3">
-        <li class="flex items-center gap-2">
-          📧 <a href="mailto:support@amazefox.com">support@amazefox.com</a>
-        </li>
-        <li class="flex items-center gap-2">
-          📱 <a href="https://wa.me/919786739966">+91 9786739966</a>
-        </li>
-        <li class="flex items-center gap-2">
-          💬 <a href="mailto:support@amazefox.com">Teams or Skype</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-
-  <!-- Social & Copyright -->
-  <div class="border-t border-gray-700 py-6 px-6 text-center text-sm text-gray-400">
-    <div class="flex justify-center gap-4 mb-4">
-      <!-- Placeholder icons: replace with real ones or use FontAwesome -->
-      <a href="#"><img src="https://via.placeholder.com/20?text=F" alt="Facebook"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=I" alt="Instagram"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=X" alt="X"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=G" alt="Google"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=W" alt="WhatsApp"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=Y" alt="YouTube"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=S" alt="Skype"></a>
-    </div>
-    <p>Copyright 2025 © <a href="https://www.amazefox.com" class="underline">www.amazefox.com</a>. All Rights Reserved.</p>
-  </div>
-
-</section>
+  
+</body>
 </html>

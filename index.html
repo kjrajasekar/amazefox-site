@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amazefox Web App</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -189,15 +192,14 @@
     </div>
   </main>
 
-  <!-- Section 2 starts here  -->
-  <div class="relative overflow-hidden">
-    <!-- Left Background Image -->
-    <img src="./img/design_01.svg" alt=""
-      class="absolute left-0 top-0 h-full max-w-[300px] object-contain pointer-events-none z-0">
-
-    <!-- Right Background Image Rotated -->
-    <img src="./img/design_01.svg" alt=""
-      class="absolute right-0 top-0 h-full max-w-[300px] object-contain transform rotate-180 pointer-events-none z-0">
+  <!-- Section 2  service cards  -->
+  <div class="relative overflow-hidden"
+  style="
+       background-image:  url('/img/img-con/design_dotted_left.svg'),url('/img/img-con/techstack_curve.svg'), url('/img/img-con/design_dotted_right.svg');
+       background-position:  top left,top right,right bottom;
+       background-repeat: no-repeat, no-repeat, no-repeat;
+     "  
+  >
 
     <!-- Content -->
     <div class="relative z-10">
@@ -225,7 +227,11 @@
             class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
           </div>
 
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center"
+           style="background-image:  url('/img/img-con/category_services_curve.svg');
+       background-position:  center;
+     " 
+          >
             <!-- Left Side -->
             <div class="lg:col-span-1">
               <h3 class="text-2xl font-black text-black mb-2">UI / UX Design</h3>
@@ -276,7 +282,10 @@
             class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
           </div>
 
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center"
+          style="background-image:  url('/img/img-con/category_services_curve.svg');
+       background-position:  center;
+     " >
             <!-- Left Side -->
             <div class="lg:col-span-1">
               <h3 class="text-2xl font-black text-black mb-2">Mobile Responsive Design</h3>
@@ -327,7 +336,10 @@
             class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
           </div>
 
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center"
+          style="background-image:  url('/img/img-con/category_services_curve.svg');
+       background-position:  center;
+     " >
             <!-- Left Side -->
             <div class="lg:col-span-1">
               <h3 class="text-2xl font-black text-black mb-2">eCommerce Solutions</h3>
@@ -377,7 +389,10 @@
           <div
             class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
           </div>
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center"
+          style="background-image:  url('/img/img-con/category_services_curve.svg');
+       background-position:  center;
+     " >
             <!-- Left Side -->
             <div class="lg:col-span-1">
               <h3 class="text-2xl font-black text-black mb-2">Custom Web Design</h3>
@@ -427,7 +442,10 @@
             class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
           </div>
 
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center"
+          style="background-image:  url('/img/img-con/category_services_curve.svg');
+       background-position:  center;
+     " >
             <!-- Left Side -->
             <div class="lg:col-span-1">
               <h3 class="text-2xl font-black text-black mb-2">Website Redesign</h3>
@@ -529,7 +547,10 @@
             class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
           </div>
 
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center"
+          style="background-image:  url('/img/img-con/category_services_curve.svg');
+       background-position:  center;
+     " >
             <!-- Left Side -->
             <div class="lg:col-span-1">
               <h3 class="text-2xl font-black text-black mb-2 ">Brand Identity and Marketing Design</h3>
@@ -571,8 +592,16 @@
   </div>
 
 
-  <!-- section 3 starts here  -->
-  <div class="bg-[#090229] text-white section-bg-third">
+  <!-- section 3 team   -->
+  <div class="bg-[#090229] text-white" 
+  style="
+       background-image: url('/img/img-con/design_dotted_left.svg'), url('/img/img-con/design_dotted_right.svg'), url('/img/img-con/need_designer_bg.svg');
+       background-blend-mode: normal, multiply, screen;
+       background-size: contain, contain, cover;
+       background-position:  top left, bottom right,center;
+       background-repeat: no-repeat, no-repeat, no-repeat;
+     "
+  >
     <section class="py-20 px-4 md:px-10 lg:px-32 text-center">
       <p class="text-sm text-gray-300 tracking-widest uppercase mb-3" data-aos="fade-up">
         Ready to make your website work for your business with us?
@@ -625,7 +654,7 @@
     </div>
 
   </div>
-  <!-- sction 4 starts here  -->
+  <!-- sction 4  key process  -->
   <div class="bg-white text-gray-800">
     <!-- Section -->
     <section class="px-6 py-16 md:px-20 bg-white relative ">
@@ -774,7 +803,7 @@
     </section>
   </div>
 
-  <!-- section 5 goes here  -->
+  <!-- section 5  why amazefox -->
   <!-- <div class="bg-gradient-to-br from-[#cad5ff] to-[#03001e] text-white"> -->
   <div class="bg-gradient-to-r from-zinc-50 to-white-zinc-500 text-white">
     <section class="py-16 px-4 md:px-20 relative overflow-hidden">
@@ -845,7 +874,7 @@
 
   </div>
 
-  <!-- section 6  -->
+  <!-- section 6 project portfolio  -->
   <section class="max-w-7xl mx-auto px-4 py-16">
     <!-- Section Title -->
     <div class="flex items-center justify-between">
@@ -915,9 +944,6 @@
       </a>
     </div>
   </section>
-
-
-
 
 
   <!-- section 7 partners logos  -->
@@ -1143,8 +1169,11 @@
 
   </section>
 
-
-  <div class="section-bg-third text-white font-sans bg-[#0071BC]">
+  <!-- technology stack section  -->
+  <div class="section-bg-third text-white font-sans bg-[url(/img/img-con/techstack_bg.svg)]"
+  style="background-image: url('./img/img-con/techstack_curve.svg'), url('./img/img-con/techstack_bg.svg'); 
+     background-blend-mode:  multiply, screen;"
+  >
     <section
       class="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 gap-12 relative overflow-hidden">
       <!-- Left Content -->
@@ -1169,13 +1198,8 @@
       </div>
 
       <!-- Right Content (Icons) -->
-      <div class="md:w-1/2 grid grid-cols-3 gap-4 place-items-center" data-aos="fade-left">
-        <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="w-16 h-16">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" class="w-16 h-16">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_After_Effects_CC_icon.svg" alt="AE" class="w-16 h-16 bg-[#2d2d3a] p-2 rounded-lg">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_Fireworks_CS6_Icon.png" alt="Fireworks" class="w-16 h-16 bg-yellow-400 p-2 rounded-lg">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_XD_CC_icon.svg" alt="XD" class="w-16 h-16 bg-[#ff2bc2] p-2 rounded-lg">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" class="w-16 h-16 bg-[#361c0c] p-2 rounded-lg"> -->
+      <div class="md:w-1/2 gap-4 place-items-center" data-aos="fade-left">
+        <img src="./img/img-con/techstach_software.svg" alt="Figma" class="">
       </div>
 
       <!-- Decorative elements -->
@@ -1229,7 +1253,8 @@
                 </div>
               </div>
             </div>
-
+            
+            
             <!-- Testimonial 2 -->
             <div class="bg-blue-100 rounded-2xl shadow-md m-6  p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
@@ -1302,7 +1327,7 @@
                 </div>
               </div>
             </div>
-
+            
             <!-- Testimonial 2 -->
             <div class="bg-blue-100 rounded-2xl shadow-md m-6  p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
@@ -1330,552 +1355,597 @@
 
 
 
-
-
   <!-- Video Testimonial section  -->
 
-  <div class="bg-gradient-to-br from-black via-[#11002a] to-[#240064] text-white">
+  <div class=" text-white bg-[url(./img/video_bg.svg)]">
 
-  <section class="max-w-7xl mx-auto px-6 py-16 relative">
-    
-    <!-- Heading -->
-    <div class="mb-12 text-center">
-      <h2 class="text-4xl font-extrabold leading-tight">
-        Our Clients are superheroes. We priorities<br />
-        Delivering excellent Products, through <br />
-        Training and Optimal Excusions
-      </h2>
-    </div>
+    <section class="max-w-7xl mx-auto px-6 py-16 relative">
 
-    <!-- Video Testimonials -->
-    <div class="flex flex-col md:flex-row gap-6 justify-center">
-      
-      <!-- Card 1 -->
-      <div class="bg-gradient-to-br from-purple-800 to-purple-900 rounded-2xl p-6 w-full md:w-1/2 relative overflow-hidden">
-        <!-- Logo and Quote -->
-        <div class="flex items-center justify-between mb-4">
-          <img src="./img/alogo.png" alt="logo" class="h-6">
-        </div>
-
-        <!-- Quote Icon -->
-        <div class="text-purple-300 text-4xl font-serif mb-4">“</div>
-
-        <!-- Quote Text -->
-        <p class="text-white font-semibold leading-snug text-sm mb-4">
-          Our Clients are superheroes. We priorities Delivering excellent Products, through Training and Optimal Excusions
-        </p>
-
-        <!-- User -->
-        <div class="text-sm text-blue-400 font-bold">truecare24</div>
-        <div class="text-xs text-gray-300">CTO, Healthcare Solutions</div>
-
-        <!-- Hexagon Image w/ Play Button -->
-        <div class="absolute right-6 top-1/2 transform -translate-y-1/2 w-32 h-32">
-          <div class="relative">
-            <div class="bg-pink-500 hexagon w-32 h-32 flex items-center justify-center overflow-hidden relative z-10 rounded-xl">
-              <img src="https://i.imgur.com/jQGRD4f.jpg" alt="user" class="w-full h-full object-cover" />
-            </div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-10 h-10 bg-black/70 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-gradient-to-br from-purple-700 to-purple-900 rounded-2xl p-6 w-full md:w-1/2 relative overflow-hidden">
-        <div class="flex items-center justify-between mb-4">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Abstract_icon.svg/1024px-Abstract_icon.svg.png" alt="logo" class="h-6">
-        </div>
-        <div class="text-purple-300 text-4xl font-serif mb-4">“</div>
-        <p class="text-white font-semibold leading-snug text-sm mb-4">
-          Our Clients are superheroes. We priorities Delivering excellent Products, through Training and Optimal Excusions
-        </p>
-        <div class="text-sm text-blue-400 font-bold">truecare24</div>
-        <div class="text-xs text-gray-300">CTO, Healthcare Solutions</div>
-
-        <div class="absolute right-6 top-1/2 transform -translate-y-1/2 w-32 h-32">
-          <div class="relative">
-            <div class="bg-pink-500 hexagon w-32 h-32 flex items-center justify-center overflow-hidden relative z-10 rounded-xl">
-               <iframe height="480" width="500" 
-            src="https://www.youtube.com/embed/il_t1WVLNxk">
-      </iframe>
-            </div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-10 h-10 bg-black/70 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-</div>
-
-
-
-<!-- what make us section  -->
-<div class="bg-gradient-to-br from-[#0a011a] to-[#290055] text-white">
-
-  <!-- Section Wrapper -->
-  <section class="max-w-7xl mx-auto px-4 py-16">
-
-    <!-- Headings -->
-    <div class="mb-12">
-      <p class="uppercase text-sm text-gray-400 font-medium mb-2">What Makes Us Different</p>
-      <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6">What Makes Every Amazfox<br> Web App Design Stand Out</h2>
-      <p class="max-w-3xl text-gray-300">
-        At Amazfox, we take a strategic, user-focused approach to every digital product we craft. Our web app designs are built not just for visual impact—but for usability, performance, and long-term scalability.
-      </p>
-    </div>
-
-    <!-- Feature Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <!-- Card -->
-      <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10">
-        <img src="https://img.icons8.com/ios/50/ffffff/administrator-male.png" class="w-8 mb-4" alt="Icon">
-        <h3 class="text-lg font-semibold mb-2">User-Centric Architecture</h3>
-        <p class="text-sm text-gray-300">We prioritize the end-user experience from day one. Our team carefully structures...</p>
-      </div>
-
-      <!-- Repeat for 7 other cards -->
-      <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10">
-        <img src="https://img.icons8.com/ios/50/ffffff/responsive.png" class="w-8 mb-4" alt="Icon">
-        <h3 class="text-lg font-semibold mb-2">Responsive & Device-Ready Layouts</h3>
-        <p class="text-sm text-gray-300">From widescreen desktops to smartphones and everything in between...</p>
-      </div>
-
-      <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10">
-        <img src="https://img.icons8.com/ios/50/ffffff/speed.png" class="w-8 mb-4" alt="Icon">
-        <h3 class="text-lg font-semibold mb-2">High-Speed Performance</h3>
-        <p class="text-sm text-gray-300">We speed up load times, minimize bounce, and enhance engagement...</p>
-      </div>
-
-      <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10">
-        <img src="https://img.icons8.com/ios/50/ffffff/layout.png" class="w-8 mb-4" alt="Icon">
-        <h3 class="text-lg font-semibold mb-2">Scalable Design Systems</h3>
-        <p class="text-sm text-gray-300">Build once, scale forever. Our systems ensure consistency and updates are easy...</p>
-      </div>
-
-      <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10">
-        <img src="https://img.icons8.com/ios/50/ffffff/lock.png" class="w-8 mb-4" alt="Icon">
-        <h3 class="text-lg font-semibold mb-2">Security-First Approach</h3>
-        <p class="text-sm text-gray-300">We implement HTTPS, secure auth, and encryption from the start...</p>
-      </div>
-
-      <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10">
-        <img src="https://img.icons8.com/ios/50/ffffff/universal-access.png" class="w-8 mb-4" alt="Icon">
-        <h3 class="text-lg font-semibold mb-2">Accessibility & Inclusivity</h3>
-        <p class="text-sm text-gray-300">WCAG 2.1 compliance, contrast ratios, screen reader support...</p>
-      </div>
-
-      <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10">
-        <img src="https://img.icons8.com/ios/50/ffffff/search.png" class="w-8 mb-4" alt="Icon">
-        <h3 class="text-lg font-semibold mb-2">SEO-Friendly Structure</h3>
-        <p class="text-sm text-gray-300">Clean HTML, fast load, semantic markup, and better discoverability...</p>
-      </div>
-
-      <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10">
-        <img src="https://img.icons8.com/ios/50/ffffff/cursor.png" class="w-8 mb-4" alt="Icon">
-        <h3 class="text-lg font-semibold mb-2">Action-Oriented UI</h3>
-        <p class="text-sm text-gray-300">Drive users toward calls-to-action through strategic layout and interactions...</p>
-      </div>
-
-    </div>
-
-    <!-- CTA Section -->
-    <div class="mt-20 text-center">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Abstract_icon.svg/1024px-Abstract_icon.svg.png" alt="logo" class="mx-auto mb-6 w-16">
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-2">Ready to innovate and drive and impact?</h2>
-      <p class="text-gray-300 mb-6">Transforming Businesses with Technology that transcends geographies and Platforms</p>
-      <a href="#" class="inline-block bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">
-        Get a Free Quote →
-      </a>
-    </div>
-
-  </section>
-
-</div>
-
-
-
-<!-- FAQ Section  -->
-<div class="bg-white text-black font-sans">
-
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <!-- Heading -->
-    <div class="text-center mb-12">
-      <p class="text-sm text-pink-600 font-semibold uppercase">Questions & Answers</p>
-      <h2 class="text-3xl md:text-4xl font-bold mt-2">Frequently Asked Questions</h2>
-      <p class="text-gray-500 mt-4 max-w-2xl mx-auto">We hope these questions and answers guide you in choosing the right web design partner for your business’s digital transformation. If you have any more questions, feel free to reach out!</p>
-    </div>
-
-    <!-- FAQ Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="faq-container">
-      <!-- Item -->
-      <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
-        <h3 class="font-semibold text-lg flex justify-between items-center">
-          How long does the web design process take?
-          <span class="toggle-icon">→</span>
-        </h3>
-        <p class="text-gray-600 mt-4 hidden">
-          The time it takes to design a website depends on the size and complexity of the project. On average, most websites are completed within 4 to 6 weeks. This includes every design to revisions and final testing.
-        </p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
-        <h3 class="font-semibold text-lg flex justify-between items-center">
-          Will my website be mobile-friendly and responsive?
-          <span class="toggle-icon">→</span>
-        </h3>
-        <p class="text-gray-600 mt-4 hidden">
-          Yes! We build responsive websites that work seamlessly on desktops, tablets, and phones.
-        </p>
-      </div>
-
-      <!-- More Items (You can duplicate this block as needed) -->
-      <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
-        <h3 class="font-semibold text-lg flex justify-between items-center">
-          Can you redesign my existing website?
-          <span class="toggle-icon">↓</span>
-        </h3>
-        <p class="text-gray-600 mt-4 hidden">
-          Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
-        </p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
-        <h3 class="font-semibold text-lg flex justify-between items-center">
-          Do you offer custom web design or do you use templates?
-          <span class="toggle-icon">↓</span>
-        </h3>
-        <p class="text-gray-600 mt-4 hidden">
-          We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based solutions.
-        </p>
-      </div>
-      <!-- More Items (You can duplicate this block as needed) -->
-      <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
-        <h3 class="font-semibold text-lg flex justify-between items-center">
-          What does a web design project typically cost? 
-          <span class="toggle-icon">↓</span>
-        </h3>
-        <p class="text-gray-600 mt-4 hidden">
-          Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
-        </p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
-        <h3 class="font-semibold text-lg flex justify-between items-center">
-          Will I be able to manage and update my website on my own? 
-          <span class="toggle-icon">↓</span>
-        </h3>
-        <p class="text-gray-600 mt-4 hidden">
-          We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based solutions.
-        </p>
-      </div>
-      <!-- More Items (You can duplicate this block as needed) -->
-      <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
-        <h3 class="font-semibold text-lg flex justify-between items-center">
-          What kind of post-launch support do you provide? 
-          <span class="toggle-icon">↓</span>
-        </h3>
-        <p class="text-gray-600 mt-4 hidden">
-          Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
-        </p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
-        <h3 class="font-semibold text-lg flex justify-between items-center">
-          Will my website be optimized for search engines (SEO)? 
-          <span class="toggle-icon">↓</span>
-        </h3>
-        <p class="text-gray-600 mt-4 hidden">
-          We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based solutions.
-        </p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
-        <h3 class="font-semibold text-lg flex justify-between items-center">
-          Can you help with content creation for my website? 
-          <span class="toggle-icon">↓</span>
-        </h3>
-        <p class="text-gray-600 mt-4 hidden">
-          Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
-        </p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
-        <h3 class="font-semibold text-lg flex justify-between items-center">
-         How do I start the web design process with AmazeWeb? 
-          <span class="toggle-icon">↓</span>
-        </h3>
-        <p class="text-gray-600 mt-4 hidden">
-          We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based solutions.
-        </p>
-      </div>
-
-      <!-- Add more questions as needed -->
-    </div>
-  </section>
-
-
-
-</div>
-
-
-
-
-<!-- enquiry section  -->
-<div class="bg-gradient-to-br from-[#0d0b1d] to-[#1e014e] text-white font-sans">
-
-  <section class="min-h-screen flex flex-col lg:flex-row items-center justify-center p-20 gap-10">
-
-    <!-- LEFT SECTION -->
-    <div class="w-full lg:w-1/2 space-y-10">
-      <div>
-        <p class="uppercase text-sm text-gray-300">Contact Us</p>
-        <h2 class="text-3xl md:text-4xl font-bold leading-tight mt-2">
-          Partner with tech catalyst who <span class="text-white">transform ideas into impact</span>
+      <!-- Heading -->
+      <div class="mb-12 text-center">
+        <h2 class="text-4xl font-extrabold leading-tight">
+          Our Clients are superheroes. We priorities<br />
+          Delivering excellent Products, through <br />
+          Training and Optimal Excusions
         </h2>
-        <p class="text-lg text-gray-300 mt-4">Book your free consultation with us</p>
       </div>
 
-      <!-- CONTACT INFO -->
-      <div class="space-y-5">
-        <div class="flex items-center gap-4">
-          <div class="bg-yellow-500 p-3 rounded-full">
-            <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M4 4h16v2H4zm0 6h16v2H4zm0 6h16v2H4z"/>
-            </svg>
+      <!-- Video Testimonials -->
+      <div class="flex flex-col md:flex-row gap-6 justify-center">
+
+        <!-- Card 1 -->
+        <div
+          class="bg-gradient-to-br from-purple-800 to-purple-900 rounded-2xl p-6 w-full md:w-1/2 relative overflow-hidden">
+          <!-- Logo and Quote -->
+          <div class="flex items-center justify-between mb-4">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=pBFQdxA-apI">Open YouTube video</a>
+            <img src="./img/alogo.png" alt="logo" class="h-6">
           </div>
-          <div>
-            <p class="text-gray-300">Email us</p>
-            <p class="font-medium">support@amazefox.com</p>
+
+          <!-- Quote Icon -->
+          <div class="text-purple-300 text-4xl font-serif mb-4">“</div>
+
+          <!-- Quote Text -->
+          <p class="text-white font-semibold leading-snug text-sm mb-4">
+            Our Clients are superheroes. We priorities Delivering excellent Products, through Training and Optimal
+            Excusions
+          </p>
+
+          <!-- User -->
+          <div class="text-sm text-blue-400 font-bold">truecare24</div>
+          <div class="text-xs text-gray-300">CTO, Healthcare Solutions</div>
+
+          <!-- Hexagon Image w/ Play Button -->
+          <div class="absolute right-6 top-1/2 transform -translate-y-1/2 w-32 h-32">
+            <div class="relative">
+              <div
+                class="bg-pink-500 hexagon w-32 h-32 flex items-center justify-center overflow-hidden relative z-10 rounded-xl">
+                <img src="https://i.imgur.com/jQGRD4f.jpg" alt="user" class="w-full h-full object-cover" />
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-10 h-10 bg-black/70 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="flex items-center gap-4">
-          <div class="bg-green-600 p-3 rounded-full">
-            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.55.57 1 1 0 011 1v3.61a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.61a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.27 1.11z"/>
-            </svg>
+        <!-- Card 2 -->
+        <div
+          class="bg-gradient-to-br from-purple-700 to-purple-900 rounded-2xl p-6 w-full md:w-1/2 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-4">
+            <img src="./img/alogo.png" alt="logo" class="h-6">
           </div>
-          <div>
-            <p class="text-gray-300">Whatsapp</p>
-            <p class="font-medium">+91 9786739966</p>
+          <div class="text-purple-300 text-4xl font-serif mb-4">“</div>
+          <p class="text-white font-semibold leading-snug text-sm mb-4">
+            Our Clients are superheroes. We priorities Delivering excellent Products, through Training and Optimal
+            Excusions
+          </p>
+          <div class="text-sm text-blue-400 font-bold">truecare24</div>
+          <div class="text-xs text-gray-300">CTO, Healthcare Solutions</div>
+
+          <div class="absolute right-6 top-1/2 transform -translate-y-1/2 w-32 h-32">
+            <div class="relative">
+              <div
+                class="bg-pink-500 hexagon w-32 h-32 flex items-center justify-center overflow-hidden relative z-10 rounded-xl">
+                <iframe height="480" width="500" src="https://www.youtube.com/embed/il_t1WVLNxk">
+                </iframe>
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-10 h-10 bg-black/70 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="flex items-center gap-4">
-          <div class="bg-purple-700 p-3 rounded-full">
-            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M3 3h18v18H3z" fill="none"/>
-              <path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2v2h4v-2h2a2 2 0 002-2v-2h2v-4h-2z"/>
-            </svg>
-          </div>
-          <div>
-            <p class="text-gray-300">Teams</p>
-            <p class="font-medium">nikilfox / amazefox</p>
-          </div>
-        </div>
       </div>
 
-      <!-- TESTIMONIAL -->
-      <div class="mt-8 border-t border-gray-600 pt-6">
-        <div class="flex items-start gap-3">
-          <div class="text-4xl text-gray-500 leading-none">“</div>
+    </section>
+
+  </div>
+
+
+
+  <!-- what make us section  -->
+  <div class="bg-gradient-to-br from-[#0a011a] to-[#290055] text-white">
+
+    <!-- Section Wrapper -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+
+      <!-- Headings -->
+      <div class="mb-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 ">
           <div>
-            <p class="text-sm md:text-base text-gray-100 font-semibold leading-relaxed">
-              Very good web designer. Will continue to work with.
-              He understand what you want is determine to do the job right.
-              Will hire him again for design work!
+            <p class="uppercase text-sm text-gray-400 font-medium mb-2">What Makes Us Different</p>
+            <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">What Makes Every Amazfox Web App Design Stand
+              Out</h2>
+          </div>
+          <div>
+
+            <p class="max-w-3xl text-gray-300">
+              At Amazfox, we take a strategic, user-focused approach to every digital product we craft. Our web app
+              designs are built not just for visual impact—but for usability, performance, and long-term scalability.
             </p>
-            <div class="mt-3">
-              <p class="font-semibold text-white">David McClellan</p>
-              <p class="text-sm text-gray-400 italic">United States, <span class="not-italic">Social Catfish</span></p>
+          </div>
+        </div>
+
+        <!-- Feature Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
+
+          <!-- Card -->
+          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
+            <img src="./img/sm-icon/ic-muser.svg" class="w-8 mb-4" alt="Icon">
+            <h3 class="text-lg font-semibold mb-2">User-Centric Architecture</h3>
+            <p class="text-sm text-gray-300">We prioritize the end-user experience from day one. Our team carefully
+              structures...</p>
+          </div>
+
+          <!-- Repeat for 7 other cards -->
+          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
+            <img src="./img/sm-icon/ic-mresp.svg" class="w-8 mb-4" alt="Icon">
+            <h3 class="text-lg font-semibold mb-2">Responsive & Device-Ready Layouts</h3>
+            <p class="text-sm text-gray-300">From widescreen desktops to smartphones and everything in between...</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
+            <img src="./img/sm-icon/ic-mspeed.svg" class="w-8 mb-4" alt="Icon">
+            <h3 class="text-lg font-semibold mb-2">High-Speed Performance</h3>
+            <p class="text-sm text-gray-300">We speed up load times, minimize bounce, and enhance engagement...</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
+            <img src="./img/sm-icon/ic-mscale.svg" class="w-8 mb-4" alt="Icon">
+            <h3 class="text-lg font-semibold mb-2">Scalable Design Systems</h3>
+            <p class="text-sm text-gray-300">Build once, scale forever. Our systems ensure consistency and updates are
+              easy...</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
+            <img src="./img/sm-icon/ic-msecurity.svg" class="w-8 mb-4" alt="Icon">
+            <h3 class="text-lg font-semibold mb-2">Security-First Approach</h3>
+            <p class="text-sm text-gray-300">We implement HTTPS, secure auth, and encryption from the start...</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
+            <img src="./img/sm-icon/ic-maccess.svg" class="w-8 mb-4" alt="Icon">
+            <h3 class="text-lg font-semibold mb-2">Accessibility & Inclusivity</h3>
+            <p class="text-sm text-gray-300">WCAG 2.1 compliance, contrast ratios, screen reader support...</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
+            <img src="./img/sm-icon/ic-mseo.svg" class="w-8 mb-4" alt="Icon">
+            <h3 class="text-lg font-semibold mb-2">SEO-Friendly Structure</h3>
+            <p class="text-sm text-gray-300">Clean HTML, fast load, semantic markup, and better discoverability...</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
+            <img src="./img/sm-icon/ic-maction.svg" class="w-8 mb-4" alt="Icon">
+            <h3 class="text-lg font-semibold mb-2">Action-Oriented UI</h3>
+            <p class="text-sm text-gray-300">Drive users toward calls-to-action through strategic layout and
+              interactions...</p>
+          </div>
+
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-20 text-center">
+          <img src="./img/alogo.png" alt="logo" class="mx-auto mb-6 w-16 animate-bounce">
+          <h2 class="text-3xl md:text-4xl font-extrabold mb-2">Ready to innovate and drive and impact?</h2>
+          <p class="text-gray-300 mb-6">Transforming Businesses with Technology that transcends geographies and
+            Platforms</p>
+          <a href="#"
+            class="inline-block bg-gradient-to-r from-[#720C7D] to-[#E61F4A] text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">
+            Get a Free Quote →
+          </a>
+        </div>
+
+    </section>
+
+  </div>
+
+
+
+  <!-- FAQ Section  -->
+  <div class="bg-white text-black font-sans">
+
+    <section class="max-w-6xl mx-auto px-4 py-16 relative">
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <p class="text-sm text-pink-600 font-semibold uppercase">Questions & Answers</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Frequently Asked Questions</h2>
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">We hope these questions and answers guide you in choosing the
+          right web design partner for your business’s digital transformation. If you have any more questions, feel free
+          to reach out!</p>
+      </div>
+
+      <!-- FAQ Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="faq-container">
+        <!-- Item -->
+        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+          <h3 class="font-semibold text-lg flex justify-between items-center">
+            How long does the web design process take?
+            <span class="toggle-icon">→</span>
+          </h3>
+          <p class="text-gray-600 mt-4 hidden">
+            The time it takes to design a website depends on the size and complexity of the project. On average, most
+            websites are completed within 4 to 6 weeks. This includes every design to revisions and final testing.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+          <h3 class="font-semibold text-lg flex justify-between items-center">
+            Will my website be mobile-friendly and responsive?
+            <span class="toggle-icon">→</span>
+          </h3>
+          <p class="text-gray-600 mt-4 hidden">
+            Yes! We build responsive websites that work seamlessly on desktops, tablets, and phones.
+          </p>
+        </div>
+
+        <!-- More Items (You can duplicate this block as needed) -->
+        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+          <h3 class="font-semibold text-lg flex justify-between items-center">
+            Can you redesign my existing website?
+            <span class="toggle-icon">↓</span>
+          </h3>
+          <p class="text-gray-600 mt-4 hidden">
+            Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+          <h3 class="font-semibold text-lg flex justify-between items-center">
+            Do you offer custom web design or do you use templates?
+            <span class="toggle-icon">↓</span>
+          </h3>
+          <p class="text-gray-600 mt-4 hidden">
+            We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based
+            solutions.
+          </p>
+        </div>
+        <!-- More Items (You can duplicate this block as needed) -->
+        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+          <h3 class="font-semibold text-lg flex justify-between items-center">
+            What does a web design project typically cost?
+            <span class="toggle-icon">↓</span>
+          </h3>
+          <p class="text-gray-600 mt-4 hidden">
+            Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+          <h3 class="font-semibold text-lg flex justify-between items-center">
+            Will I be able to manage and update my website on my own?
+            <span class="toggle-icon">↓</span>
+          </h3>
+          <p class="text-gray-600 mt-4 hidden">
+            We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based
+            solutions.
+          </p>
+        </div>
+        <!-- More Items (You can duplicate this block as needed) -->
+        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+          <h3 class="font-semibold text-lg flex justify-between items-center">
+            What kind of post-launch support do you provide?
+            <span class="toggle-icon">↓</span>
+          </h3>
+          <p class="text-gray-600 mt-4 hidden">
+            Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+          <h3 class="font-semibold text-lg flex justify-between items-center">
+            Will my website be optimized for search engines (SEO)?
+            <span class="toggle-icon">↓</span>
+          </h3>
+          <p class="text-gray-600 mt-4 hidden">
+            We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based
+            solutions.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+          <h3 class="font-semibold text-lg flex justify-between items-center">
+            Can you help with content creation for my website?
+            <span class="toggle-icon">↓</span>
+          </h3>
+          <p class="text-gray-600 mt-4 hidden">
+            Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+          <h3 class="font-semibold text-lg flex justify-between items-center">
+            How do I start the web design process with AmazeWeb?
+            <span class="toggle-icon">↓</span>
+          </h3>
+          <p class="text-gray-600 mt-4 hidden">
+            We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based
+            solutions.
+          </p>
+        </div>
+
+        <!-- Add more questions as needed -->
+      </div>
+      <img src="./img/alogo.png" alt="Paper Plane" class="absolute top-10 right-10 w-8 opacity-80 animate-bounce">
+      <img src="./img/alogo.png" alt="Paper Plane" class="absolute bottom-10 left-5 w-8 opacity-80 animate-bounce">
+    </section>
+
+
+
+  </div>
+
+
+
+
+  <!-- enquiry section  -->
+  <div class="bg-gradient-to-br from-[#0d0b1d] to-[#1e014e]  bg-blend-multiply   text-white font-sans" style="background-image: url('./img/img-con/contact_bot_curve.svg'), url('./img/img-con/contact_all_curve.svg'),url('./img/img-con/contact_main_bg.svg'); 
+     background-blend-mode: normal, multiply, screen;
+  
+ 
+           ">
+
+    <section class="min-h-screen flex flex-col lg:flex-row items-center justify-center p-20 gap-10">
+
+      <!-- LEFT SECTION -->
+      <div class="w-full lg:w-1/2 space-y-10">
+        <div>
+          <p class="uppercase text-sm text-gray-300">Contact Us</p>
+          <h2 class="text-3xl md:text-4xl font-bold leading-tight mt-2">
+            Partner with tech catalyst who <span class="text-white">transform ideas into impact</span>
+          </h2>
+          <p class="text-lg text-gray-300 mt-4">Book your free consultation with us</p>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="space-y-5">
+          <div class="flex items-center gap-4">
+            <div class="bg-yellow-500 p-3 rounded-full">
+              <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4 4h16v2H4zm0 6h16v2H4zm0 6h16v2H4z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-gray-300">Email us</p>
+              <p class="font-medium">support@amazefox.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="bg-green-600 p-3 rounded-full">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.55.57 1 1 0 011 1v3.61a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.61a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.27 1.11z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-gray-300">Whatsapp</p>
+              <p class="font-medium">+91 9786739966</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="bg-purple-700 p-3 rounded-full">
+              <!-- <img src="./img/sm-icon/ic-teams.svg" alt="" height="24"> -->
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 3h18v18H3z" fill="none" />
+                <path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2v2h4v-2h2a2 2 0 002-2v-2h2v-4h-2z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-gray-300">Teams</p>
+              <p class="font-medium">nikilfox / amazefox</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIAL -->
+        <div class="mt-8 border-t border-gray-600 pt-6">
+          <div class="flex items-start gap-3">
+            <div class="text-4xl text-gray-500 leading-none">“</div>
+            <div>
+              <p class="text-sm md:text-base text-gray-100 font-semibold leading-relaxed">
+                Very good web designer. Will continue to work with.
+                He understand what you want is determine to do the job right.
+                Will hire him again for design work!
+              </p>
+              <div class="mt-3">
+                <p class="font-semibold text-white">David McClellan</p>
+                <p class="text-sm text-gray-400 italic">United States, <span class="not-italic">Social Catfish</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- RIGHT SECTION - FORM -->
+      <div class="w-full lg:w-1/2 bg-[#191227] p-8 rounded-2xl border border-pink-500 shadow-xl space-y-6">
+        <h3 class="text-2xl font-semibold">Speak with Our Experts</h3>
+        <p class="text-gray-400 text-sm">Start growing your business with us</p>
+
+        <form class="space-y-4">
+          <input type="text" placeholder="Full name"
+            class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+
+          <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 px-3 py-3 rounded-md bg-[#2a2437]">
+              <img src="https://flagcdn.com/w40/in.png" alt="flag" class="w-5 h-5">
+              <span class="text-white">+91</span>
+            </div>
+            <input type="tel" placeholder="Mobile Number"
+              class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+          </div>
+
+          <input type="email" placeholder="Business Email"
+            class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+
+          <select
+            class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <option selected disabled>Select a web design services</option>
+            <option>Website Development</option>
+            <option>UI/UX Design</option>
+            <option>Branding</option>
+          </select>
+
+          <textarea rows="4" placeholder="About a Projects"
+            class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-[#720C7D] to-[#E61F4A] py-3 rounded-md text-white font-semibold hover:opacity-90 transition">
+            Submit →
+          </button>
+        </form>
+      </div>
+
+    </section>
+  </div>
+
+
+
+
+  <!-- Footer section  -->
+  <section class="bg-gradient-to-br from-[#1a0c2c] to-[#000018] text-white ">
+
+    <!-- Contact Form Section -->
+    <div class="max-w-7xl mx-auto px-6 py-10 text-center md:text-left">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <img src="./img/alogo.png" alt="logo" class="animate-bounce">
+        <h2 class="text-3xl font-bold">Speak with a Quick<br>Contact our Team</h2>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <input type="text" placeholder="Name"
+            class="px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none">
+          <input type="email" placeholder="Email Address"
+            class="px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none">
+          <button class="bg-gradient-to-r from-pink-500 to-red-500 px-6 py-2 rounded-full text-white font-semibold">Send
+            →</button>
+        </div>
+      </div>
     </div>
 
-    <!-- RIGHT SECTION - FORM -->
-    <div class="w-full lg:w-1/2 bg-[#191227] p-8 rounded-2xl border border-pink-500 shadow-xl space-y-6">
-      <h3 class="text-2xl font-semibold">Speak with Our Experts</h3>
-      <p class="text-gray-400 text-sm">Start growing your business with us</p>
+    <hr class="border-gray-700">
 
-      <form class="space-y-4">
-        <input type="text" placeholder="Full name" class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+    <!-- Footer Content -->
+    <footer class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-sm">
+      <!-- Company -->
+      <div>
+        <h4 class="font-bold mb-4">Company</h4>
+        <ul class="space-y-2">
+          <li>Home</li>
+          <li>About us</li>
+          <li>Services</li>
+          <li>Our Process</li>
+          <li>Portfolio</li>
+          <li>My showcase</li>
+          <li>Testimonials</li>
+          <li>Clients</li>
+        </ul>
+      </div>
 
-        <div class="flex items-center gap-2">
-          <div class="flex items-center gap-2 px-3 py-3 rounded-md bg-[#2a2437]">
-            <img src="https://flagcdn.com/w40/gb.png" alt="flag" class="w-5 h-5">
-            <span class="text-white">+91</span>
-          </div>
-          <input type="tel" placeholder="Mobile Number" class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+      <!-- Capabilities -->
+      <div>
+        <h4 class="font-bold mb-4">Capabilities</h4>
+        <ul class="space-y-2">
+          <li>Brand Identity Design</li>
+          <li>Mobile app Design</li>
+          <li>Web app Design</li>
+          <li>Product Design</li>
+          <li>UI / UX Design</li>
+          <li>Graphic Design</li>
+          <li>Website Redesign</li>
+          <li>Responsive Design</li>
+          <li>eCommerce Solutions</li>
+          <li>Full Stack Web App Design</li>
+        </ul>
+      </div>
+
+      <!-- Industries -->
+      <div>
+        <h4 class="font-bold mb-4">Industries</h4>
+        <div class="space-y-2 grid grid-cols-2">
+          <ul>
+            <li>AI Design</li>
+            <li>Finance</li>
+            <li>Travel</li>
+            <li>Real Estate</li>
+            <li>Ecommerce Design</li>
+            <li>Education</li>
+            <li>Life Sciences</li>
+            <li>Restaurants</li>
+            <li>Healthcare</li>
+            <li>Manufacturing</li>
+          </ul>
+          <ul>
+            <li>Automotive</li>
+            <li>Oil & Gas</li>
+            <li>Government</li>
+            <li>eCommerce</li>
+            <li>Construction</li>
+            <li>Communication</li>
+            <li>Hi Tech</li>
+            <li>Logistics</li>
+            <li>Medias</li>
+            <li>Entertainment</li>
+          </ul>
         </div>
+      </div>
 
-        <input type="email" placeholder="Business Email" class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+      <!-- Support -->
+      <div>
+        <h4 class="font-bold mb-4">Support</h4>
+        <ul class="space-y-2">
+          <li>Contact us</li>
+          <li>Careers</li>
+          <li>FAQ</li>
+          <li>Terms and Conditions</li>
+          <li>Privacy Policy</li>
+          <li>Sitemap</li>
+        </ul>
+      </div>
 
-        <select class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
-          <option selected disabled>Select a web design services</option>
-          <option>Website Development</option>
-          <option>UI/UX Design</option>
-          <option>Branding</option>
-        </select>
+      <!-- Get in Touch -->
+      <div>
+        <h4 class="font-bold mb-4">Get in Touch</h4>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2 ">
+            <img src="./img/sm-icon/ic-mail.svg" alt="mail"><a
+              href="mailto:support@amazefox.com">support@amazefox.com</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="./img/sm-icon/ic-whtsap.svg" alt="phone"><a href="https://wa.me/919786739966">+91 9786739966</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="./img/sm-icon/ic-teams.svg" alt="teams"> <a href="mailto:support@amazefox.com">Teams or Skype</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
-        <textarea rows="4" placeholder="About a Projects" class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
-
-        <button type="submit" class="w-full bg-gradient-to-r from-pink-600 to-red-500 py-3 rounded-md text-white font-semibold hover:opacity-90 transition">
-          Submit →
-        </button>
-      </form>
+    <!-- Social & Copyright -->
+    <div class="border-t border-gray-700 py-6 px-6 text-center text-sm text-gray-400">
+      <div class="flex justify-center gap-4 mb-4">
+        <!-- Placeholder icons: replace with real ones or use FontAwesome -->
+        <a href="#"><img src="./img/sm-icon/ic-facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="./img/sm-icon/ic-insta.svg" alt="Instagram"></a>
+        <a href="#"><img src="./img/sm-icon/ic-twit.svg" alt="X"></a>
+        <a href="#"><img src="./img/sm-icon/ic-gg.svg" alt="Google"></a>
+        <a href="#"><img src="./img/sm-icon/ic-whatsapp.svg" alt="WhatsApp"></a>
+        <a href="#"><img src="./img/sm-icon/ic-youtube.svg" alt="YouTube"></a>
+        <a href="#"><img src="./img/sm-icon/skype.svg" alt="Skype"></a>
+      </div>
+      <p>Copyright 2025 © <a href="https://www.amazefox.com" class="underline">www.amazefox.com</a>. All Rights
+        Reserved.</p>
     </div>
 
   </section>
-</div>
-
-
-
-
-<!-- Footer section  -->
- <section class="bg-gradient-to-br from-[#1a0c2c] to-[#000018] text-white">
-
-  <!-- Contact Form Section -->
-  <div class="max-w-7xl mx-auto px-6 py-10 text-center md:text-left">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-      <h2 class="text-3xl font-bold">Speak with a Quick<br>Contact our Team</h2>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <input type="text" placeholder="Name" class="px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none">
-        <input type="email" placeholder="Email Address" class="px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none">
-        <button class="bg-gradient-to-r from-pink-500 to-red-500 px-6 py-2 rounded-full text-white font-semibold">Send →</button>
-      </div>
-    </div>
-  </div>
-
-  <hr class="border-gray-700">
-
-  <!-- Footer Content -->
-  <footer class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-sm">
-    <!-- Company -->
-    <div>
-      <h4 class="font-bold mb-4">Company</h4>
-      <ul class="space-y-2">
-        <li>Home</li>
-        <li>About us</li>
-        <li>Services</li>
-        <li>Our Process</li>
-        <li>Portfolio</li>
-        <li>My showcase</li>
-        <li>Testimonials</li>
-        <li>Clients</li>
-      </ul>
-    </div>
-
-    <!-- Capabilities -->
-    <div>
-      <h4 class="font-bold mb-4">Capabilities</h4>
-      <ul class="space-y-2">
-        <li>Brand Identity Design</li>
-        <li>Mobile app Design</li>
-        <li>Web app Design</li>
-        <li>Product Design</li>
-        <li>UI / UX Design</li>
-        <li>Graphic Design</li>
-        <li>Website Redesign</li>
-        <li>Responsive Design</li>
-        <li>eCommerce Solutions</li>
-        <li>Full Stack Web App Design</li>
-      </ul>
-    </div>
-
-    <!-- Industries -->
-    <div>
-      <h4 class="font-bold mb-4">Industries</h4>
-      <div class="space-y-2 grid grid-cols-2">
-        <ul>
-        <li>AI Design</li>
-        <li>Finance</li>
-        <li>Travel</li>
-        <li>Real Estate</li>
-        <li>Ecommerce Design</li>
-        <li>Education</li>
-        <li>Life Sciences</li>
-        <li>Restaurants</li>
-        <li>Healthcare</li>
-        <li>Manufacturing</li>
-</ul>
-<ul>
-        <li>Automotive</li>
-        <li>Oil & Gas</li>
-        <li>Government</li>
-        <li>eCommerce</li>
-        <li>Construction</li>
-        <li>Communication</li>
-        <li>Hi Tech</li>
-        <li>Logistics</li>
-        <li>Medias</li>
-        <li>Entertainment</li>
-      </ul>
-    </div>
-    </div>
-
-    <!-- Support -->
-    <div>
-      <h4 class="font-bold mb-4">Support</h4>
-      <ul class="space-y-2">
-        <li>Contact us</li>
-        <li>Careers</li>
-        <li>FAQ</li>
-        <li>Terms and Conditions</li>
-        <li>Privacy Policy</li>
-        <li>Sitemap</li>
-      </ul>
-    </div>
-
-    <!-- Get in Touch -->
-    <div>
-      <h4 class="font-bold mb-4">Get in Touch</h4>
-      <ul class="space-y-3">
-        <li class="flex items-center gap-2">
-          📧 <a href="mailto:support@amazefox.com">support@amazefox.com</a>
-        </li>
-        <li class="flex items-center gap-2">
-          📱 <a href="https://wa.me/919786739966">+91 9786739966</a>
-        </li>
-        <li class="flex items-center gap-2">
-          💬 <a href="mailto:support@amazefox.com">Teams or Skype</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-
-  <!-- Social & Copyright -->
-  <div class="border-t border-gray-700 py-6 px-6 text-center text-sm text-gray-400">
-    <div class="flex justify-center gap-4 mb-4">
-      <!-- Placeholder icons: replace with real ones or use FontAwesome -->
-      <a href="#"><img src="https://via.placeholder.com/20?text=F" alt="Facebook"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=I" alt="Instagram"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=X" alt="X"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=G" alt="Google"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=W" alt="WhatsApp"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=Y" alt="YouTube"></a>
-      <a href="#"><img src="https://via.placeholder.com/20?text=S" alt="Skype"></a>
-    </div>
-    <p>Copyright 2025 © <a href="https://www.amazefox.com" class="underline">www.amazefox.com</a>. All Rights Reserved.</p>
-  </div>
-
-</section>
 
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -1924,8 +1994,8 @@
     }
   </script>
 
-<!-- Accordian script  -->
-    <script>
+  <!-- Accordian script  -->
+  <script>
     function toggleAccordion(clickedItem) {
       const allItems = document.querySelectorAll('#faq-container > div');
       allItems.forEach(item => {
@@ -1943,6 +2013,21 @@
       icon.textContent = isOpen ? '↓' : '→';
     }
   </script>
+
+  <!-- video pop up  -->
+  <script>
+    $(function () {
+      $('.popup-youtube, .popup-vimeo').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+      });
+    });
+  </script>
+
 </body>
 
 </html>

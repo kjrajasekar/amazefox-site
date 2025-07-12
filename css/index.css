@@ -190,10 +190,7 @@ vertical-align: middle;
   }
 }
 
-.section-bg-third {
-  background-image: url('./../img/bg-section-3.png');
-  background-size: cover;
-}
+
 
 .stat-number {
   font-size: 2rem;
