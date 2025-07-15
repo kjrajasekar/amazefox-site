@@ -4,6 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Caprasimo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Michroma&family=Montez&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
   <title>Amazefox Web App</title>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
@@ -41,7 +46,7 @@
 
 <body>
   <!-- Header -->
-  <header class="sticky top-0 z-50 w-full bg-white shadow-md">
+  <header class=" sticky top-0 z-50 w-full bg-white shadow-md">
     <!-- Top Contact Info -->
     <div class="bg-black text-white px-4 py-2 text-sm hidden md:flex justify-between items-center">
       <div class="flex items-center gap-4">
@@ -129,7 +134,7 @@
           Designing</span><br />
         <span class="text-black">Company</span>
       </h1>
-      <p class="mt-4 text-gray-600 text-base leading-relaxed max-w-md">
+      <p class="mt-4 text-gray-600 text-base leading-relaxed max-w-md ">
         A well-designed website not only attracts the right customers for your solution but keeps them engaged while
         contributing to your revenue.
       </p>
@@ -148,7 +153,7 @@
   </section>
 
   <!-- Company Carosel -->
-  <main class="relative  flex flex-col justify-center  overflow-hidden shadow-xl inset-shadow-xs">
+  <main class="  relative  flex flex-col justify-center  overflow-hidden shadow-xl inset-shadow-xs">
     <div class="w-full max-w-7xl mx-auto px-4 md:px-6 py-8">
       <div class="text-center">
 
@@ -194,9 +199,9 @@
 
   <!-- Section 2  service cards  -->
   <div class="relative overflow-hidden" style="
-       background-image:  url('/img/img-con/design_dotted_left.svg'),url('/img/img-con/techstack_curve.svg'), url('/img/img-con/design_dotted_right.svg');
-       background-position:  top left,top right,right bottom;
-       background-repeat: no-repeat, no-repeat, no-repeat;
+       background-image:  url('/img/img-con/design_dotted_left.svg'), url('/img/img-con/design_dotted_right.svg');
+       background-position:  top left, right bottom;
+       background-repeat: no-repeat,   no-repeat;
      ">
 
     <!-- Content -->
@@ -222,10 +227,10 @@
           class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
           <!-- Background effect -->
           <div
-            class="absolute inset-0 bg-gradient-to-br from-white via-white to-purple-50 opacity-10 pointer-events-none z-0">
+            class="absolute inset-0 bg-gradient-to-br from-[#E61F4A] via-[#FFFFFF ] to-[#FFFFFF] opacity-5 pointer-events-none z-0">
           </div>
 
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center" style="background-image:  url('/img/img-con/category_services_curve.svg');
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-6 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.svg');
        background-position:  center;
      ">
             <!-- Left Side -->
@@ -584,14 +589,14 @@
 
 
   <!-- section 3 team   -->
-  <div class="bg-[#090229] text-white" style="
+  <div class="bg-[#090229] text-white " style="
        background-image: url('/img/img-con/design_dotted_left.svg'), url('/img/img-con/design_dotted_right.svg'), url('/img/img-con/need_designer_bg.svg');
        background-blend-mode: normal, multiply, screen;
        background-size: contain, contain, cover;
        background-position:  top left, bottom right,center;
        background-repeat: no-repeat, no-repeat, no-repeat;
      ">
-    <section class="py-20 px-4 md:px-10 lg:px-32 text-center">
+    <section class="py-20 px-4 md:px-10 lg:px-32 text-center max-w-7xl mx-auto">
       <p class="text-sm text-gray-300 tracking-widest uppercase mb-3" data-aos="fade-up">
         Ready to make your website work for your business with us?
       </p>
@@ -603,7 +608,7 @@
       </h2>
 
       <!-- CTA Button -->
-      <div class="mb-10" data-aos="zoom-in" data-aos-delay="200">
+      <div class="mb-10 " data-aos="zoom-in" data-aos-delay="200">
         <a href="#"
           class="inline-block bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold text-lg px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
           Get a Free Quote →
@@ -611,7 +616,7 @@
       </div>
     </section>
     <!-- Feature Grid -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 text-center bg-zinc-200 bg-opacity-25"
+    <div class="max-w-8xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 text-center bg-zinc-200 bg-opacity-25"
       data-aos="fade-up" data-aos-delay="300">
       <div class="text-gray-300">
         <h3
@@ -794,7 +799,7 @@
 
   <!-- section 5  why amazefox -->
   <!-- <div class="bg-gradient-to-br from-[#cad5ff] to-[#03001e] text-white"> -->
-  <div class="bg-gradient-to-r from-zinc-50 to-white-zinc-500 text-white">
+  <div class="max-w-7xl mx-auto bg-gradient-to-r from-zinc-50 to-white-zinc-500 text-white">
     <section class="py-16 px-4 md:px-20 relative overflow-hidden">
       <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-10  text-black">
         <div>
@@ -989,7 +994,7 @@
   <!-- section 8 industry expertise  -->
 
   <!-- Header -->
-  <section class="text-center px-4 py-10">
+  <section class=" max-w-7xl mx-auto text-center px-4 py-10">
     <h3 class="text-sm text-purple-500 font-semibold uppercase tracking-wide">Technology Stack</h3>
     <h1 class="text-3xl md:text-4xl font-bold my-2">Industry Expertise</h1>
     <p class="max-w-2xl mx-auto text-gray-600 text-sm md:text-base">
@@ -1000,7 +1005,7 @@
   </section>
 
   <!-- Icon Grid -->
-  <section class="px-4 md:px-16 py-6">
+  <section class="max-w-7xl mx-auto px-4 md:px-16 py-6">
     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-9 gap-6 place-items-center text-center">
       <div>
         <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
@@ -1159,7 +1164,7 @@
   </section>
 
   <!-- technology stack section  -->
-  <div class="section-bg-third text-white font-sans bg-[url(/img/img-con/techstack_bg.svg)]" style="background-image: url('./img/img-con/techstack_curve.svg'), url('./img/img-con/techstack_bg.svg'); 
+  <div class="max-w-7xl mx-auto section-bg-third text-white font-sans bg-[url(/img/img-con/techstack_bg.svg)]" style="background-image: url('./img/img-con/techstack_curve.svg'), url('./img/img-con/techstack_bg.svg'); 
      background-blend-mode:  multiply, screen;">
     <section
       class="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 gap-12 relative overflow-hidden">
@@ -1201,7 +1206,7 @@
 
   <!-- section testimonials  -->
 
-  <div class="bg-gradient-to-br from-[#f9f9fb] to-[#dde7f5] text-gray-900">
+  <div class="max-w-7xl mx-auto bg-gradient-to-br from-[#f9f9fb] to-[#dde7f5] text-gray-900">
 
     <section class="max-w-6xl mx-auto px-4 py-16">
 
@@ -1222,10 +1227,10 @@
       <!-- Testimonials Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         <div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 m-6  lg:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 m-6  lg:grid-cols-2 gap-6">
 
             <!-- Testimonial 1 -->
-            <div class="bg-white rounded-2xl shadow-md m-6  p-6 w-full  ">
+            <div class="bg-white rounded-2xl shadow-md    p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
               <p class="text-sm text-gray-800 mb-6">
                 "Very good web designer. Will continue to work with. He understand what you want is determine to do the
@@ -1243,7 +1248,7 @@
 
 
             <!-- Testimonial 2 -->
-            <div class="bg-blue-100 rounded-2xl shadow-md m-6  p-6 w-full  ">
+            <div class="bg-blue-100 rounded-2xl shadow-md  p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
               <p class="text-sm text-gray-800 mb-6">
                 "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
@@ -1261,7 +1266,7 @@
 
           </div>
           <!-- Bottom Row (Full Width) -->
-          <div class="bg-gray-100 rounded-2xl shadow-md m-6 p-6 w-full">
+          <div class="bg-gray-100 rounded-2xl shadow-md  p-6 w-full">
             <div class="text-4xl mb-3 font-serif">“</div>
             <p class="text-sm text-gray-800 mb-6">
               "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
@@ -1282,7 +1287,7 @@
         <div>
 
           <!-- Top Row (Full Width) -->
-          <div class="bg-gray-100 rounded-2xl shadow-md m-6 p-6 w-full">
+          <div class="bg-gray-100 rounded-2xl shadow-md   p-6 w-full">
             <div class="text-4xl mb-3 font-serif">“</div>
             <p class="text-sm text-gray-800 mb-6">
               "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
@@ -1297,9 +1302,9 @@
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 m-6  lg:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 m-6  lg:grid-cols-2 gap-6">
             <!-- Testimonial 1 -->
-            <div class="bg-white rounded-2xl shadow-md m-6 p-6 w-full  ">
+            <div class="bg-white rounded-2xl shadow-md   p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
               <p class="text-sm text-gray-800 mb-6">
                 "Very good web designer. Will continue to work with. He understand what you want is determine to do the
@@ -1316,7 +1321,7 @@
             </div>
 
             <!-- Testimonial 2 -->
-            <div class="bg-blue-100 rounded-2xl shadow-md m-6  p-6 w-full  ">
+            <div class="bg-blue-100 rounded-2xl shadow-md    p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
               <p class="text-sm text-gray-800 mb-6">
                 "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
@@ -1344,15 +1349,15 @@
 
   <!-- Video Testimonial section  -->
 
-  <div class=" text-white bg-[url(./img/video_bg.svg)]">
+  <div class="max-w-7xl mx-auto text-white bg-[url(./img/video_bg.svg)]">
 
     <section class="max-w-7xl mx-auto px-6 py-16 relative">
 
       <!-- Heading -->
       <div class="mb-12 text-center">
         <h2 class="text-4xl font-extrabold leading-tight">
-          Our Clients are superheroes. We priorities<br />
-          Delivering excellent Products, through <br />
+          Our Clients are superheroes. We priorities 
+          Delivering excellent Products, through  
           Training and Optimal Excusions
         </h2>
       </div>
@@ -1441,7 +1446,7 @@
 
 
   <!-- what make us section  -->
-  <div class="bg-gradient-to-br from-[#0a011a] to-[#290055] text-white">
+  <div class="max-w-7xl mx-auto bg-gradient-to-br from-[#0a011a] to-[#290055] text-white">
 
     <!-- Section Wrapper -->
     <section class="max-w-7xl mx-auto px-4 py-16">
@@ -1540,7 +1545,7 @@
 
 
   <!-- FAQ Section  -->
-  <div class="bg-white text-black font-sans">
+  <div class="bg-white text-black font-sans max-w-7xl mx-auto">
 
     <section class="max-w-6xl mx-auto px-4 py-16 relative">
       <!-- Heading -->
@@ -1674,7 +1679,7 @@
 
 
   <!-- enquiry section  -->
-  <div class="bg-gradient-to-br from-[#0d0b1d] to-[#1e014e]  bg-blend-multiply   text-white font-sans" style="background-image: url('./img/img-con/contact_bot_curve.svg'), url('./img/img-con/contact_all_curve.svg'),url('./img/img-con/contact_main_bg.svg'); 
+  <div class="max-w-7xl mx-auto bg-gradient-to-br from-[#0d0b1d] to-[#1e014e]  bg-blend-multiply   text-white font-sans" style="background-image: url('./img/img-con/contact_bot_curve.svg'), url('./img/img-con/contact_all_curve.svg'),url('./img/img-con/contact_main_bg.svg'); 
      background-blend-mode: normal, multiply, screen;
   
  
@@ -1800,13 +1805,13 @@
 
 
   <!-- Footer section  -->
-  <section class="bg-gradient-to-br from-[#1a0c2c] to-[#000018] text-white ">
+  <section class="max-w-8xl mx-auto bg-gradient-to-br from-[#1a0c2c] to-[#000018] text-white ">
 
     <!-- Contact Form Section -->
     <div class="max-w-7xl mx-auto px-6 py-10 text-center md:text-left">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <img src="./img/alogo.png" alt="logo" class="animate-bounce">
-        <h2 class="text-3xl font-bold">Speak with a Quick<br>Contact our Team</h2>
+        <h2 class="text-3xl font-bold">Speak with a Quick Contact our Team</h2>
         <div class="flex flex-col sm:flex-row gap-4">
           <input type="text" placeholder="Name"
             class="px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none">
