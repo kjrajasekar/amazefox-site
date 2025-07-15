@@ -1946,7 +1946,10 @@
     AOS.init({
       duration: 800,
       once: true,
-      disable: 'mobile'
+      disable: function() {
+    var maxWidth = 800;
+    return window.innerWidth < maxWidth;
+  }
     }); 
   </script>
   <!-- Counter JS -->
