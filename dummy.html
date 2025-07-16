@@ -1,90 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Testimonial Card</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/index.css">
 </head>
-<body>
-      <!-- Video Testimonials -->
-    <div class="flex flex-col md:flex-row gap-6 justify-center bg-[url(./img/video_bg.svg)]  p-16">
-      
-      <!-- Card 1 -->
-      <div class="bg-gradient-to-br from-purple-800 to-purple-900 rounded-2xl p-6 w-full md:w-1/2 relative overflow-hidden">
-        <!-- Logo and Quote -->
-        <div class="flex items-center justify-between mb-4">
-          <img src="./img/alogo.png" alt="logo" class="h-6">
-        </div>
+<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 min-h-screen flex items-center justify-center p-6">
 
-        <!-- Quote Icon -->
-        <div class="text-purple-300 text-4xl font-serif mb-4">“</div>
+  <!-- Testimonial Card -->
+  <div class="relative w-[350px] h-[250px] rounded-2xl overflow-hidden shadow-2xl  text-white p-5 bg-url[/img/img-con/video_test_2.svg]">
 
-        <!-- Quote Text -->
-        <p class="text-white font-semibold leading-snug text-sm mb-4">
-          Our Clients are superheroes. We priorities Delivering excellent Products, through Training and Optimal Excusions
-        </p>
 
-        <!-- User -->
-        <div class="text-sm text-blue-400 font-bold">truecare24</div>
-        <div class="text-xs text-gray-300">CTO, Healthcare Solutions</div>
+    <!-- Content Layer -->
+    <div class="relative z-10 h-full flex flex-col justify-between">
 
-        <!-- Hexagon Image w/ Play Button -->
-        <div class="absolute right-6 top-1/2 transform -translate-y-1/2 w-32 h-32">
-          <div class="relative">
-            <div class="bg-pink-500 hexagon w-32 h-32 flex items-center justify-center overflow-hidden relative z-10 rounded-xl">
-              <img src="https://i.imgur.com/jQGRD4f.jpg" alt="user" class="w-full h-full object-cover" />
-            </div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-10 h-10 bg-black/70 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="https://i.ibb.co/0VHZnWc/logo.png" alt="amazefox" class="h-5 w-5">
+        <span class="font-semibold text-sm uppercase tracking-wide">amazefox</span>
       </div>
 
-      <!-- Card 2 -->
-      <div class="bg-gradient-to-br from-purple-700 to-purple-900 rounded-2xl p-6 w-full md:w-1/2 relative overflow-hidden">
-        <div class="flex items-center justify-between mb-4">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Abstract_icon.svg/1024px-Abstract_icon.svg.png" alt="logo" class="h-6">
-        </div>
-        <div class="text-purple-300 text-4xl font-serif mb-4">“</div>
-        <p class="text-white font-semibold leading-snug text-sm mb-4">
-          Our Clients are superheroes. We priorities Delivering excellent Products, through Training and Optimal Excusions
+      <!-- Quote -->
+      <div>
+        <p class="text-sm leading-snug mt-4">
+          <span class="text-2xl text-purple-200 font-bold">“</span>
+          Our Clients are superheroes. We prioritize delivering excellent products, through training and optimal executions.
         </p>
-        <div class="text-sm text-blue-400 font-bold">truecare24</div>
-        <div class="text-xs text-gray-300">CTO, Healthcare Solutions</div>
-
-        <div class="absolute right-6 top-1/2 transform -translate-y-1/2 w-32 h-32">
-          <div class="relative">
-            <div class="bg-pink-500 hexagon w-32 h-32 flex items-center justify-center overflow-hidden relative z-10 rounded-xl">
-               <iframe height="480" width="500" 
-            src="https://www.youtube.com/watch?v=hu3X6G50PHc">
-      </iframe>
-            </div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-10 h-10 bg-black/70 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
+      <!-- Client Info -->
+      <div class="mt-4">
+        <p class="font-semibold text-blue-400">truecare24</p>
+        <p class="text-xs text-gray-200">CTO, Healthcare Solutions</p>
+      </div>
     </div>
-  
+
+    <!-- Play Button -->
+    <button class="absolute inset-0 flex items-center justify-center z-20">
+      <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </div>
+    </button>
+
+  </div>
+
 </body>
 </html>
