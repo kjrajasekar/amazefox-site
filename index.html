@@ -25,11 +25,17 @@
   <script>
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('bg-opacity-0', 'backdrop-blur-md');
+      const navbars = document.getElementById('navbars');
+      if (window.scrollY > 0) {
+
+        navbar.classList.add('bg-opacity-0', 'backdrop-blur-md', 'border-b-5', ' border-indigo-500');
+        navbars.classList.remove("bg-[repeating-linear-gradient(150deg,_#000000_,_#D1D1D1_,_#D1D1D1_)]");
         navbar.classList.remove('bg-white');
+
       } else {
+
         navbar.classList.remove('bg-opacity-0', 'backdrop-blur-md');
+        navbars.classList.add("bg-[repeating-linear-gradient(150deg,_#000000_,_#D1D1D1_,_#D1D1D1_)]");
         navbar.classList.add('bg-white');
       }
     });
@@ -57,8 +63,9 @@
 </head>
 
 <body>
+
   <!-- Header -->
-  <header class="sticky top-0 z-50 w-full transition duration-300  shadow-md ">
+  <header class="sticky top-0 z-50 w-full transition duration-300  shadow-xl ">
     <!-- Top Contact Info -->
     <div class="bg-black text-white px-4 py-2 text-sm hidden md:flex justify-between items-center">
       <div class="flex items-center gap-4">
@@ -79,91 +86,97 @@
     </div>
 
     <!-- Navbar Start -->
-    <nav id="navbar" x-data="{ open: false }" class="bg-white px-4 py-4 md:px-10 md:py-6 shadow-md">
-      <div class="flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex items-center gap-2">
-          <div class="w-10 h-10 bg-gray-200 rounded-full">
-            <img src="./img/alogo.png" alt="">
+    <div id="navbars" class="bg-[repeating-linear-gradient(150deg,_#000000_,_#D1D1D1_,_#D1D1D1_)]
+ transition duration-300 " style="padding-bottom:1.8px">
+      <nav id="navbar" x-data="{ open: false }" class="bg-white px-4 py-4 md:px-10 md:py-6   ">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-gray-200 rounded-full">
+              <img src="./img/alogo.png" alt="">
+            </div>
+            <span class="text-xl font-bold">amazefox</span>
           </div>
-          <span class="text-xl font-bold">amazefox</span>
-        </div>
 
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex gap-6 text-sm font-medium">
-          <li><a href="#" class="hover:text-pink-500">Services</a></li>
-          <li><a href="#" class="hover:text-pink-500">About Us</a></li>
-          <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
-          <li><a href="#" class="hover:text-pink-500">Industries</a></li>
-          <li><a href="#" class="hover:text-pink-500">Testimonials</a></li>
-          <li><a href="#" class="hover:text-pink-500">Clients</a></li>
-          <li><a href="#" class="hover:text-pink-500">Blog</a></li>
-        </ul>
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex gap-6 text-sm font-medium">
+            <li><a href="#" class="hover:text-pink-500">Services</a></li>
+            <li><a href="#" class="hover:text-pink-500">About Us</a></li>
+            <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
+            <li><a href="#" class="hover:text-pink-500">Industries</a></li>
+            <li><a href="#" class="hover:text-pink-500">Testimonials</a></li>
+            <li><a href="#" class="hover:text-pink-500">Clients</a></li>
+            <li><a href="#" class="hover:text-pink-500">Blog</a></li>
+          </ul>
 
-        <!-- Button + Hamburger -->
-        <div class="flex items-center gap-4">
-          <button class="hidden md:inline px-4 py-2 rounded text-white bg-gradient-to-r from-purple-700 to-pink-500">
-            Contact Us
-          </button>
-          <button @click="open = !open" class="md:hidden focus:outline-none">
-            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div x-show="open" x-transition x-cloak class="md:hidden mt-4">
-        <ul class="space-y-2 text-sm font-medium">
-          <li><a @click="open = false" href="#" class="block py-2 border-b">Services</a></li>
-          <li><a @click="open = false" href="#" class="block py-2 border-b">About Us</a></li>
-          <li><a @click="open = false" href="#" class="block py-2 border-b">Portfolio</a></li>
-          <li><a @click="open = false" href="#" class="block py-2 border-b">Industries</a></li>
-          <li><a @click="open = false" href="#" class="block py-2 border-b">Testimonials</a></li>
-          <li><a @click="open = false" href="#" class="block py-2 border-b">Clients</a></li>
-          <li><a @click="open = false" href="#" class="block py-2 border-b">Blog</a></li>
-          <li>
-            <button class="mt-2 w-full px-4 py-2 rounded text-white bg-gradient-to-r from-purple-700 to-pink-500">
+          <!-- Button + Hamburger -->
+          <div class="flex items-center gap-4">
+            <button class="hidden md:inline px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
+">
               Contact Us
             </button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- Navbar End -->
+            <button @click="open = !open" class="md:hidden focus:outline-none">
+              <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
 
+        <!-- Mobile Menu -->
+        <div x-show="open" x-transition x-cloak class="md:hidden mt-4">
+          <ul class="space-y-2 text-sm font-medium">
+            <li><a @click="open = false" href="#" class="block py-2 border-b">Services</a></li>
+            <li><a @click="open = false" href="#" class="block py-2 border-b">About Us</a></li>
+            <li><a @click="open = false" href="#" class="block py-2 border-b">Portfolio</a></li>
+            <li><a @click="open = false" href="#" class="block py-2 border-b">Industries</a></li>
+            <li><a @click="open = false" href="#" class="block py-2 border-b">Testimonials</a></li>
+            <li><a @click="open = false" href="#" class="block py-2 border-b">Clients</a></li>
+            <li><a @click="open = false" href="#" class="block py-2 border-b">Blog</a></li>
+            <li>
+              <button class="mt-2 w-full px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
+">
+                Contact Us
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
   </header>
 
 
   <!-- Hero Section -->
-  <section class="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-    <!-- Left Content -->
-    <div data-aos="fade-left">
-      <p class="uppercase text-sm tracking-widest font-medium text-gray-500">Web App Design Services | Since 2008</p>
-      <h1 class="mt-4 text-3xl sm:text-5xl font-black leading-tight">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-rose-600">Best Web<br />App
-          Designing</span><br />
-        <span class="text-black">Company</span>
-      </h1>
-      <p class="mt-4 text-gray-600 text-base leading-relaxed max-w-md ">
-        A well-designed website not only attracts the right customers for your solution but keeps them engaged while
-        contributing to your revenue.
-      </p>
-      <button
-        class="mt-6 px-6 py-3 bg-gradient-to-r from-purple-800 to-rose-600 text-white rounded-full text-sm font-medium shadow hover:opacity-90 transition">
-        Get Free Quote →
-      </button>
-    </div>
+  <section class="w-full bg-no-repeat bg-cover bg-[url(/img/banner_bg.svg)]">
+    <section class="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-12 ">
+      <!-- Left Content -->
+      <div data-aos="fade-left">
+        <p class="uppercase text-sm tracking-widest font-medium text-gray-500">Web App Design Services | Since 2008</p>
+        <h1 class="mt-4 text-3xl sm:text-5xl font-black leading-tight">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Best
+            Web App
+            Designing</span>
+          <span class="text-black">Company</span>
+        </h1>
+        <p class="mt-4 text-gray-600 text-base leading-relaxed max-w-md ">
+          A well-designed website not only attracts the right customers for your solution but keeps them engaged while
+          contributing to your revenue.
+        </p>
+        <button
+          class="mt-6 px-6 py-3 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white rounded-full text-sm font-medium shadow hover:opacity-90 transition">
+          Get Free Quote →
+        </button>
+      </div>
 
-    <!-- Right Image -->
-    <div data-aos="fade-up" class="relative">
-      <!-- Main device mockup -->
-      <img src="./img/banner-right.png" alt="Web App UI" class="" />
+      <!-- Right Image -->
+      <div data-aos="fade-up" class="relative">
+        <!-- Main device mockup -->
+        <img src="./img/banner-right.png" alt="Web App UI" class="" />
 
-    </div>
+      </div>
+    </section>
   </section>
-
   <!-- Company Carosel -->
   <main class="relative  flex flex-col justify-center  overflow-hidden shadow-xl inset-shadow-xs">
     <div class="w-full max-w-7xl mx-auto px-4 md:px-6 py-8">
@@ -216,11 +229,8 @@
        background-repeat: no-repeat,   no-repeat;
      ">
 
-
-
-
     <!-- Content -->
-    <div class="relative z-10">
+    <div class="relative z-10 mb-10">
       <!-- Top Section -->
       <section data-aos="fade-up" class="text-center px-4 py-16 from-gray-100 via-white to-gray-100">
         <div class="max-w-5xl mx-auto">
@@ -245,9 +255,10 @@
         </div>
         <div class="col-span-6">
 
-          <h1 class="text-3xl md:text-6xl font-black text-black mb-4">Explore our services designed to meet your needs
+          <h1 class="text-3xl md:text-4xl font-black text-black mb-4 max-w-xl">Explore our services designed to meet
+            your needs
           </h1>
-          <p class="text-sm md:text-base text-gray-600 leading-relaxed leading-[20]">
+          <p class="text-sm md:text-base text-gray-600 leading-relaxed leading-[20] max-w-2xl">
             we offer thoughtful digital services that solve problems, simplify processes, and support your
             business growth
           </p>
@@ -256,9 +267,10 @@
     </div>
 
     <!-- Explore Services Section -->
-    <section data-aos="fade-up" class="px-4 py-10">
-      <div
-        class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+
+    <section data-aos="fade-up"
+      class="max-w-7xl mb-10 mx-auto bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] p-[1.5px] rounded-3xl  shadow-xl">
+      <div class="rounded-3xl  p-6 md:p-10 bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A] via-[#FFFFFF ] to-[#FFFFFF] opacity-5 pointer-events-none z-0">
@@ -273,7 +285,7 @@
             <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
               users.</p>
             <button
-              class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+              class="mt-6 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
               Get a Free Quote!
             </button>
           </div>
@@ -309,9 +321,9 @@
         </div>
       </div>
     </section>
-    <section data-aos="fade-up" class="px-4 py-10">
-      <div
-        class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+    <section data-aos="fade-up"
+      class=" max-w-7xl mb-10 mx-auto bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] p-[1.5px] rounded-3xl  shadow-xl">
+      <div class="rounded-3xl  p-6 md:p-10 bg-white  relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A] via-[#FFFFFF ] to-[#FFFFFF] opacity-5  pointer-events-none z-0">
@@ -326,7 +338,7 @@
             <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
               users.</p>
             <button
-              class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+              class="mt-6 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
               Get a Free Quote!
             </button>
           </div>
@@ -362,9 +374,9 @@
         </div>
       </div>
     </section>
-    <section data-aos="fade-up" class="px-4 py-10">
-      <div
-        class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+    <section data-aos="fade-up"
+      class="max-w-7xl mb-10 mx-auto bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] p-[1.5px] rounded-3xl  shadow-xl">
+      <div class="rounded-3xl  p-6 md:p-10 bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br  from-[#E61F4A] via-[#FFFFFF ] to-[#FFFFFF] opacity-5  pointer-events-none z-0">
@@ -379,7 +391,7 @@
             <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
               users.</p>
             <button
-              class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+              class="mt-6 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
               Get a Free Quote!
             </button>
           </div>
@@ -415,9 +427,9 @@
         </div>
       </div>
     </section>
-    <section data-aos="fade-up" class="px-4 py-10">
-      <div
-        class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+    <section data-aos="fade-up"
+      class="max-w-7xl mb-10 mx-auto bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] p-[1.5px] rounded-3xl  shadow-xl">
+      <div class="rounded-3xl  p-6 md:p-10 bg-white  relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A] via-[#FFFFFF ] to-[#FFFFFF] opacity-5  pointer-events-none z-0">
@@ -431,7 +443,7 @@
             <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
               users.</p>
             <button
-              class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+              class="mt-6 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
               Get a Free Quote!
             </button>
           </div>
@@ -466,9 +478,9 @@
         </div>
       </div>
     </section>
-    <section data-aos="fade-up" class="px-4 py-10">
-      <div
-        class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+    <section data-aos="fade-up"
+      class="max-w-7xl mb-10 mx-auto bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] p-[1.5px] rounded-3xl  shadow-xl">
+      <div class=" rounded-3xl p-6 md:p-10 bg-white  relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A] via-[#FFFFFF ] to-[#FFFFFF] opacity-5  pointer-events-none z-0">
@@ -483,7 +495,7 @@
             <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
               users.</p>
             <button
-              class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+              class="mt-6 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
               Get a Free Quote!
             </button>
           </div>
@@ -519,9 +531,9 @@
         </div>
       </div>
     </section>
-    <section data-aos="fade-up" class="px-4 py-10">
-      <div
-        class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+    <section data-aos="fade-up"
+      class="max-w-7xl mb-10 mx-auto bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] p-[1.5px] rounded-3xl  shadow-xl">
+      <div class="rounded-3xl  p-6 md:p-10 bg-white  relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A] via-[#FFFFFF ] to-[#FFFFFF] opacity-5  pointer-events-none z-0">
@@ -534,7 +546,7 @@
             <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
               users.</p>
             <button
-              class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+              class="mt-6 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
               Get a Free Quote!
             </button>
           </div>
@@ -570,9 +582,9 @@
         </div>
       </div>
     </section>
-    <section data-aos="fade-up" class="px-4 py-10">
-      <div
-        class="max-w-7xl mx-auto rounded-3xl border border-pink-300 p-6 md:p-10 bg-white shadow-md relative overflow-hidden">
+    <section data-aos="fade-up"
+      class="max-w-7xl mb-10 mx-auto bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] p-[1.5px] rounded-3xl  shadow-xl">
+      <div class="rounded-3xl  p-6 md:p-10 bg-white  relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A] via-[#FFFFFF ] to-[#FFFFFF] opacity-5  pointer-events-none z-0">
@@ -587,7 +599,7 @@
             <p class="text-gray-600 mb-6">UX design is all about making your digital products easy and interactive for
               users.</p>
             <button
-              class="mt-6 bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
+              class="mt-6 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white font-semibold px-6 py-2 rounded-full shadow hover:opacity-90 transition-all">
               Get a Free Quote!
             </button>
           </div>
@@ -645,7 +657,7 @@
         <!-- CTA Button -->
         <div class="mb-10" data-aos="zoom-in" data-aos-delay="200">
           <a href="#"
-            class="inline-block bg-gradient-to-r from-purple-800 to-rose-600 text-white font-semibold text-lg px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
+            class="inline-block bg-gradient-to-r  from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white font-semibold text-lg px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
             Get a Free Quote →
           </a>
         </div>
@@ -694,8 +706,12 @@
           <div class="md:h-[1800px] relative">
             <div data-aos="fade-right" class="sticky top-40">
               <div>
-                <p class="text-sm text-pink-600 font-semibold uppercase mb-2">Our Key Process</p>
-                <h2 class="text-3xl md:text-5xl font-bold mb-6">Research-based process in our web app design company
+                <p class="text-sm  font-semibold uppercase mb-2">
+                  <span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+                    Our Key Process</span>
+                </p>
+                <h2 class="text-3xl md:text-4xl font-black mb-6">Research-based process in our web app design company
                 </h2>
                 <img src="./img/img_scroll.svg" alt="Research image" class="rounded-xl shadow-xl">
               </div>
@@ -715,114 +731,176 @@
                 consumer process to ensure intuitive navigation and relevant design.
               </p>
               <div data-aos="fade-up" class="bg-white border rounded-xl p-6 shadow-xl relative">
-                <p class="text-xs text-gray-500 uppercase">Stage 1.</p>
-                <h3
-                  class="text-3xl font-bold bg-gradient-to-r from-purple-800 to-red-500 text-transparent bg-clip-text mb-4">
-                  Research and discovery
+                <p class="text-s text-black uppercase">
+                  <span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Stage
+                    1.</span>
+                </p>
+                <h3 class="text-3xl font-bold  mb-4">
+                  <span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+                    Research and discovery</span>
                 </h3>
                 <p class="text-gray-600 mb-4">
                   We delve into your product and niche to gain a deeper understanding of your industry, market,
                   competitors, and users.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-800">
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Business analysis &
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Business analysis &
                     requirements elicitation</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Defining the goals of the
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Defining the goals of the
                     web app</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting business
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Documenting business
                     requirements</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting non-functional
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Documenting non-functional
                     requirements</li>
                 </ul>
-                <div class="absolute top-4 right-4 text-3xl font-bold text-pink-300 opacity-30">01</div>
+                <div class="absolute top-4 right-4 text-5xl font-bold  opacity-50">
+                  <span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">01</span>
+                </div>
               </div>
 
 
 
               <!-- Reusable Card Component -->
               <div class="relative bg-white border rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="100">
-                <p class="text-xs text-gray-500 uppercase">Stage 2.</p>
-                <h3
-                  class="text-3xl font-bold bg-gradient-to-r from-purple-800 to-red-500 text-transparent bg-clip-text mb-4">
-                  Product ideation</h3>
+                <p class="text-s text-black uppercase">Stage 2.</p>
+                <h3 class="text-3xl font-bold  mb-4">
+                  <span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+                    Product ideation</span>
+                </h3>
                 <p class="text-gray-600 mb-4">
                   Armed with valuable insights, our team moves on to brainstorming innovative ideas and concepts for
                   your web app.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-800">
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Business analysis &
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Business analysis &
                     requirements elicitation</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Defining the goals of the
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Defining the goals of the
                     web app</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting business
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Documenting business
                     requirements</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting non-functional
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Documenting non-functional
                     requirements</li>
                 </ul>
-                <div class="absolute top-4 right-4 text-3xl font-bold text-pink-300 opacity-30">02</div>
+                <div class="absolute top-4 right-4 text-5xl font-bold  opacity-50">
+                  <span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">02</span>
+                </div>
               </div>
 
               <div class="relative bg-white border rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="200">
-                <p class="text-xs text-gray-500 uppercase">Stage 3.</p>
-                <h3
-                  class="text-2xl font-bold bg-gradient-to-r from-purple-800 to-red-500 text-transparent bg-clip-text mb-4">
-                  Prototyping and tests</h3>
+                <p class="text-s text-black uppercase">Stage 3.</p>
+                <h3 class="text-2xl font-bold mb-4">
+                  <span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+                    Prototyping and tests</span>
+                </h3>
                 <p class="text-gray-600 mb-4">
                   We build and test prototypes to gather early feedback and refine the concept before development.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-800">
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Business analysis &
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Business analysis &
                     requirements elicitation</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Defining the goals of the
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Defining the goals of the
                     web app</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting business
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Documenting business
                     requirements</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting non-functional
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Documenting non-functional
                     requirements</li>
                 </ul>
-                <div class="absolute top-4 right-4 text-3xl font-bold text-pink-300 opacity-30">03</div>
+                <div class="absolute top-4 right-4 text-5xl font-bold  opacity-50"><span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">03</span>
+                </div>
               </div>
 
               <div class="relative bg-white border rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="300">
-                <p class="text-xs text-gray-500 uppercase">Stage 4.</p>
-                <h3
-                  class="text-3xl font-bold bg-gradient-to-r from-purple-800 to-red-500 text-transparent bg-clip-text mb-4">
-                  UX/UI design</h3>
+                <p class="text-s text-black uppercase">Stage 4.</p>
+                <h3 class="text-3xl font-bold mb-4"><span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+                    UX/UI design</span></h3>
                 <p class="text-gray-600 mb-4">
                   Crafting seamless and intuitive user experiences based on user behavior and usability principles.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-800">
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Business analysis &
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Business analysis &
                     requirements elicitation</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Defining the goals of the
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Defining the goals of the
                     web app</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting business
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Documenting business
                     requirements</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting non-functional
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Documenting non-functional
                     requirements</li>
                 </ul>
-                <div class="absolute top-4 right-4 text-3xl font-bold text-pink-300 opacity-30">04</div>
+                <div class="absolute top-4 right-4 text-5xl font-bold  opacity-50"><span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+                    04</div>
               </div>
 
               <div class="relative bg-white border rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="400">
-                <p class="text-xs text-gray-500 uppercase">Stage 5.</p>
-                <h3
-                  class="text-3xl font-bold bg-gradient-to-r from-purple-800 to-red-500 text-transparent bg-clip-text mb-4">
-                  Launch and support</h3>
+                <p class="text-s text-black uppercase">Stage 5.</p>
+                <h3 class="text-3xl font-bold  mb-4"> <span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+                    Launch and support</span></h3>
                 <p class="text-gray-600 mb-4">
                   We help deploy your web application and provide continuous support for smooth operation.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-800">
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Business analysis &
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Business analysis &
                     requirements elicitation</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Defining the goals of the
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Defining the goals of the
                     web app</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting business
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Documenting business
                     requirements</li>
-                  <li class="flex items-start"><span class="text-pink-600 mr-2 mt-1">✔</span> Documenting non-functional
+                  <li class="flex items-start"><span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
+                    Documenting non-functional
                     requirements</li>
                 </ul>
-                <div class="absolute top-4 right-4 text-3xl font-bold text-pink-300 opacity-30">05</div>
+                <div class="absolute top-4 right-4 text-5xl font-bold  opacity-50">
+                  <span
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">05</span>
+                </div>
               </div>
             </div>
 
@@ -833,74 +911,111 @@
   </div>
 
   <!-- section 5  why amazefox -->
-  <!-- <div class="bg-gradient-to-br from-[#cad5ff] to-[#03001e] text-white"> -->
-  <div class="bg-gradient-to-r from-zinc-50 to-white-zinc-500 text-white max-w-7xl mx-auto">
-    <section class="py-16 px-4 md:px-20 relative overflow-hidden">
-      <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-10  text-black">
-        <div>
-          <h3 class="text-sm text-red-500 font-semibold mb-2" data-aos="fade-up">TECHNOLOGY STACK</h3>
-          <h2 class="text-3xl md:text-5xl font-bold text-black mb-10" data-aos="fade-up" data-aos-delay="100">
-            Why choose Amazefox Web as your ideal partner?
-          </h2>
-        </div>
-        <p class="mt-4 text-gray-600 text-base leading-relaxed max-w-md">
-          We believe you deserve a web design agency with experience and versatility. Our expert designers stay ahead of
-          industry trends and use best practices to create websites that not only look great but also drive user
-          engagement and boost sales.
-        </p>
-        <div>
+  <div class="bg-[url(/img/img-con/whyus_bg.svg)] bg-cover  text-white relative bg-blend-multiply">
+    <div
+      class="absolute inset-0  -z-[1] bg-[url('./img/img-con/whyus_bottom_dotted.svg')] bg-no-repeat   bg-opacity-50 ">
+    </div>
 
-        </div>
-      </div>
-      <!-- Counters Grid -->
+    <div class="text-white max-w-7xl mx-auto ">
+      <section class="py-16 px-4 md:px-20 relative overflow-hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-10  text-black">
+          <div>
+            <h3 class="text-sm text-red-500 font-semibold mb-2" data-aos="fade-up">
+              <span
+                class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">TECHNOLOGY
+                STACK</span>
+            </h3>
+            <h2 class="text-3xl md:text-4xl font-black text-black mb-10" data-aos="fade-up" data-aos-delay="100">
+              Why choose Amazefox Web as your ideal partner?
+            </h2>
+          </div>
+          <p class="mt-4 text-gray-600 text-base leading-relaxed max-w-md">
+            We believe you deserve a web design agency with experience and versatility. Our expert designers stay ahead
+            of
+            industry trends and use best practices to create websites that not only look great but also drive user
+            engagement and boost sales.
+          </p>
+          <div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-center text-black">
-        <!-- Years of Experience -->
-        <div data-aos="fade-up" data-aos-delay="200">
-          <img src="./img/icons/ic_user-exp.svg" alt="" class="mx-auto h-10 mb-2">
-          <div class="stat-number text-purple-700"><span data-countup>16</span>+</div>
-          <p class="text-sm">Years of Experience</p>
+          </div>
         </div>
-        <!-- Websites Designed -->
-        <div data-aos="fade-up" data-aos-delay="300">
-          <img src="./img/icons/ic_app--develope.svg" alt="" class="mx-auto h-10 mb-2">
-          <div class="stat-number text-purple-700"><span data-countup>2400</span>+</div>
-          <p class="text-sm">Website Designed</p>
-        </div>
-        <!-- Client Retention -->
-        <div data-aos="fade-up" data-aos-delay="400">
-          <img src="./img/icons/ic_client-financing.svg" alt="" class="mx-auto h-10 mb-2">
-          <div class="stat-number text-pink-600"><span data-countup>99</span>%</div>
-          <p class="text-sm">Client Retention</p>
-        </div>
-        <!-- Happy Customers -->
-        <div data-aos="fade-up" data-aos-delay="500">
-          <img src="./img/icons/ic_heart-health.svg" alt="" class="mx-auto h-10 mb-2">
-          <div class="stat-number text-pink-600"><span data-countup>300</span>+</div>
-          <p class="text-sm">Happy Customers</p>
-        </div>
-        <!-- Customisable Designs -->
-        <div data-aos="fade-up" data-aos-delay="600">
-          <img src="./img/icons/ic_natural-language.svg" alt="" class="mx-auto h-10 mb-2">
-          <div class="stat-number text-pink-600"><span data-countup>100</span>%</div>
-          <p class="text-sm">Customisable Designs</p>
-        </div>
-      </div>
+        <!-- Counters Grid -->
 
-      <!-- CTA Box -->
-      <div
-        class="mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-purple-700 to-pink-500 text-white flex flex-col md:flex-row items-center justify-between gap-4"
-        data-aos="zoom-in-up" data-aos-delay="200">
-        <div>
-          <h3 class="text-2xl font-bold">Ready to innovate and drive and impact?</h3>
-          <p class="text-sm mt-1">Transforming Businesses with Technology that transcends geographies and Platforms</p>
-        </div>
-        <a href="#" class="bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
-          Get a Free Quote →
-        </a>
-      </div>
-    </section>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-center text-black">
+          <!-- Years of Experience -->
+          <div data-aos="fade-up" data-aos-delay="200">
+            <img src="./img/icons/ic_user-exp.svg" alt="" class="mx-auto h-10 mb-2">
 
+            <div
+              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+              <span data-countup
+                class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">16</span>+
+            </div>
+            <p class="text-sm">Years of Experience</p>
+          </div>
+          <!-- Websites Designed -->
+          <div data-aos="fade-up" data-aos-delay="300">
+            <img src="./img/icons/ic_app--develope.svg" alt="" class="mx-auto h-10 mb-2">
+            <div
+              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+              <span data-countup
+                class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">2400</span>+
+            </div>
+
+            <p class="text-sm">Website Designed</p>
+          </div>
+          <!-- Client Retention -->
+          <div data-aos="fade-up" data-aos-delay="400">
+            <img src="./img/icons/ic_client-financing.svg" alt="" class="mx-auto h-10 mb-2">
+            <div
+              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+              <span data-countup
+                class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">99</span>%
+            </div>
+            <p class="text-sm">Client Retention</p>
+          </div>
+          <!-- Happy Customers -->
+          <div data-aos="fade-up" data-aos-delay="500">
+            <img src="./img/icons/ic_heart-health.svg" alt="" class="mx-auto h-10 mb-2">
+            <div
+              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+              <span data-countup
+                class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">300</span>+
+            </div>
+
+            <p class="text-sm">Happy Customers</p>
+          </div>
+          <!-- Customisable Designs -->
+          <div data-aos="fade-up" data-aos-delay="600">
+            <img src="./img/icons/ic_natural-language.svg" alt="" class="mx-auto h-10 mb-2">
+            <div
+              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+              <span data-countup
+                class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">100</span>%
+            </div>
+
+            <p class="text-sm">Customisable Designs</p>
+          </div>
+        </div>
+
+        <!-- CTA Box -->
+        <div class="mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
+ text-white flex flex-col md:flex-row items-center justify-between gap-4" data-aos="zoom-in-up" data-aos-delay="200">
+          <div>
+            <h3 class="text-2xl font-bold">Ready to innovate and drive and impact?</h3>
+            <p class="text-sm mt-1">Transforming Businesses with Technology that transcends geographies and Platforms
+            </p>
+          </div>
+          <a href="#" class="bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
+            Get a Free Quote →
+          </a>
+        </div>
+      </section>
+
+    </div>
+    <div
+      class="absolute inset-0  -z-[1] bg-[url('./img/img-con/whyus_top_dotted.svg')] bg-no-repeat     bg-opacity-50 ">
+    </div>
   </div>
 
   <!-- section 6 project portfolio  -->
@@ -908,7 +1023,10 @@
     <!-- Section Title -->
     <div class="flex items-center justify-between">
       <div>
-        <p class="text-sm text-purple-600 font-medium uppercase">Portfolio</p>
+        <p class="text-sm text-purple-600 font-medium uppercase">
+          <span class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+            Portfolio</span>
+        </p>
         <h2 class="text-3xl md:text-5xl font-bold mt-2 mb-2">
           Our recent <span class="text-black">web design projects</span>
         </h2>
@@ -1030,7 +1148,10 @@
 
   <!-- Header -->
   <section class="text-center px-4 py-10">
-    <h3 class="text-sm text-purple-500 font-semibold uppercase tracking-wide">Technology Stack</h3>
+    <h3 class="text-sm text-purple-500 font-semibold uppercase tracking-wide">
+      <span class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+        Technology Stack</span>
+    </h3>
     <h1 class="text-3xl md:text-5xl font-bold my-2">Industry Expertise</h1>
     <p class="max-w-2xl mx-auto text-gray-600 text-sm md:text-base">
       Putting forth our more than 16+ years of expertise to transform businesses digitally regardless of the industry.
@@ -1184,7 +1305,7 @@
 
     <!-- CTA Box -->
     <div
-      class="mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-purple-700 to-pink-500 text-white flex flex-col md:flex-row items-center justify-between gap-4"
+      class="mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col md:flex-row items-center justify-between gap-4"
       data-aos="zoom-in-up" data-aos-delay="200">
       <div>
         <h3 class="text-2xl font-bold">Ready to innovate and drive and impact?</h3>
@@ -1247,10 +1368,13 @@
     <section class="max-w-6xl mx-auto px-4 py-16">
 
       <!-- Header -->
-      <div class="text-center mb-10">
-        <h5 class="text-pink-600 font-semibold uppercase">Testimonials</h5>
+      <div class="mb-10">
+        <h5 class="text-pink-600 font-semibold uppercase">
+          <span
+            class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Testimonials</span>
+        </h5>
         <h2 class="text-3xl md:text-5xl font-extrabold my-2">What Do Client Say About<br>Web App Design</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto text-sm">
+        <p class="text-gray-600 max-w-2xl  text-sm">
           At Start Designs, our top priority is your satisfaction. Since the day we began, we've been committed to
           delivering projects with 100% satisfaction for our clients.
           We achieve this success when we fully comprehend your needs and you reciprocate our understanding.
@@ -1266,7 +1390,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 m-6  lg:grid-cols-2 gap-6">
 
             <!-- Testimonial 1 -->
-            <div class="bg-white rounded-2xl shadow-md    p-6 w-full  ">
+            <div class="bg-white rounded-2xl shadow-xl    p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
               <p class="text-sm text-gray-800 mb-6">
                 "Very good web designer. Will continue to work with. He understand what you want is determine to do the
@@ -1284,7 +1408,7 @@
 
 
             <!-- Testimonial 2 -->
-            <div class="bg-blue-100 rounded-2xl shadow-md    p-6 w-full  ">
+            <div class="bg-blue-100 rounded-2xl shadow-xl    p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
               <p class="text-sm text-gray-800 mb-6">
                 "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
@@ -1302,7 +1426,7 @@
 
           </div>
           <!-- Bottom Row (Full Width) -->
-          <div class="bg-gray-100 rounded-2xl shadow-md   p-6 w-full">
+          <div class="bg-gray-100 rounded-2xl shadow-xl   p-6 w-full">
             <div class="text-4xl mb-3 font-serif">“</div>
             <p class="text-sm text-gray-800 mb-6">
               "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
@@ -1323,7 +1447,7 @@
         <div>
 
           <!-- Top Row (Full Width) -->
-          <div class="bg-gray-100 rounded-2xl shadow-md   p-6 w-full">
+          <div class="bg-gray-100 rounded-2xl shadow-xl   p-6 w-full">
             <div class="text-4xl mb-3 font-serif">“</div>
             <p class="text-sm text-gray-800 mb-6">
               "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
@@ -1340,7 +1464,7 @@
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 m-6  lg:grid-cols-2 gap-6">
             <!-- Testimonial 1 -->
-            <div class="bg-white rounded-2xl shadow-md   p-6 w-full  ">
+            <div class="bg-white rounded-2xl shadow-xl   p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
               <p class="text-sm text-gray-800 mb-6">
                 "Very good web designer. Will continue to work with. He understand what you want is determine to do the
@@ -1357,7 +1481,7 @@
             </div>
 
             <!-- Testimonial 2 -->
-            <div class="bg-blue-100 rounded-2xl shadow-md    p-6 w-full  ">
+            <div class="bg-blue-100 rounded-2xl shadow-xl    p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
               <p class="text-sm text-gray-800 mb-6">
                 "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
@@ -1393,8 +1517,8 @@
       <!-- Heading -->
       <div class="mb-12 ">
         <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
-          Our Clients are superheroes. We priorities 
-          Delivering excellent Products, through  
+          Our Clients are superheroes. We priorities
+          Delivering excellent Products, through
           Training and Optimal Excusions
         </h2>
       </div>
@@ -1591,7 +1715,7 @@
           <p class="text-gray-300 mb-6">Transforming Businesses with Technology that transcends geographies and
             Platforms</p>
           <a href="#"
-            class="inline-block bg-gradient-to-r from-[#720C7D] to-[#E61F4A] text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">
+            class="inline-block bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">
             Get a Free Quote →
           </a>
         </div>
@@ -1607,10 +1731,13 @@
 
     <section class="max-w-6xl mx-auto px-4 py-16 relative">
       <!-- Heading -->
-      <div class="text-center mb-12">
-        <p class="text-sm text-pink-600 font-semibold uppercase">Questions & Answers</p>
+      <div class="text-start mb-12">
+        <p class="text-sm   font-semibold uppercase">
+          <span class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+            Questions & Answers</span>
+        </p>
         <h2 class="text-3xl md:text-4xl font-bold mt-2">Frequently Asked Questions</h2>
-        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">We hope these questions and answers guide you in choosing the
+        <p class="text-gray-500 mt-4 max-w-3xl ">We hope these questions and answers guide you in choosing the
           right web design partner for your business’s digital transformation. If you have any more questions, feel free
           to reach out!</p>
       </div>
@@ -1618,7 +1745,8 @@
       <!-- FAQ Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="faq-container">
         <!-- Item -->
-        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+          onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-lg flex justify-between items-center">
             How long does the web design process take?
             <span class="toggle-icon">→</span>
@@ -1629,7 +1757,8 @@
           </p>
         </div>
 
-        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+        <div class="bg-white rounded-xlborder-[1.5px] border-zinc-200  shadow-xl p-6 cursor-pointer transition"
+          onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-lg flex justify-between items-center">
             Will my website be mobile-friendly and responsive?
             <span class="toggle-icon">→</span>
@@ -1640,7 +1769,8 @@
         </div>
 
         <!-- More Items (You can duplicate this block as needed) -->
-        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+          onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-lg flex justify-between items-center">
             Can you redesign my existing website?
             <span class="toggle-icon">↓</span>
@@ -1650,7 +1780,8 @@
           </p>
         </div>
 
-        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+          onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-lg flex justify-between items-center">
             Do you offer custom web design or do you use templates?
             <span class="toggle-icon">↓</span>
@@ -1661,7 +1792,8 @@
           </p>
         </div>
         <!-- More Items (You can duplicate this block as needed) -->
-        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+          onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-lg flex justify-between items-center">
             What does a web design project typically cost?
             <span class="toggle-icon">↓</span>
@@ -1671,7 +1803,8 @@
           </p>
         </div>
 
-        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+          onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-lg flex justify-between items-center">
             Will I be able to manage and update my website on my own?
             <span class="toggle-icon">↓</span>
@@ -1682,7 +1815,8 @@
           </p>
         </div>
         <!-- More Items (You can duplicate this block as needed) -->
-        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+          onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-lg flex justify-between items-center">
             What kind of post-launch support do you provide?
             <span class="toggle-icon">↓</span>
@@ -1692,7 +1826,8 @@
           </p>
         </div>
 
-        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+          onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-lg flex justify-between items-center">
             Will my website be optimized for search engines (SEO)?
             <span class="toggle-icon">↓</span>
@@ -1702,7 +1837,8 @@
             solutions.
           </p>
         </div>
-        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+          onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-lg flex justify-between items-center">
             Can you help with content creation for my website?
             <span class="toggle-icon">↓</span>
@@ -1712,7 +1848,8 @@
           </p>
         </div>
 
-        <div class="bg-white rounded-xl shadow-md p-6 cursor-pointer transition" onclick="toggleAccordion(this)">
+        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+          onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-lg flex justify-between items-center">
             How do I start the web design process with AmazeWeb?
             <span class="toggle-icon">↓</span>
@@ -1737,10 +1874,9 @@
 
 
   <!-- enquiry section  -->
-  <div class="bg-gradient-to-br from-[#0d0b1d] to-[#1e014e]  bg-blend-multiply   text-white font-sans" style="background-image: url('./img/img-con/contact_bot_curve.svg'), url('./img/img-con/contact_all_curve.svg'),url('./img/img-con/contact_main_bg.svg'); 
-     background-blend-mode: normal, multiply, screen; background-repeat:no-repeat; background-position:center;background-size:cover;
-           ">
-
+  <div
+    class=" bg-blend-multiply bg-cover -z-[0]  text-white font-sans relative bg-[url('./img/img-con/contact_main_bg.svg')]">
+    <div class="absolute inset-0  -z-[1] bg-[url('./img/img-con/contact_all_curve.svg')] bg-opacity-50 bg-cover"></div>
     <section class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center p-20 gap-10">
 
       <!-- LEFT SECTION -->
@@ -1816,7 +1952,9 @@
       </div>
 
       <!-- RIGHT SECTION - FORM -->
-      <div class="w-full lg:w-1/2 bg-[#191227] p-8 rounded-2xl border border-pink-500 shadow-xl space-y-6">
+      <div
+        class=" w-full lg:w-1/2 bg-[#191227]  bg-[url(./img/img-con/c_form_glassy_bg.svg)] p-8 rounded-2xl shadow-xl space-y-6">
+
         <h3 class="text-2xl font-semibold">Speak with Our Experts</h3>
         <p class="text-gray-400 text-sm">Start growing your business with us</p>
 
@@ -1848,7 +1986,7 @@
             class="w-full px-4 py-3 rounded-md bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
 
           <button type="submit"
-            class="w-full bg-gradient-to-r from-[#720C7D] to-[#E61F4A] py-3 rounded-md text-white font-semibold hover:opacity-90 transition">
+            class="w-full bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-md text-white font-semibold hover:opacity-90 transition">
             Submit →
           </button>
         </form>
@@ -1861,8 +1999,8 @@
 
 
   <!-- Footer section  -->
-  <section class="bg-gradient-to-br from-[#1a0c2c]  to-[#000018] text-white ">
-
+  <section class="relative text-white bg-black bg-cover bg-center  bg-[url(./img/img-con/footer_glassy_bg.svg)]">
+    <div class="absolute inset-0  bg-opacity-50"></div>
     <!-- Contact Form Section -->
     <div class="max-w-7xl mx-auto px-6 py-10 text-center md:text-left">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -1873,7 +2011,8 @@
             class="px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none">
           <input type="email" placeholder="Email Address"
             class="px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none">
-          <button class="bg-gradient-to-r from-pink-500 to-red-500 px-6 py-2 rounded-full text-white font-semibold">Send
+          <button
+            class="bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] px-6 py-2 rounded-full text-white font-semibold">Send
             →</button>
         </div>
       </div>
