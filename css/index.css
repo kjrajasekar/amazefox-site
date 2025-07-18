@@ -13,8 +13,19 @@ p,li{
    font-family: "Be Vietnam Pro" !important;
    font-weight: 400;
 }
+.footer li{
+  font-family: "Roboto" !important;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  opacity:0.4;
+  margin-bottom: 8px;
+}
 
-
+.footer label{
+  color: white !important;
+  opacity: 1 !important;
+}
 /* section 2 styles  */
 .side-design {
   background-image: url('./../img/design_01.svg');
