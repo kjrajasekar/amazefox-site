@@ -1,51 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Video Testimonial Card</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scroll Step Progress Bar</title>
+  <style>
+    
+
+    .step-container {
+      position: fixed;
+      top: 25%;
+      left: 50%;
+      transform: translateY(-50%);
+    }
+
+    .progress-line {
+      position: absolute;
+      left: 20%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #ccc;
+      z-index: 0;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      margin: 40px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .circle {
+      width: 24px;
+      height: 24px;
+      background: #ccc;
+      border-radius: 50%;
+      border: 4px solid orange;
+      transition: background 0.3s;
+    }
+
+    .step.active .circle {
+      background:linear-gradient(pink,red) /* Indigo */
+    }
+
+    /* Scroll sections */
+    .section {
+      height: 100vh;
+      padding-left: 100px;
+      padding-top: 40px;
+    }
+
+    .section:nth-child(even) {
+      background: #f0f0f0;
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 min-h-screen flex items-center justify-center p-6">
+<body>
 
-  <!-- Testimonial Card -->
-  <div class="relative w-[350px] h-[250px] rounded-2xl overflow-hidden shadow-2xl  text-white p-5 bg-url[/img/img-con/video_test_2.svg]">
-
-
-    <!-- Content Layer -->
-    <div class="relative z-10 h-full flex flex-col justify-between">
-
-      <!-- Logo -->
-      <div class="flex items-center space-x-2">
-        <img src="https://i.ibb.co/0VHZnWc/logo.png" alt="amazefox" class="h-5 w-5">
-        <span class="font-semibold text-sm uppercase tracking-wide">amazefox</span>
-      </div>
-
-      <!-- Quote -->
-      <div>
-        <p class="text-sm leading-snug mt-4">
-          <span class="text-2xl text-purple-200 font-bold">“</span>
-          Our Clients are superheroes. We prioritize delivering excellent products, through training and optimal executions.
-        </p>
-      </div>
-
-      <!-- Client Info -->
-      <div class="mt-4">
-        <p class="font-semibold text-blue-400">truecare24</p>
-        <p class="text-xs text-gray-200">CTO, Healthcare Solutions</p>
-      </div>
+  <!-- Step Progress Bar -->
+  <div class="step-container">
+    <div class="progress-line"></div>
+    <div class="step" id="step-1">
+      <div class="circle"></div>
+      <div class="label">Step 1</div>
     </div>
-
-    <!-- Play Button -->
-    <button class="absolute inset-0 flex items-center justify-center z-20">
-      <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M8 5v14l11-7z"/>
-        </svg>
-      </div>
-    </button>
-
+    <div class="step" id="step-2">
+      <div class="circle"></div>
+      <div class="label">Step 2</div>
+    </div>
+    <div class="step" id="step-3">
+      <div class="circle"></div>
+      <div class="label">Step 3</div>
+    </div>
+    <div class="step" id="step-4">
+      <div class="circle"></div>
+      <div class="label">Step 4</div>
+    </div>
   </div>
+
+  <!-- Scroll Sections -->
+  <div class="section" data-step="1">
+    <h2>Step 1: Introduction</h2>
+    <p>Scroll down to progress...</p>
+  </div>
+  <div class="section" data-step="2">
+    <h2>Step 2: Details</h2>
+  </div>
+  <div class="section" data-step="3">
+    <h2>Step 3: Review</h2>
+  </div>
+  <div class="section" data-step="4">
+    <h2>Step 4: Complete</h2>
+  </div>
+
+  <!-- JavaScript: Scroll-Based Activation -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const steps = document.querySelectorAll('.step');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          const stepId = entry.target.getAttribute('data-step');
+          const step = document.getElementById(`step-${stepId}`);
+          if (entry.isIntersecting) {
+            step.classList.add('active');
+          } else {
+            step.classList.remove('active');
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 
 </body>
 </html>
