@@ -4,34 +4,37 @@
 } */
 
 
-h1,h2,h3,h4,h5,h6,.ft-rob{
-font-family: "Roboto" !important;
-   font-weight: 400;
+.ft-rob {
+  font-family: "Roboto" !important;
+  font-weight: 400;
 }
 
-p,li, .ft-vit{
-   font-family: "Be Vietnam Pro" !important;
-   font-weight: 400;
+.ft-vit,body {
+  font-family: "Be Vietnam Pro" !important;
+  font-weight: 400;
 }
-.bd-grad{
+
+.bd-grad {
   border-radius: 25px;
- border-width: 4px;
+  border-width: 4px;
   border-style: solid;
   border-image: linear-gradient(to right, darkblue, darkorchid) 1
 }
-.footer li{
+
+.footer li {
   font-family: "Roboto" !important;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
-  opacity:0.4;
+  opacity: 0.4;
   margin-bottom: 8px;
 }
 
-.footer label{
+.footer label {
   color: white !important;
   opacity: 1 !important;
 }
+
 /* section 2 styles  */
 .side-design {
   background-image: url('./../img/design_01.svg');
@@ -134,11 +137,12 @@ p,li, .ft-vit{
   border: 2px solid #eee;
 }
 
-.icon-img{
-margin: 0 auto;
-height: 24px;
-vertical-align: middle;
+.icon-img {
+  margin: 0 auto;
+  height: 24px;
+  vertical-align: middle;
 }
+
 /* Custom flicker keyframes */
 @keyframes flicker {
 
@@ -193,6 +197,19 @@ vertical-align: middle;
 
 }
 
+/* .neumorphic-boxs {
+  background: linear-gradient(145deg, #000, #000);
+  box-shadow:
+    6px 6px 12px rgba(255, 255, 255, 0.1),
+    -6px -6px 12px rgba(255, 255, 255, 0.7),
+    inset 0 0 0 12px rgba(255, 255, 255, 0.3),
+    inset 0 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
+  height: 80px;
+  width: 80px;
+  padding: 25px; 
+  margin:10px
+} */
 .neumorphic-box {
   background: linear-gradient(145deg, #ffffff, #f1f1f1);
   box-shadow:
@@ -203,8 +220,8 @@ vertical-align: middle;
   border-radius: 1.5rem;
   height: 80px;
   width: 80px;
-  padding: 25px; 
-  margin:10px
+  padding: 25px;
+  margin: 10px
 }
 
 @media (max-width: 600px) {
