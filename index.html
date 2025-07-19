@@ -1562,10 +1562,18 @@
   <div class=" text-white bg-[url(./img/video_bg.svg)]   bg-no-repeat bg-top bg-[length:100%_auto]">
 
     <section class="max-w-7xl mx-auto px-6 py-16 md:py-40   relative">
-
+      <!-- Arrows -->
+      <div class="hidden md:flex items-center space-x-2 absolute right-20 top-60">
+        <button class="w-20 h-20 bg-black   text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+          <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
+        </button>
+        <button class="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+          <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
+        </button>
+      </div>
       <!-- Heading -->
       <div class="mb-12 ">
-        <h2 class="text-3xl md:text-5xl max-w-5xl font-bold leading-tight">
+        <h2 class="ft-vit font-extrabold text-[35px] leading-[40px] max-w-4xl  ">
           Our Clients are superheroes. We priorities
           Delivering excellent Products, through
           Training and Optimal Excusions
@@ -1581,7 +1589,7 @@
           class="bg-[url(./img/img-con/video_test_1.svg)]  bg-contain bg-center bg-no-repeat p-[55px]  rounded-2xl p-6 w-full md:w-1/2 relative overflow-hidden">
           <a class="popup-youtube" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
             <!-- Testimonial Card -->
-            <div class="  w-[250px] h-[250px] rounded-2xl overflow-hidden shadow-2xl  text-white p-5 ">
+            <div class="  w-[250px] h-[250px] rounded-2xl overflow-hidden   text-white p-5 ">
 
 
               <!-- Content Layer -->
@@ -1626,7 +1634,7 @@
           class="bg-[url(./img/img-con/video_test_2.svg)] bg-contain bg-center bg-no-repeat p-[55px]  rounded-2xl p-6 w-full md:w-1/2 relative overflow-hidden">
           <a class="popup-youtube" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
             <!-- Testimonial Card -->
-            <div class=" w-[250px] h-[250px] rounded-2xl overflow-hidden shadow-2xl  text-white p-5 ">
+            <div class=" w-[250px] h-[250px] rounded-2xl overflow-hidden   text-white p-5 ">
 
 
               <!-- Content Layer -->
@@ -1692,15 +1700,18 @@
       <div class="mb-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-1 ">
           <div class=" ">
-            <p class="uppercase text-[18px] text-white opacity-80 font-medium mb-2">What Makes Us Different</p>
-            <h2 class="text-[50px] font-black leading-[55px] mb-6">What Makes Every Amazfox Web App Design Stand
+            <p class="uppercase text-[18px] text-white opacity-80 font-medium mb-2 ft-vit">What Makes Us Different</p>
+            <h2 class="text-[50px] font-black leading-[55px] mb-6 ft-vit">What Makes Every Amazfox Web App Design Stand
               Out</h2>
           </div>
           <div>
 
-            <p class="  text-white text-[17px]">
-              At Amazfox, we take a strategic, user-focused approach to every digital product we craft. Our web app
-              designs are built not just for visual impact—but for usability, performance, and long-term scalability.
+            <p class="  text-white text-[17px] ft-rob leading-[21px]">
+              At Amazefox, we take a strategic, user-focused approach to every digital product we craft. Our web app
+              designs are built not just for visual impact—but for usability,
+              performance, and long-term scalability. Every project we deliver is aligned with your goals and rooted in
+              best practices that turn digital experiences into business results. Here’s what we focus on in every
+              successful web project:
             </p>
           </div>
         </div>
@@ -1709,61 +1720,79 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
 
           <!-- Card -->
-            
-          <div
-            class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] px-6 py-10 rounded-2xl border border-white/10 img-zoom relative">
-            <div
-              class="bg-[url(/img/img-con/feature_list_bg.svg)] inset-0 rounded-2xl bg-opacity-50 absolute object-cover">
-            </div>
-            <img src="./img/sm-icon/ic-muser.svg" class="w-8 mb-4" alt="Icon">
-            <h3 class="text-lg font-semibold mb-2">User-Centric Architecture</h3>
-            <p class="text-sm text-gray-300">We prioritize the end-user experience from day one. Our team carefully
-              structures...</p>
+
+          <div class="bg-[url('./img/img-con/footer_glassy_bg.svg')] bg-cover p-6 rounded-2xl border border-white border-opacity-40 img-zoom">
+
+            <img src="./img/sm-icon/ic-muser.svg" class="mb-4" alt="Icon">
+            <h3 class="text-[24px] font-black leading-[26px] mb-5 ft-vit">User-Centric Architecture</h3>
+            <p class=" text-white ft-rob text-[16px]">
+              We prioritize the end-user experience from day one. Our team carefully structures intuitive navigation and
+              logical content flow that allow users to complete tasks effortlessly. It drives stronger user engagement,
+              effortless flow, and overall satisfaction.</p>
           </div>
 
           <!-- Repeat for 7 other cards -->
-          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
-            <img src="./img/sm-icon/ic-mresp.svg" class="w-8 mb-4" alt="Icon">
-            <h3 class="text-lg font-semibold mb-2">Responsive & Device-Ready Layouts</h3>
-            <p class="text-sm text-gray-300">From widescreen desktops to smartphones and everything in between...</p>
+          <div class="  bg-[url('./img/img-con/footer_glassy_bg.svg')] bg-cover p-6 rounded-2xl border border-white border-opacity-40 img-zoom">
+            <img src="./img/sm-icon/ic-mresp.svg" class=" mb-4" alt="Icon">
+            <h3 class="text-[24px] font-black leading-[26px] ft-vit mb-5">Responsive & Device-Ready Layouts</h3>
+            <p class="text-white ft-rob text-[16px]">
+              From widescreen desktops to smartphones and everything in between, we ensure flawless responsiveness. Our
+              design team creates adaptable interfaces that maintain consistency across all devices—enhancing usability
+              and trust in your brand.</p>
           </div>
 
-          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
-            <img src="./img/sm-icon/ic-mspeed.svg" class="w-8 mb-4" alt="Icon">
-            <h3 class="text-lg font-semibold mb-2">High-Speed Performance</h3>
-            <p class="text-sm text-gray-300">We speed up load times, minimize bounce, and enhance engagement...</p>
+          <div class="bg-[url('./img/img-con/footer_glassy_bg.svg')] bg-cover p-6 rounded-2xl border border-white border-opacity-40 img-zoom">
+            <img src="./img/sm-icon/ic-mspeed.svg" class=" mb-4" alt="Icon">
+            <h3 class="text-[24px] font-black leading-[26px] ft-vit mb-5">High-Speed Performance</h3>
+            <p class="text-white ft-rob text-[16px]">
+              Speed directly affects user retention and conversion. We optimize design assets, compress code, and reduce
+              page load times to ensure your app is as fast as it is functional. An optimized app enhances both user
+              satisfaction and your bottom line.</p>
           </div>
 
-          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
-            <img src="./img/sm-icon/ic-mscale.svg" class="w-8 mb-4" alt="Icon">
-            <h3 class="text-lg font-semibold mb-2">Scalable Design Systems</h3>
-            <p class="text-sm text-gray-300">Build once, scale forever. Our systems ensure consistency and updates are
-              easy...</p>
+          <div class="bg-[url('./img/img-con/footer_glassy_bg.svg')] bg-cover p-6 rounded-2xl border border-white border-opacity-40 img-zoom">
+            <img src="./img/sm-icon/ic-mscale.svg" class=" mb-4" alt="Icon">
+            <h3 class="text-[24px] font-black leading-[26px] ft-vit mb-5">Scalable Design Systems</h3>
+            <p class="text-white ft-rob text-[16px]">
+              Your product should evolve without a full redesign. That’s why we use a scalable component-based structure
+              that allows for easy expansion. Our web app designing methodology ensures visual consistency, faster
+              updates, and long-term flexibility.</p>
           </div>
 
-          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
-            <img src="./img/sm-icon/ic-msecurity.svg" class="w-8 mb-4" alt="Icon">
-            <h3 class="text-lg font-semibold mb-2">Security-First Approach</h3>
-            <p class="text-sm text-gray-300">We implement HTTPS, secure auth, and encryption from the start...</p>
+          <div class="bg-[url('./img/img-con/footer_glassy_bg.svg')] bg-cover p-6 rounded-2xl border border-white border-opacity-40 img-zoom">
+            <img src="./img/sm-icon/ic-msecurity.svg" class=" mb-4" alt="Icon">
+            <h3 class="text-[24px] font-black leading-[26px] ft-vit mb-5">Security-First Approach</h3>
+            <p class="text-white ft-rob text-[16px]">
+              Security is embedded into every layer of your app. We follow secure design standards—such as HTTPS, user
+              authentication, and protected data flows—to minimize risk while keeping the user experience smooth and
+              seamless.</p>
           </div>
 
-          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
-            <img src="./img/sm-icon/ic-maccess.svg" class="w-8 mb-4" alt="Icon">
-            <h3 class="text-lg font-semibold mb-2">Accessibility & Inclusivity</h3>
-            <p class="text-sm text-gray-300">WCAG 2.1 compliance, contrast ratios, screen reader support...</p>
+          <div class="bg-[url('./img/img-con/footer_glassy_bg.svg')] bg-cover p-6 rounded-2xl border border-white border-opacity-40 img-zoom">
+            <img src="./img/sm-icon/ic-maccess.svg" class=" mb-4" alt="Icon">
+            <h3 class="text-[24px] font-black leading-[26px] ft-vit mb-5">Accessibility & Inclusivity</h3>
+            <p class="text-white ft-rob text-[16px]">
+              We believe great design should work for everyone. Our inclusive web app designing approach complies with
+              WCAG 2.1 guidelines—supporting keyboard navigation, screen readers, and optimized contrast—so your
+              platform is accessible to all users.</p>
           </div>
 
-          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
-            <img src="./img/sm-icon/ic-mseo.svg" class="w-8 mb-4" alt="Icon">
-            <h3 class="text-lg font-semibold mb-2">SEO-Friendly Structure</h3>
-            <p class="text-sm text-gray-300">Clean HTML, fast load, semantic markup, and better discoverability...</p>
+          <div class="bg-[url('./img/img-con/footer_glassy_bg.svg')] bg-cover p-6 rounded-2xl border border-white border-opacity-40 img-zoom">
+            <img src="./img/sm-icon/ic-mseo.svg" class=" mb-4" alt="Icon">
+            <h3 class="text-[24px] font-black leading-[26px] ft-vit mb-5">SEO-Friendly Structure</h3>
+            <p class="text-white ft-rob text-[16px]">
+              Visibility begins with structure. We implement semantic HTML, meaningful metadata, and clean URLs to
+              support search engine indexing—giving your web app better
+              discoverability and long-term visibility in organic search.</p>
           </div>
 
-          <div class="bg-gradient-to-br from-[#1b1430] to-[#1c1b3a] p-6 rounded-2xl border border-white/10 img-zoom">
-            <img src="./img/sm-icon/ic-maction.svg" class="w-8 mb-4" alt="Icon">
-            <h3 class="text-lg font-semibold mb-2">Action-Oriented UI</h3>
-            <p class="text-sm text-gray-300">Drive users toward calls-to-action through strategic layout and
-              interactions...</p>
+          <div class="bg-[url('./img/img-con/footer_glassy_bg.svg')] bg-cover p-6 rounded-2xl border border-white border-opacity-40 img-zoom">
+            <img src="./img/sm-icon/ic-maction.svg" class=" mb-4" alt="Icon">
+            <h3 class="text-[24px] font-black leading-[26px] ft-vit mb-5">Action- <br /> Oriented UI</h3>
+            <p class="text-white ft-rob text-[16px]">
+              We design interfaces that move users toward your business goals. Through clear call-to-actions, engaging
+              layouts, and smart interaction cues, our web app designs help convert visits into meaningful
+              outcomes—whether sales, signups, or inquiries</p>
           </div>
 
         </div>
@@ -1771,13 +1800,16 @@
         <!-- CTA Section -->
         <div class="mt-20 text-center">
           <img src="./img/alogo.png" alt="logo" class="mx-auto mb-6 w-16 animate-bounce">
-          <h2 class="text-3xl md:text-4xl font-extrabold mb-2">Ready to innovate and drive and impact?</h2>
-          <p class="text-gray-300 mb-6">Transforming Businesses with Technology that transcends geographies and
+          <h2 class="text-[55px] font-black ft-vit leading-[40px] text-white mb-2">Ready to innovate and drive and
+            impact?</h2>
+          <p class=" ft-vit text-[20px] leading-[35px] my-6">Transforming Businesses with Technology that transcends
+            geographies and
             Platforms</p>
-          <a href="#"
-            class="inline-block bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">
-            Get a Free Quote →
-          </a>
+          <button type="submit"
+            class="relative shadow-black shadow-md w-[310px] h-[80px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white font-semibold hover:opacity-90 transition">
+            Get a Free Quote <img class="inline absolute right-[30px] top-[33px]" src="./img/img-con/btn_arrow.svg"
+              alt="" width="20">
+          </button>
         </div>
 
     </section>
@@ -1787,7 +1819,7 @@
 
 
   <!-- FAQ Section  -->
-  <div class="bg-white text-black font-sans pb-10">
+  <div class="bg-white text-black font-sans py-20">
 
     <section class="max-w-6xl mx-auto px-4 py-16 relative">
       <!-- Heading -->
@@ -1796,125 +1828,138 @@
           <span class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
             Questions & Answers</span>
         </p>
-        <h2 class="text-[55px] font-black mt-2">Frequently Asked Questions</h2>
-        <p class="text-gray-500 mt-4 max-w-3xl text-[17px]">We hope these questions and answers guide you in choosing the
-          right web design partner for your business’s digital transformation. If you have any more questions, feel free
+        <h2 class="text-[55px] font-black ">Frequently Asked Questions</h2>
+        <p class="text-gray-500 leading-[23px]   max-w-3xl text-[17px]">We hope these questions and answers guide you in
+          choosing
+          the right web design partner for your business’s digital transformation. If you have any more questions, feel
+          free
           to reach out!</p>
       </div>
 
       <!-- FAQ Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="faq-container">
         <!-- Item -->
-        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+        <div
+          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-[18px] flex justify-between items-center">
             How long does the web design process take?
-            <span class="toggle-icon">→</span>
+            <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
-          <p class="text-gray-600 mt-4 hidden text-[16px] ">
+          <p class="text-[#666666] mt-4 hidden text-[16px] ">
             The time it takes to design a website depends on the size and complexity of the project. On average, most
             websites are completed within 4 to 6 weeks. This includes every design to revisions and final testing.
           </p>
         </div>
 
-        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200  shadow-xl p-6 cursor-pointer transition"
+        <div
+          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-[18px]  flex justify-between items-center">
             Will my website be mobile-friendly and responsive?
-            <span class="toggle-icon">→</span>
+            <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
-          <p class="text-gray-600 mt-4 text-[16px]  hidden">
+          <p class="text-[#666666] mt-4 text-[16px]  hidden">
             Yes! We build responsive websites that work seamlessly on desktops, tablets, and phones.
           </p>
         </div>
 
         <!-- More Items (You can duplicate this block as needed) -->
-        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+        <div
+          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-[18px]  flex justify-between items-center">
             Can you redesign my existing website?
-            <span class="toggle-icon">→</span>
+            <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
-          <p class="text-gray-600 mt-4 text-[16px] hidden">
+          <p class="text-[#666666] mt-4 text-[16px] hidden">
             Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
           </p>
         </div>
 
-        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+        <div
+          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-[18px] flex justify-between items-center">
             Do you offer custom web design or do you use templates?
-            <span class="toggle-icon">→</span>
+            <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
-          <p class="text-gray-600 mt-4 text-[16px] hidden">
+          <p class="text-[#666666] mt-4 text-[16px] hidden">
             We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based
             solutions.
           </p>
         </div>
+
         <!-- More Items (You can duplicate this block as needed) -->
-        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+        <div
+          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3 class="font-semibold  text-[18px] flex justify-between items-center">
             What does a web design project typically cost?
-            <span class="toggle-icon">↓</span>
+            <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
-          <p class="text-gray-600 mt-4 text-[16px] hidden">
+          <p class="text-[#666666] mt-4 text-[16px] hidden">
             Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
           </p>
         </div>
 
-        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+        <div
+          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-[18px] flex justify-between items-center">
             Will I be able to manage and update my website on my own?
-            <span class="toggle-icon">↓</span>
+            <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
-          <p class="text-gray-600 mt-4 text-[16px] hidden">
+          <p class="text-[#666666] mt-4 text-[16px] hidden">
             We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based
             solutions.
           </p>
         </div>
         <!-- More Items (You can duplicate this block as needed) -->
-        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+        <div
+          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-[18px] flex justify-between items-center">
             What kind of post-launch support do you provide?
-            <span class="toggle-icon">↓</span>
+            <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
-          <p class="text-gray-600 mt-4 text-[16px] hidden">
+          <p class="text-[#666666] mt-4 text-[16px] hidden">
             Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
           </p>
         </div>
 
-        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+        <div
+          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-[18px] flex justify-between items-center">
             Will my website be optimized for search engines (SEO)?
-            <span class="toggle-icon">↓</span>
+            <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
-          <p class="text-gray-600 mt-4 text-[16px] hidden">
+          <p class="text-[#666666] mt-4 text-[16px] hidden">
             We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based
             solutions.
           </p>
         </div>
-        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+        <div
+          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-[18px] flex justify-between items-center">
             Can you help with content creation for my website?
-            <span class="toggle-icon">↓</span>
+            <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
-          <p class="text-gray-600 mt-4 text-[16px] hidden">
+          <p class="text-[#666666] mt-4 text-[16px] hidden">
             Absolutely. We specialize in redesigning websites to align with your current brand and user needs.
           </p>
         </div>
 
-        <div class="bg-white rounded-xl border-[1.5px] border-zinc-200 shadow-xl p-6 cursor-pointer transition"
+        <div
+          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3 class="font-semibold text-[18px] flex justify-between items-center">
             How do I start the web design process with AmazeWeb?
-            <span class="toggle-icon">↓</span>
+            <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
-          <p class="text-gray-600 mt-4 text-[16px] hidden">
+          <p class="text-[#666666] mt-4 text-[16px] hidden">
             We offer both. Depending on your goals, we can provide fully custom designs or efficient template-based
             solutions.
           </p>
@@ -1922,9 +1967,8 @@
 
         <!-- Add more questions as needed -->
       </div>
-      <img src="./img/alogo.png" alt="Paper Plane" class="absolute top-20 right-10 w-20 opacity-80 animate-bounce">
+      <img src="./img/alogo.png" alt="Paper Plane" class="absolute top-40 right-10 w-20 opacity-80 animate-bounce">
     </section>
-
 
 
   </div>
@@ -1934,19 +1978,19 @@
   <div
     class=" bg-blend-multiply bg-cover -z-[0]  text-white font-sans relative bg-[url('./img/img-con/contact_main_bg.svg')]">
     <div class="absolute inset-0  -z-[1] bg-[url('./img/img-con/contact_all_curve.svg')] bg-opacity-50 bg-cover"></div>
-    <section class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center p-20 gap-10">
+    <section class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center px-10 py-40 gap-10">
 
       <!-- LEFT SECTION -->
       <div class="w-full lg:w-1/2 space-y-10">
         <div>
           <p class="uppercase text-[18px] text-white">Contact Us</p>
-          <h2 class="text-[36px] font-bold leading-[40px] mt-2">
+          <h2 class="text-[36px] font-bold leading-[36px] mt-2">
             Partner with tech catalyst who <span class="text-white">transform ideas into impact</span>
           </h2>
-          <h2 class="text-[75px] font-black leading-[45px] mt-2">
+          <h2 class="text-[75px] font-black leading-[45px] my-8">
             Let's Talk
           </h2>
-          <p class="text-[23px] leading-[25px text-white mt-4">Book your free consultation with us</p>
+          <p class="text-[23px] leading-[25px] text-white mt-4">Book your free consultation with us</p>
         </div>
 
         <!-- CONTACT INFO -->
@@ -1958,8 +2002,8 @@
               <p class=" text-[18px]">support@amazefox.com</p>
             </div>
           </div>
-
-          <div class="border-t border-gray-600 pt-8 flex items-center gap-4  w-[350px]">
+          <hr class="opacity-20 w-[350px]">
+          <div class="   flex items-center gap-4   ">
             <img src="./img/img-con/c_whatssapp.svg" alt="">
 
             <div>
@@ -1967,18 +2011,18 @@
               <p class="text-[18px]">+91 9786739966</p>
             </div>
           </div>
-
-          <div class="border-t border-gray-600 pt-8 flex items-center gap-4 w-[350px]">
+          <hr class="opacity-20 w-[350px]">
+          <div class="  flex items-center gap-4  ">
             <img src="./img/img-con/cteam_ss.svg" alt="">
             <div>
-              <p class="text-gray-300">Teams</p>
-              <p class="font-medium">nikilfox / amazefox</p>
+              <p class="text-[21px]">Teams</p>
+              <p class="text-[18px]">nikilfox / amazefox</p>
             </div>
           </div>
+          <hr class="opacity-20 w-[350px]">
         </div>
-
         <!-- TESTIMONIAL -->
-        <div class="mt-8 border-t border-gray-600 pt-6  ">
+        <div class=" pt-10">
           <div class="flex items-start gap-3">
             <div class="   ">
               <img src="./img/img-con/c_review_quote.svg" alt="" width="50">
@@ -1987,15 +2031,15 @@
               <div class="flex  items-start gap-1">
                 <div class="bg-gray-500  rounded-full w-[80px] h-[80px]">
                 </div>
-               <div>
-                 <p class="text-sm md:text-[16px] text-white font-semibold leading-[21px] w-[350px]">
-                  Very good web designer. Will continue to work with.
-                  He understand what you want is determine to do the job right.
-                  Will hire him again for design work!
-                </p>
-               </div>
+                <div>
+                  <p class="text-[16px] text-white font-semibold leading-[21px] w-[350px] ml-5">
+                    Very good web designer. Will continue to work with.
+                    He understand what you want is determine to do the job right.
+                    Will hire him again for design work!
+                  </p>
+                </div>
               </div>
-              <div class="mt-3">
+              <div class="mt-3 ml-[100px]">
                 <p class="font-semibold text-white text-[15px]">David McClellan</p>
                 <p class="text-[15px] text-white italic">United States, <span class="not-italic">Social Catfish</span>
                 </p>
@@ -2007,31 +2051,34 @@
 
       <!-- RIGHT SECTION - FORM -->
       <div
-        class="w-full lg:w-1/2 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] p-[1.5px] rounded-3xl  shadow-xl">
-        <div class=" bg-[#191227]  bg-[url(./img/img-con/c_form_glassy_bg.svg)]  p-8 rounded-3xl  space-y-6">
+        class="w-full lg:w-1/2  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] p-[1.5px] rounded-3xl shadow-black shadow-2xl">
+        <div class=" bg-[#191227] relative  -z-[0]  p-8 rounded-3xl  space-y-6">
+          <div class="absolute inset-0  -z-[1] bg-[url(./img/img-con/c_form_glassy_bg.svg)] bg-opacity-50  top-[-25px]">
+          </div>
 
-          <h3 class="text-2xl font-semibold">Speak with Our Experts</h3>
-          <p class="text-gray-400 text-sm">Start growing your business with us</p>
+          <h3 class="text-[35px] font-black leading-[20px]">Speak with Our Experts</h3>
+          <p class="text-gray-400 text-[17px]">Start growing your business with us</p>
 
           <form class="space-y-4">
             <input type="text" placeholder="Full name"
-              class="border-white border-s border-t border-b border-opacity-25 w-full px-4 py-3 rounded-[10px] bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+              class="border-white border-s shadow-black shadow-md border-t border-b border-opacity-25 w-full px-4 py-3 rounded-[10px] bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
 
-            <div class="border-white border-s border-t border-b border-opacity-25 flex items-center rounded-[10px] ">
+            <div
+              class="border-white shadow-black shadow-md border-s border-t border-b border-opacity-25 flex items-center rounded-[10px] ">
               <div
                 class="flex items-center   px-3 py-3   bg-[#2a2437] rounded-s-[10px] rounded-b-[10px] rounded-e-none">
                 <img src="https://flagcdn.com/w40/in.png" alt="flag" class="w-5 h-5">
                 <span class="text-white">+91</span>
               </div>
               <input type="tel" placeholder="Mobile Number"
-                class="  rounded-e-[10px] rounded-t-[10px] rounded-s-none w-full px-4 py-3   bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+                class="  rounded-e-[10px]  rounded-t-[10px] rounded-s-none w-full px-4 py-3   bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
             </div>
 
             <input type="email" placeholder="Business Email"
-              class="border-white border-s border-t border-b border-opacity-25 w-full px-4 py-3 rounded-[10px] bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+              class="border-white shadow-black shadow-md border-s border-t border-b border-opacity-25 w-full px-4 py-3 rounded-[10px] bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
 
-            <select
-              class=" border-white border-s border-t border-b border-opacity-25 w-full px-4 py-3 rounded-[10px] bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <select style="padding-right: 2rem !important;"
+              class="opacity-50 border-white shadow-black shadow-md border-s border-t border-b border-opacity-25 w-full px-5 py-3 rounded-[10px] bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
               <option selected disabled>Select a web design services</option>
               <option>Website Development</option>
               <option>UI/UX Design</option>
@@ -2039,10 +2086,10 @@
             </select>
 
             <textarea rows="4" placeholder="About a Projects"
-              class=" border-white border-s border-t border-b border-opacity-25 w-full px-4 py-3 rounded-[10px] bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+              class=" border-white border-s shadow-black shadow-md border-t border-b border-opacity-25 w-full px-4 py-3 rounded-[10px] bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
 
             <button type="submit"
-              class="relative w-[220px] h-[70px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white font-semibold hover:opacity-90 transition">
+              class="relative shadow-black shadow-md w-[220px] h-[70px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white font-semibold hover:opacity-90 transition">
               Submit <img class="inline absolute right-[25px] top-[27px]" src="./img/img-con/btn_arrow.svg" alt=""
                 width="20">
             </button>
@@ -2052,7 +2099,6 @@
 
     </section>
   </div>
-
 
 
 
@@ -2270,7 +2316,7 @@
       allItems.forEach(item => {
         if (item !== clickedItem) {
           item.querySelector('p').classList.add('hidden');
-          item.querySelector('.toggle-icon').textContent = '↓';
+          item.querySelector('.toggle-icon').src = './img/img-con/ic_faq_downarrow.svg';
         }
       });
 
@@ -2279,7 +2325,7 @@
 
       const isOpen = !content.classList.contains('hidden');
       content.classList.toggle('hidden');
-      icon.textContent = isOpen ? '↓' : '→';
+      icon.src = isOpen ? './img/img-con/ic_faq_downarrow.svg' : './img/img-con/ic_faq_rightarrow.svg';
     }
   </script>
 
