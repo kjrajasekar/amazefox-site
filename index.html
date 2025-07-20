@@ -25,17 +25,11 @@
   <script>
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
-      const navbars = document.getElementById('navbars');
       if (window.scrollY > 0) {
-
-        navbar.classList.add('bg-opacity-0', 'backdrop-blur-md', 'border-b-5', ' border-indigo-500');
-        navbars.classList.remove("bg-[repeating-linear-gradient(150deg,_#000000_,_#D1D1D1_,_#D1D1D1_)]");
+        navbar.classList.add('bg-opacity-0', 'backdrop-blur-md', 'border-b-5', 'border-indigo-500');
         navbar.classList.remove('bg-white');
-
       } else {
-
         navbar.classList.remove('bg-opacity-0', 'backdrop-blur-md');
-        navbars.classList.add("bg-[repeating-linear-gradient(150deg,_#000000_,_#D1D1D1_,_#D1D1D1_)]");
         navbar.classList.add('bg-white');
       }
     });
@@ -86,63 +80,64 @@
     </div>
 
     <!-- Navbar Start -->
-    <div id="navbars" class="bg-[repeating-linear-gradient(150deg,_#000000_,_#D1D1D1_,_#D1D1D1_)]
- transition duration-300 " style="padding-bottom:1.8px">
-      <nav id="navbar" x-data="{ open: false }" class="bg-white px-4 py-4 md:px-10 md:py-6   ">
-        <div class="flex items-center justify-between">
-          <!-- Logo -->
-          <div class="flex items-center gap-2">
-            <div class="w-10 h-10 bg-gray-200 rounded-full">
-              <img src="./img/alogo.png" alt="">
-            </div>
-            <span class="text-[40px] ">amazefox</span>
+
+    <nav id="navbar" style=" border-bottom: 1.5px solid transparent;
+  border-image: linear-gradient(90deg,#000000,#d1d1d1,black, #d1d1d1) 10 ;" x-data="{ open: false }"
+      class="bg-white px-4 py-4 md:px-10 md:py-6   transition duration-300 ">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 bg-gray-200 rounded-full">
+            <img src="./img/alogo.png" alt="">
           </div>
+          <span class="text-[40px] ">amazefox</span>
+        </div>
 
-          <!-- Desktop Menu -->
-          <ul class="hidden md:flex gap-6 text-[16px] ft-rob font-medium">
-            <li><a href="#" class="hover:text-pink-500">Services</a></li>
-            <li><a href="#" class="hover:text-pink-500">About Us</a></li>
-            <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
-            <li><a href="#" class="hover:text-pink-500">Industries</a></li>
-            <li><a href="#" class="hover:text-pink-500">Testimonials</a></li>
-            <li><a href="#" class="hover:text-pink-500">Clients</a></li>
-            <li><a href="#" class="hover:text-pink-500">Blog</a></li>
-          </ul>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6 text-[16px] ft-rob font-medium">
+          <li><a href="#" class="hover:text-pink-500">Services</a></li>
+          <li><a href="#" class="hover:text-pink-500">About Us</a></li>
+          <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
+          <li><a href="#" class="hover:text-pink-500">Industries</a></li>
+          <li><a href="#" class="hover:text-pink-500">Testimonials</a></li>
+          <li><a href="#" class="hover:text-pink-500">Clients</a></li>
+          <li><a href="#" class="hover:text-pink-500">Blog</a></li>
+        </ul>
 
-          <!-- Button + Hamburger -->
-          <div class="flex items-center gap-4">
-            <button class="hidden ft-rob text-[17px] md:inline px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
+        <!-- Button + Hamburger -->
+        <div class="flex items-center gap-4">
+          <button class="hidden ft-rob text-[17px] md:inline px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
+">
+            Contact Us
+          </button>
+          <button @click="open = !open" class="md:hidden focus:outline-none">
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div x-show="open" x-transition x-cloak class="md:hidden mt-4">
+        <ul class="space-y-2 ft-rob text-[16px] font-medium">
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Services</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">About Us</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Portfolio</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Industries</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Testimonials</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Clients</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Blog</a></li>
+          <li>
+            <button class="mt-2 w-full px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
 ">
               Contact Us
             </button>
-            <button @click="open = !open" class="md:hidden focus:outline-none">
-              <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div x-show="open" x-transition x-cloak class="md:hidden mt-4">
-          <ul class="space-y-2 ft-rob text-[16px] font-medium">
-            <li><a @click="open = false" href="#" class="block py-2 border-b">Services</a></li>
-            <li><a @click="open = false" href="#" class="block py-2 border-b">About Us</a></li>
-            <li><a @click="open = false" href="#" class="block py-2 border-b">Portfolio</a></li>
-            <li><a @click="open = false" href="#" class="block py-2 border-b">Industries</a></li>
-            <li><a @click="open = false" href="#" class="block py-2 border-b">Testimonials</a></li>
-            <li><a @click="open = false" href="#" class="block py-2 border-b">Clients</a></li>
-            <li><a @click="open = false" href="#" class="block py-2 border-b">Blog</a></li>
-            <li>
-              <button class="mt-2 w-full px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
-">
-                Contact Us
-              </button>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- </div> -->
     <!-- Navbar End -->
   </header>
 
@@ -186,7 +181,8 @@
 
 
   <!-- Company Carosel -->
-  <main class="relative  flex flex-col justify-center  overflow-hidden shadow-xl inset-shadow-xs">
+  <main class="relative  flex flex-col justify-center  overflow-hidden shadow-xl inset-shadow-xs" style=" border-bottom: 1.5px solid transparent;
+  border-image: linear-gradient(90deg,#000000,#d1d1d1,black, #d1d1d1) 10 ;">
     <div class="w-full max-w-7xl mx-auto px-4 md:px-6 py-8">
       <div class="text-center">
 
@@ -747,7 +743,7 @@
   </div>
 
   <!-- section 4  key process  -->
-  <div class="bg-white text-gray-800 ">
+  <div class="bg-white text-[#666666] ">
     <!-- Section -->
     <section
       class="px-6 py-16 md:px-20 bg-white relative bg-[url(/img/img-con/process_bg.svg)]   bg-no-repeat bg-center">
@@ -761,10 +757,10 @@
               <div>
                 <p class="text-sm  font-semibold uppercase mb-2">
                   <span
-                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[18px] font-light">
                     Our Key Process</span>
                 </p>
-                <h2 class="text-3xl md:text-4xl font-black mb-6">Research-based process in our web app design company
+                <h2 class="text-black text-[50px] leading-[40px] font-black mb-10">Research-based process in our web app design company
                 </h2>
                 <img src="./img/img_scroll.svg" alt="Research image" class="rounded-xl shadow-xl">
               </div>
@@ -776,7 +772,7 @@
           <div class=" ">
             <!-- Stage Cards -->
             <div class="space-y-10 ">
-              <p class="text-gray-600 max-w-2xl mb-10">
+              <p class="text-[17px] max-w-2xl mb-10">
                 Our web application design experts will analyze your digital products’ target consumer process to ensure
                 intuitive
                 navigation and relevant design. Our web application design experts will analyze your digital products’
@@ -784,22 +780,21 @@
                 consumer process to ensure intuitive navigation and relevant design.
               </p>
               <div data-aos="fade-up"
-                class="bg-white bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain  border rounded-xl p-6 shadow-xl relative">
-                <p class="text-s text-black uppercase">
+                class="bg-white bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain  border rounded-xl p-6 px-10 shadow-xl relative">
+                <p class="text-[15px] text-black uppercase">
                   <span
-                    class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Stage
+                    class="">Stage
                     1.</span>
                 </p>
-                <h3 class="text-3xl font-bold  mb-4">
+                <h3 class="text-[40px] leading-[50px] font-black  mb-4">
                   <span
                     class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                     Research and discovery</span>
                 </h3>
-                <p class="text-gray-600 mb-4">
-                  We delve into your product and niche to gain a deeper understanding of your industry, market,
-                  competitors, and users.
+                <p class="text-[15px] leading-[21px] mb-4">
+                  We delve into your product and niche to gain a deeper understanding of  your industry, market, competitors, and users – their needs, behaviors,  motivations, and pain points. Read more about this stage We delve into your product and niche to gain a deeper.
                 </p>
-                <ul class="space-y-2 text-sm text-gray-800">
+                <ul class="space-y-2 text-[16px] font-bold leading-[30px]">
                   <li class="flex items-start"><span
                       class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
                     Business analysis &
@@ -827,19 +822,18 @@
 
               <!-- Reusable Card Component -->
               <div
-                class="relative bg-white border rounded-xl p-6 shadow-xl bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain"
+                class="relative bg-white border rounded-xl p-6 px-10 shadow-xl bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain"
                 data-aos="fade-up" data-aos-delay="100">
-                <p class="text-s text-black uppercase">Stage 2.</p>
-                <h3 class="text-3xl font-bold  mb-4">
+                <p class="text-[15px] text-black uppercase">Stage 2.</p>
+                <h3 class="text-[40px] leading-[50px] font-black  mb-4">
                   <span
                     class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                     Product ideation</span>
                 </h3>
-                <p class="text-gray-600 mb-4">
-                  Armed with valuable insights, our team moves on to brainstorming innovative ideas and concepts for
-                  your web app.
+                <p class="text-[15px] leading-[21px]  mb-4">
+                  Armed with valuable insights, our team moves on to brainstorming innovative  ideas and concepts for your web app design. We work on information  architecture and flow mapping.
                 </p>
-                <ul class="space-y-2 text-sm text-gray-800">
+                <ul class="space-y-2 text-[16px] font-bold leading-[30px]">
                   <li class="flex items-start"><span
                       class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
                     Business analysis &
@@ -864,18 +858,18 @@
               </div>
 
               <div
-                class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 shadow-xl"
+                class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                 data-aos="fade-up" data-aos-delay="200">
-                <p class="text-s text-black uppercase">Stage 3.</p>
-                <h3 class="text-2xl font-bold mb-4">
+                <p class="text-[15px] text-black uppercase">Stage 3.</p>
+                <h3 class="text-[40px] leading-[50px] font-black  mb-4">
                   <span
                     class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                     Prototyping and tests</span>
                 </h3>
-                <p class="text-gray-600 mb-4">
+                <p class="text-[15px] leading-[21px]  mb-4">
                   We build and test prototypes to gather early feedback and refine the concept before development.
                 </p>
-                <ul class="space-y-2 text-sm text-gray-800">
+                <ul class="space-y-2 text-[16px] font-bold leading-[30px]">
                   <li class="flex items-start"><span
                       class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
                     Business analysis &
@@ -899,16 +893,16 @@
               </div>
 
               <div
-                class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 shadow-xl"
+                class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                 data-aos="fade-up" data-aos-delay="300">
-                <p class="text-s text-black uppercase">Stage 4.</p>
-                <h3 class="text-3xl font-bold mb-4"><span
+                <p class="text-[15px] text-black uppercase">Stage 4.</p>
+                <h3 class="text-[40px] leading-[50px] font-black  mb-4"><span
                     class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                     UX/UI design</span></h3>
-                <p class="text-gray-600 mb-4">
-                  Crafting seamless and intuitive user experiences based on user behavior and usability principles.
+                <p class="text-[15px] leading-[21px]  mb-4">
+                 We delve into your product and niche to gain a deeper understanding of  your industry, market, competitors, and users – their needs, behaviors,  motivations, and pain points. Read more about this stage We delve into your product and niche to gain a deeper.
                 </p>
-                <ul class="space-y-2 text-sm text-gray-800">
+                <ul class="space-y-2 text-[16px] font-bold leading-[30px]">
                   <li class="flex items-start"><span
                       class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
                     Business analysis &
@@ -932,16 +926,16 @@
               </div>
 
               <div
-                class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 shadow-xl"
+                class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                 data-aos="fade-up" data-aos-delay="400">
-                <p class="text-s text-black uppercase">Stage 5.</p>
-                <h3 class="text-3xl font-bold  mb-4"> <span
+                <p class="text-[15px] text-black uppercase">Stage 5.</p>
+                <h3 class="text-[40px] leading-[50px] font-black   mb-4"> <span
                     class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                     Launch and support</span></h3>
-                <p class="text-gray-600 mb-4">
-                  We help deploy your web application and provide continuous support for smooth operation.
+                <p class="text-[15px] leading-[21px] mb-4">
+                  We delve into your product and niche to gain a deeper understanding of  your industry, market, competitors, and users – their needs, behaviors,  motivations, and pain points. Read more about this stage We delve into your product and niche to gain a deeper.
                 </p>
-                <ul class="space-y-2 text-sm text-gray-800">
+                <ul class="space-y-2 text-[16px] font-bold leading-[30px]">
                   <li class="flex items-start"><span
                       class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] mr-2 mt-1">✔</span>
                     Business analysis &
@@ -987,14 +981,14 @@
           <div>
             <h3 class="text-sm text-red-500 font-semibold mb-2" data-aos="fade-up">
               <span
-                class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">TECHNOLOGY
+                class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[18px]">TECHNOLOGY
                 STACK</span>
             </h3>
-            <h2 class="text-3xl md:text-4xl font-black text-black mb-10" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="text-[50px] leading-[55px] font-black text-black mb-10" data-aos="fade-up" data-aos-delay="100">
               Why choose Amazefox Web as your ideal partner?
             </h2>
           </div>
-          <p class="mt-4 text-gray-600 text-base leading-relaxed max-w-md">
+          <p class="mt-4 text-[#666666] text-[16px] leading-[23px] max-w-md">
             We believe you deserve a web design agency with experience and versatility. Our expert designers stay ahead
             of
             industry trends and use best practices to create websites that not only look great but also drive user
@@ -1008,76 +1002,84 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-center text-black">
           <!-- Years of Experience -->
-          <div data-aos="fade-up" data-aos-delay="200">
-            <img src="./img/icons/ic_user-exp.svg" alt="" class="mx-auto h-10 mb-2">
+          <div data-aos="fade-up" data-aos-delay="200" >
+            <img src="./img/icons/ic_user-exp.svg" alt="" class="mx-auto  mb-2">
 
             <div
-              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[70px] leading-[45px] font-extrabold my-10">
               <span data-countup
                 class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">16</span>+
             </div>
-            <p class="text-sm">Years of Experience</p>
+            <p class="text-[17px] leading-[21px]">Years of Experience</p>
           </div>
           <!-- Websites Designed -->
           <div data-aos="fade-up" data-aos-delay="300">
-            <img src="./img/icons/ic_app--develope.svg" alt="" class="mx-auto h-10 mb-2">
+            <img src="./img/icons/ic_app--develope.svg" alt="" class="mx-auto  mb-2">
             <div
-              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[70px] leading-[45px] font-extrabold my-10">
               <span data-countup
                 class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">2400</span>+
             </div>
 
-            <p class="text-sm">Website Designed</p>
+            <p class="text-[17px] leading-[21px]">Website Designed</p>
           </div>
           <!-- Client Retention -->
           <div data-aos="fade-up" data-aos-delay="400">
-            <img src="./img/icons/ic_client-financing.svg" alt="" class="mx-auto h-10 mb-2">
+            <img src="./img/icons/ic_client-financing.svg" alt="" class="mx-auto  mb-2">
             <div
-              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[70px] leading-[45px] font-extrabold my-10">
               <span data-countup
                 class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">99</span>%
             </div>
-            <p class="text-sm">Client Retention</p>
+            <p class="text-[17px] leading-[21px]">Client Retention</p>
           </div>
           <!-- Happy Customers -->
           <div data-aos="fade-up" data-aos-delay="500">
-            <img src="./img/icons/ic_heart-health.svg" alt="" class="mx-auto h-10 mb-2">
+            <img src="./img/icons/ic_heart-health.svg" alt="" class="mx-auto  mb-2">
             <div
-              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[70px] leading-[45px] font-extrabold my-10">
               <span data-countup
                 class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">300</span>+
             </div>
 
-            <p class="text-sm">Happy Customers</p>
+            <p class="text-[17px] leading-[21px]">Happy Customers</p>
           </div>
           <!-- Customisable Designs -->
           <div data-aos="fade-up" data-aos-delay="600">
-            <img src="./img/icons/ic_natural-language.svg" alt="" class="mx-auto h-10 mb-2">
+            <img src="./img/icons/ic_natural-language.svg" alt="" class="mx-auto  mb-2">
             <div
-              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+              class="stat-number text-transparent bg-clip-text font-bold text-5xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[70px] leading-[45px] font-extrabold my-10">
               <span data-countup
                 class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">100</span>%
             </div>
 
-            <p class="text-sm">Customisable Designs</p>
+            <p class="text-[17px] leading-[21px]">Customisable Designs</p>
           </div>
         </div>
 
         <!-- CTA Box -->
-        <div class="mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
- text-white flex flex-col md:flex-row items-center justify-between gap-4" data-aos="zoom-in-up" data-aos-delay="200">
-          <div
-            class="absolute inset-0 -z-[1] bg-[url(/img/img-con/techstack_curve.svg)] bg-center   bg-cover  bg-no-repeat">
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold">Ready to innovate and drive and impact?</h3>
-            <p class="text-sm mt-1">Transforming Businesses with Technology that transcends geographies and Platforms
-            </p>
-          </div>
-          <a href="#" class="bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
-            Get a Free Quote →
-          </a>
+         <div
+        class="max-w-7xl mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col md:flex-row items-center justify-between gap-4 relative"
+        data-aos="zoom-in-up" data-aos-delay="200">
+        <div
+          class="absolute inset-0 -z-[1] bg-[url(/img/img-con/techstack_curve.svg)] bg-center   bg-cover  bg-no-repeat">
         </div>
+        <div class="grid grid-cols-12">
+          <div class="col-span-1">
+            <img src="./img/alogo.png" alt="">
+          </div>
+          <div class="col-span-11">
+            <h3 class="text-[32px] leading-[40px] font-black">Ready to innovate and drive and impact?</h3>
+            <p class="text-[16px] leading-[35px] mt-1">Transforming Businesses with Technology that transcends
+              geographies and Platforms</p>
+          </div>
+        </div>
+        <button type="submit"
+          class="relative  shadow-black ft-rob shadow-md w-[300px] h-[80px] bg-gradient-to-r from-[#ffffff]  to-[#ffffff] py-3 rounded-[100px] text-black text-[17px] font-bold hover:opacity-90 transition">
+          Get Free Quote <img class="inline absolute right-[35px] top-[33px]" src="./img/img-con/ic_faq_rightarrow.svg"
+            alt="" width="20">
+        </button>
+      </div>
       </section>
 
     </div>
@@ -1085,83 +1087,84 @@
   </div>
 
   <!-- section 6 project portfolio  -->
-  <section class="max-w-7xl mx-auto px-4 py-16">
+  <section class="max-w-7xl mx-auto px-4 py-16 relative">
     <!-- Section Title -->
     <div class="flex items-center justify-between">
       <div>
-        <p class="text-sm text-purple-600 font-medium uppercase">
+        <p class="text-[18px] uppercase">
           <span class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
             Portfolio</span>
         </p>
-        <h2 class="text-3xl md:text-5xl font-bold mt-2 mb-2">
-          Our recent <span class="text-black">web design projects</span>
+        <h2 class="text-[55px] leading-[50px] font-black mt-2 mb-2">
+          Our recent web design projects</span>
         </h2>
-        <p class="text-gray-500">Check out our projects where we made our clients win in the real world.</p>
+        <p class="text-[#666666] text-[17px]">Check out our projects where we made our clients win in the real world.</p>
       </div>
 
       <!-- Navigation Arrows -->
-      <div class="hidden md:flex items-center space-x-2">
-        <button class="w-10 h-10 bg-black   text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-          <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
-        </button>
-        <button class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-          <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
-        </button>
-      </div>
+       <div class="hidden md:flex items-center space-x-2 absolute right-20 top-20">
+      <button class="w-20 h-20 bg-black   text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+        <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
+      </button>
+      <button class="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+        <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
+      </button>
+    </div>
     </div>
 
     <!-- Grid Projects -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
       <!-- Card 1 -->
-      <div class="relative rounded-xl overflow-hidden shadow-lg group img-zoom">
+      <div class="relative rounded-xl overflow-hidden shadow-3xl group img-zoom">
         <img src="./img/img_phone.svg" alt="Chilliseeds" class="w-full h-auto" />
-        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-35 p-4">
-          <h3 class="text-white text-lg font-semibold">Chilliseeds</h3>
-          <p class="text-white text-sm">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+        <div class="text-white absolute bottom-0 left-0 w-full bg-black bg-opacity-35 text-white p-8 rounded-b-2xl">
+          <h3 class="text-[31px] mb-5 leading-[25px] font-black">Chilliseeds</h3>
+          <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="relative rounded-xl overflow-hidden shadow-lg group img-zoom">
         <img src="./img/img_koli.png" alt="Melodica" class="w-full h-auto" />
-        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-35  p-4">
-          <h3 class="text-white text-lg font-semibold">Melodica</h3>
-          <p class="text-white text-sm">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-35 text-white p-8 rounded-b-2xl">
+          <h3 class="text-[31px] mb-5 leading-[25px] font-black">Melodica</h3>
+          <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
         </div>
       </div>
 
       <!-- Card 3 -->
       <div class="relative rounded-xl overflow-hidden shadow-lg group img-zoom">
         <img src="./img/img_tab.svg" alt="AutoQ" class="w-full h-auto" />
-        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-35  p-4">
-          <h3 class="text-white text-lg font-semibold">AutoQ</h3>
-          <p class="text-white text-sm">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-35  text-white p-8 rounded-b-2xl">
+          <h3 class="text-[31px] mb-5 leading-[25px] font-black">AutoQ</h3>
+          <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
         </div>
       </div>
 
       <!-- Card 4 -->
       <div class="relative rounded-xl overflow-hidden shadow-lg group img-zoom">
         <img src="./img/img_webs.png" alt="Look Who's Cooking" class="w-full h-auto" />
-        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-35  p-4">
-          <h3 class="text-white text-lg font-semibold">Look Who’s Cooking</h3>
-          <p class="text-white text-sm">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-35 text-white p-8 rounded-b-2xl">
+          <h3 class="text-[31px] mb-5 leading-[25px] font-black">Look Who’s Cooking</h3>
+          <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
         </div>
       </div>
     </div>
 
     <!-- View All Work Button -->
     <div class="text-center mt-12">
-      <a href="#"
-        class="inline-flex items-center px-6 py-3 border border-black rounded-full font-medium hover:bg-black hover:text-white transition">
-        View all Work →
-      </a>
+     <button type="submit"
+          class="relative mt-10 shadow-black shadow-sm border border-[#000000] w-[300px] h-[80px] bg-white hover:bg-black py-3 rounded-[100px] hover:text-white text-black text-[21px] font-bold  transition">
+          View All Works<img class="inline absolute right-[35px] top-[33px]" src="./img/img-con/ic_faq_rightarrow.svg"
+            alt="" width="20">
+        </button>
     </div>
   </section>
 
 
   <!-- section 7 partners logos  -->
   <section class="max-w-7xl mx-auto">
-    <h2 class="text-xl md:text-xl font-bold text-center mb-10 text-gray-600">Trusted By Companies All Over The World.
+    <h2 class="text-[20px] font-semibold text-center mb-10 text-[#666666]">Trusted By Companies All Over The World.
     </h2>
 
     <!-- Logos -->
@@ -1217,12 +1220,12 @@
       <img src="./img/alogo.png" alt="Paper Plane" class="absolute top-20 right-80 w-10 opacity-80 animate-bounce">
       <img src="./img/alogo.png" alt="Paper Plane" class="absolute top-60 left-80  w-10 opacity-80 animate-bounce">
       <img src="./img/alogo.png" alt="" class="mx-auto">
-      <h3 class="text-sm text-purple-500 font-semibold uppercase tracking-wide">
+      <h3 class="text-[18px] uppercase leading-[25px]">
         <span class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
           Technology Stack</span>
       </h3>
-      <h1 class="text-3xl md:text-5xl font-bold my-2">Industry Expertise</h1>
-      <p class="max-w-2xl mx-auto text-gray-600 text-sm md:text-base">
+      <h1 class="text-[55px] leading-[50px] font-black my-2">Industry Expertise</h1>
+      <p class="max-w-2xl mx-auto text-[17px] ft-rob leading-[23px] text-[#666666]">
         Putting forth our more than 16+ years of expertise to transform businesses digitally regardless of the industry.
         We believe your unique perspective will be an add-on to our valuable industry insights delivering beneficial
         solutions.
@@ -1231,7 +1234,7 @@
 
     <!-- Icon Grid -->
     <section class="px-4 md:px-16 py-6 max-w-7xl mx-auto">
-      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-9 gap-6 place-items-center text-center">
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-10 place-items-center text-center">
         <div>
           <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
               src="./img/logos/ic-fin.svg" class="icon-img"></div>
@@ -1282,8 +1285,7 @@
         </div>
 
 
-      </div>
-      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-9 my-5 gap-6 place-items-center text-center">
+     
         <div>
           <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
               src="./img/logos/ic-oil.svg" class="icon-img"></div>
@@ -1334,8 +1336,7 @@
         </div>
 
 
-      </div>
-      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-9 my-5 gap-6 place-items-center text-center">
+     
         <div>
           <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
               src="./img/logos/ic-ev.svg" class="icon-img"></div>
@@ -1362,7 +1363,7 @@
           <span class="icon-label">Agriculture</span>
         </div>
         <div>
-          <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
+          <div class=" neumorphic-box items-center justify-center " data-aos="zoom-in"><img
               src="./img/logos/ic-insure.svg" class="icon-img"></div>
           <span class="icon-label">Insurance</span>
         </div>
@@ -1374,18 +1375,26 @@
 
       <!-- CTA Box -->
       <div
-        class="mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col md:flex-row items-center justify-between gap-4 relative"
+        class="max-w-7xl mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col md:flex-row items-center justify-between gap-4 relative"
         data-aos="zoom-in-up" data-aos-delay="200">
         <div
           class="absolute inset-0 -z-[1] bg-[url(/img/img-con/techstack_curve.svg)] bg-center   bg-cover  bg-no-repeat">
         </div>
-        <div>
-          <h3 class="text-2xl font-bold">Ready to innovate and drive and impact?</h3>
-          <p class="text-sm mt-1">Transforming Businesses with Technology that transcends geographies and Platforms</p>
+        <div class="grid grid-cols-12">
+          <div class="col-span-1">
+            <img src="./img/alogo.png" alt="">
+          </div>
+          <div class="col-span-11">
+            <h3 class="text-[32px] leading-[40px] font-black">Ready to innovate and drive and impact?</h3>
+            <p class="text-[16px] leading-[35px] mt-1">Transforming Businesses with Technology that transcends
+              geographies and Platforms</p>
+          </div>
         </div>
-        <a href="#" class="bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
-          Get a Free Quote →
-        </a>
+        <button type="submit"
+          class="relative  shadow-black ft-rob shadow-md w-[300px] h-[80px] bg-gradient-to-r from-[#ffffff]  to-[#ffffff] py-3 rounded-[100px] text-black text-[17px] font-bold hover:opacity-90 transition">
+          Get Free Quote <img class="inline absolute right-[35px] top-[33px]" src="./img/img-con/ic_faq_rightarrow.svg"
+            alt="" width="20">
+        </button>
       </div>
 
 
@@ -1394,30 +1403,29 @@
 
 
   <!-- technology stack section  -->
-  <div class="section-bg-third text-white font-sans bg-[url(/img/img-con/techstack_bg.svg)] py-40"
+  <div class="section-bg-third text-white  bg-[url(/img/img-con/techstack_bg.svg)] py-40"
     style="background-image: url('./img/img-con/techstack_curve.svg'), url('./img/img-con/techstack_bg.svg'); 
      background-blend-mode:  multiply, screen; background-repeat:no-repeat; background-position:center;background-size:cover">
     <section
       class=" max-w-7xl mx-auto   flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 gap-12 relative overflow-hidden">
       <!-- Left Content -->
       <div class="md:w-1/2 z-10" data-aos="fade-right">
-        <h4 class="uppercase tracking-wide text-purple-200 text-sm mb-2">Technology Stack</h4>
-        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
-          Elevating<br>Software with a<br>Website Design
+        <h4 class="uppercase text-[18px] leading-[25px] mb-6">Technology Stack</h4>
+        <h1 class="text-[70px] font-black leading-[60px] mb-6">
+          Elevating Software with a Website Design
         </h1>
-        <p class="text-sm text-purple-200 mb-4 max-w-lg leading-relaxed">
+        <p class="text-[16px] mb-4 max-w-lg leading-[20px] ">
           Professional branding is a powerful catalyst for company development which improves its image and contributes
+          to commercial success. Professional branding is a powerful catalyst for company development which improves its
+          image and contributes
           to commercial success.
         </p>
-        <p class="text-sm text-purple-200 mb-8 max-w-lg leading-relaxed">
-          Professional branding is a powerful catalyst for company development which improves its image and contributes
-          to commercial success.
-        </p>
-        <a href="#"
-          class="inline-flex items-center bg-white text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition">
-          Get a Free Quote!
-          <span class="ml-2 text-xl">→</span>
-        </a>
+
+        <button type="submit"
+          class="relative mt-10 shadow-black shadow-md w-[300px] h-[80px] bg-gradient-to-r from-[#ffffff]  to-[#ffffff] py-3 rounded-[100px] text-black text-[17px] font-bold hover:opacity-90 transition">
+          Get Free Quote <img class="inline absolute right-[35px] top-[33px]" src="./img/img-con/ic_faq_rightarrow.svg"
+            alt="" width="20">
+        </button>
       </div>
 
       <!-- Right Content (Icons) -->
@@ -1446,14 +1454,14 @@
 
     <img src="./img/alogo.png" alt="Paper Plane" class="absolute top-40 right-[35%] w-10 opacity-80 animate-bounce">
     <!-- Navigation Arrows -->
-       <div class="hidden md:flex items-center space-x-2 absolute right-80 top-40">
-        <button class="w-20 h-20 bg-black   text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-          <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
-        </button>
-        <button class="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-          <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
-        </button>
-      </div>
+    <div class="hidden md:flex items-center space-x-2 absolute right-80 top-40">
+      <button class="w-20 h-20 bg-black   text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+        <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
+      </button>
+      <button class="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+        <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
+      </button>
+    </div>
     <section class="max-w-6xl mx-auto px-4 py-16">
 
       <!-- Header -->

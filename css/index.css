@@ -139,8 +139,14 @@
 
 .icon-img {
   margin: 0 auto;
-  height: 24px;
+  /* height: 24px; */
   vertical-align: middle;
+}
+.icon-label{
+   font-family: "Roboto" !important;
+   font-weight: bold;
+   font-size: 17px;
+   line-height: 21px;
 }
 
 /* Custom flicker keyframes */
@@ -213,15 +219,22 @@
 .neumorphic-box {
   background: linear-gradient(145deg, #ffffff, #f1f1f1);
   box-shadow:
-    6px 6px 12px rgba(87, 87, 87, 0.1),
-    -6px -6px 12px rgba(220, 220, 220, 0.7),
-    inset 0 0 0 12px rgba(255, 255, 255, 0.3),
-    inset 0 0 0 10px rgba(202, 202, 202, 0.2);
+    6px 6px 16px rgba(87, 87, 87, 0.1),
+    -6px -6px 16px rgba(220, 220, 220, 0.7),
+    inset 0 0 0 16px rgba(255, 255, 255, 0.3),
+    inset 0 0 0 16px rgba(202, 202, 202, 0.2);
   border-radius: 1.5rem;
-  height: 80px;
-  width: 80px;
-  padding: 25px;
-  margin: 10px
+  height: 120px;
+  width: 120px;
+  padding: 45px;
+  margin: 20px;
+  
+
+  border: 1px solid transparent;
+  /* border-image: linear-gradient(90deg,#3800A0,#750C7B,#E61F4A) 10 round; */
+  border-radius: 25px;
+  overflow: hidden;
+ 
 }
 
 @media (max-width: 600px) {
