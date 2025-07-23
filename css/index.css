@@ -3,7 +3,9 @@
   overflow-y: auto;
 } */
 
-
+.sec-width{
+  max-width: 90rem;
+}
 .ft-rob {
   font-family: "Roboto" !important;
   font-weight: 400;
