@@ -1,10 +1,129 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scroll Step Progress Bar</title>
+  <style>
+    
+
+    .step-container {
+      position: fixed;
+      top: 25%;
+      left: 50%;
+      transform: translateY(-50%);
+    }
+
+    .progress-line {
+      position: absolute;
+      left: 20%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #ccc;
+      z-index: 0;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      margin: 40px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .circle {
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      border-radius: 50%;
+      border: 4px solid #720C7D;
+      transition: background 0.3s;
+    }
+
+    .step.active .circle {
+      background:linear-gradient(120deg,#3800A0,#720C7D,#E61F4A) /* Indigo */
+    }
+
+    /* Scroll sections */
+    .section {
+      height: 100vh;
+      padding-left: 100px;
+      padding-top: 40px;
+    }
+
+    .section:nth-child(even) {
+      background: #f0f0f0;
+    }
+  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nested Gradient Cards</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body>
 
+  <!-- Step Progress Bar -->
+  <div class="step-container">
+    <div class="progress-line"></div>
+    <div class="step" id="step-1">
+      <div class="circle"></div>
+      <div class="label">Step 1</div>
+    </div>
+    <div class="step" id="step-2">
+      <div class="circle"></div>
+      <div class="label">Step 2</div>
+    </div>
+    <div class="step" id="step-3">
+      <div class="circle"></div>
+      <div class="label">Step 3</div>
+    </div>
+    <div class="step" id="step-4">
+      <div class="circle"></div>
+      <div class="label">Step 4</div>
+    </div>
+  </div>
+
+  <!-- Scroll Sections -->
+  <div class="section" data-step="1">
+    <h2>Step 1: Introduction</h2>
+    <p>Scroll down to progress...</p>
+  </div>
+  <div class="section" data-step="2">
+    <h2>Step 2: Details</h2>
+  </div>
+  <div class="section" data-step="3">
+    <h2>Step 3: Review</h2>
+  </div>
+  <div class="section" data-step="4">
+    <h2>Step 4: Complete</h2>
+  </div>
+
+  <!-- JavaScript: Scroll-Based Activation -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const steps = document.querySelectorAll('.step');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          const stepId = entry.target.getAttribute('data-step');
+          const step = document.getElementById(`step-${stepId}`);
+          if (entry.isIntersecting) {
+            step.classList.add('active');
+          } else {
+            step.classList.remove('active');
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
 </html>

@@ -109,7 +109,7 @@
 
         <!-- Button + Hamburger -->
         <div class="flex items-center gap-4">
-          <button class="hidden ft-rob text-[17px] md:inline px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
+          <button class="hidden ft-rob text-[17px] lg:inline px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
 ">
             Contact Us
           </button>
@@ -247,7 +247,8 @@
           <h1 class="text-[18px] mb-4"><span
               class="uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Web
               App Design </span></h1>
-          <h1 class="text-[40px] lg:text-[60px] leading-[60px] mb-4"><span class="font-black">Web App Design Services</span></h1>
+          <h1 class="text-[40px] lg:text-[60px] leading-[60px] mb-4"><span class="font-black">Web App Design
+              Services</span></h1>
           <p class="text-[18px] lg:text-[16px]  leading-[20px] text-[#666666]">
             Amazefox designs websites that are clean, user-friendly, and aligned with your brand. We focus
             on smart layouts, smooth navigation, and effective calls-to-action to create engaging digital
@@ -267,7 +268,8 @@
         </div>
         <div class="lg:col-span-6 col-span-8 ft-vit">
 
-          <h1 class="text-[35px] lg:text-[60px] text-center lg:text-left  leading-[35px] lg:leading-[50px] font-black mb-4 max-w-4xl">
+          <h1
+            class="text-[35px] lg:text-[60px] text-center lg:text-left  leading-[35px] lg:leading-[50px] font-black mb-4 max-w-4xl">
             Explore Web App Design Services designed around your business needs
           </h1>
           <p class="text-[18px] lg:text-[16px] leading-[21px] mx-[25px] lg:max-w-2xl text-[#666666]">
@@ -674,8 +676,6 @@
 
   </div>
 
-
-
   <!-- section 3 team--------------------------------------   -->
   <div class="bg-[#090229] text-white py-10 relative" style="
        background-image: url('/img/img-con/design_dotted_left.svg'), url('/img/img-con/need_designer_bg.svg');
@@ -757,11 +757,12 @@
     <section
       class="px-6 py-16 md:px-20 bg-white relative bg-[url(/img/img-con/process_bg.svg)]   bg-no-repeat bg-center">
       <div class="absolute inset-0 bg-[url(/img/img-con/design_dotted_left.svg)] bg-no-repeat "></div>
-      <div class="sec-width mx-auto">
+      <div class="sec-width mx-auto relative">
+
         <!-- Image + First Card -->
-        <div class="grid md:grid-cols-2 gap-10 items-start mb-10 ">
+        <div class="grid lg:grid-cols-[47%_2%_2%_47%] gap-10 items-start mb-10 ">
           <!-- Title -->
-          <div class="md:h-[1800px] relative">
+          <div class="md:h-[1800px] relative  ">
             <div data-aos="fade-right" class="sticky top-40">
               <div>
                 <p class="text-sm  font-semibold uppercase mb-2">
@@ -775,11 +776,36 @@
                 <img src="./img/img_scroll.svg" alt="Research image" class="rounded-xl shadow-xl">
               </div>
             </div>
+          </div>
+          <!-- scroll indicator  -->
+          <div class="max-w-[100px] sticky mt-4 top-10 z-5 ">
+            <div class=" mt-40 top-1 z-5 progress-line h-[450px]   "></div>
+            </div>
+            <div class="sticky mt-80 top-40 z-7">
+            <div class="step " id="step-1">
+              <div class="circle"></div>
 
+            </div>
+            <div class="step" id="step-2">
+              <div class="circle"></div>
+
+            </div>
+            <div class="step" id="step-3">
+              <div class="circle"></div>
+
+            </div>
+            <div class="step" id="step-4">
+              <div class="circle"></div>
+
+            </div>
+            <div class="step" id="step-5">
+              <div class="circle"></div>
+
+            </div>
           </div>
 
+          <div class="   ">
 
-          <div class=" ">
             <!-- Stage Cards -->
             <div class="space-y-10 ">
               <p class="text-[17px] max-w-2xl mb-10">
@@ -789,7 +815,8 @@
                 target
                 consumer process to ensure intuitive navigation and relevant design.
               </p>
-              <div data-aos="fade-up"
+
+              <div data-aos="fade-up" data-step="1"
                 class="bg-white bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain  border rounded-xl p-6 px-10 shadow-xl relative">
                 <p class="text-[15px] text-black uppercase">
                   <span class="">Stage
@@ -832,7 +859,7 @@
 
 
               <!-- Reusable Card Component -->
-              <div
+              <div data-step="2"
                 class="relative bg-white border rounded-xl p-6 px-10 shadow-xl bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain"
                 data-aos="fade-up" data-aos-delay="100">
                 <p class="text-[15px] text-black uppercase">Stage 2.</p>
@@ -869,7 +896,7 @@
                 </div>
               </div>
 
-              <div
+              <div data-step="3"
                 class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                 data-aos="fade-up" data-aos-delay="200">
                 <p class="text-[15px] text-black uppercase">Stage 3.</p>
@@ -904,7 +931,7 @@
                 </div>
               </div>
 
-              <div
+              <div data-step="4"
                 class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                 data-aos="fade-up" data-aos-delay="300">
                 <p class="text-[15px] text-black uppercase">Stage 4.</p>
@@ -939,7 +966,7 @@
                     04</div>
               </div>
 
-              <div
+              <div data-step="5"
                 class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                 data-aos="fade-up" data-aos-delay="400">
                 <p class="text-[15px] text-black uppercase">Stage 5.</p>
@@ -1177,7 +1204,6 @@
     </div>
   </section>
 
-
   <!-- section 7 partners logos  -->
   <section class="sec-width mx-auto">
     <h2 class="text-[20px] font-semibold text-center mb-10 text-[#666666]">Trusted By Companies All Over The World.
@@ -1228,7 +1254,6 @@
     </div>
   </section>
 
-
   <!-- section 8 industry expertise  -->
   <div class="bg-[url(/img/img-con/industry_bg.svg)] bg-no-repeat bg-center  my-20">
     <!-- Header -->
@@ -1253,13 +1278,15 @@
       <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-10 place-items-center text-center">
         <div>
 
-          <div class="flex items-center justify-center">
+          <div class="flex items-center justify-center mb-5">
             <!-- Outer Card with Gradient Border -->
-            <div class="card-outer-border grid place-items-center ">
-              <div class="bg-white rounded-[25px] overflow-hidden  h-[99px]  ">
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
                 <!-- Inner Card inside Outer -->
-                <div class="card-inner-border  items-center justify-center ">
-                  <div class="bg-white rounded-[20px] overflow-hidden h-[90px] my-auto ">
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl">
                     <img src="./img/logos/ic-fin.svg" class="icon-img">
                   </div>
                 </div>
@@ -1268,135 +1295,450 @@
 
           </div>
 
-          <!-- <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-fin.svg" class="icon-img"></div> -->
+
           <span class="icon-label">Finance</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in">
-            <img src="./img/logos/ic-real.svg" class="icon-img">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl">
+                    <img src="./img/logos/ic-real.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="icon-label">Real Estate</span>
         </div>
         <div>
-          <div class="neumorphic-box  items-center justify-center " data-aos="zoom-in">
-            <img src="./img/logos/ic-sate.svg" class="icon-img">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-sate.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="icon-label">Travel</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in">
-            <img src="./img/logos/ic-b2b.svg" class="icon-img">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-b2b.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="icon-label">B2B</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in">
-            <img src="./img/logos/ic-edu.svg" class="icon-img">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-edu.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="icon-label">Educations</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-resta.svg" class="icon-img">
-          </div><span class="icon-label">Restaurants</span>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-resta.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="icon-label">Restaurants</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-health.svg" class="icon-img">
-          </div><span class="icon-label">Healthcare</span>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-health.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="icon-label">Healthcare</span>
         </div>
         <div>
-          <div class="neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-manf.svg" class="icon-img"></div><span class="icon-label">Manafacture</span>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-manf.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="icon-label">Manafacture</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-autom.svg" class="icon-img">
-          </div><span class="icon-label">Automotive</span>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-autom.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="icon-label">Automotive</span>
         </div>
 
 
 
         <div>
-          <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-oil.svg" class="icon-img"></div>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-oil.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <span class="icon-label">Oil & Gas</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in">
-            <img src="./img/logos/ic-govern.svg" class="icon-img">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-govern.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="icon-label">Government</span>
         </div>
         <div>
-          <div class="neumorphic-box  items-center justify-center " data-aos="zoom-in">
-            <img src="./img/logos/ic-const.svg" class="icon-img">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-const.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="icon-label">Construction</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in">
-            <img src="./img/logos/ic-ecom.svg" class="icon-img">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-ecom.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="icon-label">eCommerce</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in">
-            <img src="./img/logos/ic-telecom.svg" class="icon-img">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-telecom.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="icon-label">Communication</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-hitech.svg" class="icon-img">
-          </div><span class="icon-label">Hi-Tech</span>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-hitech.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="icon-label">Hi-Tech</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-logis.svg" class="icon-img">
-          </div><span class="icon-label">Logistics</span>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-logis.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="icon-label">Logistics</span>
         </div>
         <div>
-          <div class="neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-media.svg" class="icon-img"></div><span class="icon-label">Medias</span>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-media.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="icon-label">Medias</span>
         </div>
         <div>
-          <div class="neumorphic-box   items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-enter.svg" class="icon-img">
-          </div><span class="icon-label">Entertainment</span>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl   h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-enter.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="icon-label">Entertainment</span>
         </div>
 
 
 
         <div>
-          <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-ev.svg" class="icon-img"></div>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-ev.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <span class="icon-label">Electric Vehicle</span>
         </div>
         <div>
-          <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-saas.svg" class="icon-img"></div>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-saas.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <span class="icon-label">SaaS</span>
         </div>
         <div>
-          <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-social.svg" class="icon-img"></div>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-social.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <span class="icon-label">Social Media</span>
         </div>
         <div>
-          <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-aero.svg" class="icon-img"></div>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-aero.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <span class="icon-label">Aviations</span>
         </div>
         <div>
-          <div class=" neumorphic-box    items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-agri.svg" class="icon-img"></div>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-agri.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <span class="icon-label">Agriculture</span>
         </div>
         <div>
-          <div class=" neumorphic-box items-center justify-center " data-aos="zoom-in"><img
-              src="./img/logos/ic-insure.svg" class="icon-img"></div>
+          <div class="flex items-center justify-center mb-5">
+            <!-- Outer Card with Gradient Border -->
+            <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl  h-[90px] w-[90px]">
+                    <img src="./img/logos/ic-insure.svg" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <span class="icon-label">Insurance</span>
         </div>
 
@@ -1471,7 +1813,6 @@
     </section>
 
   </div>
-
 
   <!-- section testimonials  -->
 
@@ -1761,7 +2102,6 @@
   </div>
 
 
-
   <!-- what make us section  -->
   <div class="  relative bg-no-repeat w-full bg-[length:100%_auto] text-white py-20" style="
        background-image: url('/img/img-con/features_bot_curve.svg'), url('/img/img-con/feature_main_bg.svg') ;
@@ -1779,7 +2119,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-1 ">
           <div class=" ">
             <p class="uppercase text-[18px] text-white opacity-80 font-medium mb-2 ft-vit">What Makes Us Different</p>
-            <h2 class="text-[35px] lg:text-[50px] font-black leading-[35px] lg:leading-[55px] mb-6 ft-vit">What Makes Every Amazfox Web App Design Stand
+            <h2 class="text-[35px] lg:text-[50px] font-black leading-[35px] lg:leading-[55px] mb-6 ft-vit">What Makes
+              Every Amazfox Web App Design Stand
               Out</h2>
           </div>
           <div>
@@ -1886,7 +2227,8 @@
         <!-- CTA Section -->
         <div class="mt-20 text-center">
           <img src="./img/alogo.png" alt="logo" class="mx-auto mb-6 w-16 animate-bounce">
-          <h2 class="text-[35px] lg:text-[55px] font-black ft-vit leading-[45px] lg:leading-[40px] text-white mb-2">Ready to innovate and drive and
+          <h2 class="text-[35px] lg:text-[55px] font-black ft-vit leading-[45px] lg:leading-[40px] text-white mb-2">
+            Ready to innovate and drive and
             impact?</h2>
           <p class=" ft-vit text-[20px] leading-[35px] my-6">Transforming Businesses with Technology that transcends
             geographies and
@@ -1903,7 +2245,6 @@
   </div>
 
 
-
   <!-- FAQ Section  -->
   <div class="bg-white text-black font-sans py-20">
 
@@ -1914,9 +2255,12 @@
           <span class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
             Questions & Answers</span>
         </p>
-        <h2 class="lg:text-[55px] text-[35px] font-black lg:leading-[70px] leading-[50px]">Frequently Asked Questions</h2>
-        <p class="text-gray-500 leading-[23px] mt-5  max-w-3xl text-[17px]">We hope these questions and answers guide you in
-          choosing the right web design partner for your business’s digital transformation. If you have any more questions, feel
+        <h2 class="lg:text-[55px] text-[35px] font-black lg:leading-[70px] leading-[50px]">Frequently Asked Questions
+        </h2>
+        <p class="text-gray-500 leading-[23px] mt-5  max-w-3xl text-[17px]">We hope these questions and answers guide
+          you in
+          choosing the right web design partner for your business’s digital transformation. If you have any more
+          questions, feel
           free to reach out!</p>
       </div>
 
@@ -2051,12 +2395,12 @@
 
         <!-- Add more questions as needed -->
       </div>
-      <img src="./img/alogo.png" alt="Paper Plane" class="absolute lg:top-40 top-20 right-10 w-20 opacity-80 animate-bounce">
+      <img src="./img/alogo.png" alt="Paper Plane"
+        class="absolute lg:top-40 top-20 right-10 w-20 opacity-80 animate-bounce">
     </section>
 
 
   </div>
-
 
   <!-- enquiry section  -->
   <div
@@ -2185,13 +2529,12 @@
   </div>
 
 
-
   <!-- Footer section  -->
   <section class="relative text-white bg-black bg-cover bg-center  bg-[url(./img/img-con/footer_glassy_bg.svg)]">
     <div class="absolute inset-0  -z-[1] bg-opacity-50"></div>
     <!-- Contact Form Section -->
     <div class="sec-width mx-auto  py-10 text-center md:text-left">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex flex-col xl:flex-row justify-between items-center gap-1">
         <img src="./img/alogo.png" alt="logo" class="animate-bounce">
         <h2 class="text-[35px] leading-[40px] font-bold">Speak with a Quick<br>Contact our Team</h2>
         <div class="flex flex-col sm:flex-row gap-4">
@@ -2210,7 +2553,7 @@
     <hr class="border-gray-700">
 
     <!-- Footer Content -->
-    <footer class=" sec-width mx-auto  py-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-sm">
+    <footer class=" sec-width mx-auto  py-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6   break-all">
       <!-- Company -->
       <div class="footer">
         <h4 class="font-extrabold text-[20px] mb-4">Company</h4>
@@ -2324,7 +2667,7 @@
 
     <!-- Social & Copyright -->
     <div class="border-t border-gray-700 max-w-7xl mx-auto py-6  text-center text-sm text-gray-400 h-[140px]">
-      <div class="float-right justify-center ">
+      <div class="mx-auto md:float-right justify-center ">
         <div class="flex gap-2 mb-4">
           <a href="#"><img src="./img/sm-icon/ic-facebook.svg" alt="Facebook"></a>
           <a href="#"><img src="./img/sm-icon/ic-insta.svg" alt="Instagram"></a>
@@ -2335,7 +2678,8 @@
           <a href="#"><img src="./img/sm-icon/skype.svg" alt="Skype"></a>
         </div>
       </div>
-      <p class="float-left">Copyright 2025 © <a href="https://www.amazefox.com" class="underline">www.amazefox.com</a>.
+      <p class="sm:float-left mx-auto">Copyright 2025 © <a href="https://www.amazefox.com"
+          class="underline">www.amazefox.com</a>.
         All Rights
         Reserved.</p>
     </div>
@@ -2427,7 +2771,32 @@
     });
   </script>
 
+  <!-- JavaScript: Scroll-Based Activation -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const steps = document.querySelectorAll('.step');
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          const stepId = entry.target.getAttribute('data-step');
+          const step = document.getElementById(`step-${stepId}`);
+          if (entry.isIntersecting) {
+            step.classList.add('active');
+          } else {
+            step.classList.remove('active');
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 
 </body>
 
