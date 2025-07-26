@@ -35,7 +35,7 @@
     });
   </script>
   <script>
-    tailwind.config = {
+        tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
@@ -53,6 +53,8 @@
         },
       },
     };
+
+
   </script>
 </head>
 
@@ -261,10 +263,18 @@
 
       <div class=" grid grid-cols-8 sec-width mx-auto ">
         <div class="lg:col-span-1 col-span-8  mx-auto ">
-          <div class=" neumorphic-boxs  items-center justify-center " data-aos="zoom-in"
-            style="width: 120px;height:120px">
-            <img src="./img/alogo.png" alt="Logo" class="mx-auto w-40 mb-4 ">
-          </div>
+                <div
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[30px] bg-zinc-100 p-4 shadow-black  ">
+                <!-- Inner Card inside Outer -->
+                <div
+                  class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[20px] bg-white p-6 shadow-black  shadow-1xl">
+                    <img src="./img/alogo.png" class="icon-img">
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
         <div class="lg:col-span-6 col-span-8 ft-vit">
 
@@ -760,7 +770,7 @@
       <div class="sec-width mx-auto relative">
 
         <!-- Image + First Card -->
-        <div class="grid lg:grid-cols-[47%_2%_2%_47%] gap-10 items-start mb-10 ">
+        <div class="grid lg:grid-cols-[47%_2%_2%_47%] grid-cols-1 gap-10 items-start mb-10 ">
           <!-- Title -->
           <div class="md:h-[1800px] relative  ">
             <div data-aos="fade-right" class="sticky top-40">
@@ -778,10 +788,10 @@
             </div>
           </div>
           <!-- scroll indicator  -->
-          <div class="max-w-[100px] sticky mt-4 top-10 z-5 ">
-            <div class=" mt-40 top-1 z-5 progress-line h-[450px]   "></div>
+          <div class="max-w-[100px] sticky hidden lg:block mt-4 top-10 z-5 ">
+            <div class=" mt-40 top-1 z-5 hidden lg:block progress-line    "></div>
             </div>
-            <div class="sticky mt-80 top-40 z-7">
+            <div class="sticky hidden lg:block mt-80 top-40 z-7">
             <div class="step " id="step-1">
               <div class="circle"></div>
 
@@ -807,7 +817,7 @@
           <div class="   ">
 
             <!-- Stage Cards -->
-            <div class="space-y-10 ">
+            <div class="space-y-10  ">
               <p class="text-[17px] max-w-2xl mb-10">
                 Our web application design experts will analyze your digital products’ target consumer process to ensure
                 intuitive
@@ -817,7 +827,7 @@
               </p>
 
               <div data-aos="fade-up" data-step="1"
-                class="bg-white bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain  border rounded-xl p-6 px-10 shadow-xl relative">
+                class="card-section bg-white bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain  border rounded-xl p-6 px-10 shadow-xl relative">
                 <p class="text-[15px] text-black uppercase">
                   <span class="">Stage
                     1.</span>
@@ -860,7 +870,7 @@
 
               <!-- Reusable Card Component -->
               <div data-step="2"
-                class="relative bg-white border rounded-xl p-6 px-10 shadow-xl bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain"
+                class="card-section relative bg-white border rounded-xl p-6 px-10 shadow-xl bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain"
                 data-aos="fade-up" data-aos-delay="100">
                 <p class="text-[15px] text-black uppercase">Stage 2.</p>
                 <h3 class="text-[40px] leading-[50px] font-black  mb-4">
@@ -897,7 +907,7 @@
               </div>
 
               <div data-step="3"
-                class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
+                class="card-section bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                 data-aos="fade-up" data-aos-delay="200">
                 <p class="text-[15px] text-black uppercase">Stage 3.</p>
                 <h3 class="text-[40px] leading-[50px] font-black  mb-4">
@@ -932,7 +942,7 @@
               </div>
 
               <div data-step="4"
-                class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
+                class="card-section bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                 data-aos="fade-up" data-aos-delay="300">
                 <p class="text-[15px] text-black uppercase">Stage 4.</p>
                 <h3 class="text-[40px] leading-[50px] font-black  mb-4"><span
@@ -967,7 +977,7 @@
               </div>
 
               <div data-step="5"
-                class="bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
+                class="card-section bg-[url(/img/img-con/process_curve.svg)] bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                 data-aos="fade-up" data-aos-delay="400">
                 <p class="text-[15px] text-black uppercase">Stage 5.</p>
                 <h3 class="text-[40px] leading-[50px] font-black   mb-4"> <span
@@ -2688,92 +2698,18 @@
 
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
+   <script>
+            AOS.init({
       duration: 800,
       once: true,
       disable: function () {
         var maxWidth = 800;
         return window.innerWidth < maxWidth;
       }
-    }); 
-  </script>
-  <!-- Counter JS -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const counters = document.querySelectorAll('[data-countup]');
-      counters.forEach(counter => {
-        const updateCount = () => {
-          const target = +counter.textContent.replace(/[^\d]/g, '');
-          const speed = 200; // Lower is faster
-          let count = 0;
-          const increment = Math.ceil(target / speed);
-
-          const run = () => {
-            count += increment;
-            if (count < target) {
-              counter.innerText = count;
-              requestAnimationFrame(run);
-            } else {
-              counter.innerText = target;
-            }
-          };
-          run();
-        };
-        updateCount();
-      });
     });
-  </script>
-  <!-- scroll logo script  -->
-  <script>
-    const root = document.documentElement;
-    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-    const marqueeContent = document.querySelector("ul.marquee-content");
 
-    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
-    for (let i = 0; i < marqueeElementsDisplayed; i++) {
-      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-    }
-  </script>
-
-  <!-- Accordian script  -->
-  <script>
-    function toggleAccordion(clickedItem) {
-      const allItems = document.querySelectorAll('#faq-container > div');
-      allItems.forEach(item => {
-        if (item !== clickedItem) {
-          item.querySelector('p').classList.add('hidden');
-          item.querySelector('.toggle-icon').src = './img/img-con/ic_faq_downarrow.svg';
-        }
-      });
-
-      const content = clickedItem.querySelector('p');
-      const icon = clickedItem.querySelector('.toggle-icon');
-
-      const isOpen = !content.classList.contains('hidden');
-      content.classList.toggle('hidden');
-      icon.src = isOpen ? './img/img-con/ic_faq_downarrow.svg' : './img/img-con/ic_faq_rightarrow.svg';
-    }
-  </script>
-
-  <!-- video pop up  -->
-  <script>
-    $(function () {
-      $('.popup-youtube, .popup-vimeo').magnificPopup({
-        disableOn: 0,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-      });
-    });
-  </script>
-
-  <!-- JavaScript: Scroll-Based Activation -->
-  <script>
-    const sections = document.querySelectorAll('.section');
+            const sections = document.querySelectorAll('.card-section');
     const steps = document.querySelectorAll('.step');
 
     const observer = new IntersectionObserver(
@@ -2796,7 +2732,35 @@
     sections.forEach(section => {
       observer.observe(section);
     });
-  </script>
+
+
+
+
+            document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('[data-countup]');
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.textContent.replace(/[^\d]/g, '');
+          const speed = 200; // Lower is faster
+          let count = 0;
+          const increment = Math.ceil(target / speed);
+
+          const run = () => {
+            count += increment;
+            if (count < target) {
+              counter.innerText = count;
+              requestAnimationFrame(run);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          run();
+        };
+        updateCount();
+      });
+    });
+   </script>
+  <script src="./js/effects.js"></script>
 
 </body>
 

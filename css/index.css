@@ -1,57 +1,59 @@
-/* html, body {
-  overflow-x: hidden;
-  overflow-y: auto;
-} */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-.sec-width{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sec-width {
   max-width: 90rem;
 }
+
 .ft-rob {
   font-family: "Roboto" !important;
   font-weight: 400;
 }
 
-.ft-vit,body {
+.ft-vit,
+body {
   font-family: "Be Vietnam Pro" !important;
   font-weight: 400;
 }
 
-
 @layer utilities {
   .gradient-border {
-    background: linear-gradient(135deg, #E61F4A, #3800A0); /* pink to blue */
-   
+    background: linear-gradient(195deg, rgba(230, 31, 74, 0.7), rgba(56, 0, 160, 0.6));
   }
-
 
   .gradient-border-rb {
- 
     background:
-     linear-gradient(15deg, #E61F4A, #3800A0),
-     linear-gradient(15deg, #E61F4A, #3800A0); 
-    background-repeat: no-repeat,no-repeat;
-    background-size: 95% 10px,10px 90%;
-    background-position: bottom right ;
-    background-color: #fff; /* fallback */
+      linear-gradient(65deg, rgba(230, 31, 74, 0.4), rgba(56, 0, 160, 0.4)),
+      linear-gradient(65deg, rgba(230, 31, 74, 0.4), rgba(56, 0, 160, 0.4));
+    background-repeat: no-repeat, no-repeat;
+    background-size: 95% 10px, 10px 90%;
+    background-position: bottom right;
+    background-color: #fff;
   }
 }
-  .card-outer-border {
-       border-image: linear-gradient(90deg,red,yellow,black, pink) 10 !important;
-      padding: 1px;
-      border: 1px solid transparent;
-      overflow: hidden !important;
-      border-radius: 25px !important;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      
-    }
-  .card-inner-border {
-      border-image: linear-gradient(90deg, #a855f7, #ec4899,black,yellow) 10;
-      padding: 5px;
-      border-radius: 25px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      width: 100px;
-      height: 100px;
-    }
+
+.card-outer-border {
+  border-image: linear-gradient(90deg, red, yellow, black, pink) 10 !important;
+  padding: 1px;
+  border: 1px solid transparent;
+  overflow: hidden !important;
+  border-radius: 25px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-inner-border {
+  border-image: linear-gradient(90deg, #a855f7, #ec4899, black, yellow) 10;
+  padding: 5px;
+  border-radius: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  height: 100px;
+}
 
 .footer li {
   font-family: "Roboto" !important;
@@ -73,13 +75,7 @@
 }
 
 /* Scroll logos  */
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .abody {
   font-family: 'Montserrat', sans-serif;
@@ -137,9 +133,7 @@
   animation: scrolling var(--marquee-animation-duration) linear infinite;
 }
 
-/* .marquee-content:hover {
-  animation-play-state: paused;
-} */
+ 
 @keyframes scrolling {
   0% {
     transform: translateX(0);
@@ -174,11 +168,12 @@
   /* height: 24px; */
   vertical-align: middle;
 }
-.icon-label{
-   font-family: "Roboto" !important;
-   font-weight: bold;
-   font-size: 17px;
-   line-height: 21px;
+
+.icon-label {
+  font-family: "Roboto" !important;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 21px;
 }
 
 /* Custom flicker keyframes */
@@ -214,7 +209,6 @@
   animation: flicker 3s infinite ease-in-out;
 }
 
-
 .img-zoom {
   transform: scale(0.9);
   transition: transform .5s;
@@ -224,18 +218,68 @@
   transform: scale(1);
 }
 
-
 .icon-placeholder {
-
   padding: 10px 20px;
   border-radius: 30px;
   background: #e0e0e0;
   box-shadow: 15px 15px 30px #bebebe,
     -15px -15px 30px #ffffff;
-
 }
 
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+}
 
+/* video outlet  */
+.hexagon {
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+}
+
+.progress-line {
+  left: 50% !important;
+  width: 2px;
+  background: #ccc;
+  z-index: 0;
+}
+
+.step {
+  display: flex;
+  margin: 40px 0;
+  position: relative;
+  left: -280%;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  border: 4px solid #720C7D;
+  transition: background 0.3s;
+}
+
+.step.active .circle {
+  background: linear-gradient(120deg, #3800A0, #720C7D, #E61F4A)
+}
+
+/* Scroll sections */
+.section {
+  height: 100vh;
+  padding-left: 100px;
+  padding-top: 40px;
+}
+
+.section:nth-child(even) {
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 992px) {
+  .sec-width {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 
 @media (max-width: 600px) {
   html {
@@ -251,75 +295,5 @@
   .marquee:before,
   .marquee:after {
     width: 5rem;
-  }
-}
-
-
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-/* video outlet  */
-.hexagon {
-  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
-}
-
-
-
-
-    .step-container {
-     
-    }
-
-    .progress-line {
-      
-      left: 50% !important;
-      width: 2px;
-      
-      background: #ccc;
-      z-index: 0;
-    }
-
-    .step {
-      display: flex;
-       
-      margin: 40px 0;
-      position: relative;
-       
-      left: -280%;
-    }
-
-    .circle {
-      width: 24px;
-      height: 24px;
-      background: #fff;
-      border-radius: 50%;
-      border: 4px solid #720C7D;
-      transition: background 0.3s;
-    }
-
-    .step.active .circle {
-      background:linear-gradient(120deg,#3800A0,#720C7D,#E61F4A) /* Indigo */
-    }
-
-    /* Scroll sections */
-    .section {
-      height: 100vh;
-      padding-left: 100px;
-      padding-top: 40px;
-    }
-
-    .section:nth-child(even) {
-      background: #f0f0f0;
-    }
-
-
-
-@media screen and (max-width: 992px) {
-  .sec-width{
-    width: 80%;
-    margin: 0 auto;
   }
 }
