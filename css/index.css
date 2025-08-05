@@ -9,6 +9,10 @@
 .sec-width {
   max-width: 87.5rem;
 }
+.sec-width-lg {
+  max-width: 100rem;
+}
+
 
 .ft-rob {
   font-family: "Roboto" !important;
@@ -237,17 +241,15 @@ body {
 }
 
 .progress-line {
-  left: 50% !important;
   width: 2px;
   background: #ccc;
-  z-index: 0;
 }
 
 .step {
   display: flex;
   margin: 40px 0;
   position: relative;
-  left: -155%;
+  left: -145%;
 }
 
 .circle {
