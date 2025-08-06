@@ -35,6 +35,18 @@
     });
   </script>
   <script>
+    $(function () {
+      $('.popup-youtube, .popup-vimeo').magnificPopup({
+        disableOn: 0,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+      });
+    });
+  </script>
+  <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -1320,7 +1332,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Real Estate</span>
         </div>
@@ -1339,7 +1350,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Travel</span>
         </div>
@@ -1358,7 +1368,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">B2B</span>
         </div>
@@ -1377,7 +1386,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Educations</span>
         </div>
@@ -1396,7 +1404,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Restaurants</span>
         </div>
@@ -1415,7 +1422,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Healthcare</span>
         </div>
@@ -1434,7 +1440,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Manafacture</span>
         </div>
@@ -1453,13 +1458,9 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Automotive</span>
         </div>
-
-
-
         <div>
           <div class="flex items-center justify-center mb-5">
             <!-- Outer Card with Gradient Border -->
@@ -1475,7 +1476,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Oil & Gas</span>
         </div>
@@ -1494,7 +1494,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Government</span>
         </div>
@@ -1513,7 +1512,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Construction</span>
         </div>
@@ -1532,7 +1530,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">eCommerce</span>
         </div>
@@ -1551,7 +1548,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Communication</span>
         </div>
@@ -1570,7 +1566,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Hi-Tech</span>
         </div>
@@ -1589,7 +1584,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Logistics</span>
         </div>
@@ -1608,7 +1602,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Medias</span>
         </div>
@@ -1627,11 +1620,9 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Entertainment</span>
         </div>
-
         <div>
           <div class="flex items-center justify-center mb-5">
             <!-- Outer Card with Gradient Border -->
@@ -1647,7 +1638,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Electric Vehicle</span>
         </div>
@@ -1666,7 +1656,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">SaaS</span>
         </div>
@@ -1685,7 +1674,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Social Media</span>
         </div>
@@ -1704,7 +1692,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Aviations</span>
         </div>
@@ -1723,7 +1710,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Agriculture</span>
         </div>
@@ -1742,16 +1728,10 @@
                 </div>
               </div>
             </div>
-
           </div>
           <span class="icon-label">Insurance</span>
         </div>
-
-
-
       </div>
-
-
       <!-- CTA Box -->
       <div
         class="sec-width mx-auto mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col md:flex-row items-center justify-between gap-4 relative"
@@ -1812,8 +1792,8 @@
       </div>
 
       <!-- Decorative elements -->
-      <img src="./img/alogo.png" alt="Paper Plane" class="absolute bottom-10 left-10 w-8 opacity-80 animate-bounce">
-      <img src="./img/alogo.png" alt="Paper Plane" class="absolute top-10 right-10 w-8 opacity-80 animate-bounce">
+      <img src="./img/alogo.png" alt="Paper Plane" class="absolute bottom-10 left-10 w-8 opacity-80 animate-bounce" />
+      <img src="./img/alogo.png" alt="Paper Plane" class="absolute top-10 right-10 w-8 opacity-80 animate-bounce" />
     </section>
 
   </div>
@@ -1855,9 +1835,6 @@
         </p>
       </div>
 
-
-
-
       <!-- Testimonials Grid -->
       <div class="grid grid-cols-1   md:grid-cols-2 gap-6 ft-rob">
         <div>
@@ -1880,7 +1857,6 @@
               </div>
             </div>
 
-
             <!-- Testimonial 2 -->
             <div class="bg-blue-100 rounded-2xl shadow-xl    p-6 w-full  ">
               <div class="text-4xl mb-3 font-serif">“</div>
@@ -1897,7 +1873,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <!-- Bottom Row (Full Width) -->
           <div class="bg-gray-100 rounded-2xl shadow-xl   p-6 w-full">
@@ -1916,8 +1891,6 @@
             </div>
           </div>
         </div>
-
-
         <div class="mt-6">
 
           <!-- Top Row (Full Width) -->
@@ -2756,17 +2729,7 @@
     for (let i = 0; i < marqueeElementsDisplayed; i++) {
       marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
     }
-    // ****** video pop up   ******/
-    $(function () {
-      $('.popup-youtube, .popup-vimeo').magnificPopup({
-        disableOn: 0,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-      });
-    });
+
   </script>
   <script src="./js/effects.js"></script>
 
