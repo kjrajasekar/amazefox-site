@@ -9,6 +9,7 @@
 .sec-width {
   max-width: 87.5rem;
 }
+
 .sec-width-lg {
   max-width: 100rem;
 }
@@ -26,8 +27,18 @@ body {
 }
 
 @layer utilities {
+
   .gradient-border {
-    background: linear-gradient(195deg, rgba(230, 31, 74, 0.7), rgba(56, 0, 160, 0.6));
+    box-shadow: 0 2px 10px 6px rgba(22, 24, 26, 0.12);
+    background: linear-gradient(195deg, rgba(230, 31, 74, 0.7), rgba(56, 0, 160, 0.35));
+  }
+
+  .gradient-border-rb div {
+    background: linear-gradient(150deg,
+        rgba(255, 0, 0, 0.05),
+        rgba(0, 0, 255, 0.05)
+      );
+       box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.15);
   }
 
   .gradient-border-rb {
@@ -38,10 +49,11 @@ body {
     background-size: 95% 10px, 10px 90%;
     background-position: bottom right;
     background-color: #fff;
+    box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.15);
   }
 }
 
-.card-outer-border {
+/* .card-outer-border {
   border-image: linear-gradient(90deg, red, yellow, black, pink) 10 !important;
   padding: 1px;
   border: 1px solid transparent;
@@ -57,7 +69,7 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   width: 100px;
   height: 100px;
-}
+} */
 
 .footer li {
   font-family: "Roboto" !important;
@@ -79,8 +91,6 @@ body {
 }
 
 /* Scroll logos  */
-
-
 .abody {
   font-family: 'Montserrat', sans-serif;
   background-color: #eee;
@@ -137,7 +147,7 @@ body {
   animation: scrolling var(--marquee-animation-duration) linear infinite;
 }
 
- 
+
 @keyframes scrolling {
   0% {
     transform: translateX(0);
@@ -213,13 +223,22 @@ body {
   animation: flicker 3s infinite ease-in-out;
 }
 
-.img-zoom {
-  transform: scale(0.9);
-  transition: transform .5s;
+.img-zoom img {
+  transition: transform .5s, filter 1.5s ease-in-out;
+
 }
 
-.img-zoom:hover {
-  transform: scale(1);
+.img-zoom:hover img {
+
+  transform: scale(1.1);
+}
+
+.logo-gray {
+  filter: grayscale(100%);
+}
+
+.logo-gray:hover {
+  filter: grayscale(0);
 }
 
 .icon-placeholder {
