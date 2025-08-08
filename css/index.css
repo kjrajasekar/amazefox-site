@@ -43,10 +43,10 @@ body {
 
   .gradient-border-rb {
     background:
-      linear-gradient(65deg, rgba(230, 31, 74, 0.4), rgba(56, 0, 160, 0.4)),
-      linear-gradient(65deg, rgba(230, 31, 74, 0.4), rgba(56, 0, 160, 0.4));
+      linear-gradient(65deg, rgba(230, 31, 74, 0.35), rgba(56, 0, 160, 0.35)),
+      linear-gradient(65deg, rgba(230, 31, 74, 0.35), rgba(56, 0, 160, 0.35));
     background-repeat: no-repeat, no-repeat;
-    background-size: 95% 10px, 10px 90%;
+    background-size: 95% 10px, 10px 95%;
     background-position: bottom right;
     background-color: #fff;
     box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.15);
@@ -225,11 +225,9 @@ body {
 
 .img-zoom img {
   transition: transform .5s, filter 1.5s ease-in-out;
-
 }
 
 .img-zoom:hover img {
-
   transform: scale(1.1);
 }
 
