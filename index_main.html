@@ -56,12 +56,23 @@
           },
           animation: {
             'infinite-scroll': 'infinite-scroll 25s linear infinite',
+            flipChar: 'flipChar 1s ease forwards',
+            appear: 'appear 0.8s ease forwards',
           },
           keyframes: {
             'infinite-scroll': {
               from: { transform: 'translateX(0)' },
               to: { transform: 'translateX(-100%)' },
-            }
+            },
+            flipChar: {
+              '0%': { opacity: '0', transform: 'rotateX(-90deg)' },
+              '50%': { opacity: '1', transform: 'rotateX(0deg)' },
+              '100%': { opacity: '0', transform: 'rotateX(90deg)' },
+            },
+            appear: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
           }
         },
       },
@@ -166,7 +177,8 @@
           class=" px-6 w-[220px] h-[35px] text-[12px] font-bold bg-gradient-to-r from-[#09CF83] ft-vit to-[#A259FF] text-white rounded-full font-medium shadow hover:opacity-90 transition">
           No. 1 Web design Company
         </button>
-        <p class="uppercase text-[13px] tracking-widest font-medium mt-10 ft-vit">
+        <span id="fancy-text" class="flex space-x-1 text-sm font-bold mt-5"></span>
+        <p class="uppercase text-[13px] tracking-widest font-medium mt-5 ft-vit">
           Web App design Services | Since 2008
         </p>
         <h1 class="mt-4 text-[50px]  font-black leading-[45px]">
@@ -272,13 +284,14 @@
       <div class=" grid grid-cols-8 sec-width mx-auto gap-5 pt-20 pb-10">
         <div class="lg:col-span-1 col-span-8  mx-auto  rounded-[30px] shadow-1xl shadow-black ">
           <div
-            class="grid place-items-center  shadow-[#16181A1F] shadow-1xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-            <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+            class="grid place-items-center w-[145px] h-[145px]  shadow-[#16181A1F] shadow-1xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+            <div class="rounded-[30px] bg-white  p-2 shadow-black w-[142px] h-[142px]  ">
               <!-- Inner Card inside Outer -->
               <div
-                class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                <div class="rounded-[20px] bg-white p-6 shadow-black  shadow-1xl h-[120px]">
-                  <img src="./img/alogo.png" class="icon-img">
+                class="relative rounded-[20px] w-[123px] h-[123px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                <div
+                  class="rounded-[20px] w-[120px] h-[120px] bg-white p-6 shadow-black  shadow-1xl h-[120px] flex items-center justify-center">
+                  <img src="./img/alogo.png" class="max-w-full h-auto">
                 </div>
               </div>
             </div>
@@ -328,18 +341,21 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Website Design </li>
-                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Mobile App Design </li>
-               <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  E-commerce Design </li>
-               <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Dashboard Design </li>
-               <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Web Application Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile App Design </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> E-commerce Design </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Dashboard Design </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Web Application Design
+                </li>
               </ul>
 
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-               <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Landing Page Design</li>
-               <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  SaaS Platform Design </li>
-               <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Wearable App Design</li>
-               <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Tablet App Design </li>
-               <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Email Template Design </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Landing Page Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> SaaS Platform Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Wearable App Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Tablet App Design </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Email Template Design
+                </li>
               </ul>
             </div>
           </div>
@@ -378,20 +394,29 @@
           <div class="lg:col-span-3">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Mobile-Friendly Website Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Responsive Web App Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Cross-Device Compatibility</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Adaptive Layout Design</li>
-                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Mobile-First UI Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile-Friendly Website
+                  Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Responsive Web App Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Cross-Device
+                  Compatibility</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Adaptive Layout Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile-First UI Design
+                </li>
               </ul>
 
 
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Fluid Grid Systems</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Touch Optimized Interfaces</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Fast Loading Mobile Pages</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile E-commerce Optimization</li>
-                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Optimized Mobile Navigation</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Fluid Grid Systems</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Touch Optimized
+                  Interfaces</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Fast Loading Mobile Pages
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile E-commerce
+                  Optimization</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Optimized Mobile
+                  Navigation</li>
 
               </ul>
             </div>
@@ -435,19 +460,23 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-               <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Fashion Websites </li>
-                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Electronics Websites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Grocery Websites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Skincare Websites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Furniture Websites</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Fashion Websites </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Electronics Websites
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Grocery Websites </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Skincare Websites </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Furniture Websites</li>
               </ul>
 
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Jewelry Websites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Fitness Websites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Baby Products Websites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Pet Supplies Websites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Marketplace Websites </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Jewelry Websites </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Fitness Websites </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Baby Products Websites
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Pet Supplies Websites
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Marketplace Websites
+                </li>
 
               </ul>
             </div>
@@ -460,7 +489,7 @@
         </div>
       </div>
     </section>
-       <section
+    <section
       class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
@@ -490,20 +519,27 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
 
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Business Website Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Portfolio Website Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  CMS-Based Web Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  E-commerce Website Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Landing Page Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Business Website Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Portfolio Website Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> CMS-Based Web Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> E-commerce Website Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Landing Page Design</li>
               </ul>
 
 
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Blog & News Website Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Responsive Website Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Industry-Specific Web Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  One-Page Website Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Custom UI Components</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Blog & News Website
+                  Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Responsive Website Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Industry-Specific Web
+                  Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> One-Page Website Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Custom UI Components</li>
               </ul>
             </div>
 
@@ -517,7 +553,7 @@
         </div>
       </div>
     </section>
-       <section
+    <section
       class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
@@ -546,20 +582,26 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Corporate Websites</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Landing Pages</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Educational Websites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Portfolio Websites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  E-commerce Websites</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Corporate Websites</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Landing Pages</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Educational Websites
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Portfolio Websites </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> E-commerce Websites</li>
               </ul>
 
 
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Healthcare/Clinic Websites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Real Estate Listing Sites </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  SaaS Marketing Websites</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Booking & Appointment Sites</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Blogs & Personal Sites </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Healthcare/Clinic
+                  Websites </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Real Estate Listing Sites
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> SaaS Marketing Websites
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Booking & Appointment
+                  Sites</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Blogs & Personal Sites
+                </li>
 
               </ul>
             </div>
@@ -574,7 +616,7 @@
         </div>
       </div>
     </section>
-       <section
+    <section
       class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
@@ -603,20 +645,28 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
 
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Digital Product Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  SaaS Product Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  MVP Design Services</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Wireframing & Prototyping</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  UX Research & Strategy</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Digital Product Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> SaaS Product Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> MVP Design Services</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Wireframing & Prototyping
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> UX Research & Strategy
+                </li>
               </ul>
 
 
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Cross-Platform Product Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  User Flow & Journey Mapping</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Mobile Product Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Interactive UI Components</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Conversion-Driven Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Cross-Platform Product
+                  Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> User Flow & Journey
+                  Mapping</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile Product Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Interactive UI Components
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Conversion-Driven Design
+                </li>
 
               </ul>
             </div>
@@ -631,7 +681,7 @@
         </div>
       </div>
     </section>
-    <    <section
+    < <section
       class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
@@ -660,20 +710,25 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
 
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Logo Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Brand Style Guide</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Social Media Creatives</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Marketing Collateral Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Business Card & Stationery Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Logo Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Brand Style Guide</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Social Media Creatives
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Marketing Collateral
+                  Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Business Card &
+                  Stationery Design</li>
               </ul>
 
 
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Brochure & Flyer Design </li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Banner & Poster Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Packaging Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Ad Creative Design</li>
-                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt="">  Presentation Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Brochure & Flyer Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Banner & Poster Design
+                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Packaging Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Ad Creative Design</li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Presentation Design</li>
 
               </ul>
             </div>
@@ -687,7 +742,7 @@
           </div>
         </div>
       </div>
-    </section>
+      </section>
 
   </div>
 
@@ -778,7 +833,8 @@
     <!-- Section -->
     <section id="steps-section"
       class="px-6 py-16 md:px-20 bg-white relative bg-[url(/img/img-con/process_bg_01.svg)]   bg-no-repeat bg-center">
-      <div class="absolute inset-0 bg-[url(/img/service/sub_service_left_dotted.svg)] bg-no-repeat " style="background-size: 35%;"></div>
+      <div class="absolute inset-0 bg-[url(/img/service/sub_service_left_dotted.svg)] bg-no-repeat "
+        style="background-size: 35%;"></div>
       <div class="sec-width  mx-auto relative">
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -820,7 +876,7 @@
               <div class="flex items-start gap-6" data-image="./img/img_scroll.svg">
                 <div class="flex flex-col items-center">
                   <div
-                    class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-[#720C7D]0 text-white font-bold step-number">
+                    class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#720C7D]0 text-white font-bold step-number">
                     1</div>
                 </div>
                 <div
@@ -867,7 +923,7 @@
               <div class="flex items-start gap-6" data-image="./img/img_webs.png">
                 <div class="flex flex-col items-center">
                   <div
-                    class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-400 font-bold step-number">
+                    class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-400 font-bold step-number">
                     2</div>
                 </div>
                 <div
@@ -911,7 +967,7 @@
               <div class="flex items-start gap-6" data-image="./img/img_tab.svg">
                 <div class="flex flex-col items-center">
                   <div
-                    class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-400 font-bold step-number">
+                    class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-400 font-bold step-number">
                     3</div>
                 </div>
 
@@ -954,7 +1010,7 @@
               <div class="flex items-start gap-6" data-image="./img/img_phone.svg">
                 <div class="flex flex-col items-center">
                   <div
-                    class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-400 font-bold step-number">
+                    class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-400 font-bold step-number">
                     4</div>
                 </div>
                 <div
@@ -996,7 +1052,7 @@
               <div class="flex items-start gap-6" data-image="./img/img_koli.png">
                 <div class="flex flex-col items-center">
                   <div
-                    class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-400 font-bold step-number">
+                    class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-400 font-bold step-number">
                     5</div>
                 </div>
                 <div
@@ -1865,8 +1921,8 @@
 
   <!-- technology stack section  -->
   <div class=" text-white  bg-[url(/img/img-con/techstack_bg.svg)] py-20"
-    style="background-image: url('./img/img-con/techstack_curve.svg'), url('./img/img-con/techstack_bg.svg'); 
-     background-blend-mode:  multiply, screen; background-repeat:no-repeat; background-position:center;background-size:cover">
+    style="background-image: url('./img/img-con/category_services_curve.png'), url('./img/img-con/techstack_bg.svg'); 
+     background-blend-mode:  multiply, screen; background-repeat:no-repeat; background-position:bottom ;background-size:contain cover">
     <section
       class=" sec-width mx-auto flex flex-col lg:flex-row items-center justify-between px-6 py-5 gap-6 relative overflow-hidden">
       <!-- Left Content -->
@@ -2598,7 +2654,7 @@
 
   </div>
 
-  <!-- what make us section  -->
+  <!--Features - what make us section  -->
   <div class="  relative bg-no-repeat w-full bg-[length:100%_auto] text-white py-20" style="
        background-image: url('/img/img-con/features_bot_curve.png'), url('/img/img-con/feature_main_bg.svg') ;
        background-blend-mode: normal,  screen;
@@ -3391,7 +3447,35 @@
 
     });
   </script>
+  <script>
+    const phrases = [
+      "Webs #1 Website Design ",
+      "Design Websites and Applications ",
+      "Transparent & Tailored Pricing "
+    ];
 
+    const container = document.getElementById("fancy-text");
+    let phraseIndex = 0;
+
+    function showPhrase(text) {
+      container.innerHTML = "";
+      text.split("").forEach((char, i) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.className = `inline-block animate-appear`;
+        span.style.animationDelay = `${i * 0.33}s`; // small stagger
+        container.appendChild(span);
+      });
+    }
+
+    function loopPhrases() {
+      showPhrase(phrases[phraseIndex]);
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      setTimeout(loopPhrases, 3500);
+    }
+
+    loopPhrases();
+  </script>
 </body>
 
 </html>

@@ -156,11 +156,6 @@ body {
   border: 2px solid #eee;
 }
 
-.icon-img {
-  margin: 0 auto;
-  /* height: 24px; */
-  vertical-align: middle;
-}
 
 .icon-label {
   font-family: "Roboto" !important;
@@ -278,8 +273,7 @@ body {
     .progress-line {
       position: absolute;
       top: 6%;
-     
-      left: 14px;
+      left: 20px;
       width: 4px;
       background-color: #d1d5db;
     }
@@ -288,7 +282,7 @@ body {
     }
     .progress-line-fill {
       position: absolute;
-      left: 14px;
+      left: 20px;
       width: 4px;
       background-color: #720C7D;
       height: 0;
