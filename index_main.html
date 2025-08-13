@@ -90,17 +90,17 @@
         class="mx-auto sec-width   text-white px-4 py-2 ft-vit text-[15px] hidden md:flex justify-between items-center">
         <div class="flex items-center gap-4">
           <div class="flex items-center gap-2">
-            <i class="ph-fill ph-whatsapp-logo text-green-500 text-lg"></i>
+            <img src="./img/ic_whtsapp.svg" alt="">
             <span>+91 9786739966</span>
           </div>
           <span>|</span>
           <div class="flex items-center gap-2">
-            <img src="./img/ic_mail.svg" alt="" class="w-4 h-4">
+            <img src="./img/ic_mail.svg" alt="">
             <span>support@amazefox.com</span>
           </div>
         </div>
         <div class="flex items-center gap-2">
-          <img src="./img/ic_whtsapp.svg" alt="" class="w-4 h-4">
+          <img src="./img/ic_teams.svg" alt="">
           <span>nikilfox / amazefox</span>
         </div>
       </div>
@@ -114,15 +114,20 @@
       <div class="sec-width mx-auto flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center gap-2">
-          <div class="w-10 h-10 bg-gray-200 rounded-full">
+          <div class=" ">
             <img src="./img/alogo.png" alt="">
           </div>
           <span class="text-[40px] ">amazefox</span>
         </div>
 
         <!-- Desktop Menu -->
-        <ul class="hidden md:flex gap-6 text-[16px] ft-rob font-medium">
-          <li><a href="#" class="hover:text-pink-500">Services</a></li>
+        <ul class="hidden md:flex gap-8 text-[16px] ft-rob font-medium">
+          <li><a href="#" class="hover:text-pink-500 hs-dropdown [--trigger:hover] relative  inline">Services
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg></a>
+          </li>
           <li><a href="#" class="hover:text-pink-500">About Us</a></li>
           <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
           <li><a href="#" class="hover:text-pink-500">Industries</a></li>
@@ -132,11 +137,9 @@
         </ul>
 
         <!-- Button + Hamburger -->
-        <div class="flex items-center gap-4">
-          <button class="hidden ft-rob text-[17px] lg:inline px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
-">
-            Contact Us
-          </button>
+        <div class="flex items-center ">
+          <button class="hidden ft-rob text-[17px] lg:inline px-4 py-2 rounded-[10px] text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]
+"> Contact Us </button>
           <button @click="open = !open" class="md:hidden focus:outline-none">
             <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -169,7 +172,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="w-full bg-no-repeat bg-cover bg-[url(/img/banner_bg.svg)]">
+  <section class="w-full bg-no-repeat bg-cover bg-[url(/img/banner_bg_01.svg)] ">
     <section class="relative sec-width p-10 mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-1 ">
       <!-- Left Content -->
       <div data-aos="fade-left" class="lg:col-span-3">
@@ -192,7 +195,7 @@
           drives meaningful interactions that support your business growth.
         </p>
         <button type="submit"
-          class="relative mt-10 shadow-black shadow-md w-[250px] h-[75px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[17px] font-bold hover:opacity-90 transition">
+          class="relative mt-10 shadow-black shadow-sm w-[250px] h-[75px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[17px] font-bold hover:opacity-90 transition">
           Get Free Quote <img class="inline absolute right-[30px] top-[30px]" src="./img/img-con/btn_arrow.svg" alt=""
             width="20">
         </button>
@@ -208,48 +211,32 @@
   </section>
 
   <!-- Company Carosel -->
-  <main class="relative   flex flex-col justify-center  overflow-hidden shadow-xl inset-shadow-xs" style=" border-bottom: 1.5px solid transparent;
+  <main class="relative   flex flex-col justify-center  overflow-hidden shadow-md inset-shadow-xs" style=" border-bottom: 1.5px solid transparent;
   border-image: linear-gradient(90deg,#000000,#d1d1d1,black, #d1d1d1) 10 ;">
-    <div class="w-full sec-width mx-auto px-4 md:px-6 py-8">
+    <div class="w-full sec-width mx-auto px-4 md:px-6 py-10">
       <div class="text-center">
+        <div class="w-full overflow-hidden 
+            [mask-image:_linear-gradient(to_right,transparent_0,_black_64px,_black_calc(100%-64px),transparent_100%)]">
 
-        <!-- Logo Carousel animation -->
-        <div x-data="{}" x-init="$nextTick(() => {
-                        let ul = $refs.logos;
-                        ul.insertAdjacentHTML('afterend', ul.outerHTML);
-                        ul.nextSibling.setAttribute('aria-hidden', 'true');
-                    })"
-          class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-          <ul x-ref="logos"
-            class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-            <li>
-              <img src="./img/logos/ic_logo_bert.svg" alt="Facebook" />
-            </li>
-            <li>
-              <img src="./img/logos/ic_logo_eht.svg" alt="Disney" />
-            </li>
-            <li>
-              <img src="./img/logos/ic_logo_ex.svg" alt="Airbnb" />
-            </li>
-            <li>
-              <img src="./img/logos/ic_logo_exf.svg" alt="Apple" />
-            </li>
-            <li>
-              <img src="./img/logos/ic_logo_heart.svg" alt="Spark" />
-            </li>
-            <li>
-              <img src="./img/logos/ic_logo_htto.svg" alt="Samsung" />
-            </li>
-            <li>
-              <img src="./img/logos/ic_logo_s.svg" alt="Quora" />
-            </li>
-
+          <ul id="logo-track" class="flex items-center gap-10 [&_li]:mx-6 [&_img]:max-w-none">
+            <li><img src="./img/logos/ic_logo_bert.svg" alt="Facebook" /></li>
+            <li><img src="./img/logos/ic_logo_eht.svg" alt="Disney" /></li>
+            <li><img src="./img/logos/ic_logo_ex.svg" alt="Airbnb" /></li>
+            <li><img src="./img/logos/ic_logo_exf.svg" alt="Apple" /></li>
+            <li><img src="./img/logos/ic_logo_heart.svg" alt="Spark" /></li>
+            <li><img src="./img/logos/ic_logo_htto.svg" alt="Samsung" /></li>
+            <li><img src="./img/logos/ic_logo_s.svg" alt="Quora" /></li>
+            <li><img src="./img/logos/ic_logo_bert.svg" alt="Facebook" /></li>
+            <li><img src="./img/logos/ic_logo_eht.svg" alt="Disney" /></li>
+            <li><img src="./img/logos/ic_logo_ex.svg" alt="Airbnb" /></li>
+            <li><img src="./img/logos/ic_logo_exf.svg" alt="Apple" /></li>
+            <li><img src="./img/logos/ic_logo_heart.svg" alt="Spark" /></li>
+            <li><img src="./img/logos/ic_logo_htto.svg" alt="Samsung" /></li>
+            <li><img src="./img/logos/ic_logo_s.svg" alt="Quora" /></li>
           </ul>
+
         </div>
-        <!-- End: Logo Carousel animation -->
-
       </div>
-
     </div>
   </main>
 
@@ -261,7 +248,7 @@
      ">
 
     <!-- Content -->
-    <div class="relative z-10 mb-10">
+    <div class="relative z-10 mb-5">
       <!-- Top Section -->
       <section data-aos="fade-up" class="sec-width mx-auto text-center px-4 py-16 from-gray-100 via-white to-gray-100">
         <div class="lg:max-w-5xl xl:max-w-7xl mx-auto ft-vit">
@@ -271,7 +258,7 @@
               App Design </span></h1>
           <h1 class="text-[40px] lg:text-[60px] leading-[60px] mb-4"><span class="font-black">Web App Design
               Services</span></h1>
-          <p class="text-[18px] lg:text-[16px]  leading-[20px] text-[#666666]">
+          <p class="text-[18px] lg:text-[16px]  leading-[20px] text-[#666666] max-w-4xl mx-auto">
             Amazefox designs websites that are clean, user-friendly, and aligned with your brand. We focus
             on smart layouts, smooth navigation, and effective calls-to-action to create engaging digital
             experiences. Whether you're launching a new site or refreshing an old one, our team ensures
@@ -290,7 +277,7 @@
               <div
                 class="relative rounded-[20px] w-[123px] h-[123px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                 <div
-                  class="rounded-[20px] w-[120px] h-[120px] bg-white p-6 shadow-black  shadow-1xl h-[120px] flex items-center justify-center">
+                  class="rounded-[20px] w-[120px] h-[120px]  bg-gradient-to-br from-[#671b70]   to-[#000000] p-6 shadow-black  shadow-1xl h-[120px] flex items-center justify-center">
                   <img src="./img/alogo.png" class="max-w-full h-auto">
                 </div>
               </div>
@@ -299,10 +286,10 @@
         </div>
         <div class="lg:col-span-7 col-span-8 ft-vit">
           <h1
-            class="text-[35px] lg:text-[60px] text-center lg:text-left  leading-[35px] lg:leading-[50px] font-black mb-4  ">
+            class="text-[35px] lg:text-[48px] text-center lg:text-left  leading-[35px] lg:leading-[50px] font-black mb-4  ">
             Explore Web App Design Services designed around your business needs
           </h1>
-          <p class="text-[18px] lg:text-[16px] leading-[21px] mx-[25px]   text-[#666666]">
+          <p class="text-[18px] lg:text-[16px] leading-[21px]     text-[#666666]">
             we offer thoughtful digital services that solve problems, simplify processes, and support your
             business growth.
           </p>
@@ -313,22 +300,22 @@
     <!-- Explore Services Section -->
 
     <section
-      class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
+      class="sec-width   mb-6 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-6 gap-6 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-2 ft-vit p-5 my-5 text-center lg:text-start">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
             <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-2  ">UI / UX Design</h3>
             <p class="text-[#666666] text-[14px] mb-6">
               Our UI/UX design helps users do more with less effort through smart, clean, and thoughtful
-              design.
+              design.Every element is placed with  precision to enhance usability.
             </p>
             <button type="submit"
               class="relative   w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition">
@@ -337,8 +324,8 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-3">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+          <div class="lg:col-span-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Website Design </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile App Design </li>
@@ -360,25 +347,25 @@
             </div>
           </div>
           <!-- Right Side Image -->
-          <div class="lg:col-span-1 ">
-            <img src="./img/service/UIUX-design.svg" alt="Illustration" class="w-full max-w-xs  mx-auto">
+          <div class="lg:col-span-2 ">
+            <img src="./img/service/UIUX-design.svg" alt="Illustration" class="float-end">
           </div>
         </div>
       </div>
     </section>
     <section
-      class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
+      class="sec-width   mb-6 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-6 gap-6 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-2 ft-vit p-5 my-5 text-center lg:text-start">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
             <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-2">Mobile
               Responsive Design</h3>
             <p class="text-[#666666] text-[14px] mb-6">
@@ -391,8 +378,8 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-3">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+          <div class="lg:col-span-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile-Friendly Website
                   Design</li>
@@ -425,25 +412,25 @@
           </div>
 
           <!-- Right Side Image -->
-          <div class="lg:col-span-1">
-            <img src="./img/service/mobile-responsivedesign.svg" alt="Illustration" class="w-full max-w-xs mx-auto">
+          <div class="lg:col-span-2">
+            <img src="./img/service/mobile-responsivedesign.svg" alt="Illustration" class="float-end">
           </div>
         </div>
       </div>
     </section>
     <section
-      class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
+      class="sec-width   mb-6 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-6 gap-6 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-2 ft-vit p-5 my-5 text-center lg:text-start">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
             <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-2">eCommerce Solutions</h3>
             <p class="text-[#666666] text-[14px] mb-6">
               We craft seamless online shopping experiences that boost sales, build trust, and make every
@@ -456,9 +443,9 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-3">
+          <div class="lg:col-span-4">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Fashion Websites </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Electronics Websites
@@ -483,25 +470,25 @@
           </div>
 
           <!-- Right Side Image -->
-          <div class="lg:col-span-1">
-            <img src="./img/service/ecommerce-solutions.svg" alt="Illustration" class="w-full max-w-xs mx-auto">
+          <div class="lg:col-span-2">
+            <img src="./img/service/ecommerce-solutions.svg" alt="Illustration" class="float-end">
           </div>
         </div>
       </div>
     </section>
     <section
-      class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
+      class="sec-width   mb-6 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-6 gap-6 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-2 ft-vit p-5 my-5 text-center lg:text-start">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
             <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-2">Custom Web Design</h3>
             <p class="text-[#666666] text-[14px] mb-6">
               Our custom web design solutions are tailored to reflect your brand, engage users, and deliver outstanding
@@ -514,9 +501,9 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-3">
+          <div class="lg:col-span-4">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
 
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Business Website Design
@@ -547,25 +534,25 @@
           </div>
 
           <!-- Right Side Image -->
-          <div class="lg:col-span-1">
-            <img src="./img/service/custom-webesign.svg" alt="Illustration" class="w-full max-w-xs mx-auto">
+          <div class="lg:col-span-2">
+            <img src="./img/service/custom-webesign.svg" alt="Illustration" class="float-end">
           </div>
         </div>
       </div>
     </section>
     <section
-      class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
+      class="sec-width   mb-6 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-6 gap-6 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-2 ft-vit p-5 my-5 text-center lg:text-start">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
             <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-2">Website Redesign</h3>
             <p class="text-[#666666] text-[14px] mb-6">
               We refresh outdated websites into modern, user-friendly experiences that align with your brand,
@@ -578,9 +565,8 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-3">
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+          <div class="lg:col-span-4 ">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Corporate Websites</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Landing Pages</li>
@@ -605,30 +591,28 @@
 
               </ul>
             </div>
-
-
           </div>
 
           <!-- Right Side Image -->
-          <div class="lg:col-span-1">
-            <img src="./img/service/website-redesign.svg" alt="Illustration" class="w-full max-w-xs mx-auto">
+          <div class="lg:col-span-2">
+            <img src="./img/service/website-redesign.svg" alt="Illustration" class="float-end">
           </div>
         </div>
       </div>
     </section>
     <section
-      class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
+      class="sec-width   mb-6 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-6 gap-6 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative px-6 py-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-2 ft-vit p-5 my-5 text-center lg:text-start">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
             <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-2">Product Design</h3>
             <p class="text-[#666666] text-[14px] mb-6">
               Our product design service blends creativity, usability, and strategy to build digital products that users
@@ -640,9 +624,9 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-3">
+          <div class="lg:col-span-4">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
 
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Digital Product Design
@@ -675,25 +659,25 @@
           </div>
 
           <!-- Right Side Image -->
-          <div class="lg:col-span-1">
-            <img src="./img/service/product-design.svg" alt="Illustration" class="w-full max-w-xs mx-auto">
+          <div class="lg:col-span-2">
+            <img src="./img/service/product-design.svg" alt="Illustration" class="float-end">
           </div>
         </div>
       </div>
     </section>
-    < <section
-      class="sec-width   mb-10 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
+    <section
+      class="sec-width   mb-20  mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-6 gap-6 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative px-6  z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-2 ft-vit p-5 my-5 text-center lg:text-start">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
             <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-2">Brand Identity and Marketing Design</h3>
             <p class="text-[#666666] text-[14px] mb-6">
               We create strong visual identities and marketing assets that build brand trust, tell your story, and
@@ -705,9 +689,9 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-3">
+          <div class="lg:col-span-4">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
 
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Logo Design</li>
@@ -737,13 +721,12 @@
           </div>
 
           <!-- Right Side Image -->
-          <div class="lg:col-span-1">
-            <img src="./img/service/brand-design.svg" alt="Illustration" class="w-full max-w-xs mx-auto">
+          <div class="lg:col-span-2 ">
+            <img src="./img/service/brand-design.svg" alt="Illustration" class="float-end ">
           </div>
         </div>
       </div>
       </section>
-
   </div>
 
   <!-- section 3 team--------------------------------------   -->
@@ -3266,8 +3249,6 @@
         sections.forEach(section => {
           observer.observe(section);
         });
-    
-    
     */
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -3296,15 +3277,15 @@
 
 
 
-    const root = document.documentElement;
-    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-    const marqueeContent = document.querySelector("ul.marquee-content");
-
-    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
-    for (let i = 0; i < marqueeElementsDisplayed; i++) {
-      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-    }
+    /** const root = document.documentElement;
+     const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+     const marqueeContent = document.querySelector("ul.marquee-content");
+ 
+     root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+ 
+     for (let i = 0; i < marqueeElementsDisplayed; i++) {
+       marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+     } -->
 
     //*****  Accordian script ******/ 
     function toggleAccordion(clickedItem) {
@@ -3326,6 +3307,28 @@
 
 
   </script>
+  <script>
+    const track = document.getElementById('logo-track');
+
+    // Clone the list for seamless loop
+    const clone = track.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.parentNode.appendChild(clone);
+
+    // Wrap originals and clone inside a container for animation
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('marquee-wrapper');
+    wrapper.style.display = 'flex';
+    wrapper.style.flexWrap = 'nowrap';
+    wrapper.style.animation = 'infinite-scroll 20s linear infinite';
+
+    // Move both ULs into wrapper
+    const parent = track.parentNode;
+    parent.appendChild(wrapper);
+    wrapper.appendChild(track);
+    wrapper.appendChild(clone);
+  </script>
+
   <script>
     // All 20 logos
     const allLogos = [
@@ -3364,7 +3367,7 @@
     // Swap a logo every 1 second
     setInterval(swapRandomLogo, 500);
   </script>
-  <!-- <script src="./js/effects.js"></script> -->
+
 
   <!-- slider page script  -->
   <script>
@@ -3471,7 +3474,7 @@
     function loopPhrases() {
       showPhrase(phrases[phraseIndex]);
       phraseIndex = (phraseIndex + 1) % phrases.length;
-      setTimeout(loopPhrases, 3500);
+      setTimeout(loopPhrases, 7500);
     }
 
     loopPhrases();
