@@ -32,6 +32,133 @@
   </style>
 </head>
 <body class="bg-gray-100">
+<nav id="navbar" style="border-bottom: 1.5px solid transparent;
+  border-image: linear-gradient(90deg,#000000,#d1d1d1,black, #d1d1d1) 10;"
+  x-data="{ open: false, megaOpen: false }"
+  @click.away="megaOpen = false"
+  class="bg-white px-4 py-4 md:px-10 md:py-6 transition duration-300">
+
+  <div class="sec-width mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <div>
+        <img src="./img/alogo.png" alt="">
+      </div>
+      <span class="text-[40px]">amazefox</span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-8 text-[16px] ft-rob font-medium relative">
+      <!-- Services with Hover & Click -->
+      <li class="relative"
+          @mouseenter="if(window.innerWidth >= 768) megaOpen = true"
+          @mouseleave="if(window.innerWidth >= 768) megaOpen = false">
+        <button @click="if(window.innerWidth < 768) megaOpen = !megaOpen"
+          class="hover:text-pink-500 inline-flex items-center focus:outline-none">
+          Services
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 ml-1" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Mega Menu -->
+        <div x-show="megaOpen"
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0 translate-y-4"
+          x-transition:enter-end="opacity-100 translate-y-0"
+          x-transition:leave="transition ease-in duration-200"
+          x-transition:leave-start="opacity-100 translate-y-0"
+          x-transition:leave-end="opacity-0 translate-y-4"
+          class="absolute left-0 top-full grid grid-cols-2 gap-6 bg-white shadow-lg border border-gray-200 rounded-lg p-6 w-[500px] z-50">
+          <a href="#" class="hover:text-pink-500">Website Design</a>
+          <a href="#" class="hover:text-pink-500">Mobile App Design</a>
+          <a href="#" class="hover:text-pink-500">E-commerce Design</a>
+          <a href="#" class="hover:text-pink-500">Dashboard Design</a>
+          <a href="#" class="hover:text-pink-500">Web Application Design</a>
+          <a href="#" class="hover:text-pink-500">Landing Page Design</a>
+          <a href="#" class="hover:text-pink-500">SaaS Platform Design</a>
+          <a href="#" class="hover:text-pink-500">Wearable App Design</a>
+          <a href="#" class="hover:text-pink-500">Tablet App Design</a>
+          <a href="#" class="hover:text-pink-500">Email Template Design</a>
+        </div>
+      </li>
+
+      <li><a href="#" class="hover:text-pink-500">About Us</a></li>
+      <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
+      <li><a href="#" class="hover:text-pink-500">Industries</a></li>
+      <li><a href="#" class="hover:text-pink-500">Testimonials</a></li>
+      <li><a href="#" class="hover:text-pink-500">Clients</a></li>
+      <li><a href="#" class="hover:text-pink-500">Blog</a></li>
+    </ul>
+
+    <!-- Contact Button + Hamburger -->
+    <div class="flex items-center">
+      <button
+        class="hidden ft-rob text-[17px] lg:inline px-4 py-2 rounded-[10px] text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+        Contact Us
+      </button>
+      <button @click="open = !open" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor"
+          stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div x-show="open" x-transition x-cloak class="md:hidden mt-4">
+    <ul class="space-y-2 ft-rob text-[16px] font-medium">
+      <!-- Services expandable in mobile -->
+      <li>
+        <button @click="megaOpen = !megaOpen"
+          class="flex justify-between w-full py-2 border-b">
+          Services
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 transform transition-transform"
+            :class="megaOpen ? 'rotate-180' : ''"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <ul x-show="megaOpen" x-transition class="pl-4 space-y-2">
+          <li><a href="#">Website Design</a></li>
+          <li><a href="#">Mobile App Design</a></li>
+          <li><a href="#">E-commerce Design</a></li>
+          <li><a href="#">Dashboard Design</a></li>
+          <li><a href="#">Web Application Design</a></li>
+          <li><a href="#">Landing Page Design</a></li>
+          <li><a href="#">SaaS Platform Design</a></li>
+          <li><a href="#">Wearable App Design</a></li>
+          <li><a href="#">Tablet App Design</a></li>
+          <li><a href="#">Email Template Design</a></li>
+        </ul>
+      </li>
+
+      <li><a @click="open = false" href="#" class="block py-2 border-b">About Us</a></li>
+      <li><a @click="open = false" href="#" class="block py-2 border-b">Portfolio</a></li>
+      <li><a @click="open = false" href="#" class="block py-2 border-b">Industries</a></li>
+      <li><a @click="open = false" href="#" class="block py-2 border-b">Testimonials</a></li>
+      <li><a @click="open = false" href="#" class="block py-2 border-b">Clients</a></li>
+      <li><a @click="open = false" href="#" class="block py-2 border-b">Blog</a></li>
+
+      <li>
+        <button
+          class="mt-2 w-full px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+          Contact Us
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
 
 <section class="max-w-6xl mx-auto py-20 px-4">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -107,51 +234,6 @@
   </div>
 </section>
 
-<script>
-  const steps = document.querySelectorAll("#steps > div");
-  const stepImage = document.getElementById("stepImage");
-  const stepNumbers = document.querySelectorAll(".step-number");
-  const progressFill = document.getElementById("progressFill");
-
-  window.addEventListener("scroll", () => {
-    let currentStepIndex = 0;
-
-    steps.forEach((step, index) => {
-      const rect = step.getBoundingClientRect();
-
-      // Trigger step as soon as it starts entering the middle of the viewport
-      if (rect.top < window.innerHeight * 0.6 && rect.bottom > window.innerHeight * 0.4) {
-        currentStepIndex = index;
-      }
-    });
-
-    // Update step number colors
-    stepNumbers.forEach((num, i) => {
-      if (i === currentStepIndex) {
-        // Active step at start
-        num.classList.add("mybg-grad", "text-white", "border-[#720C7D]");
-        num.classList.remove("border-gray-400", "text-gray-400");
-      } else if (i < currentStepIndex) {
-        // Completed steps stay blue
-        num.classList.add("mybg-grad", "text-white", "border-[#720C7D]");
-        num.classList.remove("border-gray-400", "text-gray-400");
-      } else {
-        // Future steps gray
-        num.classList.remove("mybg-grad", "text-white", "border-[#720C7D]");
-        num.classList.add("border-gray-400", "text-gray-400");
-      }
-    });
-
-    // Update image immediately when step starts
-    stepImage.src = steps[currentStepIndex].dataset.image;
-
-    // Update progress line height
-    const stepHeight = steps[steps.length - 1].getBoundingClientRect().bottom - steps[0].getBoundingClientRect().top;
-    const scrolled = window.scrollY - steps[0].offsetTop + window.innerHeight / 2;
-    const progress = Math.min(Math.max(scrolled / stepHeight, 0), 1);
-    progressFill.style.height = `${progress * 100}%`;
-  });
-</script>
 
 
 </body>

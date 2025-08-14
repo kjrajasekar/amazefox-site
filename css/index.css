@@ -19,6 +19,10 @@
   font-weight: 400;
 }
 
+.ft-vit-t{
+   font-family: "Be Vietnam " !important;
+  font-weight: 400;
+}
 .ft-vit,
 body {
   font-family: "Be Vietnam Pro" !important;
@@ -216,8 +220,8 @@ body {
     }
     .progress-line {
       position: absolute;
-      top: 6%;
-      left: 20px;
+      top: 8%;
+      left: 35px;
       width: 4px;
       background-color: #d1d5db;
     }
@@ -226,7 +230,7 @@ body {
     }
     .progress-line-fill {
       position: absolute;
-      left: 20px;
+      left: 35px;
       width: 4px;
       background-color: #720C7D;
       height: 0;
