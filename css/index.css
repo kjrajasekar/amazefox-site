@@ -6,6 +6,19 @@
   box-sizing: border-box;
 }
 
+
+/* country list in contact form  */
+
+.intl-tel-input,
+.iti{
+  width: 100%;
+}
+.iti__country-list {
+      color: black !important;
+      background-color: white !important;
+    }
+
+/* country list in contact form  */
 .sec-width {
   max-width: 87.5rem;
 }
@@ -54,6 +67,7 @@ body {
     box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.15);
   }
 }
+
 
 .footer li {
   font-family: "Roboto" !important;
