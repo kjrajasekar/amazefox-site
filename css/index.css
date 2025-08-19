@@ -117,8 +117,6 @@ body {
   }
 }
 
-
-
 .icon-label {
   font-family: "Roboto" !important;
   font-weight: bold;
@@ -192,41 +190,6 @@ body {
   clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
 }
 
-/* .progress-line {
-  width: 2px;
-  background: #ccc;
-}
-
-.step {
-  display: flex;
-  margin: 40px 0;
-  position: relative;
-  left: -145%;
-}
-
-.circle {
-  width: 24px;
-  height: 24px;
-  background: #fff;
-  border-radius: 50%;
-  border: 4px solid #720C7D;
-  transition: background 0.3s;
-}
-
-.step.active .circle {
-  background: linear-gradient(120deg, #3800A0, #720C7D, #E61F4A)
-} */
-
-/* Scroll sections */
-/* .section {
-  height: 100vh;
-  padding-left: 100px;
-  padding-top: 40px;
-}
-
-.section:nth-child(even) {
-  background: #f0f0f0;
-} */
 
     .active-step {
       background-color: #720C7D;

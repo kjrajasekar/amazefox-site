@@ -161,23 +161,97 @@
       </div>
 
       <!-- Mega Menu Full Width -->
-     <div x-show="megaOpen" @mouseenter="megaOpen = true" @mouseleave="megaOpen = false"
+      <div x-show="megaOpen" @mouseenter="megaOpen = true" @mouseleave="megaOpen = false"
         x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4"
         x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200"
         x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
-        class="absolute inset-x-0 left-0 top-full max-w-[100%] mx-auto bg-white shadow-lg border-t border-gray-200 z-50 overflow-x-hidden">
+        class="absolute inset-x-0 left-0 top-full max-w-[100%] mx-auto bg-white shadow-lg border-t border-gray-200 z-50 overflow-visible">
 
         <div class="grid grid-cols-5 gap-6 p-6 max-w-7xl mx-auto">
-          <a href="#" class="hover:text-pink-500">UI/UX Design</a>
-          <a href="#" class="hover:text-pink-500">Mobile App Solution</a>
-          <a href="#" class="hover:text-pink-500">E-commerce Design</a>
-          <a href="#" class="hover:text-pink-500">Custom Web Design</a>
-          <a href="#" class="hover:text-pink-500">Website Re-Design</a>
-          <a href="#" class="hover:text-pink-500">Product Design</a>
-          <a href="#" class="hover:text-pink-500">Brand Identity</a>
-          <a href="#" class="hover:text-pink-500">Marketing Design</a>
+
+          <!-- UI/UX Design -->
+          <div>
+            <a href="#" class="hover:text-pink-500 font-semibold">UI/UX Design</a>
+            <div class="mt-2 w-full   p-3 space-y-2">
+              <a href="#" class="block hover:text-pink-500">
+                <!-- <span class="ml-auto pe-2">→</span> -->
+                Wireframing</a>
+              <a href="#" class="block hover:text-pink-500">Prototyping</a>
+              <a href="#" class="block hover:text-pink-500">Interaction Design</a>
+            </div>
+          </div>
+
+          <!-- Mobile App Solution -->
+          <div>
+            <a href="#" class="hover:text-pink-500 font-semibold">Mobile App Solution</a>
+            <div class="mt-2 w-full   p-3 space-y-2">
+              <a href="#" class="block hover:text-pink-500">iOS Development</a>
+              <a href="#" class="block hover:text-pink-500">Android Development</a>
+              <a href="#" class="block hover:text-pink-500">Cross-Platform Apps</a>
+            </div>
+          </div>
+
+          <!-- E-commerce Design -->
+          <div>
+            <a href="#" class="hover:text-pink-500 font-semibold">E-commerce Design</a>
+            <div class="mt-2 w-full   p-3 space-y-2">
+              <a href="#" class="block hover:text-pink-500">Shopify</a>
+              <a href="#" class="block hover:text-pink-500">WooCommerce</a>
+              <a href="#" class="block hover:text-pink-500">Custom Solutions</a>
+            </div>
+          </div>
+
+          <!-- Custom Web Design -->
+          <div>
+            <a href="#" class="hover:text-pink-500 font-semibold">Custom Web Design</a>
+            <div class="mt-2 w-full   p-3 space-y-2">
+              <a href="#" class="block hover:text-pink-500">Landing Pages</a>
+              <a href="#" class="block hover:text-pink-500">Corporate Websites</a>
+              <a href="#" class="block hover:text-pink-500">Portfolio Sites</a>
+            </div>
+          </div>
+
+          <!-- Website Re-Design -->
+          <div>
+            <a href="#" class="hover:text-pink-500 font-semibold">Website Re-Design</a>
+            <div class="mt-2 w-full  p-3 space-y-2">
+              <a href="#" class="block hover:text-pink-500">UI Refresh</a>
+              <a href="#" class="block hover:text-pink-500">UX Optimization</a>
+              <a href="#" class="block hover:text-pink-500">SEO-Friendly Redesign</a>
+            </div>
+          </div>
+
+          <!-- Product Design -->
+          <div>
+            <a href="#" class="hover:text-pink-500 font-semibold">Product Design</a>
+            <div class="mt-2 w-full    p-3 space-y-2">
+              <a href="#" class="block hover:text-pink-500">MVP Development</a>
+              <a href="#" class="block hover:text-pink-500">Prototyping</a>
+              <a href="#" class="block hover:text-pink-500">Design System</a>
+            </div>
+          </div>
+
+          <!-- Brand Identity -->
+          <div>
+            <a href="#" class="hover:text-pink-500 font-semibold">Brand Identity</a>
+            <div class="mt-2 w-full    p-3 space-y-2">
+              <a href="#" class="block hover:text-pink-500">Logo Design</a>
+              <a href="#" class="block hover:text-pink-500">Color Guidelines</a>
+              <a href="#" class="block hover:text-pink-500">Typography</a>
+            </div>
+          </div>
+
+          <!-- Marketing Design -->
+          <div>
+            <a href="#" class="hover:text-pink-500 font-semibold">Marketing Design</a>
+            <div class="mt-2 w-full  p-3 space-y-2">
+              <a href="#" class="block hover:text-pink-500">Social Media</a>
+              <a href="#" class="block hover:text-pink-500">Email Templates</a>
+              <a href="#" class="block hover:text-pink-500">Ad Creatives</a>
+            </div>
+          </div>
         </div>
-      </div>  
+      </div>
 
       <!-- Mobile Menu -->
       <div x-show="open" x-transition x-cloak class="md:hidden mt-4">
@@ -198,7 +272,7 @@
       </div>
     </nav>
 
-    <!-- </div> -->
+
     <!-- Navbar End -->
   </header>
 
@@ -225,11 +299,14 @@
           An effective digital presence not only builds trust with potential clients but also
           drives meaningful interactions that support your business growth.
         </p>
-        <button type="submit"
-          class="relative mt-10 shadow-black shadow-sm w-[250px] h-[75px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[17px] font-bold hover:opacity-90 transition">
-          Get Free Quote <img class="inline absolute right-[30px] top-[30px]" src="./img/img-con/btn_arrow.svg" alt=""
-            width="20">
+        <button type="submit" class="relative mt-10 shadow-black shadow-sm w-[250px] h-[75px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  py-3 rounded-[100px] text-white text-[17px] font-bold hover:opacity-90 transition 
+  flex items-center justify-center gap-3">
+
+          <span>Get Free Quote</span>
+          <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
         </button>
+
       </div>
 
       <!-- Right Image -->
@@ -347,11 +424,16 @@
               Our UI/UX design helps users do more with less effort through smart, clean, and thoughtful
               design.Every element is placed with precision to enhance usability.
             </p>
-            <button type="submit"
-              class="relative   w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition">
-              Get a Free Quote <img class="inline absolute right-[25px] top-[21px]" src="./img/img-con/btn_arrow.svg"
-                alt="" width="20">
+
+            <button type="submit" class="relative mt-10 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
+  flex items-center justify-center gap-3">
+
+              <span>Get Free Quote</span>
+              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
             </button>
+
+
           </div>
           <!-- mid Side -->
           <div class="lg:col-span-4">
@@ -401,10 +483,12 @@
             <p class="text-[#666666] text-[14px] mb-6">
               Our mobile responsive design ensures your website or application looks perfect and functions flawlessly
               across all screen sizes—smartphones, tablets, and beyond.</p>
-            <button type="submit"
-              class="relative   w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition">
-              Get a Free Quote <img class="inline absolute right-[25px] top-[21px]" src="./img/img-con/btn_arrow.svg"
-                alt="" width="20">
+            <button type="submit" class="relative mt-10 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
+  flex items-center justify-center gap-3">
+
+              <span>Get Free Quote</span>
+              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
             </button>
           </div>
           <!-- mid Side -->
@@ -466,10 +550,12 @@
               We craft seamless online shopping experiences that boost sales, build trust, and make every
               click count—from homepage to checkout.
             </p>
-            <button type="submit"
-              class="relative  w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition">
-              Get a Free Quote <img class="inline absolute right-[25px] top-[21px]" src="./img/img-con/btn_arrow.svg"
-                alt="" width="20">
+            <button type="submit" class="relative mt-10 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
+  flex items-center justify-center gap-3">
+
+              <span>Get Free Quote</span>
+              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
             </button>
           </div>
           <!-- mid Side -->
@@ -524,10 +610,12 @@
               Our custom web design solutions are tailored to reflect your brand, engage users, and deliver outstanding
               digital experiences across all platforms.
             </p>
-            <button type="submit"
-              class="relative  w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition">
-              Get a Free Quote <img class="inline absolute right-[25px] top-[21px]" src="./img/img-con/btn_arrow.svg"
-                alt="" width="20">
+            <button type="submit" class="relative mt-10 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
+  flex items-center justify-center gap-3">
+
+              <span>Get Free Quote</span>
+              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
             </button>
           </div>
           <!-- mid Side -->
@@ -588,10 +676,12 @@
               We refresh outdated websites into modern, user-friendly experiences that align with your brand,
               engage users, and drive better results.
             </p>
-            <button type="submit"
-              class="relative  w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition">
-              Get a Free Quote <img class="inline absolute right-[25px] top-[21px]" src="./img/img-con/btn_arrow.svg"
-                alt="" width="20">
+            <button type="submit" class="relative mt-10 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
+  flex items-center justify-center gap-3">
+
+              <span>Get Free Quote</span>
+              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
             </button>
           </div>
           <!-- mid Side -->
@@ -647,10 +737,12 @@
             <p class="text-[#666666] text-[14px] mb-6">
               Our product design service blends creativity, usability, and strategy to build digital products that users
               love and businesses value.</p>
-            <button type="submit"
-              class="relative  w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition">
-              Get a Free Quote <img class="inline absolute right-[25px] top-[21px]" src="./img/img-con/btn_arrow.svg"
-                alt="" width="20">
+            <button type="submit" class="relative mt-10 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
+  flex items-center justify-center gap-3">
+
+              <span>Get Free Quote</span>
+              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
             </button>
           </div>
           <!-- mid Side -->
@@ -713,10 +805,12 @@
             <p class="text-[#666666] text-[14px] mb-6">
               We create strong visual identities and marketing assets that build brand trust, tell your story, and
               engage your audience effectively.</p>
-            <button type="submit"
-              class="relative   w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition">
-              Get a Free Quote <img class="inline absolute right-[25px] top-[21px]" src="./img/img-con/btn_arrow.svg"
-                alt="" width="20">
+            <button type="submit" class="relative mt-10 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
+  flex items-center justify-center gap-3">
+
+              <span>Get Free Quote</span>
+              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
             </button>
           </div>
           <!-- mid Side -->
@@ -761,86 +855,116 @@
   </div>
 
   <!-- section 3 team--------------   -->
-  <div class=" mx-auto bg-[#090229]">
-    <div class="    mx-auto bg-[#090229]  text-white py-8 relative" style="
-       background-image: url('/img/img-con/design_dotted_left.svg'), url('/img/img-con/need_designer_bg.svg');
-       background-position:  top left,center;
-       background-size:29%, cover;
-       
-       background-repeat: no-repeat;
-     ">
-      <div class="mx-auto " style="
-       background-image:url('/img/img-con/design_dotted_right.svg');
-       background-size:33%;
-       background-position: top right;
-       background-repeat: no-repeat;
-     ">
-        <section class="py-20 px-4 text-center mb-20 mt-1">
-          <p class="text-[16px] text-white tracking-widest uppercase " data-aos="fade-up">
-            Ready to make your website work for your business with us?
-          </p>
+  <div class="mx-auto bg-[#090229] relative overflow-hidden">
+  <!-- Main Section with background patterns -->
+  <div 
+    class="mx-auto text-white py-8 relative 
+           bg-[url('/img/img-con/design_dotted_left.svg'),url('/img/img-con/need_designer_bg.svg')] 
+           bg-[position:top_left,center] 
+           bg-[length:29%,cover] 
+           bg-no-repeat">
+    
+    <!-- Right Dotted Background -->
+    <div 
+      class="mx-auto bg-[url('/img/img-con/design_dotted_right.svg')] 
+             bg-[length:33%] bg-[position:top_right] bg-no-repeat">
 
-          <h2
-            class="tracking-[-1px] max-w-4xl mx-auto text-[30px]  leading-[30px] md:text-[75px]  md:leading-[65px]  font-extrabold  py-4"
-            data-aos="fade-up" data-aos-delay="100">
-            Need Dedicated
-            designer a Team?
-          </h2>
+      <!-- CTA Section -->
+      <section class="py-20 px-4 text-center mb-20 mt-1">
+        <p class="text-[16px] tracking-widest uppercase" data-aos="fade-up">
+          Ready to make your website work for your business with us?
+        </p>
 
-          <!-- CTA Button -->
-          <div class="my-5 " data-aos="zoom-in" data-aos-delay="200">
-            <a href="#"
-              class="inline-block shadow-black shadow-md relative  w-[250px] h-[60px] md:w-[310px] md:h-[75px] text-center bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white font-bold text-[17px]  px-6 md:py-[25px] py-[18px] rounded-full  hover:scale-105 transition-transform duration-300">
-              Get a Free Quote
-              <img class="inline absolute right-10 md:top-[30px] top-[20px]" src="./img/img-con/p_rightarrow.svg" alt=""
-                width="20">
-            </a>
-          </div>
-        </section>
+        <h2
+          class="tracking-[-1px] max-w-4xl mx-auto 
+                 text-[30px] leading-[30px] 
+                 md:text-[75px] md:leading-[65px] 
+                 font-extrabold py-4"
+          data-aos="fade-up"
+          data-aos-delay="100">
+          Need Dedicated Designer a Team?
+        </h2>
 
-      </div>
-      <!-- Feature Grid -->
-      <div class="xl:absolute bottom-0  w-full  bg-zinc-200 bg-opacity-15  ">
-        <div class="sec-width mx-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-2 md:gap-4">
-          <div class="text-gray-300">
-            <h3
-              class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] opacity-60  uppercase text-center   text-transparent bg-clip-text  bg-[linear-gradient(120deg,_white_15%,_gray_38%,_white_48%,_gray_75%,_white_100%)]   drop-shadow-[0_0_6px_black]  text-transparent bg-clip-text ">
-              Business
-              <br />Centered
-            </h3>
-          </div>
-          <div class="text-gray-300">
-            <h3
-              class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] opacity-60 uppercase text-center     text-transparent bg-clip-text  bg-[linear-gradient(120deg,_white_15%,_gray_38%,_white_48%,_gray_75%,_white_100%)]   drop-shadow-[0_0_6px_black]  text-transparent bg-clip-text ">
-              Time <br />Saving</h3>
-          </div>
-          <div class="text-gray-300">
-            <h3
-              class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] uppercase opacity-60  text-center   text-transparent bg-clip-text  bg-[linear-gradient(120deg,_white_15%,_gray_38%,_white_48%,_gray_75%,_white_100%)]   drop-shadow-[0_0_6px_black]  text-transparent bg-clip-text ">
-              Problem <br />Solving</h3>
-          </div>
-          <div class="text-gray-300">
-            <h3
-              class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] uppercase opacity-60  text-center   text-transparent bg-clip-text  bg-[linear-gradient(120deg,_white_15%,_gray_38%,_white_48%,_gray_75%,_white_100%)]   drop-shadow-[0_0_6px_black]  text-transparent bg-clip-text ">
-              Money <br />
-              Saving</h3>
-          </div>
-          <div class="text-gray-300">
-            <h3
-              class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] uppercase  opacity-60  text-center   text-transparent bg-clip-text  bg-[linear-gradient(120deg,_white_15%,_gray_38%,_white_48%,_gray_75%,_white_100%)]   drop-shadow-[0_0_6px_black]  text-transparent bg-clip-text  ">
-              Risk<br />Free
-            </h3>
-          </div>
-          <div class="text-gray-300">
-            <h3
-              class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] uppercase opacity-60  text-center   text-transparent bg-clip-text  bg-[linear-gradient(120deg,_white_15%,_gray_38%,_white_48%,_gray_75%,_white_100%)]   drop-shadow-[0_0_6px_black]  text-transparent bg-clip-text ">
-              User<br />Oriented
-            </h3>
-          </div>
+        <!-- CTA Button -->
+        <div class="my-5" data-aos="zoom-in" data-aos-delay="200">
+          <button type="submit"
+            class="relative mt-10 shadow-black shadow-md 
+                   w-[250px] h-[60px] md:w-[310px] md:h-[75px] 
+                   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+                   py-3 rounded-[100px] text-white text-[17px] font-bold 
+                   hover:opacity-90 transition 
+                   flex items-center justify-center gap-3 mx-auto">
+            <span>Get a Free Quote</span>
+            <img src="./img/img-con/btn_arrow.svg" alt="" width="20">
+          </button>
         </div>
+      </section>
+    </div>
+
+    <!-- Feature Grid -->
+    <div class="xl:absolute bottom-0 w-full bg-zinc-200 bg-opacity-15">
+      <div class="sec-width mx-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-2 md:gap-4">
+        
+        <!-- Feature Item -->
+        <div class="text-gray-300 text-center">
+          <h3 class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] uppercase opacity-60 
+                     bg-clip-text text-transparent 
+                     bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
+                     drop-shadow-[0_0_6px_black]">
+            Business <br /> Centered
+          </h3>
+        </div>
+
+        <div class="text-gray-300 text-center">
+          <h3 class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] uppercase opacity-60 
+                     bg-clip-text text-transparent 
+                     bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
+                     drop-shadow-[0_0_6px_black]">
+            Time <br /> Saving
+          </h3>
+        </div>
+
+        <div class="text-gray-300 text-center">
+          <h3 class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] uppercase opacity-60 
+                     bg-clip-text text-transparent 
+                     bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
+                     drop-shadow-[0_0_6px_black]">
+            Problem <br /> Solving
+          </h3>
+        </div>
+
+        <div class="text-gray-300 text-center">
+          <h3 class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] uppercase opacity-60 
+                     bg-clip-text text-transparent 
+                     bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
+                     drop-shadow-[0_0_6px_black]">
+            Money <br /> Saving
+          </h3>
+        </div>
+
+        <div class="text-gray-300 text-center">
+          <h3 class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] uppercase opacity-60 
+                     bg-clip-text text-transparent 
+                     bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
+                     drop-shadow-[0_0_6px_black]">
+            Risk <br /> Free
+          </h3>
+        </div>
+
+        <div class="text-gray-300 text-center">
+          <h3 class="md:p-5 font-extrabold text-[20px] md:text-[35px] leading-[35px] uppercase opacity-60 
+                     bg-clip-text text-transparent 
+                     bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
+                     drop-shadow-[0_0_6px_black]">
+            User <br /> Oriented
+          </h3>
+        </div>
+
       </div>
     </div>
   </div>
+</div>
+
 
   <!-- section 4  key process  -->
   <div class="bg-white text-[#666666] ">
@@ -1224,10 +1348,13 @@
                 geographies and Platforms</p>
             </div>
           </div>
-          <button type="submit"
-            class="relative  shadow-black ft-rob shadow-md w-[250px] h-[70px] md:w-[300px] md:h-[80px] bg-gradient-to-r from-[#ffffff]  to-[#ffffff] py-3 rounded-[100px] text-black text-[17px] font-bold hover:opacity-90 transition">
-            Get Free Quote <img class="inline absolute right-[35px] md:top-[33px] top-[28px]"
-              src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20">
+
+          <button type="submit" class="relative shadow-black ft-rob shadow-md  w-[225px] h-[70px] md:w-[270px] md:h-[75px] 
+  bg-gradient-to-r from-[#ffffff] to-[#ffffff]   rounded-[100px] text-black text-[17px] font-bold 
+  hover:opacity-90 transition flex items-center justify-center gap-3">
+
+            <span>Get a Free Quote</span>
+            <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20" class="inline">
           </button>
         </div>
       </section>
@@ -1255,16 +1382,17 @@
       </div>
 
       <!-- Navigation Arrows -->
-      <div class="hidden xl:flex items-center space-x-2 absolute right-0 top-20">
-        <button id=""
-          class=" prevBtn  w-20 h-20 bg-black   text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-          <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
-        </button>
-        <button id=""
-          class=" nextBtn  w-20 h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-          <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
-        </button>
-      </div>
+     <div class="flex items-center space-x-2 absolute right-0 top-20">
+  <button
+    class="prevBtn w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+    <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
+  </button>
+  <button
+    class="nextBtn w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+    <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
+  </button>
+</div>
+
     </div>
 
     <!-- Grid Projects -->
@@ -1419,11 +1547,17 @@
 
     <!-- View All Work Button -->
     <div class="text-center mt-12 mb-20">
-      <button type="submit"
-        class="relative mt-10 shadow-black shadow-sm border border-[#000000] w-[250px] h-[60px] md:w-[300px] md:h-[80px] bg-white hover:bg-black py-3 rounded-[100px] hover:text-white text-black text-[21px] font-bold  transition">
-        View All Works<img class="inline absolute md:right-[35px] right-[21px] md:top-[33px] top-[23px]"
-          src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20">
+      <button type="submit" class="relative mx-auto mt-10 shadow-black shadow-sm border border-[#000000] 
+  w-[250px] h-[60px] md:w-[300px] md:h-[80px] 
+  bg-white hover:bg-black rounded-[100px] 
+  text-black hover:text-white text-[21px] font-bold 
+  transition flex items-center justify-center gap-3">
+
+        <span>View All Works</span>
+        <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20"
+          class="inline transition-transform duration-300 group-hover:translate-x-1">
       </button>
+
     </div>
   </section>
 
@@ -1961,10 +2095,12 @@
               geographies and Platforms</p>
           </div>
         </div>
-        <button type="submit"
-          class="relative  shadow-black ft-rob shadow-md w-[250px] h-[70px] md:w-[300px] md:h-[80px] bg-gradient-to-r from-[#ffffff]  to-[#ffffff] py-3 rounded-[100px] text-black text-[20px] font-bold hover:opacity-90 transition">
-          Get Free Quote <img class="inline absolute right-[35px] md:top-[33px] top-[28px]"
-            src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20">
+        <button type="submit" class="relative shadow-black ft-rob shadow-md  w-[225px] h-[70px] md:w-[270px] md:h-[75px] 
+  bg-gradient-to-r from-[#ffffff] to-[#ffffff]   rounded-[100px] text-black text-[17px] font-bold 
+  hover:opacity-90 transition flex items-center justify-center gap-3">
+
+          <span>Get a Free Quote</span>
+          <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20" class="inline">
         </button>
       </div>
     </section>
@@ -1989,12 +2125,14 @@
           image and contributes
           to commercial success.
         </p>
+        <button type="submit" class="relative shadow-black ft-rob shadow-md  w-[251px] h-[65px] md:w-[270px] md:h-[75px] 
+  bg-gradient-to-r from-[#ffffff] to-[#ffffff]   rounded-[100px] text-black text-[17px] font-bold 
+  hover:opacity-90 transition flex items-center justify-center gap-3">
 
-        <button type="submit"
-          class="relative mt-5 shadow-black shadow-md w-[250px] h-[65px] md:w-[300px] md:h-[80px] bg-gradient-to-r from-[#ffffff]  to-[#ffffff] py-3 rounded-[100px] text-black text-[17px] font-bold hover:opacity-90 transition">
-          Get Free Quote <img class="inline absolute right-[35px] md:top-[33px] top-[25px]"
-            src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20">
+          <span>Get a Free Quote</span>
+          <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20" class="inline">
         </button>
+
       </div>
 
       <!-- Right Content (Icons) -->
@@ -2021,16 +2159,18 @@
       <img src="./img/alogo.png" alt="Paper Plane"
         class="absolute top-10 right-[35%] sm:top-10 w-10 lg:w-50 lg:top-60 opacity-80 animate-bounce">
       <!-- Navigation Arrows -->
-      <div class="hidden lg:flex items-center space-x-2 absolute right-5 top-80">
+      <div class="flex items-center space-x-2 absolute right-20 top-40
+            sm:flex md:flex lg:flex xl:flex">
         <button
-          class="prevBtn w-20 h-20 bg-black   text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+          class="prevBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
           <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
         </button>
         <button
-          class="nextBtn w-20 h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+          class="nextBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
           <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
         </button>
       </div>
+
       <!-- Header -->
       <div class="mb-8 text-center lg:text-left">
         <h5 class="text-[18px] font-semibold leading-[25px] uppercase">
@@ -2170,7 +2310,6 @@
             </div>
           </div>
         </div>
-
       </div>
       <!-- testimonial slide  2 -->
       <div class="grid grid-cols-1   md:grid-cols-2 gap-6 ft-rob  hidden transition-opacity duration-500 project-page">
@@ -2255,8 +2394,6 @@
             </div>
           </div>
           <div class="grid grid-cols-1   my-6  lg:grid-cols-2 gap-6">
-
-
             <!-- Testimonial 2 -->
             <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 w-full  ">
               <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
@@ -2420,11 +2557,8 @@
             </div>
           </div>
         </div>
-
       </div>
-
     </section>
-
   </div>
 
   <!-- Video Testimonial section  -->
@@ -2433,16 +2567,18 @@
      background-blend-mode:  lighten;background-size:cover,30%,50%,50%; background-repeat:no-repeat; background-position:center,top left, top right,bottom left">
     <section class="sec-width mx-auto px-6 py-16 md:py-20    relative">
       <!-- Arrows -->
-      <div class="hidden xl:flex items-center space-x-2 absolute right-20 top-40">
+      <div class="flex items-center space-x-2 absolute right-20 top-40
+            sm:flex md:flex lg:flex xl:flex">
         <button
-          class="prevBtn w-20 h-20 bg-black   text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+          class="prevBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
           <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
         </button>
         <button
-          class="nextBtn w-20 h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+          class="nextBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
           <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
         </button>
       </div>
+
       <!-- Heading -->
       <div class="mb-12 mt-10">
         <h4 class="uppercase text-[18px] leading-[25px] mb-5 font-semibold">Video Testimonial</h4>
@@ -2674,11 +2810,14 @@
           <p class=" ft-vit text-[20px] leading-[35px] my-6">Transforming Businesses with Technology that transcends
             geographies and
             Platforms</p>
-          <button type="submit"
-            class="relative shadow-black shadow-md w-[210px] h-[60px] md:w-[310px] md:h-[80px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white font-semibold hover:opacity-90 transition">
-            Get a Free Quote <img class="inline absolute right-[30px] md:top-[33px]  " src="./img/img-con/btn_arrow.svg"
-              alt="" width="20">
+          <button type="submit" class="relative mt-10 shadow-black shadow-sm w-[250px] h-[75px] md:w-[310px] md:h-[80px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  py-3 rounded-[100px] text-white text-[17px] font-bold hover:opacity-90 transition 
+  flex items-center justify-center gap-3 mx-auto">
+
+            <span class="me-2">Get Free Quote</span>
+            <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
           </button>
+
         </div>
 
     </section>
@@ -2958,11 +3097,15 @@
               <textarea rows="4" placeholder="About a Projects"
                 class=" border-white border-s shadow-black shadow-md border-t border-b border-opacity-25 w-full px-4 py-3 rounded-[10px] bg-[#2a2437] text-white focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
 
-              <button type="submit"
-                class="relative shadow-black shadow-md w-[220px] h-[70px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] py-3 rounded-[100px] text-white font-semibold hover:opacity-90 transition">
-                Submit <img class="inline absolute right-[25px] top-[27px]" src="./img/img-con/btn_arrow.svg" alt=""
-                  width="20">
+              <button type="submit" class="relative shadow-black shadow-md w-[220px] h-[70px] 
+  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  rounded-[100px] text-[20px] text-white font-semibold hover:opacity-90 
+  transition flex items-center justify-center gap-3  ">
+
+                <span class="me-2">Submit</span>
+                <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
               </button>
+
             </form>
           </div>
         </div>
@@ -2986,10 +3129,15 @@
             class="w-[300px] h-[65px] px-10 py-2 rounded-full bg-gray-800 text-white focus:outline-none border border-white border-opacity-10 ">
           <input type="email" placeholder="Email Address"
             class="w-[300px] h-[65px] px-10 py-2 rounded-full bg-gray-800 text-white focus:outline-none border border-white border-opacity-10 ">
-          <button
-            class="relative w-[165px] h-[65px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] px-6 py-2 rounded-full text-white font-semibold">Send
-            <img class="inline absolute right-[25px] top-[27px]" src="./img/img-con/btn_arrow.svg" alt="" width="20">
+          <button class="relative w-[165px] h-[65px] 
+  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+  px-6 py-2 rounded-full text-white font-semibold  text-[18px]
+  flex items-center justify-center gap-3 hover:opacity-90 transition">
+
+            <span class="me-2">Send</span>
+            <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
           </button>
+
         </div>
       </div>
     </div>
@@ -3165,31 +3313,7 @@
         return window.innerWidth < maxWidth;
       }
     });
-    /*
-        const sections = document.querySelectorAll('.card-section');
-        const steps = document.querySelectorAll('.step');
-    
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach(entry => {
-              const stepId = entry.target.getAttribute('data-step');
-              const step = document.getElementById(`step-${stepId}`);
-              if (entry.isIntersecting) {
-                step.classList.add('active');
-              } else {
-                step.classList.remove('active');
-              }
-            });
-          },
-          {
-            threshold: 0.5,
-          }
-        );
-    
-        sections.forEach(section => {
-          observer.observe(section);
-        });
-    */
+
 
     document.addEventListener('DOMContentLoaded', () => {
       const counters = document.querySelectorAll('[data-countup]');
