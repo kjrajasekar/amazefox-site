@@ -240,4 +240,8 @@ body {
   .marquee:after {
     width: 5rem;
   }
+  .sec-width {
+    width: 92%;
+    margin: 0 auto;
+  }
 }

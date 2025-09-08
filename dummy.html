@@ -3,61 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phone Number with Country Code</title>
-
-  <!-- intl-tel-input CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    input {
-      width: 300px;
-      padding: 10px;
-      font-size: 16px;
-    }
-  </style>
+  <title>Document</title>
 </head>
 <body>
+<span id="animated-text"></span>
 
-  <h2>Contact Form</h2>
-  <form>
-    <div class="form-group">
-      <label for="phone">Phone Number:</label><br>
-      <input id="phone" type="tel" name="phone" />
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  var options = {
+    strings: [
+      "Webs #1 Website Maintenance Program",
+      "Managing Websites and Applications Since 2010",
+      "Transparent & Tailored Pricing Plans"
+    ],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 3500,
+    loop: true
+  };
 
-  <!-- intl-tel-input JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+  var typed = new Typed("#animated-text", options);
+</script>
 
-  <script>
-    const input = document.querySelector("#phone");
 
-    // Initialize intl-tel-input
-    const iti = window.intlTelInput(input, {
-      initialCountry: "auto", // auto detect user's country
-      geoIpLookup: function(success, failure) {
-        fetch("https://ipapi.co/json")
-          .then(res => res.json())
-          .then(data => success(data.country_code))
-          .catch(() => success("us"));
-      },
-      separateDialCode: true, // shows dial code separately
-      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js" // for formatting/validation
-    });
-
-    // Example: get full number on form submit
-    document.querySelector("form").addEventListener("submit", function(e) {
-      e.preventDefault();
-      alert("Full Phone Number: " + iti.getNumber());
-    });
-  </script>
 </body>
 </html>
