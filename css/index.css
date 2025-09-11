@@ -151,7 +151,9 @@ body {
     opacity: 0.8;
   }
 }
-
+.prevBtn:hover, .nextBtn:hover{
+      background: linear-gradient(90deg, #3800A0, #720C7D, #E61F4A);
+}
 .flicker {
   animation: flicker 3s infinite ease-in-out;
 }
