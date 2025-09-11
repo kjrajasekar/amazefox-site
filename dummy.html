@@ -1,152 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Caprasimo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Michroma&family=Montez&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
-  <title>Amazefox Web App</title>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Carousel</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- intl-tel-input CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
 
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
-<body>
-<span id="animated-text"></span>
 
-<div class="bg-cover text-white bg-[url(./img/video_bg.svg)] bg-no-repeat"
-  style="background-blend-mode: lighten; background-size: cover,30%,50%,50%; background-repeat: no-repeat; background-position: center,top left, top right,bottom left">
+<body class="bg-white text-gray-800">
 
-  <section class="sec-width mx-auto px-6 py-16 md:py-20 relative">
+  <section class="sec-width mx-auto py-16 relative">
 
-    <!-- Navigation Arrows -->
-    <div class="flex items-center justify-end space-x-4 mb-6">
-      <button id="prevBtn"
-        class="w-14 h-14 md:w-16 md:h-16 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-        ‹
-      </button>
-      <button id="nextBtn"
-        class="w-14 h-14 md:w-16 md:h-16 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-        ›
-      </button>
-    </div>
-
-    <h4 class="uppercase text-[18px] leading-[25px] mb-5 font-semibold">Video Testimonial</h4>
-    <h2 class="font-extrabold text-[20px] lg:text-[50px] leading-tight max-w-6xl tracking-[-1px] mb-12">
-      Our Clients are superheroes. We prioritize delivering excellent Products, through Training and Optimal Executions
-    </h2>
-
-    <!-- Video Cards Container -->
-    <div class="overflow-hidden relative">
-      <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
-        <!-- Video Card Items -->
-        <div class="relative mx-2 w-full sm:w-1/2 max-w-[650px] rounded-2xl overflow-hidden">
-          <img src="./img/img-con/video_test_1.svg" alt="video background" class="w-full h-full object-contain">
-          <a class="popup-youtube absolute inset-0" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
-            <div class="absolute inset-0 flex flex-col justify-between p-6 text-white z-10 px-6 sm:px-10">
-              <div class="flex items-center space-x-2">
-                <img src="./img/alogo.png" alt="amazefox" class="w-10 h-10 object-contain" />
-                <span class="text-xl font-semibold uppercase tracking-wide">amazefox</span>
-              </div>
-              <img src="./img/img-con/c_review_quote.svg" alt="" width="80" class="opacity-40 mx-auto" />
-              <p class="text-base sm:text-lg leading-relaxed text-purple-200 font-semibold border-b border-white px-6 pb-4 mt-6">
-                Our Clients are superheroes. We prioritize delivering excellent products, through training and optimal executions.
-              </p>
-              <div class="mt-4 text-white text-center">
-                <p class="font-bold text-lg">truecare24</p>
-                <p class="text-sm">CTO, Healthcare Solutions</p>
-              </div>
-            </div>
-            <button class="absolute inset-0 flex items-center justify-center z-20">
-              <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="currentColor"
-                  viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </button>
-          </a>
-        </div>
-
-        <!-- Duplicate Cards (Change images and data as needed) -->
-        <div class="relative mx-2 w-full sm:w-1/2 max-w-[650px] rounded-2xl overflow-hidden">
-          <img src="./img/img-con/video_test_2.svg" alt="video background" class="w-full h-full object-contain">
-          <a class="popup-youtube absolute inset-0" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
-            <div class="absolute inset-0 flex flex-col justify-between p-6 text-white z-10 px-6 sm:px-10">
-              <div class="flex items-center space-x-2">
-                <img src="./img/alogo.png" alt="amazefox" class="w-10 h-10 object-contain" />
-                <span class="text-xl font-semibold uppercase tracking-wide">amazefox</span>
-              </div>
-              <img src="./img/img-con/c_review_quote.svg" alt="" width="80" class="opacity-40 mx-auto" />
-              <p class="text-base sm:text-lg leading-relaxed text-purple-200 font-semibold border-b border-white px-6 pb-4 mt-6">
-                Our Clients are superheroes. We prioritize delivering excellent products, through training and optimal executions.
-              </p>
-              <div class="mt-4 text-white text-center">
-                <p class="font-bold text-lg">truecare24</p>
-                <p class="text-sm">CTO, Healthcare Solutions</p>
-              </div>
-            </div>
-            <button class="absolute inset-0 flex items-center justify-center z-20">
-              <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="currentColor"
-                  viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </button>
-          </a>
-        </div>
-
-        <!-- Add more cards as needed -->
+    <!-- Section Title -->
+    <div class="flex items-center justify-between md:px-10 xl:px-2">
+      <div>
+        <p class="text-[18px] font-semibold uppercase mb-1">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+            Portfolio
+          </span>
+        </p>
+        <h2 class="w-full tracking-[-1px] text-black text-[30px] leading-[30px] md:text-[55px] md:leading-[65px] font-black">
+          Our recent web design projects
+        </h2>
+        <p class="text-[#666666] text-[17px] mt-2">
+          Check out our projects where we made our clients win in the real world.
+        </p>
       </div>
     </div>
+
+    <!-- Swiper Carousel -->
+    <div class="swiper mySwiper mt-10">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+              <img src="./img/img_phone.svg" alt="Project" class="w-full h-auto" />
+              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
+                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">Chilliseeds-1</h3>
+                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+              </div>
+            </div>
+
+            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+              <img src="./img/img_koli.png" alt="Project" class="w-full h-auto" />
+              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
+                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">Melodica</h3>
+                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+              <img src="./img/img_tab.svg" alt="Project" class="w-full h-auto" />
+              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
+                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">AutoQ</h3>
+                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+              </div>
+            </div>
+
+            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+              <img src="./img/img_webs.png" alt="Project" class="w-full h-auto" />
+              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
+                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">Look Who's Cooking</h3>
+                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+              <img src="./img/img_phone.svg" alt="Project" class="w-full h-auto" />
+              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
+                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">Chilliseeds-3</h3>
+                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+              </div>
+            </div>
+
+            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+              <img src="./img/img_koli.png" alt="Project" class="w-full h-auto" />
+              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
+                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">Melodica</h3>
+                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- View All Work Button -->
+    <div class="text-center mt-12 mb-20">
+      <button type="submit"
+        class="relative mx-auto mt-10 shadow-black shadow-sm border border-[#000000] w-[250px] h-[60px] md:w-[300px] md:h-[80px] bg-white hover:bg-black rounded-[100px] text-black hover:text-white text-[21px] font-bold transition flex items-center justify-center gap-3">
+        <span>View All Works</span>
+        <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20"
+          class="inline transition-transform duration-300 group-hover:translate-x-1">
+      </button>
+    </div>
+
   </section>
-</div>
 
-<!-- JavaScript for simple slider -->
-<script>
-  const carousel = document.getElementById('carousel');
-  const nextBtn = document.getElementById('nextBtn');
-  const prevBtn = document.getElementById('prevBtn');
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  let currentIndex = 0;
-  const cardWidth = 300; // Approx width of one card (adjust as needed)
-  
-  function updateCarousel() {
-    carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
-
-  nextBtn.addEventListener('click', () => {
-    const maxIndex = carousel.children.length - (window.innerWidth >= 768 ? 2 : 1);
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
-
-  prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
-</script>
+  <!-- Swiper Initialization -->
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+        },
+        1024: {
+          slidesPerView: 1,
+        },
+      },
+    });
+  </script>
 
 </body>
+
 </html>
