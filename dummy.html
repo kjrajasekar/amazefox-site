@@ -3,151 +3,21 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Carousel</title>
-
-  <!-- Tailwind CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
-<body class="bg-white text-gray-800">
+<body class="w-full h-screen bg-[#5CA4EA] flex items-center justify-center overflow-hidden font-sans">
 
-  <section class="sec-width mx-auto py-16 relative">
+  <button class="relative w-[180px] h-[60px] border border-[#91C9FF] text-white font-thin text-lg cursor-pointer overflow-hidden transition-colors duration-1000 hover:bg-[#4F95DA]">
+    <!-- SVG Border -->
+    <svg width="180" height="60" viewBox="0 0 180 60" class="absolute top-0 left-0">
+      <polyline points="179,1 179,59 1,59 1,1 179,1"
+                class="stroke-white fill-none stroke-[1px] stroke-dasharray-[150_480] stroke-dashoffset-[150] transition-all duration-[1000ms] ease-in-out group-hover:stroke-dashoffset-[-480]" />
+    </svg>
 
-    <!-- Section Title -->
-    <div class="flex items-center justify-between md:px-10 xl:px-2">
-      <div>
-        <p class="text-[18px] font-semibold uppercase mb-1">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
-            Portfolio
-          </span>
-        </p>
-        <h2 class="w-full tracking-[-1px] text-black text-[30px] leading-[30px] md:text-[55px] md:leading-[65px] font-black">
-          Our recent web design projects
-        </h2>
-        <p class="text-[#666666] text-[17px] mt-2">
-          Check out our projects where we made our clients win in the real world.
-        </p>
-      </div>
-    </div>
-
-    <!-- Swiper Carousel -->
-    <div class="swiper mySwiper mt-10">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
-              <img src="./img/img_phone.svg" alt="Project" class="w-full h-auto" />
-              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
-                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">Chilliseeds-1</h3>
-                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
-              </div>
-            </div>
-
-            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
-              <img src="./img/img_koli.png" alt="Project" class="w-full h-auto" />
-              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
-                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">Melodica</h3>
-                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
-              <img src="./img/img_tab.svg" alt="Project" class="w-full h-auto" />
-              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
-                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">AutoQ</h3>
-                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
-              </div>
-            </div>
-
-            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
-              <img src="./img/img_webs.png" alt="Project" class="w-full h-auto" />
-              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
-                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">Look Who's Cooking</h3>
-                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
-              <img src="./img/img_phone.svg" alt="Project" class="w-full h-auto" />
-              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
-                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">Chilliseeds-3</h3>
-                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
-              </div>
-            </div>
-
-            <div class="relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
-              <img src="./img/img_koli.png" alt="Project" class="w-full h-auto" />
-              <div class="text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl">
-                <h3 class="text-[31px] mb-5 font-black tracking-[-1px]">Melodica</h3>
-                <p class="text-[13px] font-bold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Navigation Buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-
-    <!-- View All Work Button -->
-    <div class="text-center mt-12 mb-20">
-      <button type="submit"
-        class="relative mx-auto mt-10 shadow-black shadow-sm border border-[#000000] w-[250px] h-[60px] md:w-[300px] md:h-[80px] bg-white hover:bg-black rounded-[100px] text-black hover:text-white text-[21px] font-bold transition flex items-center justify-center gap-3">
-        <span>View All Works</span>
-        <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20"
-          class="inline transition-transform duration-300 group-hover:translate-x-1">
-      </button>
-    </div>
-
-  </section>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-  <!-- Swiper Initialization -->
-  <script>
-    const swiper = new Swiper('.mySwiper', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 1,
-        },
-        1024: {
-          slidesPerView: 1,
-        },
-      },
-    });
-  </script>
+    <span class="relative z-10">HOVER ME</span>
+  </button>
 
 </body>
 
