@@ -175,68 +175,63 @@
          x-transition:leave="transition ease-in duration-200"
          x-transition:leave-start="opacity-100 translate-y-0"
          x-transition:leave-end="opacity-0 translate-y-4"
-         class="absolute inset-x-0 left-0 top-full max-w-[100%] bg-white shadow-lg border-t border-gray-200 z-50 overflow-visible">
+         class="block absolute inset-x-0 left-0 top-full max-w-[100%] bg-white shadow-lg border-t border-gray-200 z-50 overflow-visible">
 
-        <div class="flex max-w-[80%] mx-auto">
-
+        <div x-data="{ activeTab: 'web-app' }" class="flex max-w-[88%] mx-auto">
             <!-- Left Tab -->
-            <div class="w-1/4 bg-gray-100 p-4">
+            <div class="w-1/4 bg-white p-4">
                 <ul class="space-y-2">
                     <li @mouseenter="activeTab = 'web-app'"
-                        class="cursor-pointer px-2 py-2 hover:bg-gray-200 rounded"
-                        :class="activeTab === 'web-app' ? 'bg-gray-300 font-semibold' : ''">
-                        Web App Design Services
+                        class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                        :class="activeTab === 'web-app' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                        Web App Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
                     </li>
                     <li @mouseenter="activeTab = 'mobile-app'"
-                        class="cursor-pointer px-2 py-2 hover:bg-gray-200 rounded"
-                        :class="activeTab === 'mobile-app' ? 'bg-gray-300 font-semibold' : ''">
-                        Mobile App Design Services
+                        class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                        :class="activeTab === 'mobile-app' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                        Mobile App Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
+                        
                     </li>
                     <li @mouseenter="activeTab = 'website-redesign'"
-                        class="cursor-pointer px-2 py-2 hover:bg-gray-200 rounded"
-                        :class="activeTab === 'website-redesign' ? 'bg-gray-300 font-semibold' : ''">
-                        Website Redesign Services
+                          class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                        :class="activeTab === 'website-redesign' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                        Website Redesign Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
                     </li>
                     <li @mouseenter="activeTab = 'logo-design'"
-                        class="cursor-pointer px-2 py-2 hover:bg-gray-200 rounded"
-                        :class="activeTab === 'logo-design' ? 'bg-gray-300 font-semibold' : ''">
-                        Logo Design Services
+                        class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                        :class="activeTab === 'logo-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                          Logo Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
                     </li>
                     <li @mouseenter="activeTab = 'branding-design'"
-                        class="cursor-pointer px-2 py-2 hover:bg-gray-200 rounded"
-                        :class="activeTab === 'branding-other' ? 'bg-gray-300 font-semibold' : ''">
-                      Branding Design Services
+                         class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                        :class="activeTab === 'branding-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                           Branding Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
                     </li>
-                    <li @mouseenter="activeTab = 'media-design'"
-                        class="cursor-pointer px-2 py-2 hover:bg-gray-200 rounded"
-                        :class="activeTab === 'branding-other' ? 'bg-gray-300 font-semibold' : ''">
-                    Media Branding Design
-                    </li>
-                    <li @mouseenter="activeTab = 'word-design'"
-                        class="cursor-pointer px-2 py-2 hover:bg-gray-200 rounded"
-                        :class="activeTab === 'branding-other' ? 'bg-gray-300 font-semibold' : ''">
-                  WordPress Website Design 
+                  <li @mouseenter="activeTab = 'word-design'"
+                       class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                        :class="activeTab === 'word-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                     WordPress Website Design  <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
                     </li>
                     <li @mouseenter="activeTab = 'blog-design'"
-                        class="cursor-pointer px-2 py-2 hover:bg-gray-200 rounded"
-                        :class="activeTab === 'branding-other' ? 'bg-gray-300 font-semibold' : ''">
-                  	Blog website design
+                        class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                        :class="activeTab === 'blog-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                    Blog website design <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
                     </li>
                     <li @mouseenter="activeTab = 'ecom-design'"
-                        class="cursor-pointer px-2 py-2 hover:bg-gray-200 rounded"
-                        :class="activeTab === 'branding-other' ? 'bg-gray-300 font-semibold' : ''">
-                  	E commerce Website design 
+                       class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                        :class="activeTab === 'ecom-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                   	E commerce Website design  <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
                     </li>
                     <li @mouseenter="activeTab = 'social-design'"
-                        class="cursor-pointer px-2 py-2 hover:bg-gray-200 rounded"
-                        :class="activeTab === 'branding-other' ? 'bg-gray-300 font-semibold' : ''">
-                   Social Media Design
+                         class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                        :class="activeTab === 'social-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                     Social Media Design <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
                     </li>
                 </ul>
             </div>
 
             <!-- Right Content -->
-            <div class="flex-1 p-6 grid grid-cols-3 gap-6 w-full">
+            <div class="flex-1 p-6 grid grid-cols-3 gap-6 w-full bg-gradient-to-br from-white via-rose-300  to-[#FFFFFF] to-45%  ">
 
                 <div x-show="activeTab === 'web-app'" x-transition class="space-y-2 ml-10 w-full">
                     <a href="#" class="block hover:text-pink-500">UI / UX Design</a>
@@ -284,11 +279,12 @@
                     <a href="#" class="block hover:text-pink-500">Financial Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">School Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Hotel Branding Design</a>
-                </div>
-                <div x-show="activeTab === 'media-design'" x-transition class="space-y-2 ml-10 w-full">
+                    <a href="#" class="block hover:text-pink-500"> Media Branding Design</a>
                   <a href="#" class="block hover:text-pink-500">Transportation Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Publisher Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Website Branding Design</a>
+                    </div>
+                    <div x-show="activeTab === 'branding-design'" x-transition class="space-y-2 ml-10 w-full>
                     <a href="#" class="block hover:text-pink-500">Club Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Pharmaceuticals Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Pet Product Branding Design</a>
@@ -344,7 +340,7 @@
 
   <!-- Hero Section -->
   <section class="w-full bg-no-repeat bg-cover bg-[url(/img/banner_bg_01.svg)] ">
-    <section class="relative sec-width md:px-10 py-10 mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-1 ">
+    <section class="relative sec-width md:px-10   mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-1 ">
       <!-- Left Content -->
       <div data-aos="fade-left" class="lg:col-span-3">
         <button
@@ -428,7 +424,7 @@
               class="uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Web
               App Design </span></h1>
           <h1
-            class="text-[26px] lg:text-[60px] leading-[35px] md:leading-[60px] mb-4 tracking-[-3px] md:tracking-[-2px]">
+            class="text-[26px] lg:text-[50px] leading-[35px] md:leading-[60px] mb-4 tracking-[-3px] md:tracking-[-2px]">
             <span class="font-black">Web App
               Design
               Services</span>
@@ -444,16 +440,16 @@
         </div>
       </section>
 
-      <div class=" grid grid-cols-8 sec-width mx-auto gap-5 md:pt-20 pb-10">
-        <div class="lg:col-span-1 col-span-8  mx-auto  rounded-[30px] shadow-1xl shadow-black ">
+      <div class=" grid grid-cols-8 sec-width mx-auto gap-0 md:pt-5 pb-5   items-start   ">
+        <div class="lg:col-span-1 col-span-8  mx-auto  rounded-[30px] shadow-1xl shadow-black">
           <div
-            class="grid place-items-center w-[145px] h-[145px]  shadow-[#16181A1F] shadow-1xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-            <div class="rounded-[30px] bg-white  p-2 shadow-black w-[142px] h-[142px]  ">
+            class="grid place-items-center w-[120px] h-[120px]  shadow-[#16181A1F] shadow-1xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
+            <div class="rounded-[30px] bg-white  p-2 shadow-black w-[118px] h-[118px]  ">
               <!-- Inner Card inside Outer -->
               <div
-                class="relative rounded-[20px] w-[129px] h-[129px] lg:w-[127px] lg:h-[127px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                class="relative rounded-[26px] w-[102px] h-[102px]   overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                 <div
-                  class="rounded-[20px] w-[127px] h-[127px]  bg-gradient-to-br from-[#671b70]   to-[#000000] p-6 shadow-black  shadow-1xl h-[120px] flex items-center justify-center">
+                  class="rounded-[26px] w-[100px] h-[100px]  bg-gradient-to-br from-[#671b70]   to-[#000000] p-6 shadow-black  shadow-1xl   flex items-center justify-center">
                   <img src="./img/alogo.png" class="max-w-full h-auto">
                 </div>
               </div>
@@ -462,7 +458,7 @@
         </div>
         <div class="lg:col-span-7 col-span-8 ft-vit">
           <h1
-            class="tracking-[-1px] text-[18px] lg:text-[48px] text-center lg:text-left  leading-[20px] lg:leading-[50px] font-black mb-4 w-[80%]  ">
+            class="tracking-[-1px] text-[18px] lg:text-[40px] text-center lg:text-left  leading-[20px] lg:leading-[44px] font-black mb-2 w-[80%]  ">
             Explore Web App Design Services designed around your business needs
           </h1>
           <p class="text-[13px] lg:text-[16px] leading-[16px] lg:leading-[21px]   text-[#666666]">
@@ -477,7 +473,7 @@
 
     <section
       class="sec-width   mb-6 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
-      <div class="rounded-[30px]      bg-white relative overflow-hidden">
+      <div class="rounded-[30px]   bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
@@ -488,7 +484,7 @@
      ">
           <!-- Left Side -->
           <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px] ">UI / UX Design</h3>
+            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px] ">UI / UX Design</h3>
             <p class="text-[#666666] text-[14px] mb-4">
               Our UI/UX design helps users do more with less effort through smart, clean, and thoughtful
               design.Every element is placed with precision to enhance usability.
@@ -547,7 +543,7 @@
      ">
           <!-- Left Side -->
           <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Mobile
+            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Mobile
               Responsive Design</h3>
             <p class="text-[#666666] text-[14px] mb-4">
               Our mobile responsive design ensures your website or application looks perfect and functions flawlessly
@@ -614,7 +610,7 @@
      ">
           <!-- Left Side -->
           <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">eCommerce Solutions</h3>
+            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">eCommerce Solutions</h3>
             <p class="text-[#666666] text-[14px] mb-4">
               We craft seamless online shopping experiences that boost sales, build trust, and make every
               click count—from homepage to checkout.
@@ -674,7 +670,7 @@
      ">
           <!-- Left Side -->
           <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Custom Web Design</h3>
+            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Custom Web Design</h3>
             <p class="text-[#666666] text-[14px] mb-4">
               Our custom web design solutions are tailored to reflect your brand, engage users, and deliver outstanding
               digital experiences across all platforms.
@@ -740,7 +736,7 @@
      ">
           <!-- Left Side -->
           <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Website Redesign</h3>
+            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Website Redesign</h3>
             <p class="text-[#666666] text-[14px] mb-4">
               We refresh outdated websites into modern, user-friendly experiences that align with your brand,
               engage users, and drive better results.
@@ -802,7 +798,7 @@
      ">
           <!-- Left Side -->
           <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Product Design</h3>
+            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Product Design</h3>
             <p class="text-[#666666] text-[14px] mb-4">
               Our product design service blends creativity, usability, and strategy to build digital products that users
               love and businesses value.</p>
@@ -863,14 +859,14 @@
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative px-6  z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative px-6 py-6  z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
           <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[33px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Brand Identity and Marketing
-              Design</h3>
+            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">
+              Brand & Marketing Design</h3>
             <p class="text-[#666666] text-[14px] mb-4">
               We create strong visual identities and marketing assets that build brand trust, tell your story, and
               engage your audience effectively.</p>
@@ -937,16 +933,16 @@
              bg-[length:33%] bg-[position:top_right] bg-no-repeat">
 
         <!-- CTA Section -->
-        <section class="py-20 px-4 text-center mb-20 mt-1">
+        <section class="py-10 px-4 text-center mb-20 mt-1">
           <p class="text-[14px] lg:text-[16px] md:leading-[65px] leading-[18px]tracking-widest uppercase"
             data-aos="fade-up">
             Ready to make your website work for your business with us?
           </p>
 
-          <h2 class="tracking-[-1px] max-w-4xl mx-auto 
+          <h2 class="tracking-[-1px] max-w-2xl mx-auto 
                  text-[35px] leading-[34px] 
-                 md:text-[75px] md:leading-[65px] 
-                 font-extrabold py-4" data-aos="fade-up" data-aos-delay="100">
+                 md:text-[65px] md:leading-[60px] 
+                 font-extrabold  " data-aos="fade-up" data-aos-delay="100">
             Need Dedicated Designer a Team?
           </h2>
 
@@ -1049,7 +1045,7 @@
                     Our Key Process</span>
                 </h3>
                 <h2
-                  class="w-[85%] tracking-[-1px] text-black text-[25px] leading-[26px] lg:text-[45px] lg:leading-[40px] font-black mb-10">
+                  class="w-[85%] tracking-[-1px] text-black text-[25px] leading-[26px] lg:text-[40px] lg:leading-[40px] font-black mb-10">
                   Research-based process in our web app
                   design company
                 </h2>
@@ -1087,7 +1083,7 @@
                     <span class="">Stage
                       1.</span>
                   </p>
-                  <h3 class="text-[28px] leading-[28px] lg:text-[40px] lg:leading-[50px] font-black  mb-4">
+                  <h3 class="text-[28px] leading-[28px] lg:text-[35px] lg:leading-[40px] font-black  mb-4">
                     <span
                       class="text-transparent tracking-[-1px] bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                       Research and discovery</span>
@@ -1115,7 +1111,7 @@
                       Documenting non-functional
                       requirements</li>
                   </ul>
-                  <div class="absolute top-4 right-4 text-3xl lg:text-5xl font-bold  opacity-50">
+                  <div class="absolute top-4 right-4 text-3xl lg:text-5xl font-bold  opacity-20">
                     <span
                       class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">01</span>
                   </div>
@@ -1132,7 +1128,7 @@
                   class="card-section relative bg-white border rounded-xl p-6 px-10 shadow-xl bg-[url(/img/img-con/process_curve.png)] bg-no-repeat  bg-right bg-contain"
                   data-aos="fade-up" data-aos-delay="100">
                   <p class="text-[15px] text-black uppercase">Stage 2.</p>
-                  <h3 class="text-[28px] leading-[28px] lg:text-[40px] lg:leading-[50px] font-black  mb-4">
+                  <h3 class="text-[28px] leading-[28px] lg:text-[35px] lg:leading-[40px] font-black  mb-4">
                     <span
                       class="text-transparent tracking-[-1px] bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                       Product ideation</span>
@@ -1159,7 +1155,7 @@
                       Documenting non-functional
                       requirements</li>
                   </ul>
-                  <div class="absolute top-4 right-4 text-3xl lg:text-5xl font-bold  opacity-50">
+                  <div class="absolute top-4 right-4 text-3xl lg:text-5xl font-bold  opacity-20">
                     <span
                       class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">02</span>
                   </div>
@@ -1177,7 +1173,7 @@
                   class="card-section bg-[url(/img/img-con/process_curve.png)] bg-no-repeat  bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                   data-aos="fade-up" data-aos-delay="200">
                   <p class="text-[15px] text-black uppercase">Stage 3.</p>
-                  <h3 class="text-[28px] leading-[28px] lg:text-[40px] lg:leading-[50px] font-black  mb-4">
+                  <h3 class="text-[28px] leading-[28px] lg:text-[35px] lg:leading-[40px] font-black  mb-4">
                     <span
                       class="text-transparent bg-clip-text tracking-[-1px]  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                       Prototyping and tests</span>
@@ -1203,7 +1199,7 @@
                       Documenting non-functional
                       requirements</li>
                   </ul>
-                  <div class="absolute top-4 right-4 text-3xl lg:text-5xl font-bold  opacity-50"><span
+                  <div class="absolute top-4 right-4 text-3xl lg:text-5xl font-bold  opacity-20"><span
                       class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">03</span>
                   </div>
                 </div>
@@ -1219,7 +1215,7 @@
                   class="card-section bg-[url(/img/img-con/process_curve.png)] bg-no-repeat  bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                   data-aos="fade-up" data-aos-delay="300">
                   <p class="text-[15px] text-black uppercase">Stage 4.</p>
-                  <h3 class="text-[28px] leading-[28px] lg:text-[40px] lg:leading-[50px] font-black  mb-4"><span
+                  <h3 class="text-[28px] leading-[28px] lg:text-[35px] lg:leading-[40px] font-black  mb-4"><span
                       class="text-transparent bg-clip-text tracking-[-1px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                       UX/UI design</span></h3>
                   <p class="text-[13px] leading-[17px] lg:text-[15px] lg:leading-[20px]  mb-4">
@@ -1245,7 +1241,7 @@
                       Documenting non-functional
                       requirements</li>
                   </ul>
-                  <div class="absolute top-4 right-4  text-3xl lg:text-5xl font-bold  opacity-50"><span
+                  <div class="absolute top-4 right-4  text-3xl lg:text-5xl font-bold  opacity-20"><span
                       class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                       04</div>
                 </div>
@@ -1261,7 +1257,7 @@
                   class="card-section bg-[url(/img/img-con/process_curve.png)] bg-no-repeat  bg-right bg-contain relative bg-white border rounded-xl p-6 px-10 shadow-xl"
                   data-aos="fade-up" data-aos-delay="400">
                   <p class="text-[15px] text-black uppercase">Stage 5.</p>
-                  <h3 class="text-[28px] leading-[28px] lg:text-[40px] lg:leading-[50px] font-black   mb-4"> <span
+                  <h3 class="text-[28px] leading-[28px] lg:text-[35px] lg:leading-[40px] font-black   mb-4"> <span
                       class="text-transparent bg-clip-text tracking-[-1px]  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
                       Launch and support</span></h3>
                   <p class="text-[13px] leading-[17px] lg:text-[15px] lg:leading-[20px] mb-4">
@@ -1287,7 +1283,7 @@
                       Documenting non-functional
                       requirements</li>
                   </ul>
-                  <div class="absolute top-4 right-4 text-3xl lg:text-5xl font-bold  opacity-50">
+                  <div class="absolute top-4 right-4 text-3xl lg:text-5xl font-bold  opacity-20">
                     <span
                       class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">05</span>
                   </div>
@@ -1311,8 +1307,8 @@
      ">
 
     <div class="text-white sec-width-lg  mx-auto ">
-      <section class="xl:py-40 py-20  sec-width mx-auto relative overflow-hidden">
-        <div class="grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-2 px-0 md:px-10 xl:px-2   gap-5  text-black">
+      <section class=" py-20  sec-width mx-auto relative overflow-hidden">
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-2 px-0 md:px-10 xl:px-2   gap-5  text-black">
           <div>
             <h3 class="text-sm text-red-500 font-semibold mb-5" data-aos="fade-up">
               <span
@@ -1320,7 +1316,7 @@
                 STACK</span>
             </h3>
             <h2
-              class="w-[90%] tracking-[-1px] text-black text-[23px] leading-[25px]   md:text-[45px] md:leading-[45px] font-black lg:mb-10 mb-5"
+              class="w-[90%] tracking-[-1px] text-black text-[23px] leading-[25px]   md:text-[40px] md:leading-[40px] font-black lg:mb-10 mb-5"
               data-aos="fade-up" data-aos-delay="100">
               Why choose Amazefox Web as your ideal partner?
             </h2>
@@ -1340,12 +1336,12 @@
 
           <!-- Years of Experience -->
           <div data-aos="fade-up" data-aos-delay="200"
-            class="lg:border-r-2 border-[#15131340] p-4 flex flex-row md:flex-col items-center text-left md:text-center">
+            class="lg:border-r-2 border-[#15131330] p-4 flex flex-row md:flex-col items-center text-left md:text-center">
             <img src="./img/icons/ic_user-exp.svg" alt="" class="w-12 h-12 mb-0 md:mb-2">
 
             <div class="ml-4 md:ml-0">
               <div
-                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[60px] tracking-[-4px] leading-[45px] font-extrabold pt-0 md:pt-5 lg:h-[85px]">
+                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[50px] tracking-[-4px] leading-[45px] font-bold pt-0 md:pt-3 lg:h-[65px]">
                 <span data-countup
                   class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">16</span>+
               </div>
@@ -1355,12 +1351,12 @@
 
           <!-- Websites Designed -->
           <div data-aos="fade-up" data-aos-delay="300"
-            class="lg:border-r-2 border-[#15131340] p-4 flex flex-row md:flex-col items-center text-left md:text-center">
+            class="lg:border-r-2 border-[#15131330] p-4 flex flex-row md:flex-col items-center text-left md:text-center">
             <img src="./img/icons/ic_app--develope.svg" alt="" class="w-12 h-12 mb-0 md:mb-2">
 
             <div class="ml-4 md:ml-0">
               <div
-                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[60px] tracking-[-4px] leading-[45px] font-extrabold pt-0 md:pt-5 lg:h-[85px]">
+                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[50px] tracking-[-4px] leading-[45px] font-bold pt-0 md:pt-3 lg:h-[65px]">
                 <span data-countup
                   class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">2400</span>+
               </div>
@@ -1370,12 +1366,12 @@
 
           <!-- Client Retention -->
           <div data-aos="fade-up" data-aos-delay="400"
-            class="lg:border-r-2 border-[#15131340] p-4 flex flex-row md:flex-col items-center text-left md:text-center">
+            class="lg:border-r-2 border-[#15131330] p-4 flex flex-row md:flex-col items-center text-left md:text-center">
             <img src="./img/icons/ic_client-financing.svg" alt="" class="w-12 h-12 mb-0 md:mb-2">
 
             <div class="ml-4 md:ml-0">
               <div
-                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[60px] tracking-[-4px] leading-[45px] font-extrabold pt-0 md:pt-5 lg:h-[85px]">
+                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[50px] tracking-[-4px] leading-[45px] font-bold pt-0 md:pt-3 lg:h-[65px]">
                 <span data-countup
                   class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">99</span>%
               </div>
@@ -1385,12 +1381,12 @@
 
           <!-- Happy Customers -->
           <div data-aos="fade-up" data-aos-delay="500"
-            class="lg:border-r-2 border-[#15131340] p-4 flex flex-row md:flex-col items-center text-left md:text-center">
+            class="lg:border-r-2 border-[#15131330] p-4 flex flex-row md:flex-col items-center text-left md:text-center">
             <img src="./img/icons/ic_heart-health.svg" alt="" class="w-12 h-12 mb-0 md:mb-2">
 
             <div class="ml-4 md:ml-0">
               <div
-                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[60px] tracking-[-4px] leading-[45px] font-extrabold pt-0 md:pt-5 lg:h-[85px]">
+                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[50px] tracking-[-4px] leading-[45px] font-bold pt-0 md:pt-3 lg:h-[65px]">
                 <span data-countup
                   class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">300</span>+
               </div>
@@ -1400,12 +1396,12 @@
 
           <!-- Customisable Designs -->
           <div data-aos="fade-up" data-aos-delay="600"
-            class="lg:border-r-2 border-[#15131340] p-4 flex flex-row md:flex-col items-center text-left md:text-center">
+            class="lg:border-r-2 border-[#15131330] p-4 flex flex-row md:flex-col items-center text-left md:text-center">
             <img src="./img/icons/ic_natural-language.svg" alt="" class="w-12 h-12 mb-0 md:mb-2">
 
             <div class="ml-4 md:ml-0">
               <div
-                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[60px] tracking-[-4px] leading-[45px] font-extrabold pt-0 md:pt-5 lg:h-[85px]">
+                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[50px] tracking-[-4px] leading-[45px] font-bold pt-0 md:pt-3 lg:h-[65px]">
                 <span data-countup
                   class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">100</span>%
               </div>
@@ -1420,7 +1416,7 @@
 
             <div class="ml-4 md:ml-0">
               <div
-                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[60px] tracking-[-4px] leading-[45px] font-extrabold pt-0 md:pt-5 lg:h-[85px]">
+                class="stat-number text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-[36px] lg:text-[50px] tracking-[-4px] leading-[45px] font-bold pt-0 md:pt-3 lg:h-[65px]">
                 <span data-countup
                   class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">24</span>/7
               </div>
@@ -1443,7 +1439,7 @@
             <div class="  xl:col-span-1">
               <img src="./img/alogo.png" alt="">
             </div>
-            <div class="  xl:col-span-11">
+            <div class=" pl-6 xl:col-span-11">
               <h3 class="text-[25px] leading-[25px]  md:text-[32px] md:leading-[40px] font-black">Ready to innovate and
                 drive and impact?</h3>
               <p class="text-[16px] leading-[25px] md:leading-[35px] md:mt-1 mt-5">Transforming Businesses with
@@ -1467,16 +1463,16 @@
   </div>
 
   <!-- section 6 project portfolio  -->
-  <section class="sec-width mx-auto  py-16 relative carousel">
+  <section class="sec-width mx-auto  py-20 relative carousel">
     <!-- Section Title -->
-    <div class="flex items-center justify-between md:px-10 xl:px-2">
+    <div class="mt-10 flex items-center justify-between md:px-10 xl:px-2">
       <div>
         <p class="text-[18px] font-semibold uppercase mb-1">
           <span class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
             Portfolio</span>
         </p>
         <h2
-          class="w-[100%] tracking-[-1px] text-black text-[30px] leading-[30px] md:text-[50px] md:leading-[5px] font-black  ">
+          class="w-[100%] tracking-[-1px] text-black text-[30px] leading-[30px] md:text-[40px] md:leading-[40px] font-black  ">
           Our recent web design projects</span>
         </h2>
         <p class="text-[#666666] text-[17px] mt-2">Check out our projects where we made our clients win in the real
@@ -1485,7 +1481,7 @@
       </div>
 
       <!-- Navigation Arrows -->
-      <div class="flex items-center space-x-2 absolute right-0 lg:top-20 top-10">
+      <div class="flex items-center space-x-2 absolute right-0 lg:top-40 top-10">
         <button
           class="prevBtn w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
           <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
@@ -1670,9 +1666,9 @@
     <h2 class="text-[18px] font-semibold text-center mb-10 text-[#666666] uppercase">Trusted By Companies All Over The
       World. </h2>
 
-    <div id="logo-grid" class="grid lg:grid-cols-5 grid-cols-3 gap-10 mx-auto  ">
+    <div id="logo-grid" class="grid lg:grid-cols-5 grid-cols-3 gap-10   mx-auto  ">
       <!-- Initial 12 visible logos -->
-      <div class=" h-20  mx-auto flex items-center justify-center bg-white rounded">
+      <div class=" h-20  mx-auto flex items-center justify-center bg-white rounded ">
         <img src="./img/logos/ic_logo_eht.svg" class="max-h-16 transition-all duration-500" />
       </div>
       <div class="h-20   mx-auto flex items-center justify-center bg-white rounded">
@@ -1736,7 +1732,7 @@
   </section>
 
   <!-- *****section 8 industry expertise  -->
-  <div class="bg-[url(/img/img-con/industry_bg.svg)]   bg-center bg-cover bg-no-repeat w-full  py-20">
+  <div class="bg-[url(/img/img-con/industry_bg.svg)]   bg-center bg-cover bg-no-repeat w-full  py-10">
     <!-- Header -->
     <section class="text-center px-4 py-10 relative sec-width mx-auto">
       <img src="./img/alogo.png" alt="Paper Plane"
@@ -1748,7 +1744,7 @@
         <span class=" text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
           Technology Stack</span>
       </h3>
-      <h1 class="tracking-[-2px] text-[35px] lg:text-[55px] leading-[35px] md:leading-[50px] font-black my-2">Industry
+      <h1 class="tracking-[-2px] text-[35px] lg:text-[40px] leading-[35px] md:leading-[40px] font-black my-2">Industry
         Expertise</h1>
       <p class="max-w-2xl mx-auto text-[17px] ft-rob leading-[22px] text-[#666666] mt-5 mb-9">
         Putting forth our more than 16+ years of expertise to transform businesses digitally regardless of the industry.
@@ -2194,7 +2190,7 @@
       </div>
       <!-- CTA Box -->
       <div
-        class="sec-width mx-auto mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col md:flex-row items-center justify-between gap-4 relative"
+        class="sec-width mx-auto mt-16 mb-10 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col md:flex-row items-center justify-between gap-4 relative"
         data-aos="zoom-in-up" data-aos-delay="200">
         <div
           class="absolute inset-0 -z-[1] bg-[url(/img/img-con/techstack_curve.png)] bg-center   bg-cover  bg-no-repeat">
@@ -2203,7 +2199,7 @@
           <div class="  xl:col-span-1">
             <img src="./img/alogo.png" alt="">
           </div>
-          <div class="  xl:col-span-11">
+          <div class="pl-6  xl:col-span-11">
             <h3 class="text-[25px] leading-[25px]  md:text-[32px] md:leading-[40px] font-black">Ready to innovate and
               drive and impact?</h3>
             <p class="text-[16px] leading-[25px] md:leading-[35px] md:mt-1 mt-5">Transforming Businesses with Technology
@@ -2223,7 +2219,7 @@
   </div>
 
   <!-- technology stack section  -->
-  <div class=" text-white  bg-[url(/img/img-con/techstack_bg.svg)] py-20"
+  <div class=" text-white  bg-[url(/img/img-con/techstack_bg.svg)] py-16"
     style="background-image: url('./img/img-con/techstack-curve.png'), url('./img/img-con/techstack_bg.svg'), url('/img/img-con/design_dotted_left.svg'); 
      background-blend-mode:  screen, screen, screen; background-repeat:no-repeat; background-position:left bottom,bottom, top left ;background-size:50%, cover,30%">
     <section
@@ -2232,10 +2228,10 @@
       <div class="lg:w-1/2 z-10 text-center lg:text-left " data-aos="fade-right">
         <h4 class="uppercase text-[15px] lg:text-[18px] leading-[25px] mb-5 font-normal">Technology Stack</h4>
         <h1
-          class="text-[33px] tracking-[-1px] md:text-[40px] xl:text-[70px] font-black leading-[32px] xl:leading-[65px] mb-6">
+          class="text-[33px] tracking-[-1px] md:text-[40px] xl:max-w-xl xl:text-[50px] font-black leading-[32px] xl:leading-[52px] mb-6">
           Elevating Software with a Website Design
         </h1>
-        <p class="text-[13px] lg:text-[16px] mb-4 xl:max-w-lg leading-[17px] lg:leading-[21px] font-normal">
+        <p class="text-[13px] lg:text-[16px] mb-4 xl:max-w-xl leading-[17px] lg:leading-[21px] font-normal">
           Professional branding is a powerful catalyst for company development which improves its image and contributes
           to commercial success. Professional branding is a powerful catalyst for company development which improves its
           image and contributes
@@ -2256,25 +2252,25 @@
       </div>
 
       <!-- Decorative elements -->
-      <img src="./img/alogo.png" alt="Paper Plane" class="absolute bottom-10 left-10 w-8 opacity-80 animate-bounce" />
+      <img src="./img/alogo.png" alt="Paper Plane" class="absolute bottom-5 left-10 w-8 opacity-80 animate-bounce" />
       <img src="./img/alogo.png" alt="Paper Plane" class="absolute top-10 right-10 w-8 opacity-80 animate-bounce" />
     </section>
 
   </div>
 
   <!-- section testimonials  -->
-  <div class="bg-blend-multiply text-gray-900 carousel" style="
+  <div class="bg-blend-multiply text-gray-900 carousel pt-10" style="
        background-image: url('/img/img-con/testimonial_top_dotted.svg'),url(/img/img-con/testimonial_bg.svg), url('/img/img-con/testimonial_bottom_dotted.svg');
        background-size: 35%,cover, 35% ;
        background-position:  top left,center, bottom right;
        background-repeat: no-repeat,repeat, no-repeat;
      ">
 
-    <section class="sec-width mx-auto px-4 py-40 relative">
+    <section class="sec-width mx-auto px-4 py-20 relative">
       <img src="./img/alogo.png" alt="Paper Plane"
         class="absolute top-10 right-[35%] sm:top-10 w-10 lg:w-50 lg:top-60 opacity-80 animate-bounce">
       <!-- Navigation Arrows -->
-      <div class="flex items-center space-x-2 absolute lg:right-6 lg:top-60 bottom-20 left-40 lg:bottom-auto lg:left-auto
+      <div class="  flex items-center space-x-2 absolute lg:right-6 lg:top-60 bottom-20 left-40 lg:bottom-auto lg:left-auto
             sm:flex md:flex lg:flex xl:flex">
         <button
           class="prevBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
@@ -2293,8 +2289,8 @@
             class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Testimonials</span>
         </h5>
         <h2
-          class="text-[20px] tracking-[-2px] md:text-[40px] lg:max-w-2xl leading-[25px] lg:text-[50px] lg:leading-[55px] font-black my-5">
-          What Do Client Say About Web App Design</h2>
+          class="text-[20px] tracking-[-1px] md:text-[40px] lg:max-w-2xl leading-[25px] lg:text-[40px] lg:leading-[45px] font-black my-5">
+          What do Client say about Web App Design</h2>
         <p class=" lg:max-w-2xl  ft-rob text-[17px] leading-[23px]">
           At Start Designs, our top priority is your satisfaction. Since the day we began, we've been committed to
           delivering projects with 100% satisfaction for our clients.
@@ -2814,9 +2810,9 @@
             <p class="uppercase text-[15px] lg:text-[18px] text-white opacity-80 font-semibold mb-5 ft-vit">What Makes
               Us Different</p>
             <h2
-              class="text-[25px] tracking-[-1px] lg:text-[50px] font-black leading-[26px] lg:leading-[55px] mb-6 ft-vit">
-              What Makes
-              Every Amazfox Web App Design Stand
+              class="text-[25px] tracking-[-0.5px] lg:text-[40px] font-black leading-[26px] lg:leading-[45px] mb-6 ft-vit">
+              What makes
+              every Amazfox Web App Design Stand
               Out</h2>
           </div>
           <div class="col-span-2">
@@ -2954,12 +2950,12 @@
   <div class="bg-white text-black font-sans py-20">
     <section class="sec-width mx-auto px-4 py-16 relative">
       <!-- Heading -->
-      <div class="text-start mb-12">
+      <div class="text-start mb-8">
         <p class="text-[15px] lg:text-[18px]   font-semibold uppercase mb-1">
           <span class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
             Questions & Answers</span>
         </p>
-        <h2 class="lg:text-[55px] text-[25px] font-black lg:leading-[70px] leading-[25px] tracking-[-1px]">Frequently
+        <h2 class="lg:text-[40px] text-[25px] font-black lg:leading-[45px] leading-[25px] tracking-[-0.5px]">Frequently
           Asked Questions
         </h2>
         <p class="ft-rob text-[13px] leading-[17px] lg:text-[17px] lg:leading-[23px] mt-2  max-w-3xl  ">We hope these
@@ -3112,7 +3108,7 @@
         <!-- Add more questions as needed -->
       </div>
       <img src="./img/alogo.png" alt="Paper Plane"
-        class="absolute lg:top-40 top-20 right-10 w-20 opacity-80 animate-bounce">
+        class="absolute lg:top-20 top-20 right-10 w-20 opacity-80 animate-bounce">
     </section>
   </div>
 
@@ -3125,7 +3121,7 @@
        background-position:center,  top left,center left, bottom right;
        background-repeat: no-repeat;
      ">
-    <section class="sec-width mx-auto flex flex-col lg:flex-row items-center justify-center px-4 py-20 gap-10">
+    <section class="sec-width mx-auto flex flex-col lg:flex-row items-stretch justify-center px-4 py-20 gap-10">
       <!-- LEFT SECTION -->
       <div class="w-full lg:w-[40%] space-y-15 my-5">
         <div>
@@ -3367,7 +3363,7 @@
       <div class="flex flex-col xl:flex-row justify-between items-center ">
         <div class="flex flex-col xl:flex-row justify-between items-center gap-1">
           <img src="./img/alogo.png" alt="logo" class="animate-bounce">
-          <h2 class="text-[35px] leading-[40px] font-bold tracking-[-1px]  ">Speak with a Quick<br>Contact our Team</h2>
+          <h2 class="text-[35px] leading-[40px] font-bold tracking-[-1px] pl-6 ">Speak with a Quick<br>Contact our Team</h2>
         </div>
         <div class="flex flex-col md:flex-row gap-3">
           <input type="text" placeholder="Name"
