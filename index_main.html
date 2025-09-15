@@ -117,175 +117,165 @@
 
     <!-- Navbar Start -->
 
-<nav id="navbar"
-     style="border-bottom: 1.5px solid transparent; border-image: linear-gradient(90deg,#000000,#d1d1d1,black,#d1d1d1) 10;"
-     x-data="{ open: false, megaOpen: false, activeTab: null }"
-     class="relative bg-white px-4 py-4 md:px-10 md:py-6 transition duration-300">
+    <nav id="navbar"
+      style="border-bottom: 1.5px solid transparent; border-image: linear-gradient(90deg,#000000,#d1d1d1,black,#d1d1d1) 10;"
+      x-data="{ open: false, megaOpen: false, activeTab: null }"
+      class="relative bg-white px-4 py-4 md:px-10 md:py-6 transition duration-300">
 
-    <div class="sec-width mx-auto flex items-center justify-between">
+      <div class="sec-width mx-auto flex items-center justify-between">
         <button @click="open = !open" class="md:hidden focus:outline-none">
-            <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" stroke-width="2"
-                 viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
+          <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
 
         <!-- Logo -->
         <div class="flex items-center gap-2">
-            <div>
-                <img src="./img/nav_logo_bd.svg" alt="Logo">
-            </div>
+          <div>
+            <img src="./img/nav_logo_bd.svg" alt="Logo">
+          </div>
         </div>
 
         <!-- Desktop Menu -->
         <ul class="hidden md:flex gap-8 text-[16px] ft-rob font-medium">
-            <li class="relative" @mouseenter="megaOpen = true" @mouseleave="megaOpen = false">
-                <a href="#" class="hover:text-pink-500 inline-flex items-center">
-                    Services
-                    <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 mx-2" fill="none"
-                         viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </a>
-            </li>
-            <li><a href="#" class="hover:text-pink-500">About Us</a></li>
-            <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
-            <li><a href="#" class="hover:text-pink-500">Industries</a></li>
-            <li><a href="#" class="hover:text-pink-500">Testimonials</a></li>
-            <li><a href="#" class="hover:text-pink-500">Clients</a></li>
-            <li><a href="#" class="hover:text-pink-500">Blog</a></li>
+          <li class="relative" @mouseenter="megaOpen = true" @mouseleave="megaOpen = false">
+            <a href="#" class="hover:text-pink-500 inline-flex items-center">
+              Services
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 mx-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+          </li>
+          <li><a href="#" class="hover:text-pink-500">About Us</a></li>
+          <li><a href="#" class="hover:text-pink-500">Portfolio</a></li>
+          <li><a href="#" class="hover:text-pink-500">Industries</a></li>
+          <li><a href="#" class="hover:text-pink-500">Testimonials</a></li>
+          <li><a href="#" class="hover:text-pink-500">Clients</a></li>
+          <li><a href="#" class="hover:text-pink-500">Blog</a></li>
         </ul>
 
         <!-- Contact Us Button -->
         <div class="flex items-center me-2">
-            <button
-                class="hidden ft-rob text-[17px] lg:inline px-4 py-2 rounded-[10px] text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
-                Contact Us
-            </button>
+          <button
+            class="hidden ft-rob text-[17px] lg:inline px-4 py-2 rounded-[10px] text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+            Contact Us
+          </button>
         </div>
-    </div>
+      </div>
 
-    <!-- Mega Menu -->
-    <div x-show="megaOpen" @mouseenter="megaOpen = true" @mouseleave="megaOpen = true"
-         x-transition:enter="transition ease-out duration-300"
-         x-transition:enter-start="opacity-0 translate-y-4"
-         x-transition:enter-end="opacity-100 translate-y-0"
-         x-transition:leave="transition ease-in duration-200"
-         x-transition:leave-start="opacity-100 translate-y-0"
-         x-transition:leave-end="opacity-0 translate-y-4"
-         class="block absolute inset-x-0 left-0 top-full max-w-[100%] bg-white shadow-lg border-t border-gray-200 z-50 overflow-visible">
+      <!-- Mega Menu -->
+      <div x-show="megaOpen" @mouseenter="megaOpen = true" @mouseleave="megaOpen = true"
+        x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4"
+        x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+        class="block absolute inset-x-0 left-0 top-full max-w-[100%] bg-white shadow-lg border-t border-gray-200 z-50 overflow-visible">
 
-        <div x-data="{ activeTab: 'web-app' }" class="flex max-w-[88%] mx-auto text-[15px]">
-            <!-- Left Tab -->
-            <div class="w-1/4 bg-white p-4 ">
-                <ul class="space-y-2">
-                    <li @mouseenter="activeTab = 'web-app'"
-                        class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
-                        :class="activeTab === 'web-app' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
-                        Web App Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
-                    </li>
-                    <li @mouseenter="activeTab = 'mobile-app'"
-                        class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
-                        :class="activeTab === 'mobile-app' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
-                        Mobile App Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
-                        
-                    </li>
-                    <li @mouseenter="activeTab = 'website-redesign'"
-                          class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
-                        :class="activeTab === 'website-redesign' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
-                        Website Redesign Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
-                    </li>
-                    <li @mouseenter="activeTab = 'logo-design'"
-                        class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
-                        :class="activeTab === 'logo-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
-                          Logo Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
-                    </li>
-                    <li @mouseenter="activeTab = 'branding-design'"
-                         class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
-                        :class="activeTab === 'branding-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
-                           Branding Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
-                    </li>
-                  <li @mouseenter="activeTab = 'word-design'"
-                       class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
-                        :class="activeTab === 'word-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
-                     WordPress Website Design  <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
-                    </li>
-                    <li @mouseenter="activeTab = 'blog-design'"
-                        class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
-                        :class="activeTab === 'blog-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
-                    Blog website design <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
-                    </li>
-                    <li @mouseenter="activeTab = 'ecom-design'"
-                       class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
-                        :class="activeTab === 'ecom-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
-                   	E commerce Website design  <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
-                    </li>
-                    <li @mouseenter="activeTab = 'social-design'"
-                         class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
-                        :class="activeTab === 'social-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
-                     Social Media Design <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
-                    </li>
-                </ul>
-            </div>
+        <div x-data="{ activeTab: 'web-app' }" class="flex max-w-[88%] mx-auto text-[14px]">
+          <!-- Left Tab -->
+          <div class="w-1/4 bg-white p-4 ">
+            <ul class="space-y-2">
+              <li @mouseenter="activeTab = 'web-app'"
+                class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                :class="activeTab === 'web-app' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                Web App Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
+              </li>
+              <li @mouseenter="activeTab = 'mobile-app'"
+                class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                :class="activeTab === 'mobile-app' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                Mobile App Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
 
-            <!-- Right Content -->
-            <div class="flex-1 p-6 grid grid-cols-3 gap-6 w-full bg-gradient-to-br from-white via-rose-300  to-[#FFFFFF] to-45%  ">
+              </li>
+              <li @mouseenter="activeTab = 'website-redesign'"
+                class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                :class="activeTab === 'website-redesign' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                Website Redesign Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
+              </li>
+              <li @mouseenter="activeTab = 'logo-design'"
+                class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                :class="activeTab === 'logo-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                Logo Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
+              </li>
+              <li @mouseenter="activeTab = 'branding-design'"
+                class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                :class="activeTab === 'branding-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                Branding Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
+              </li>
+              <li @mouseenter="activeTab = 'word-design'"
+                class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                :class="activeTab === 'word-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                WordPress Website Design <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
+              </li>
+              <li @mouseenter="activeTab = 'blog-design'"
+                class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                :class="activeTab === 'blog-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                Blog website design <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
+              </li>
+              <li @mouseenter="activeTab = 'ecom-design'"
+                class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                :class="activeTab === 'ecom-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                E commerce Website design <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
+              </li>
+              <li @mouseenter="activeTab = 'social-design'"
+                class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
+                :class="activeTab === 'social-design' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
+                Social Media Design <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline  ">
+              </li>
+            </ul>
+          </div>
 
+          <!-- Right Content -->
+          <div class="flex-1 p-6 grid   gap-6 w-full bg-gradient-to-br from-white via-rose-300  to-[#FFFFFF] to-45%  ">
+            <div class=" grid grid-cols-3 gap-2 w-full ">
+              <div class="col-span-2 w-full">
                 <div x-show="activeTab === 'web-app'" x-transition class="space-y-2 ml-10 w-full">
-                    <a href="#" class="block hover:text-pink-500">UI / UX Design</a>
-                    <a href="#" class="block hover:text-pink-500">Mobile Responsive Design</a>
-                    <a href="#" class="block hover:text-pink-500">eCommerce Solutions</a>
-                    <a href="#" class="block hover:text-pink-500">Custom Web Design</a>
-                    <a href="#" class="block hover:text-pink-500">Website Redesign</a>
-                    <a href="#" class="block hover:text-pink-500">Product Design</a>
-                    <a href="#" class="block hover:text-pink-500">Brand Identity and Marketing Design</a>
+                  <a href="#" class="block hover:text-pink-500">UI / UX Design</a>
+                  <a href="#" class="block hover:text-pink-500">Mobile Responsive Design</a>
+                  <a href="#" class="block hover:text-pink-500">eCommerce Solutions</a>
+                  <a href="#" class="block hover:text-pink-500">Custom Web Design</a>
+                  <a href="#" class="block hover:text-pink-500">Website Redesign</a>
+                  <a href="#" class="block hover:text-pink-500">Product Design</a>
+                  <a href="#" class="block hover:text-pink-500">Brand Identity and Marketing Design</a>
                 </div>
-
                 <div x-show="activeTab === 'mobile-app'" x-transition class="space-y-2 ml-10 w-full">
-                    <a href="#" class="block hover:text-pink-500">iOS App Design</a>
-                    <a href="#" class="block hover:text-pink-500">Android App Design</a>
-                    <a href="#" class="block hover:text-pink-500">Mobile App Design</a>
-                    <a href="#" class="block hover:text-pink-500">Ui/UX Mobile App Design</a>
-                    <a href="#" class="block hover:text-pink-500">E-commerce Mobile App Design</a>
-                    <a href="#" class="block hover:text-pink-500">Mobile App Redesign Services</a>
+                  <a href="#" class="block hover:text-pink-500">iOS App Design</a>
+                  <a href="#" class="block hover:text-pink-500">Android App Design</a>
+                  <a href="#" class="block hover:text-pink-500">Mobile App Design</a>
+                  <a href="#" class="block hover:text-pink-500">Ui/UX Mobile App Design</a>
+                  <a href="#" class="block hover:text-pink-500">E-commerce Mobile App Design</a>
+                  <a href="#" class="block hover:text-pink-500">Mobile App Redesign Services</a>
                 </div>
-
                 <div x-show="activeTab === 'website-redesign'" x-transition class="space-y-2 ml-10 w-full">
-                    <a href="#" class="block hover:text-pink-500">Website Redesign</a>
-                    <a href="#" class="block hover:text-pink-500">UI/UX Redesign</a>
-                    <a href="#" class="block hover:text-pink-500">E-commerce Redesign</a>
+                  <a href="#" class="block hover:text-pink-500">Website Redesign</a>
+                  <a href="#" class="block hover:text-pink-500">UI/UX Redesign</a>
+                  <a href="#" class="block hover:text-pink-500">E-commerce Redesign</a>
                 </div>
-
                 <div x-show="activeTab === 'logo-design'" x-transition class="space-y-2 ml-10 w-full">
-                    <a href="#" class="block hover:text-pink-500">Business Logo Design</a>
-                    <a href="#" class="block hover:text-pink-500">Startup Logo Creation</a>
-                    <a href="#" class="block hover:text-pink-500">Corporate Brand Logo Design</a>
-                    <a href="#" class="block hover:text-pink-500">Minimalist Logo Design</a>
-                    <a href="#" class="block hover:text-pink-500">Mascot & Character Logo Design</a>
-                    <a href="#" class="block hover:text-pink-500">Symbol / Icon-Based Logos</a>
-                    <a href="#" class="block hover:text-pink-500">Typography-Focused Logo Design</a>
-                    <a href="#" class="block hover:text-pink-500">3D & Gradient Style Logos</a>
-                    <a href="#" class="block hover:text-pink-500">Combination Mark Logos</a>
-                    <a href="#" class="block hover:text-pink-500">Abstract Concept Logos</a>
+                  <a href="#" class="block hover:text-pink-500">Business Logo Design</a>
+                  <a href="#" class="block hover:text-pink-500">Startup Logo Creation</a>
+                  <a href="#" class="block hover:text-pink-500">Corporate Brand Logo Design</a>
+                  <a href="#" class="block hover:text-pink-500">Minimalist Logo Design</a>
+                  <a href="#" class="block hover:text-pink-500">Mascot & Character Logo Design</a>
+                  <a href="#" class="block hover:text-pink-500">Symbol / Icon-Based Logos</a>
+                  <a href="#" class="block hover:text-pink-500">Typography-Focused Logo Design</a>
+                  <a href="#" class="block hover:text-pink-500">3D & Gradient Style Logos</a>
+                  <a href="#" class="block hover:text-pink-500">Combination Mark Logos</a>
+                  <a href="#" class="block hover:text-pink-500">Abstract Concept Logos</a>
                 </div>
-
-                <div x-show="activeTab === 'branding-design'" x-transition class="space-y-2 ml-10 w-full">
+                <div x-show="activeTab === 'branding-design'" class="flex  ml-10 w-full">
+                  <div class="space-y-2 p-5">
                     <a href="#" class="block hover:text-pink-500">Branding Design Services</a>
                     <a href="#" class="block hover:text-pink-500">Travel Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Shop Branding Design</a>
-                    <a href="#" class="block hover:text-pink-500">Sales Desk Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Financial Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">School Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Hotel Branding Design</a>
-                    <a href="#" class="block hover:text-pink-500"> Media Branding Design</a>
-                  <a href="#" class="block hover:text-pink-500">Transportation Branding Design</a>
-                    <a href="#" class="block hover:text-pink-500">Publisher Branding Design</a>
+                    <a href="#" class="block hover:text-pink-500">Media Branding Design</a>
+                    <a href="#" class="block hover:text-pink-500">Transportation Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Website Branding Design</a>
-                    </div>
-                    <div x-show="activeTab === 'branding-design'" x-transition class="space-y-2 ml-10 w-full>
-                    <a href="#" class="block hover:text-pink-500">Club Branding Design</a>
+
+                  </div>
+                  <div class="space-y-2 p-5">
                     <a href="#" class="block hover:text-pink-500">Pharmaceuticals Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Pet Product Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Clothing Branding Design</a>
@@ -295,47 +285,76 @@
                     <a href="#" class="block hover:text-pink-500">Wedding Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Photograph Branding Design</a>
                     <a href="#" class="block hover:text-pink-500">Furniture Branding Design</a>
+                  </div>
                 </div>
-
-                 <div x-show="activeTab === 'word-design'" x-transition class="space-y-2 ml-10 w-full">
-                    <a href="#" class="block hover:text-pink-500">WordPress UI/UX Redesign</a>
-                    <a href="#" class="block hover:text-pink-500">WordPress E-commerce Redesign</a>
-                    <a href="#" class="block hover:text-pink-500">E-commerce Redesign</a>
+                <div x-show="activeTab === 'word-design'" x-transition class="space-y-2 ml-10 w-full">
+                  <a href="#" class="block hover:text-pink-500">WordPress UI/UX Redesign</a>
+                  <a href="#" class="block hover:text-pink-500">WordPress E-commerce Redesign</a>
+                  <a href="#" class="block hover:text-pink-500">E-commerce Redesign</a>
                 </div>
-                 <div x-show="activeTab === 'blog-design'" x-transition class="space-y-2 ml-10 w-full">
-                    <a href="#" class="block hover:text-pink-500">Blog Website Design</a>
-                    <a href="#" class="block hover:text-pink-500">	Blog UI/UX Redesign</a>
-                    <a href="#" class="block hover:text-pink-500">Blog UI/UX Redesign</a>
+                <div x-show="activeTab === 'blog-design'" x-transition class="space-y-2 ml-10 w-full">
+                  <a href="#" class="block hover:text-pink-500">Blog Website Design</a>
+                  <a href="#" class="block hover:text-pink-500"> Blog UI/UX Redesign</a>
+                  <a href="#" class="block hover:text-pink-500">Blog UI/UX Redesign</a>
                 </div>
-                 <div x-show="activeTab === 'ecom-design'" x-transition class="space-y-2 ml-10 w-full">
-                    <a href="#" class="block hover:text-pink-500">E-commerce Website Design</a>
-                    <a href="#" class="block hover:text-pink-500">E-commerce Website Redesign</a>
-                    <a href="#" class="block hover:text-pink-500">Social Media Design Service </a>
+                <div x-show="activeTab === 'ecom-design'" x-transition class="space-y-2 ml-10 w-full">
+                  <a href="#" class="block hover:text-pink-500">E-commerce Website Design</a>
+                  <a href="#" class="block hover:text-pink-500">E-commerce Website Redesign</a>
+                  <a href="#" class="block hover:text-pink-500">Social Media Design Service </a>
                 </div>
                 <div x-show="activeTab === 'social-design'" x-transition class="space-y-2 ml-10 w-full">
-                  <a href="#" class="block hover:text-pink-500">	Social Media Designs We Create</a>
-                    <a href="#" class="block hover:text-pink-500"> Instagram Posts & Stories </a>
-                    <a href="#" class="block hover:text-pink-500"> Facebook Ads & Cover Designs </a>
-                    <a href="#" class="block hover:text-pink-500">LinkedIn Banners & Visual Templates  </a>
-                    <a href="#" class="block hover:text-pink-500"> Twitter Headers & Graphic Posts </a>
-                    <a href="#" class="block hover:text-pink-500"> YouTube Thumbnails & Channel Art </a>
-                    <a href="#" class="block hover:text-pink-500">Pinterest Pin Designs  </a>
-                    <a href="#" class="block hover:text-pink-500"> TikTok Visual Templates & Intro Frames </a>
-                    <a href="#" class="block hover:text-pink-500"> Google Display Ad Creatives </a>
-                    <a href="#" class="block hover:text-pink-500"> Motion Graphics & Reels </a>
-                    <a href="#" class="block hover:text-pink-500"> Branded Cross-Platform Design Kits </a>
-         
+                  <a href="#" class="block hover:text-pink-500"> Social Media Designs We Create</a>
+                  <a href="#" class="block hover:text-pink-500"> Instagram Posts & Stories </a>
+                  <a href="#" class="block hover:text-pink-500"> Facebook Ads & Cover Designs </a>
+                  <a href="#" class="block hover:text-pink-500">LinkedIn Banners & Visual Templates </a>
+                  <a href="#" class="block hover:text-pink-500"> Twitter Headers & Graphic Posts </a>
+                  <a href="#" class="block hover:text-pink-500"> YouTube Thumbnails & Channel Art </a>
+                  <a href="#" class="block hover:text-pink-500">Pinterest Pin Designs </a>
+                  <a href="#" class="block hover:text-pink-500"> TikTok Visual Templates & Intro Frames </a>
+                  <a href="#" class="block hover:text-pink-500"> Google Display Ad Creatives </a>
+                  <a href="#" class="block hover:text-pink-500"> Motion Graphics & Reels </a>
+                  <a href="#" class="block hover:text-pink-500"> Branded Cross-Platform Design Kits </a>
+
                 </div>
-                <div  >
-                  <img src="./img/img_koli.png" alt="">
-                </div>
+              </div>
+              <div>
+                <img src="./img/img_koli.png" alt="">
+              </div>
             </div>
+            <div class="space-y-4 text-[#777777] ft-rob mt-5 grid grid-cols-3">
+              <div class="flex  items-center gap-4  ">
+                <img src="./img/img-con/c_mails.svg" alt="" width="55">
+                <div>
+                  <p class=" text-[18px] text-black font-semibold trailing-[-2px]">Email us</p>
+                  <p class=" text-[15px] ">support@amazefox.com</p>
+                </div>
+              </div>
+
+              <div class=" flex items-center gap-4   ">
+                <img src="./img/img-con/c_whatssapp.svg" alt="" width="55">
+
+                <div>
+                  <p class="text-[18px] text-black font-semibold  ">Whatsapp</p>
+                  <p class="text-[15px]">+91 9786739966</p>
+                </div>
+              </div>
+
+              <div class="  flex items-center gap-4  ">
+                <img src="./img/img-con/cteam_ss.svg" alt="" width="55">
+                <div>
+                  <p class="text-[18px] text-black font-semibold">Teams</p>
+                  <p class="text-[15px]">nikilfox / amazefox</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Mobile Menu remains unchanged -->
+      <!-- Mobile Menu remains unchanged -->
 
-</nav>
+    </nav>
 
     <!-- Navbar End -->
   </header>
@@ -861,7 +880,8 @@
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative px-6 py-6  z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative px-6 py-6  z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply"
+          style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
@@ -3365,7 +3385,8 @@
       <div class="flex flex-col xl:flex-row justify-between items-center ">
         <div class="flex flex-col xl:flex-row justify-between items-center gap-1">
           <img src="./img/alogo.png" alt="logo" class="animate-bounce">
-          <h2 class="text-[35px] leading-[40px] font-bold tracking-[-1px] pl-6 ">Speak with a Quick<br>Contact our Team</h2>
+          <h2 class="text-[35px] leading-[40px] font-bold tracking-[-1px] pl-6 ">Speak with a Quick<br>Contact our Team
+          </h2>
         </div>
         <div class="flex flex-col md:flex-row gap-3">
           <input type="text" placeholder="Name"
