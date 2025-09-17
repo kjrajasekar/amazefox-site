@@ -13,7 +13,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -95,20 +95,20 @@
   <header class="sticky top-0 z-50 w-full transition duration-300  shadow-xl ">
     <!-- Top Contact Info -->
     <div class="bg-black ">
-      <div class="mx-auto sec-width   text-white   py-2 ft-vit text-[13px] hidden md:flex justify-between items-center">
+      <div class="mx-auto sec-width   text-white   py-2 ft-vit text-[11px] md:text-[13px]  md:flex justify-between items-center">
         <div class="flex items-center gap-4">
-          <div class="flex items-center gap-2">
-            <img src="./img/ic_whtsapp.svg" alt="">
+          <div class="flex items-center gap-2 p-2">
+            <img src="./img/ic_whtsapp.svg" alt="" class="w-[18px]  "/>
             <span>+91 9786739966</span>
           </div>
           <span>|</span>
           <div class="flex items-center gap-2">
-            <img src="./img/ic_mail.svg" alt="">
+            <img src="./img/ic_mail.svg" alt="" class="w-[18px]  "/>
             <span>support@amazefox.com</span>
           </div>
         </div>
-        <div class="flex items-center gap-2">
-          <img src="./img/ic_teams.svg" alt="">
+        <div class="flex items-center gap-2 hidden lg:flex" >
+          <img src="./img/ic_teams.svg" alt="" />
           <span>nikilfox / amazefox</span>
         </div>
       </div>
@@ -131,7 +131,7 @@
         <!-- Logo -->
         <div class="flex items-center gap-2">
           <div>
-            <img src="./img/nav_logo_bd.svg" alt="Logo">
+            <img src="./img/nav_logo_bd.svg" alt="Logo" class="w-[60%] md:w-[100%]">
           </div>
         </div>
 
@@ -153,17 +153,18 @@
           <li><a href="#" class="hover:text-pink-500">Clients</a></li>
           <li><a href="#" class="hover:text-pink-500">Blog</a></li>
         </ul>
-
         <!-- Contact Us Button -->
         <div class="flex   ">
           <button
-            class="flex group hidden lg:inline px-4 py-2 rounded-[10px] text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
-            <span class="group-hover:order-2 transition ft-rob text-[16px]  "> Contact Us</span>
-            <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="pl-1 inline transition group-hover:order-1">
+            class="flex items-center justify-center group  lg:inline px-4 py-2 rounded-[10px]  hover:rounded-[8px] text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] w-[90px] md:w-[150px] overflow-hidden">
+            <span class="flex items-center transition-all duration-300">
+              <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="16"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span class="transition-all duration-300 group-hover:ms-2 text-center text-[9px]">Contact Us</span>
+            </span>
           </button>
         </div>
       </div>
-
       <!-- Mega Menu -->
       <div x-show="megaOpen" @mouseenter="megaOpen = true" @mouseleave="megaOpen = false"
         x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4"
@@ -490,7 +491,6 @@
         </button>
         <span id="fancy-text"
           class="flex  space-x-[2px] uppercase text-wrap  md:text-[12px] text-[10px]  md:font-normal mt-5 ft-rob"></span>
-
         <h1 class="mt-4 md:text-[50px] text-[35px] tracking-[-2px] font-black leading-[31px] md:leading-[45px]">
           <span class="text-transparent  bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Best
             Web App
@@ -501,14 +501,14 @@
           An effective digital presence not only builds trust with potential clients but also
           drives meaningful interactions that support your business growth.
         </p>
-        <button type="submit" class="group relative mt-6 shadow-black shadow-sm w-[165px] h-[41px] md:w-[250px] md:h-[75px]  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-  py-3 rounded-[100px] text-white text-[12px] md:text-[17px] font-bold   transition hover:opacity-90
-    flex items-center justify-center gap-3 hover:-translate-y-1 hover:scale-102 ">
-          <span class="group-hover:order-2   duration-300 ease-in-out">Get Free Quotes</span>
-          <img src="./img/img-con/btn_arrow.svg" alt="" width="20"
-            class="inline duration-300  transition group-hover:order-1">
+        <button
+          class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[165px] h-[41px] md:w-[250px] md:h-[75px] overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[17px] font-bold ">
+          <span class="flex items-center  justify-center transition-all duration-300">
+            <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+            <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+              class=" opacity-100 transition-opacity duration-300" />
+          </span>
         </button>
-
       </div>
 
       <!-- Right Image -->
@@ -630,13 +630,21 @@
               Our UI/UX design helps users do more with less effort through smart, clean, and thoughtful
               design.Every element is placed with precision to enhance usability.
             </p>
+            <button
+              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
+              <span class="flex items-center  justify-center transition-all duration-300">
+                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                  class=" opacity-300 transition-opacity duration-300" />
+              </span>
+            </button>
 
-            <button type="submit" class="group relative mt-5 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+            <!-- <button type="submit" class="group relative mt-5 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
   py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
   flex items-center justify-center gap-3">
               <span class="group-hover:order-2 transition">Get Free Quote</span>
               <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition group-hover:order-1">
-            </button>
+            </button> -->
 
           </div>
           <!-- mid Side -->
@@ -687,11 +695,13 @@
             <p class="text-[#666666] text-[14px] mb-4">
               Our mobile responsive design ensures your website or application looks perfect and functions flawlessly
               across all screen sizes—smartphones, tablets, and beyond.</p>
-            <button type="submit" class="group relative mt-5 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
-  flex items-center justify-center gap-3">
-              <span class="group-hover:order-2 transition">Get Free Quote</span>
-              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition group-hover:order-1">
+            <button
+              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
+              <span class="flex items-center  justify-center transition-all duration-300">
+                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                  class=" opacity-300 transition-opacity duration-300" />
+              </span>
             </button>
           </div>
           <!-- mid Side -->
@@ -753,11 +763,13 @@
               We craft seamless online shopping experiences that boost sales, build trust, and make every
               click count—from homepage to checkout.
             </p>
-            <button type="submit" class="group relative mt-5 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
-  flex items-center justify-center gap-3">
-              <span class="group-hover:order-2 transition">Get Free Quote</span>
-              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition group-hover:order-1">
+            <button
+              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
+              <span class="flex items-center  justify-center transition-all duration-300">
+                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                  class=" opacity-300 transition-opacity duration-300" />
+              </span>
             </button>
           </div>
           <!-- mid Side -->
@@ -811,11 +823,13 @@
               Our custom web design solutions are tailored to reflect your brand, engage users, and deliver outstanding
               digital experiences across all platforms.
             </p>
-            <button type="submit" class="group relative mt-5 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
-  flex items-center justify-center gap-3">
-              <span class="group-hover:order-2 transition">Get Free Quote</span>
-              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition group-hover:order-1">
+            <button
+              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
+              <span class="flex items-center  justify-center transition-all duration-300">
+                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                  class=" opacity-300 transition-opacity duration-300" />
+              </span>
             </button>
           </div>
           <!-- mid Side -->
@@ -823,7 +837,6 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
-
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Business Website Design
                 </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Portfolio Website Design
@@ -833,7 +846,6 @@
                 </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Landing Page Design</li>
               </ul>
-
 
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Blog & News Website
@@ -847,8 +859,6 @@
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Custom UI Components</li>
               </ul>
             </div>
-
-
           </div>
 
           <!-- Right Side Image -->
@@ -876,11 +886,13 @@
               We refresh outdated websites into modern, user-friendly experiences that align with your brand,
               engage users, and drive better results.
             </p>
-            <button type="submit" class="group relative mt-5 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
-  flex items-center justify-center gap-3">
-              <span class="group-hover:order-2 transition">Get Free Quote</span>
-              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition group-hover:order-1">
+            <button
+              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
+              <span class="flex items-center  justify-center transition-all duration-300">
+                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                  class=" opacity-300 transition-opacity duration-300" />
+              </span>
             </button>
           </div>
           <!-- mid Side -->
@@ -936,11 +948,13 @@
             <p class="text-[#666666] text-[14px] mb-4">
               Our product design service blends creativity, usability, and strategy to build digital products that users
               love and businesses value.</p>
-            <button type="submit" class="group relative mt-5 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
-  flex items-center justify-center gap-3">
-              <span class="group-hover:order-2 transition">Get Free Quote</span>
-              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition group-hover:order-1">
+            <button
+              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
+              <span class="flex items-center  justify-center transition-all duration-300">
+                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                  class=" opacity-300 transition-opacity duration-300" />
+              </span>
             </button>
           </div>
           <!-- mid Side -->
@@ -1004,11 +1018,13 @@
             <p class="text-[#666666] text-[14px] mb-4">
               We create strong visual identities and marketing assets that build brand trust, tell your story, and
               engage your audience effectively.</p>
-            <button type="submit" class="group relative mt-5 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
-  flex items-center justify-center gap-3">
-              <span class="group-hover:order-2 transition">Get Free Quote</span>
-              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition group-hover:order-1">
+            <button
+              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
+              <span class="flex items-center  justify-center transition-all duration-300">
+                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                  class=" opacity-300 transition-opacity duration-300" />
+              </span>
             </button>
           </div>
           <!-- mid Side -->
@@ -1081,15 +1097,23 @@
 
           <!-- CTA Button -->
           <div class="my-5" data-aos="zoom-in" data-aos-delay="200">
-            <button type="submit" class="group relative mt-10 shadow-black shadow-md 
-                   w-[250px] h-[60px] md:w-[310px] md:h-[75px] 
+            <button
+              class="flex items-center justify-center  mx-auto text-center shadow-black shadow-md group  hover:opacity-90   px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6   w-[250px] h-[60px] md:w-[310px] md:h-[75px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[17px] font-bold ">
+              <span class="flex items-center  justify-center transition-all duration-300">
+                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                  class=" opacity-100 transition-opacity duration-300" />
+              </span>
+            </button>
+            <!-- <button type="submit" class="group relative mt-10  
+                  
                    bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
                    py-3 rounded-[100px] text-white text-[17px] font-bold 
                    hover:opacity-90 transition 
-                   flex items-center justify-center gap-3 mx-auto">
+                   flex  gap-3">
               <span class="group-hover:order-2 transition">Get a Free Quote</span>
               <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition group-hover:order-1">
-            </button>
+            </button> -->
           </div>
         </section>
       </div>
@@ -1580,15 +1604,16 @@
                 geographies and Platforms</p>
             </div>
           </div>
-
-          <button type="submit" class="group relative shadow-black ft-rob shadow-md  w-[225px] h-[70px] md:w-[270px] md:h-[75px] 
-  bg-gradient-to-r from-[#ffffff] to-[#ffffff]   rounded-[100px] text-black text-[17px] font-bold 
-  hover:opacity-90 transition flex items-center justify-center gap-3">
-
-            <span class="group-hover:order-2 transition">Get a Free Quote</span>
-            <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20"
-              class="inline transition group-hover:order-1">
+          <button class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2  
+           bg-white shadow-black shadow-md w-[225px] h-[70px] md:w-[270px] md:h-[75px] 
+           overflow-hidden py-3 rounded-[100px] text-black text-[12px] md:text-[17px] font-bold ">
+            <span class="flex items-center  justify-center transition-all duration-300">
+              <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+              <img src="./img/img-con/ic_faq_rightarrow.svg" alt="Arrow" width="20"
+                class=" opacity-100 transition-opacity duration-300" />
+            </span>
           </button>
+
         </div>
       </section>
 
@@ -1777,10 +1802,23 @@
       </div>
     </div>
 
-
     <!-- View All Work Button -->
     <div class="text-center mt-12 mb-20">
-      <button type="submit" class="group relative mx-auto mt-10 shadow-black shadow-sm border border-[#000000] 
+
+      <button class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2  
+           bg-white border border-[#000000]   w-[250px] h-[60px] md:w-[300px] md:h-[80px]  
+           overflow-hidden   py-3 rounded-[100px] text-black text-[12px] md:text-[21px] font-bold ">
+          <span class="flex items-center  justify-center transition-all duration-300">
+            <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">
+             View All Works</span>
+            <img src="./img/img-con/ic_faq_rightarrow.svg" alt="Arrow" width="20" class=" opacity-100 transition-opacity duration-300">
+          </span>
+        </button>
+
+
+
+      <!-- <button type="submit" class="group relative mx-auto mt-10 
+      shadow-black shadow-sm border border-[#000000] 
   w-[250px] h-[60px] md:w-[300px] md:h-[80px] 
   bg-white hover:bg-black rounded-[100px] 
   text-black hover:text-white text-[21px] font-bold 
@@ -1791,7 +1829,7 @@
         <span class="transition">View All Works</span>
         <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20"
           class="group-hover:hidden inline transition-transform duration-300 group-hover:translate-x-1">
-      </button>
+      </button> -->
 
     </div>
   </section>
@@ -2343,13 +2381,16 @@
               geographies and Platforms</p>
           </div>
         </div>
-        <button type="submit" class="relative shadow-black ft-rob shadow-md  w-[225px] h-[70px] md:w-[270px] md:h-[75px] 
-  bg-gradient-to-r from-[#ffffff] to-[#ffffff]   rounded-[100px] text-black text-[17px] font-bold 
-  hover:opacity-90 transition flex items-center justify-center gap-3">
-
-          <span>Get a Free Quote</span>
-          <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20" class="inline">
+        <button class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2  
+           bg-white shadow-black shadow-md w-[225px] h-[70px] md:w-[270px] md:h-[75px] 
+           overflow-hidden py-3 rounded-[100px] text-black text-[12px] md:text-[17px] font-bold ">
+          <span class="flex items-center  justify-center transition-all duration-300">
+            <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+            <img src="./img/img-con/ic_faq_rightarrow.svg" alt="Arrow" width="20"
+              class=" opacity-100 transition-opacity duration-300" />
+          </span>
         </button>
+
       </div>
     </section>
   </div>
@@ -2373,13 +2414,15 @@
           image and contributes
           to commercial success.
         </p>
-        <button type="submit" class="relative shadow-black ft-rob shadow-md  w-[259px] h-[60px] md:w-[270px] md:h-[75px] 
-  bg-gradient-to-r from-[#ffffff] to-[#ffffff]   rounded-[100px] text-black text-[17px] font-bold 
-  hover:opacity-90 transition flex items-center justify-center gap-3">
-          <span>Get a Free Quote</span>
-          <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20" class="inline">
+        <button
+          class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2 
+            bg-white  mt-4 shadow-black shadow-md w-[259px] h-[60px] md:w-[270px] md:h-[75px] overflow-hidden py-3 rounded-[100px] text-black text-[12px] md:text-[17px] font-bold ">
+          <span class="flex items-center  justify-center transition-all duration-300">
+            <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get a Free Quotes</span>
+            <img src="./img/img-con/ic_faq_rightarrow.svg" alt="Arrow" width="20"
+              class=" opacity-100 transition-opacity duration-300" />
+          </span>
         </button>
-
       </div>
 
       <!-- Right Content (Icons) -->
@@ -3068,15 +3111,18 @@
             with Technology that transcends
             geographies and
             Platforms</p>
-          <button type="submit" class="group relative mt-10 shadow-black shadow-sm w-[250px] h-[75px] md:w-[310px] md:h-[80px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-  group-hover:from-[#E61F4A] group-hover:to-[#3800A0]
-          py-3 rounded-[100px] text-white text-[17px] font-bold hover:opacity-90 transition 
-  flex items-center justify-center gap-3 mx-auto">
 
-            <span class="me-2 transition  group-hover:order-2">Get Free Quote</span>
-            <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition  group-hover:order-1">
+
+          <button class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2  
+           bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  
+           mt-6 shadow-black shadow-sm  w-[250px] h-[75px] md:w-[310px] md:h-[80px]
+            overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[17px] font-bold ">
+            <span class="flex items-center  justify-center transition-all duration-300">
+              <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+              <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                class=" opacity-100 transition-opacity duration-300" />
+            </span>
           </button>
-
         </div>
 
     </section>
@@ -3468,12 +3514,15 @@
               </div>
               <div class="flex flex-col lg:flex-row gap-4 w-full">
                 <div class="w-full lg:w-[35%]">
-                  <button type="submit" class="relative shadow-black shadow-md w-[220px] h-[70px] 
-                        bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-                         rounded-[100px] text-[20px] text-white font-semibold hover:opacity-90 
-                      transition flex items-center justify-center gap-3">
-                    <span class="me-2">Submit</span>
-                    <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
+                  <button class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2  
+           bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  
+             shadow-black shadow-sm  w-[220px] h-[70px]
+            overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[17px] font-bold ">
+                    <span class="flex items-center  justify-center transition-all duration-300">
+                      <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Submit</span>
+                      <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                        class=" opacity-100 transition-opacity duration-300" />
+                    </span>
                   </button>
                 </div>
                 <div class="w-full lg:w-[65%]">
@@ -3508,15 +3557,17 @@
             class="w-[300px] h-[65px] px-10 py-2 rounded-full bg-gray-800 text-white focus:outline-none border border-white border-opacity-10 ">
           <input type="email" placeholder="Email Address"
             class="w-[300px] h-[65px] px-10 py-2 rounded-full bg-gray-800 text-white focus:outline-none border border-white border-opacity-10 ">
-          <button class="relative w-[165px] h-[65px] 
-  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-  px-6 py-2 rounded-full text-white font-semibold  text-[18px]
-  flex items-center justify-center gap-3 hover:opacity-90 transition">
 
-            <span class="me-2">Send</span>
-            <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline">
+          <button class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2  
+           bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  
+             shadow-black shadow-sm  w-[165px] h-[65px]
+            overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[17px] font-bold ">
+            <span class="flex items-center  justify-center transition-all duration-300">
+              <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Send</span>
+              <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                class=" opacity-100 transition-opacity duration-300" />
+            </span>
           </button>
-
         </div>
       </div>
     </div>
