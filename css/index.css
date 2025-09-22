@@ -107,7 +107,7 @@ body {
 }
 
 #logo-track img {
-  height: 36px;
+  height: 30px;
   width: auto;
 }
 
@@ -220,9 +220,31 @@ body {
       background-image: linear-gradient(150deg,#3800A0,#720C7D,#E61F4A);
     }
 
+@media screen and (min-width: 992px) {
+    .bg-black .sec-width {
+    width: 94%;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 992px) {
   .sec-width {
     width: 80%;
+    margin: 0 auto;
+  }
+   .services .sec-width {
+    width: 90%;
+    margin: 5px auto;
+  }
+  .techstack .sec-width{
+    width: 95%;
+    margin: 0 auto;
+  }
+  nav .sec-width {
+    width: 100%;
+    margin: 0 auto;
+  }
+    .bg-black .sec-width {
+    width: 94%;
     margin: 0 auto;
   }
 }
@@ -245,6 +267,10 @@ body {
   .sec-width {
     width: 92%;
     margin: 0 auto;
+  }
+     .services .sec-width {
+    width: 90%;
+    margin: 8px auto;
   }
 }
 

@@ -13,7 +13,8 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
-  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -90,53 +91,58 @@
 </head>
 
 <body>
-
   <!-- Header -->
   <header class="sticky top-0 z-50 w-full transition duration-300  shadow-xl ">
     <!-- Top Contact Info -->
-    <div class="bg-black ">
-      <div class="mx-auto sec-width   text-white   py-2 ft-vit text-[11px] md:text-[13px]  md:flex justify-between items-center">
+    <div class="bg-black">
+      <div
+        class="mx-auto sec-width text-white flex justify-between items-center text-[11px] md:text-[13px] py-2    ">
+
+        <!-- Left: Contact Info -->
         <div class="flex items-center gap-4">
-          <div class="flex items-center gap-2 p-2">
-            <img src="./img/ic_whtsapp.svg" alt="" class="w-[18px]  "/>
+          <div class="flex items-center gap-2">
+            <img src="./img/ic_whtsapp.svg" alt="WhatsApp" class="w-4 h-4" />
             <span>+91 9786739966</span>
           </div>
-          <span>|</span>
+          <span class="text-gray-400">|</span>
           <div class="flex items-center gap-2">
-            <img src="./img/ic_mail.svg" alt="" class="w-[18px]  "/>
+            <img src="./img/ic_mail.svg" alt="Email" class="w-4 h-4" />
             <span>support@amazefox.com</span>
           </div>
         </div>
-        <div class="flex items-center gap-2 hidden lg:flex" >
-          <img src="./img/ic_teams.svg" alt="" />
+
+        <!-- Right: Teams -->
+        <div class="flex items-center gap-2 hidden sm:flex">
+          <img src="./img/ic_teams.svg" alt="Teams" class="w-4 h-4" />
           <span>nikilfox / amazefox</span>
         </div>
       </div>
     </div>
 
     <!-- Navbar Start -->
-
     <nav id="navbar"
       style="border-bottom: 1.5px solid transparent; border-image: linear-gradient(90deg,#000000,#d1d1d1,black,#d1d1d1) 10;"
       x-data="{ open: false, megaOpen: false, activeTab: null }"
-      class="relative bg-white px-4 py-4 md:px-10 md:py-6 transition duration-300">
+      class="relative bg-white px-4 py-4 xl:px-10 xl:py-6 transition duration-300">
 
-      <div class="sec-width mx-auto flex items-center justify-between">
-        <button @click="open = !open" class="md:hidden focus:outline-none">
-          <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+      <div class="sec-width mx-auto flex  justify-between items-center">
+        <!-- Left side (Mobile & Tablet: Menu + Logo) -->
+        <div class="flex items-center gap-4 md:gap-4">
+          <!-- Mobile Menu Icon -->
+          <button @click="open = !open" class="lg:hidden focus:outline-none">
+            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
 
-        <!-- Logo -->
-        <div class="flex items-center gap-2">
-          <div>
-            <img src="./img/nav_logo_bd.svg" alt="Logo" class="w-[60%] md:w-[100%]">
+          <!-- Logo -->
+          <div class="flex-shrink-0 md:flex-shrink  xl:flex-shrink-0">
+            <img src="./img/nav_logo_bd.svg" alt="Logo" class="  w-[60%] lg:w-[70%]  xl:w-[100%] h-auto">
           </div>
         </div>
 
         <!-- Desktop Menu -->
-        <ul class="hidden md:flex gap-8 text-[16px] ft-rob font-medium">
+        <ul class="hidden lg:flex gap-6 lg:gap-4 xl:gap-8 text-[14px] lg:text-[14px] xl:text-[16px] ft-rob font-medium">
           <li class="relative" @mouseenter="megaOpen = true" @mouseleave="megaOpen = false">
             <a href="#" class="hover:text-pink-500 inline-flex items-center">
               Services
@@ -153,14 +159,17 @@
           <li><a href="#" class="hover:text-pink-500">Clients</a></li>
           <li><a href="#" class="hover:text-pink-500">Blog</a></li>
         </ul>
+
         <!-- Contact Us Button -->
-        <div class="flex   ">
+        <div class="flex">
           <button
-            class="flex items-center justify-center group  lg:inline px-4 py-2 rounded-[10px]  hover:rounded-[8px] text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] w-[90px] md:w-[150px] overflow-hidden">
-            <span class="flex items-center transition-all duration-300">
-              <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="16"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span class="transition-all duration-300 group-hover:ms-2 text-center text-[9px]">Contact Us</span>
+            class="flex items-center justify-center group   px-4 py-2 rounded-[10px] hover:rounded-[8px] text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] w-[100px] sm:w-[140px] md:w-[135px] lg:w-[142px] xl:w-[152px] overflow-hidden whitespace-nowrap">
+            <span class="flex items-center transition-all duration-300 text-center">
+              <img src="./img/img-con/btn_arrow.svg" alt="Arrow"
+                class="md:w-[16px] w-[11px] inline mr-1 md:hidden group-hover:inline transition-all duration-300" />
+              <span
+                class="transition-all duration-300   group-hover:ms-2  text-[9px] sm:text-[13px] md:text-[14px] xl:text-[17px] justify-center">Contact
+                Us</span>
             </span>
           </button>
         </div>
@@ -170,9 +179,9 @@
         x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4"
         x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200"
         x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
-        class="block absolute inset-x-0 left-0 top-full max-w-[100%] bg-white shadow-lg border-t border-gray-200 z-50 overflow-visible">
+        class="hidden absolute inset-x-0 left-0 top-full max-w-[100%] bg-white shadow-lg border-t border-gray-200 z-50 overflow-visible">
 
-        <div x-data="{ activeTab: 'web-app' }" class="flex max-w-[88%] mx-auto text-[14px]">
+        <div x-data="{ activeTab: 'web-app' }" class="flex max-w-[95%] mx-auto text-[14px]">
           <!-- Left Tab -->
           <div class="w-1/4 bg-white p-4 ">
             <ul class="space-y-2">
@@ -186,7 +195,6 @@
                 :class="activeTab === 'mobile-app' ? 'bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  w-[120%]  text-white font-semibold overflow-visible flex gap-5' : ''">
                 Mobile App Design Services <img src="./img/img-con/btn_arrow.svg" alt="" width="20"
                   class="inline  px-1">
-
               </li>
               <li @mouseenter="activeTab = 'website-redesign'"
                 class="pl-6 cursor-pointer px-2 py-2 hover:bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   rounded-[10px] "
@@ -227,10 +235,10 @@
           </div>
 
           <!-- Right Content -->
-          <div class="flex-1 py-6 grid   gap-6 w-full bg-gradient-to-br from-white via-rose-200  to-[#FFFFFF] to-45%  ">
-            <div class=" grid grid-cols-3 gap-2 w-full ">
-              <div class="col-span-2 w-full">
-                <div x-show="activeTab === 'web-app'" x-transition class="space-y-2 ml-10 w-full">
+          <div class="flex-1 py-6 grid gap-6 w-full bg-gradient-to-br from-white via-rose-200 to-[#FFFFFF]">
+            <div class="grid grid-cols-6 gap-2 w-full">
+              <div class="col-span-4 w-[90%]">
+                <div x-show="activeTab === 'web-app'" x-transition class="space-y-2 ml-10 w-[80%]">
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">UI / UX Design</a>
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
@@ -246,7 +254,7 @@
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Brand Identity and Marketing Design</a>
                 </div>
-                <div x-show="activeTab === 'mobile-app'" x-transition class="space-y-2 ml-10 w-full">
+                <div x-show="activeTab === 'mobile-app'" x-transition class="space-y-2 ml-10 w-[80%]">
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">iOS App Design</a>
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
@@ -260,7 +268,7 @@
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Mobile App Redesign Services</a>
                 </div>
-                <div x-show="activeTab === 'website-redesign'" x-transition class="space-y-2 ml-10 w-full">
+                <div x-show="activeTab === 'website-redesign'" x-transition class="space-y-2 ml-10 w-[80%]">
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Modern Website Redesign</a>
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
@@ -282,7 +290,7 @@
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Fast Website Redesign</a>
                 </div>
-                <div x-show="activeTab === 'logo-design'" x-transition class="space-y-2 ml-10 w-full">
+                <div x-show="activeTab === 'logo-design'" x-transition class="space-y-2 ml-10 w-[80%]">
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Business Logo Design</a>
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
@@ -304,7 +312,7 @@
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Abstract Concept Logos</a>
                 </div>
-                <div x-show="activeTab === 'branding-design'" class="flex  ml-10 w-full">
+                <div x-show="activeTab === 'branding-design'" class="flex  ml-10 w-[80%]">
                   <div class="space-y-2 p-5">
                     <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                         src="./img/service/service_list_arrow.svg" alt="">Branding Design Services</a>
@@ -324,7 +332,6 @@
                         src="./img/service/service_list_arrow.svg" alt="">Transportation Branding Design</a>
                     <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                         src="./img/service/service_list_arrow.svg" alt="">Website Branding Design</a>
-
                   </div>
                   <div class="space-y-2 p-5">
                     <a href="#" class="block hover:text-pink-500 flex gap-2"><img
@@ -347,7 +354,7 @@
                         src="./img/service/service_list_arrow.svg" alt="">Furniture Branding Design</a>
                   </div>
                 </div>
-                <div x-show="activeTab === 'word-design'" x-transition class="space-y-2 ml-10 w-full">
+                <div x-show="activeTab === 'word-design'" x-transition class="space-y-2 ml-10 w-[80%]">
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Custom WordPress Design </a>
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
@@ -369,7 +376,7 @@
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Full WP Website Solutions </a>
                 </div>
-                <div x-show="activeTab === 'blog-design'" x-transition class="space-y-2 ml-10 w-full">
+                <div x-show="activeTab === 'blog-design'" x-transition class="space-y-2 ml-10 w-[80%]">
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt=""> Modern Blog Design </a>
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
@@ -391,7 +398,7 @@
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Fast Loading Blog Design </a>
                 </div>
-                <div x-show="activeTab === 'ecom-design'" x-transition class="space-y-2 ml-10 w-full">
+                <div x-show="activeTab === 'ecom-design'" x-transition class="space-y-2 ml-10 w-[80%]">
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Online Store Design </a>
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
@@ -413,7 +420,7 @@
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt="">Fast & Secure E-commerce Design </a>
                 </div>
-                <div x-show="activeTab === 'social-design'" x-transition class="space-y-2 ml-10 w-full">
+                <div x-show="activeTab === 'social-design'" x-transition class="space-y-2 ml-10 w-[80%]">
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
                       src="./img/service/service_list_arrow.svg" alt=""> Social Media Designs We Create</a>
                   <a href="#" class="block hover:text-pink-500 flex gap-2"><img
@@ -438,7 +445,7 @@
                       src="./img/service/service_list_arrow.svg" alt=""> Branded Cross-Platform Design Kits </a>
                 </div>
               </div>
-              <div>
+              <div class="col-span-2 px-10">
                 <img src="./img/img_koli.png" alt="">
               </div>
             </div>
@@ -451,16 +458,13 @@
                   <p class=" text-[15px] ">support@amazefox.com</p>
                 </div>
               </div>
-
               <div class="flex items-center gap-4  mt-0 ">
                 <img src="./img/img-con/c_whatssapp.svg" alt="" width="55">
-
                 <div>
                   <p class="text-[18px] text-black font-semibold  ">Whatsapp</p>
                   <p class="text-[15px]">+91 9786739966</p>
                 </div>
               </div>
-
               <div class="  flex items-center gap-4  ">
                 <img src="./img/img-con/cteam_ss.svg" alt="" width="55">
                 <div>
@@ -468,41 +472,54 @@
                   <p class="text-[15px]">nikilfox / amazefox</p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-      <!-- Mobile Menu remains unchanged -->
-
+      <!-- Mobile Menu   -->
+      <div x-show="open" x-transition="" class="md:hidden mt-4" style="display: none;">
+        <ul class="space-y-2 ft-rob text-[16px] font-medium">
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Services</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">About Us</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Portfolio</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Industries</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Testimonials</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Clients</a></li>
+          <li><a @click="open = false" href="#" class="block py-2 border-b">Blog</a></li>
+          <li>
+        <button class="mt-2 w-full px-4 py-2 rounded text-white bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] ">
+              Contact Us
+            </button>
+          </li>
+        </ul>
+      </div>
     </nav>
-
     <!-- Navbar End -->
   </header>
 
   <!-- Hero Section -->
   <section class="w-full bg-no-repeat bg-cover bg-[url(/img/banner_bg_01.svg)] ">
-    <section class="relative sec-width md:py-10   mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-1 ">
+    <section class="relative sec-width md:py-10 lg:px-6 xl:px-0  mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-1 ">
       <!-- Left Content -->
-      <div data-aos="fade-left" class="lg:col-span-3">
+      <div data-aos="fade-left" class="lg:col-span-3 py-5 md:py-0">
         <button
-          class="px-4  w-[200px] h-[35px] text-[12px] font-bold bg-gradient-to-r from-[#09CF83] ft-vit to-[#A259FF] text-white rounded-full font-medium shadow hover:opacity-90 transition">
+          class="px-4  w-[200px] h-[25px] text-[11px] md:h-[35px] md:text-[12px] font-bold bg-gradient-to-r from-[#09CF83] ft-vit to-[#A259FF] text-white rounded-full font-medium shadow hover:opacity-90 transition">
           No. 1 Web design Company
         </button>
         <span id="fancy-text"
-          class="flex  space-x-[2px] uppercase text-wrap  md:text-[12px] text-[10px]  md:font-normal mt-5 ft-rob"></span>
+          class="flex  space-x-[2px] uppercase text-wrap  md:text-[12px] text-[10px]  md:font-normal mt-3 md:mt-5 ft-rob"></span>
         <h1 class="mt-4 md:text-[50px] text-[35px] tracking-[-2px] font-black leading-[31px] md:leading-[45px]">
           <span class="text-transparent  bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Best
             Web App
             Designing</span>
           <span class="text-black">Company</span>
         </h1>
-        <p class="mt-6 text-[#333333] text-[13px] md:text-[16px] leading-[20px] leading-[16px] md:max-w-md ">
+        <p class="mt-6 text-[#333333] text-[13px] md:text-[16px] md:leading-[20px] leading-[16px] md:max-w-md ">
           An effective digital presence not only builds trust with potential clients but also
           drives meaningful interactions that support your business growth.
         </p>
         <button
-          class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[165px] h-[41px] md:w-[250px] md:h-[75px] overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[17px] font-bold ">
+          class="flex items-center  group  hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[165px] h-[41px] md:w-[250px] md:h-[75px] overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[17px] font-bold ">
           <span class="flex items-center  justify-center transition-all duration-300">
             <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
             <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
@@ -510,11 +527,10 @@
           </span>
         </button>
       </div>
-
       <!-- Right Image -->
-      <div data-aos="fade-up" class="relative lg:col-span-6 py-10 w-auto h-auto">
+      <div data-aos="fade-up" class="relative lg:col-span-6  items-center  justify-center py-5 lg:py-0   w-auto h-auto">
         <!-- Main device mockup -->
-        <img src="./img/banner-right.png" alt="Web App UI" class="" />
+        <img src="./img/banner-right.png" alt="Web App UI" class="w-[100%] mx-auto lg:w-full" />
       </div>
     </section>
   </section>
@@ -522,12 +538,12 @@
   <!-- Company Carosel -->
   <main class="relative   flex flex-col justify-center  overflow-hidden shadow-md inset-shadow-xs" style=" border-bottom: 1.5px solid transparent;
   border-image: linear-gradient(90deg,#000000,#d1d1d1,black, #d1d1d1) 10 ;">
-    <div class="w-full sec-width mx-auto px-4 md:px-6 py-10">
+    <div class="w-full sec-width mx-auto px-4 md:px-6 py-6 lg:py-10">
       <div class="text-center">
         <div class="w-full overflow-hidden 
             [mask-image:_linear-gradient(to_right,transparent_0,_black_64px,_black_calc(100%-64px),transparent_100%)]">
 
-          <ul id="logo-track" class="flex items-center gap-10 [&_li]:mx-6 [&_img]:max-w-none">
+          <ul id="logo-track" class="flex items-center gap-5 lg:gap-10 [&_li]:mx-6 [&_img]:max-w-none">
             <li><img src="./img/logos/ic_logo_bert.svg" alt="Facebook" /></li>
             <li><img src="./img/logos/ic_logo_eht.svg" alt="Disney" /></li>
             <li><img src="./img/logos/ic_logo_ex.svg" alt="Airbnb" /></li>
@@ -549,29 +565,29 @@
   </main>
 
   <!-- Section 2  service cards  -->
-  <div class="relative overflow-hidden" style="
+  <div class="services relative overflow-hidden" style="
        background-image:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),  url('/img/service/sub_service_left_dotted.svg'), url('/img/service/sub_service_right_dotted.svg');
        background-position:center,  top left,  top right;
        background-repeat: no-repeat,   no-repeat;
      ">
 
     <!-- Content -->
-    <div class="relative z-10 mb-5">
+    <div class="relative z-10 lg:mb-5">
       <!-- Top Section -->
       <section data-aos="fade-up" class="sec-width mx-auto text-center px-4 py-16 from-gray-100 via-white to-gray-100">
         <div class="lg:max-w-5xl xl:max-w-7xl mx-auto ft-vit">
           <img src="./img/alogo.png" alt="Logo" class="mx-auto md:w-20 mb-4 animate-bounce">
-          <h1 class="text-[15px] md:text-[18px] mb-4 "><span
+          <h1 class="text-[15px] md:text-[18px] lg:mb-4 "><span
               class="uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Web
               App Design </span></h1>
           <h1
-            class="text-[26px] lg:text-[50px] leading-[35px] md:leading-[60px] mb-4 tracking-[-3px] md:tracking-[-2px]">
+            class="text-[24px] lg:text-[50px] leading-[35px] md:leading-[60px] mb-4 tracking-[-1px] md:tracking-[-2px]">
             <span class="font-black">Web App
               Design
               Services</span>
           </h1>
           <p
-            class="text-[18px] lg:text-[16px] text-normal  leading-[18px] md:leading-[20px] text-[#666666] max-w-4xl mx-auto">
+            class="text-[14px] lg:text-[16px] text-normal  leading-[18px] md:leading-[20px] text-[#666666] max-w-4xl mx-auto">
             Amazefox designs websites that are clean, user-friendly, and aligned with your brand. We focus
             on smart layouts, smooth navigation, and effective calls-to-action to create engaging digital
             experiences. Whether you're launching a new site or refreshing an old one, our team ensures
@@ -581,25 +597,14 @@
         </div>
       </section>
 
-      <div class=" grid grid-cols-8 sec-width mx-auto gap-0 md:pt-5 pb-5     ">
-        <div class="lg:col-span-1 col-span-8  mx-auto  rounded-[30px] shadow-1xl shadow-black ">
-          <div
-            class="grid   w-[120px] h-[120px]  shadow-[#16181A1F] shadow-1xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-            <div class="rounded-[30px] bg-white  p-2 shadow-black w-[118px] h-[118px]  ">
-              <!-- Inner Card inside Outer -->
-              <div
-                class="relative rounded-[26px] w-[102px] h-[102px]   overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                <div
-                  class="rounded-[26px] w-[100px] h-[100px]  bg-gradient-to-br from-[#671b70]   to-[#000000] p-6 shadow-black  shadow-1xl   flex items-center justify-center">
-                  <img src="./img/alogo.png" class="max-w-full h-auto">
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class=" grid grid-cols-10 lg:grid-cols-8 sec-width mx-auto  gap-4   md:pt-5 pb-5     ">
+        <div class="col-span-2 lg:col-span-1  mx-auto  rounded-[30px] shadow-1xl shadow-black ">
+
+          <img src="./img/service_logo.svg" alt="">
         </div>
-        <div class="lg:col-span-7 col-span-8 ft-vit">
+        <div class="col-span-8 lg:col-span-7 ft-vit">
           <h1
-            class="tracking-[-1px] text-[18px] lg:text-[40px] text-center lg:text-left  leading-[20px] lg:leading-[44px] font-black mb-2 w-[80%]  ">
+            class="tracking-[-1px] text-[18px] lg:text-[40px]  text-left  leading-[18px] lg:leading-[44px] font-bold lg:font-black mb-2 lg:w-[80%]     ">
             Explore Web App Design Services designed around your business needs
           </h1>
           <p class="text-[13px] lg:text-[16px] leading-[16px] lg:leading-[21px]   text-[#666666]">
@@ -619,62 +624,62 @@
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
-       background-position:  left bottom;
-       background-repeat:no-repeat;
-     ">
-          <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px] ">UI / UX Design</h3>
-            <p class="text-[#666666] text-[14px] mb-4">
+     
+        <div class="relative px-4 md:p-6 z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-2 items-center bg-blend-multiply"
+          style="background-image: url('/img/img-con/category_services_curve.png');
+              background-position: left bottom;
+              background-repeat: no-repeat;">
+          
+          <!-- Left Side (Always visible) -->
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-start">
+            <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black 
+            mb-1 lg:mb-4 tracking-[-1px]">UI / UX Design</h3>
+            <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
               Our UI/UX design helps users do more with less effort through smart, clean, and thoughtful
-              design.Every element is placed with precision to enhance usability.
+              design. Every element is placed with precision to enhance usability.
             </p>
             <button
-              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
-              <span class="flex items-center  justify-center transition-all duration-300">
-                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
+              class="  flex items-center justify-center group hover:opacity-90 lg:inline 
+                    px-4 py-2 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+                      shadow-black shadow-sm w-[225px] h-[55px] overflow-hidden 
+                    rounded-[100px] text-white text-[12px] md:text-[14px] font-bold">
+              <span class="flex items-center justify-center w-full transition-all duration-300">
+                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">
+                  Get Free Quotes
+                </span>
                 <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
-                  class=" opacity-300 transition-opacity duration-300" />
+                  class="opacity-80 transition-opacity duration-300">
               </span>
             </button>
-
-            <!-- <button type="submit" class="group relative mt-5 shadow-black shadow-sm w-[225px] h-[55px] bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-  py-3 rounded-[100px] text-white text-[14px] font-bold hover:opacity-90 transition 
-  flex items-center justify-center gap-3">
-              <span class="group-hover:order-2 transition">Get Free Quote</span>
-              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition group-hover:order-1">
-            </button> -->
-
           </div>
-          <!-- mid Side -->
-          <div class="lg:col-span-4 ">
+
+          <!-- Middle Side (Only visible on lg and above) -->
+          <div class="hidden lg:block lg:col-span-4 mx-auto">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Website Design </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile App Design </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> E-commerce Design </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Dashboard Design </li>
-                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Web Application Design
-                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Web Application Design </li>
               </ul>
 
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Landing Page Design</li>
-                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> SaaS Platform Design
-                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> SaaS Platform Design</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Wearable App Design</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Tablet App Design </li>
-                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Email Template Design
-                </li>
+                <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Email Template Design</li>
               </ul>
             </div>
           </div>
-          <!-- Right Side Image -->
-          <div class="lg:col-span-2 ">
-            <img src="./img/service/UIUX-design.svg" alt="Illustration" class="float-end">
+
+          <!-- Right Side (Visible from sm and above) -->
+          <div class="hidden sm:block sm:col-span-1 lg:col-span-2">
+            <img src="./img/service/UIUX-design.svg" alt="Illustration" class="md:float-end mx-auto">
           </div>
         </div>
+
       </div>
     </section>
     <section
@@ -682,30 +687,37 @@
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
-          class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
+          class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]  to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative px-4 md:p-6 z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Mobile
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-start">
+            <h3 class="text-[24px] lg:text-[30px] leading-[25px] lg:leading-[33px]  ft-vit font-black  
+            mb-1 lg:mb-4 tracking-[-1px]">Mobile
               Responsive Design</h3>
-            <p class="text-[#666666] text-[14px] mb-4">
+            <p class="text-[#666666] text-[14px] lg:mb-4 leading-[18px] lg:leading-[20px]">
               Our mobile responsive design ensures your website or application looks perfect and functions flawlessly
               across all screen sizes—smartphones, tablets, and beyond.</p>
-            <button
-              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
-              <span class="flex items-center  justify-center transition-all duration-300">
-                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
-                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
-                  class=" opacity-300 transition-opacity duration-300" />
-              </span>
-            </button>
+           <button
+                class="  flex items-center justify-center group hover:opacity-90 lg:inline 
+                      px-4 py-2 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+                        shadow-black shadow-sm w-[225px] h-[55px] overflow-hidden 
+                      rounded-[100px] text-white text-[12px] md:text-[14px] font-bold">
+                
+                <span class="flex items-center justify-center w-full transition-all duration-300">
+                  <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">
+                    Get Free Quotes
+                  </span>
+                  <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                      class="opacity-80 transition-opacity duration-300">
+                </span>
+              </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-4 hidden md:block">
+          <div class="hidden lg:block lg:col-span-4 mx-auto ">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile-Friendly Website
@@ -731,49 +743,52 @@
                   Optimization</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Optimized Mobile
                   Navigation</li>
-
               </ul>
             </div>
-
-
           </div>
-
           <!-- Right Side Image -->
-          <div class="lg:col-span-2">
-            <img src="./img/service/mobile-responsivedesign.svg" alt="Illustration" class="float-end">
+          <div class="hidden sm:block sm:col-span-1 lg:col-span-2">
+            <img src="./img/service/mobile-responsivedesign.svg" alt="Illustration" class="md:float-end mx-auto">
           </div>
         </div>
       </div>
     </section>
     <section
-      class="sec-width   mb-6 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
+      class="sec-width   mb-6 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]   via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
       <div class="rounded-[30px]      bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
-          class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
+          class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]   to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative px-4 md:p-6 z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">eCommerce Solutions</h3>
-            <p class="text-[#666666] text-[14px] mb-4">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-start">
+            <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black 
+            mb-1 lg:mb-4 tracking-[-1px]">eCommerce Solutions</h3>
+            <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
               We craft seamless online shopping experiences that boost sales, build trust, and make every
               click count—from homepage to checkout.
             </p>
-            <button
-              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
-              <span class="flex items-center  justify-center transition-all duration-300">
-                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
-                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
-                  class=" opacity-300 transition-opacity duration-300" />
-              </span>
-            </button>
+          <button
+                class="  flex items-center justify-center group hover:opacity-90 lg:inline 
+                      px-4 py-2 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+                     shadow-black shadow-sm w-[225px] h-[55px] overflow-hidden 
+                      rounded-[100px] text-white text-[12px] md:text-[14px] font-bold">
+                
+                <span class="flex items-center justify-center w-full transition-all duration-300">
+                  <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">
+                    Get Free Quotes
+                  </span>
+                  <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                      class="opacity-80 transition-opacity duration-300">
+                </span>
+              </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-4 hidden md:block">
+          <div class="hidden lg:block lg:col-span-4 mx-auto">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Fashion Websites </li>
@@ -797,10 +812,9 @@
               </ul>
             </div>
           </div>
-
           <!-- Right Side Image -->
-          <div class="lg:col-span-2 hidden md:block">
-            <img src="./img/service/ecommerce-solutions.svg" alt="Illustration" class="float-end">
+          <div class="hidden sm:block sm:col-span-1 lg:col-span-2">
+            <img src="./img/service/ecommerce-solutions.svg" alt="Illustration" class="md:float-end mx-auto">
           </div>
         </div>
       </div>
@@ -812,28 +826,37 @@
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative px-4 md:p-6 z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Custom Web Design</h3>
-            <p class="text-[#666666] text-[14px] mb-4">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-start">
+            <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black   
+            mb-1 lg:mb-4 tracking-[-1px]">Custom Web Design</h3>
+            <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
               Our custom web design solutions are tailored to reflect your brand, engage users, and deliver outstanding
               digital experiences across all platforms.
             </p>
+          
             <button
-              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
-              <span class="flex items-center  justify-center transition-all duration-300">
-                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
-                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
-                  class=" opacity-300 transition-opacity duration-300" />
-              </span>
-            </button>
+                class="  flex items-center justify-center group hover:opacity-90 lg:inline 
+                      px-4 py-2 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+                       shadow-black shadow-sm w-[225px] h-[55px] overflow-hidden 
+                      rounded-[100px] text-white text-[12px] md:text-[14px] font-bold">
+                
+                <span class="flex items-center justify-center w-full transition-all duration-300">
+                  <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">
+                    Get Free Quotes
+                  </span>
+                  <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                      class="opacity-80 transition-opacity duration-300">
+                </span>
+              </button>
+
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-4 hidden md:block">
+          <div class="hidden lg:block lg:col-span-4 mx-auto">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
@@ -860,43 +883,49 @@
               </ul>
             </div>
           </div>
-
           <!-- Right Side Image -->
-          <div class="lg:col-span-2 hidden md:block">
-            <img src="./img/service/custom-webesign.svg" alt="Illustration" class="float-end">
+          <div class="hidden sm:block sm:col-span-1 lg:col-span-2">
+            <img src="./img/service/custom-webesign.svg" alt="Illustration" class="md:float-end mx-auto">
           </div>
         </div>
       </div>
     </section>
     <section
       class="sec-width   mb-6 mx-auto bg-gradient-to-r from-[#3800A0]   via-[#47039726]    via-[#750D7C]   via-[#BE195C26]    to-[#E61F4A]  p-[1px] rounded-[30px]   ">
-      <div class="rounded-[30px]      bg-white relative overflow-hidden">
+      <div class="rounded-[30px]   bg-white relative overflow-hidden">
         <!-- Background effect -->
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative p-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative px-4 md:p-6 z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Website Redesign</h3>
-            <p class="text-[#666666] text-[14px] mb-4">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-start">
+            <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black  
+            mb-1 lg:mb-4 tracking-[-1px]">Website Redesign</h3>
+            <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
               We refresh outdated websites into modern, user-friendly experiences that align with your brand,
               engage users, and drive better results.
             </p>
-            <button
-              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
-              <span class="flex items-center  justify-center transition-all duration-300">
-                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
-                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
-                  class=" opacity-300 transition-opacity duration-300" />
-              </span>
-            </button>
+           <button
+                class="  flex items-center justify-center group hover:opacity-90 lg:inline 
+                      px-4 py-2 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+                       shadow-black shadow-sm w-[225px] h-[55px] overflow-hidden 
+                      rounded-[100px] text-white text-[12px] md:text-[14px] font-bold">
+                
+                <span class="flex items-center justify-center w-full transition-all duration-300">
+                  <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">
+                    Get Free Quotes
+                  </span>
+                  <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                      class="opacity-80 transition-opacity duration-300">
+                </span>
+              </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-4 hidden md:block">
+          <div class="hidden lg:block lg:col-span-4 mx-auto">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Corporate Websites</li>
@@ -923,10 +952,9 @@
               </ul>
             </div>
           </div>
-
           <!-- Right Side Image -->
-          <div class="lg:col-span-2 hidden md:block">
-            <img src="./img/service/website-redesign.svg" alt="Illustration" class="float-end">
+          <div class="hidden sm:block sm:col-span-1 lg:col-span-2">
+            <img src="./img/service/website-redesign.svg" alt="Illustration" class="md:float-end mx-auto">
           </div>
         </div>
       </div>
@@ -938,27 +966,34 @@
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative px-6 py-6 z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
+        <div class="relative px-4 md:p-6 z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-2 items-center bg-blend-multiply" style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">Product Design</h3>
-            <p class="text-[#666666] text-[14px] mb-4">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-start">
+            <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black  
+             mb-1 lg:mb-4 tracking-[-1px]">Product Design</h3>
+            <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
               Our product design service blends creativity, usability, and strategy to build digital products that users
               love and businesses value.</p>
-            <button
-              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
-              <span class="flex items-center  justify-center transition-all duration-300">
-                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
-                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
-                  class=" opacity-300 transition-opacity duration-300" />
-              </span>
-            </button>
+         <button
+                class="  flex items-center justify-center group hover:opacity-90 lg:inline 
+                      px-4 py-2 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+                       shadow-black shadow-sm w-[225px] h-[55px] overflow-hidden 
+                      rounded-[100px] text-white text-[12px] md:text-[14px] font-bold">
+                
+                <span class="flex items-center justify-center w-full transition-all duration-300">
+                  <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">
+                    Get Free Quotes
+                  </span>
+                  <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                      class="opacity-80 transition-opacity duration-300">
+                </span>
+              </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-4 hidden md:block">
+          <div class="hidden lg:block lg:col-span-4 mx-auto">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
@@ -991,10 +1026,9 @@
 
 
           </div>
-
           <!-- Right Side Image -->
-          <div class="lg:col-span-2 hidden md:block">
-            <img src="./img/service/product-design.svg" alt="Illustration" class="float-end">
+          <div class="hidden sm:block sm:col-span-1 lg:col-span-2">
+            <img src="./img/service/product-design.svg" alt="Illustration" class="md:float-end mx-auto">
           </div>
         </div>
       </div>
@@ -1006,29 +1040,35 @@
         <div
           class="absolute inset-0 bg-gradient-to-br from-[#E61F4A]      to-[#FFFFFF] to-45% opacity-[0.1]   pointer-events-none z-0">
         </div>
-        <div class="relative px-6 py-6  z-10 grid grid-cols-1 lg:grid-cols-9 gap-2 items-center bg-blend-multiply"
+        <div class="relative px-4 md:p-6  z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-2 items-center bg-blend-multiply"
           style="background-image:  url('/img/img-con/category_services_curve.png');
        background-position:  left bottom;
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 text-center lg:text-start">
-            <h3 class="text-[30px] ft-vit font-black leading-[33px] mb-4 tracking-[-1px]">
+          <div class="lg:col-span-3 ft-vit p-5 my-5 text-start">
+            <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black  
+             mb-1 lg:mb-4 tracking-[-1px]">
               Brand & Marketing Design</h3>
-            <p class="text-[#666666] text-[14px] mb-4">
+            <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
               We create strong visual identities and marketing assets that build brand trust, tell your story, and
               engage your audience effectively.</p>
-            <button
-              class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-6 shadow-black shadow-sm w-[225px] h-[55px]  overflow-hidden py-3 rounded-[100px] text-white text-[12px] md:text-[14px] font-bold ">
-              <span class="flex items-center  justify-center transition-all duration-300">
-                <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
-                <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
-                  class=" opacity-300 transition-opacity duration-300" />
-              </span>
-            </button>
+           <button
+                class="  flex items-center justify-center group hover:opacity-90 lg:inline 
+                      px-4 py-2 bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
+                       shadow-black shadow-sm w-[225px] h-[55px] overflow-hidden 
+                      rounded-[100px] text-white text-[12px] md:text-[14px] font-bold">
+                <span class="flex items-center justify-center w-full transition-all duration-300">
+                  <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">
+                    Get Free Quotes
+                  </span>
+                  <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
+                      class="opacity-80 transition-opacity duration-300">
+                </span>
+              </button>
           </div>
           <!-- mid Side -->
-          <div class="lg:col-span-4 hidden md:block">
+          <div class="hidden lg:block lg:col-span-4 mx-auto">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
@@ -1055,13 +1095,11 @@
 
               </ul>
             </div>
-
-
           </div>
 
           <!-- Right Side Image -->
-          <div class="lg:col-span-2 hidden md:block ">
-            <img src="./img/service/brand-design.svg" alt="Illustration" class="float-end ">
+          <div class="hidden sm:block sm:col-span-1 lg:col-span-2 ">
+            <img src="./img/service/brand-design.svg" alt="Illustration" class="md:float-end mx-auto">
           </div>
         </div>
       </div>
@@ -1105,26 +1143,18 @@
                   class=" opacity-100 transition-opacity duration-300" />
               </span>
             </button>
-            <!-- <button type="submit" class="group relative mt-10  
-                  
-                   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] 
-                   py-3 rounded-[100px] text-white text-[17px] font-bold 
-                   hover:opacity-90 transition 
-                   flex  gap-3">
-              <span class="group-hover:order-2 transition">Get a Free Quote</span>
-              <img src="./img/img-con/btn_arrow.svg" alt="" width="20" class="inline transition group-hover:order-1">
-            </button> -->
+           
           </div>
         </section>
       </div>
 
       <!-- Feature Grid -->
-      <div class="xl:absolute bottom-0 w-full bg-zinc-200 bg-opacity-15">
-        <div class="sec-width mx-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-2 md:gap-4">
+      <div class="xl:absolute bottom-0 w-full bg-zinc-200 bg-opacity-15 py-10 sm:py-5 md:py-0">
+        <div class="sec-width mx-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-2  ">
 
           <!-- Feature Item -->
           <div class="text-gray-300 text-center">
-            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[35px] leading-[23px] lg:leading-[35px] uppercase opacity-60 
+            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[33px] leading-[23px] md:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1133,7 +1163,7 @@
           </div>
 
           <div class="text-gray-300 text-center">
-            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[35px] leading-[23px] lg:leading-[35px] uppercase opacity-60 
+            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[33px] leading-[23px] md:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1142,7 +1172,7 @@
           </div>
 
           <div class="text-gray-300 text-center">
-            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[35px] leading-[23px] lg:leading-[35px] uppercase opacity-60 
+            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[33px] leading-[23px] md:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1151,7 +1181,7 @@
           </div>
 
           <div class="text-gray-300 text-center">
-            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[35px] leading-[23px] lg:leading-[35px] uppercase opacity-60 
+            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[33px] leading-[23px] md:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1160,7 +1190,7 @@
           </div>
 
           <div class="text-gray-300 text-center">
-            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[35px] leading-[23px] lg:leading-[35px] uppercase opacity-60 
+            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[33px] leading-[23px] md:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1169,7 +1199,7 @@
           </div>
 
           <div class="text-gray-300 text-center">
-            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[35px] leading-[23px] lg:leading-[35px] uppercase opacity-60 
+            <h3 class="md:p-5 font-extrabold text-[23px] md:text-[33px] leading-[23px] md:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1206,7 +1236,7 @@
                   Research-based process in our web app
                   design company
                 </h2>
-                <img id="stepImage" src="./img/img_scroll.svg" alt="Research image" class="rounded-xl  ">
+                <img id="stepImage" src="./img/product-ideation.jpg" alt="Research image" class="rounded-xl  ">
               </div>
             </div>
           </div>
@@ -1640,7 +1670,7 @@
       </div>
 
       <!-- Navigation Arrows -->
-      <div class="flex items-center space-x-2 absolute right-0 lg:top-40 top-10">
+      <div class="hidden lg:flex items-center space-x-2 absolute right-0 lg:top-40 top-10">
         <button
           class="prevBtn w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
           <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
@@ -1704,7 +1734,7 @@
       </div>
     </div>
     <!-- project slide set 2 -->
-    <div class="hidden transition-opacity project-page duration-500">
+    <div class="  transition-opacity project-page duration-500">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
         <!-- Card 1 -->
         <div class="relative rounded-3xl overflow-hidden shadow-3xl group img-zoom">
@@ -1753,7 +1783,7 @@
       </div>
     </div>
     <!-- project slide set 3 -->
-    <div class="hidden transition-opacity project-page duration-500">
+    <div class="  transition-opacity project-page duration-500">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
         <!-- Card 1 -->
         <div class="relative rounded-3xl overflow-hidden shadow-3xl group img-zoom">
@@ -1805,19 +1835,20 @@
     <!-- View All Work Button -->
     <div class="text-center mt-12 mb-20">
 
-      <button class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2  
+      <!-- <button class="flex items-center  group hidden hover:opacity-90 lg:inline px-4 py-2  
            bg-white border border-[#000000]   w-[250px] h-[60px] md:w-[300px] md:h-[80px]  
            overflow-hidden   py-3 rounded-[100px] text-black text-[12px] md:text-[21px] font-bold ">
-          <span class="flex items-center  justify-center transition-all duration-300">
-            <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">
-             View All Works</span>
-            <img src="./img/img-con/ic_faq_rightarrow.svg" alt="Arrow" width="20" class=" opacity-100 transition-opacity duration-300">
-          </span>
-        </button>
+        <span class="flex items-center  justify-center transition-all duration-300">
+          <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">
+            View All Works</span>
+          <img src="./img/img-con/ic_faq_rightarrow.svg" alt="Arrow" width="20"
+            class=" opacity-100 transition-opacity duration-300">
+        </span>
+      </button> -->
 
 
 
-      <!-- <button type="submit" class="group relative mx-auto mt-10 
+      <button type="submit" class="group relative mx-auto mt-10 
       shadow-black shadow-sm border border-[#000000] 
   w-[250px] h-[60px] md:w-[300px] md:h-[80px] 
   bg-white hover:bg-black rounded-[100px] 
@@ -1829,7 +1860,7 @@
         <span class="transition">View All Works</span>
         <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20"
           class="group-hover:hidden inline transition-transform duration-300 group-hover:translate-x-1">
-      </button> -->
+      </button>  
 
     </div>
   </section>
@@ -1840,73 +1871,75 @@
     <h2 class="text-[18px] font-semibold text-center mb-10 text-[#666666] uppercase">Trusted By Companies All Over The
       World. </h2>
 
-    <div id="logo-grid" class="grid lg:grid-cols-5 grid-cols-3 gap-10   mx-auto  ">
-      <!-- Initial 12 visible logos -->
-      <div class=" h-[90px] mx-auto flex items-center justify-center bg-white rounded ">
-        <img src="./img/logos/ic_logo_eht.svg" class="max-h-16 transition-all duration-500" />
-      </div>
-      <div class="h-[90px]  mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_ex.svg" class="max-h-16" />
-      </div>
-      <div class=" h-[90px]  mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_exf.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px]   mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_heart.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px]  mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_htto.svg" class="max-h-16" />
-      </div>
-      <div class=" h-[90px]  mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_bert.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px]  mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_s.svg" class="max-h-16" />
-      </div>
-      <div class=" h-[90px]  mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_eht.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_exf.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px]   mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_heart.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_htto.svg" class="max-h-16" />
-      </div>
-      <div class=" h-[90px]  mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_bert.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px]  mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_bert.svg" class="max-h-16" />
-      </div>
-      <div class=" h-[90px]  mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_bert.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px]   mx-auto flex items-center justify-center bg-white rounded">
-        <img src="./img/logos/ic_logo_s.svg" class="max-h-16" />
-      </div>
-      <div class=" h-[90px]  mx-auto flex items-center justify-center bg-white rounded hidden lg:flex">
-        <img src="./img/logos/ic_logo_bert.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px]  mx-auto flex items-center justify-center bg-white rounded hidden lg:flex">
-        <img src="./img/logos/ic_logo_bert.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px]   mx-auto flex items-center justify-center bg-white rounded hidden lg:flex">
-        <img src="./img/logos/ic_logo_s.svg" class="max-h-16" />
-      </div>
-      <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded hidden lg:flex">
-        <img src="./img/logos/ic_logo_eht.svg" class="max-h-16 m-10" />
-      </div>
-      <div class="h-[90px]  mx-auto flex items-center justify-center bg-white rounded hidden lg:flex">
-        <img src="./img/logos/ic_logo_exf.svg" class="max-h-16 m-20" />
-      </div>
-    </div>
+  <div id="logo-grid" 
+     class="grid lg:grid-cols-5 grid-cols-3 gap-10 mx-auto 
+            max-h-[calc(90px*5+2.5rem)] overflow-hidden lg:max-h-full">
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_eht.svg" class="max-h-16 transition-all duration-500" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_ex.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_exf.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_heart.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_htto.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_bert.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_s.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_eht.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_exf.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_heart.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_htto.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_bert.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_bert.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_bert.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_s.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_eht.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_exf.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_s.svg" class="max-h-16" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_eht.svg" class="max-h-16 m-10" />
+  </div>
+  <div class="h-[90px] mx-auto flex items-center justify-center bg-white rounded">
+    <img src="./img/logos/ic_logo_exf.svg" class="max-h-16 m-20" />
+  </div>
+</div>
+
   </section>
 
   <!-- *****section 8 industry expertise  -->
-  <div class="bg-[url(/img/img-con/industry_bg.svg)]   bg-center bg-cover bg-no-repeat w-full  py-10">
+  <div class="techstack bg-[url(/img/img-con/industry_bg.svg)]   bg-center bg-cover bg-no-repeat w-full  py-10">
     <!-- Header -->
     <section class="text-center px-4 py-10 relative sec-width mx-auto">
       <img src="./img/alogo.png" alt="Paper Plane"
@@ -1929,17 +1962,17 @@
 
     <!-- Icon Grid -->
     <section class="sec-width mx-auto">
-      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-10 place-items-center text-center">
+      <div class="grid  grid-cols-3  sm:grid-cols-4  md:grid-cols-6 xl:grid-cols-8 lg:gap-10 gap-2 place-items-center text-center">
         <div>
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px] p-3 lg:p-6 shadow-black  shadow-1xl  h-[55px]  w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-fin.svg" class="icon-img  mx-auto">
                   </div>
                 </div>
@@ -1952,30 +1985,30 @@
         <div>
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
-            <div class="  grid place-items-center    relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+            <div class="  grid place-items-center    relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl  h-[55px]  w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-real.svg" class="icon-img   mx-auto">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <span class="icon-label">Real Estate</span>
+          <span class="icon-label">RealEstate</span>
         </div>
         <div>
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl h-[55px] w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-sate.svg" class="icon-img  mx-auto">
                   </div>
                 </div>
@@ -1987,12 +2020,12 @@
         <div>
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
-            <div class="  grid place-items-center   relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+            <div class="  grid place-items-center   relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl  h-[55px]  w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-b2b.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2005,12 +2038,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] h-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-edu.svg" class="icon-img   mx-auto">
                   </div>
                 </div>
@@ -2023,12 +2056,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-resta.svg" class="icon-img   mx-auto">
                   </div>
                 </div>
@@ -2041,12 +2074,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-health.svg" class="icon-img   mx-auto">
                   </div>
                 </div>
@@ -2059,12 +2092,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-manf.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2077,12 +2110,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative  rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-autom.svg" class="icon-img   mx-auto">
                   </div>
                 </div>
@@ -2095,12 +2128,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-oil.svg" class="icon-img  mx-auto">
                   </div>
                 </div>
@@ -2113,12 +2146,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-govern.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2131,12 +2164,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-const.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2149,12 +2182,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-ecom.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2167,12 +2200,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-telecom.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2185,12 +2218,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-hitech.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2203,12 +2236,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-logis.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2221,12 +2254,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-media.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2239,12 +2272,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] h-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-enter.svg" class="icon-img   mx-auto">
                   </div>
                 </div>
@@ -2257,30 +2290,30 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-ev.svg" class="icon-img mx-auto">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <span class="icon-label">Electric Vehicle</span>
+          <span class="icon-label">ElectricVehicle</span>
         </div>
         <div>
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-saas.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2293,12 +2326,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-social.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2311,12 +2344,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-aero.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2329,12 +2362,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-agri.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -2347,12 +2380,12 @@
           <div class="flex items-center justify-center mb-3">
             <!-- Outer Card with Gradient Border -->
             <div
-              class="grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[30px] overflow-hidden p-[1px] gradient-border">
-              <div class="rounded-[30px] bg-white p-3 shadow-black  ">
+              class="grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
+              <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
                 <!-- Inner Card inside Outer -->
                 <div
-                  class="relative rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[20px]  p-6 shadow-black  shadow-1xl h-[110px] w-[110px]">
+                  class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
                     <img src="./img/logos/ic-insure.svg" class="icon-img mx-auto">
                   </div>
                 </div>
@@ -3007,99 +3040,155 @@
         </div>
 
         <!-- Feature Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-5">
-          <!-- Card -->
-          <div
-            class="bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px] border border-white border-opacity-40 img-zoom">
-            <img src="./img/sm-icon/ic-muser.svg" class="mb-4" alt="Icon">
-            <h3 class="text-[22px]  lg:text-[24px] leading-[24px]  lg:leading-[26px] font-black mb-5 ft-vit">
-              User-Centric Architecture</h3>
-            <p class=" text-white ft-rob text-[16px] leading-[22px]">
-              We prioritize the end-user experience from day one. Our team carefully structures intuitive navigation and
-              logical content flow that allow users to complete tasks effortlessly. It drives stronger user engagement,
-              effortless flow, and overall satisfaction.</p>
-          </div>
+       <div class="sec-width mx-auto mt-5">
+ <div x-data="{ openIndex: null }" class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
 
-          <!-- Repeat for 7 other cards -->
-          <div
-            class="  bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px]  border border-white border-opacity-40 img-zoom">
-            <img src="./img/sm-icon/ic-mresp.svg" class=" mb-4" alt="Icon">
-            <h3 class="text-[22px]  lg:text-[24px] leading-[24px]  lg:leading-[26px] font-black  ft-vit mb-5">Responsive
-              & Device-Ready Layouts</h3>
-            <p class="text-white ft-rob text-[16px] leading-[22px] ">
-              From widescreen desktops to smartphones and everything in between, we ensure flawless responsiveness. Our
-              design team creates adaptable interfaces that maintain consistency across all devices—enhancing usability
-              and trust in your brand.</p>
-          </div>
+  <!-- Card 1 -->
+  <div class="bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px] border border-white border-opacity-40 img-zoom">
+    <button 
+      class="w-full flex justify-between items-center lg:hidden text-left" 
+      @click="openIndex === 1 ? openIndex = null : openIndex = 1">
+      <div class="flex items-center gap-3">
+        <img src="./img/sm-icon/ic-muser.svg" alt="Icon">
+        <h3 class="text-[22px] font-black ft-vit">User-Centric Architecture</h3>
+      </div>
+      <span class="text-white text-2xl font-bold" x-text="openIndex === 1 ? '-' : '↓'"></span>
+    </button>
+    <div :class="{'block': openIndex === 1, 'hidden': openIndex !== 1}" class="lg:block mt-4 lg:mt-0">
+      <img src="./img/sm-icon/ic-muser.svg" class="mb-4 hidden lg:block" alt="Icon">
+      <h3 class="text-[22px] lg:text-[24px] font-black mb-5 ft-vit hidden lg:block">User-Centric Architecture</h3>
+      <p class="text-white ft-rob text-[16px] leading-[22px]">We prioritize the end-user experience from day one. Our team carefully structures intuitive navigation and logical content flow that allow users to complete tasks effortlessly.</p>
+    </div>
+  </div>
 
-          <div
-            class="  bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px]  border border-white border-opacity-40 img-zoom">
-            <img src="./img/sm-icon/ic-mspeed.svg" class=" mb-4" alt="Icon">
-            <h3 class="text-[22px]  lg:text-[24px] leading-[24px]  lg:leading-[26px] font-black ft-vit mb-5">High-Speed
-              Performance</h3>
-            <p class="text-white ft-rob text-[16px] leading-[22px]">
-              Speed directly affects user retention and conversion. We optimize design assets, compress code, and reduce
-              page load times to ensure your app is as fast as it is functional. An optimized app enhances both user
-              satisfaction and your bottom line.</p>
-          </div>
+  <!-- Card 2 -->
+  <div class="bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px] border border-white border-opacity-40 img-zoom">
+    <button 
+      class="w-full flex justify-between items-center lg:hidden text-left" 
+      @click="openIndex === 2 ? openIndex = null : openIndex = 2">
+      <div class="flex items-center gap-3">
+        <img src="./img/sm-icon/ic-mresp.svg" alt="Icon">
+        <h3 class="text-[22px] font-black ft-vit">Responsive & Device-Ready Layouts</h3>
+      </div>
+      <span class="text-white text-2xl font-bold" x-text="openIndex === 2 ? '-' : '↓'"></span>
+    </button>
+    <div :class="{'block': openIndex === 2, 'hidden': openIndex !== 2}" class="lg:block mt-4 lg:mt-0">
+      <img src="./img/sm-icon/ic-mresp.svg" class="mb-4 hidden lg:block" alt="Icon">
+      <h3 class="text-[22px] lg:text-[24px] font-black mb-5 ft-vit hidden lg:block">Responsive & Device-Ready Layouts</h3>
+      <p class="text-white ft-rob text-[16px] leading-[22px]">From widescreen desktops to smartphones and everything in between, we ensure flawless responsiveness with adaptable interfaces.</p>
+    </div>
+  </div>
 
-          <div
-            class="  bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px]  border border-white border-opacity-40 img-zoom">
-            <img src="./img/sm-icon/ic-mscale.svg" class=" mb-4" alt="Icon">
-            <h3 class="text-[22px]  lg:text-[24px] leading-[24px]  lg:leading-[26px] font-black ft-vit mb-5">Scalable
-              Design Systems</h3>
-            <p class="text-white ft-rob text-[16px] leading-[22px]">
-              Your product should evolve without a full redesign. That’s why we use a scalable component-based structure
-              that allows for easy expansion. Our web app designing methodology ensures visual consistency, faster
-              updates, and long-term flexibility.</p>
-          </div>
+  <!-- Card 3 -->
+  <div class="bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px] border border-white border-opacity-40 img-zoom">
+    <button 
+      class="w-full flex justify-between items-center lg:hidden text-left" 
+      @click="openIndex === 3 ? openIndex = null : openIndex = 3">
+      <div class="flex items-center gap-3">
+        <img src="./img/sm-icon/ic-mspeed.svg" alt="Icon">
+        <h3 class="text-[22px] font-black ft-vit">High-Speed Performance</h3>
+      </div>
+      <span class="text-white text-2xl font-bold" x-text="openIndex === 3 ? '-' : '↓'"></span>
+    </button>
+    <div :class="{'block': openIndex === 3, 'hidden': openIndex !== 3}" class="lg:block mt-4 lg:mt-0">
+      <img src="./img/sm-icon/ic-mspeed.svg" class="mb-4 hidden lg:block" alt="Icon">
+      <h3 class="text-[22px] lg:text-[24px] font-black mb-5 ft-vit hidden lg:block">High-Speed Performance</h3>
+      <p class="text-white ft-rob text-[16px] leading-[22px]">We optimize assets, compress code, and reduce page load times to ensure your app is as fast as it is functional.</p>
+    </div>
+  </div>
 
-          <div
-            class="  bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px]  border border-white border-opacity-40 img-zoom">
-            <img src="./img/sm-icon/ic-msecurity.svg" class=" mb-4" alt="Icon">
-            <h3 class="text-[22px]  lg:text-[24px] leading-[24px]  lg:leading-[26px] font-black ft-vit mb-5">
-              Security-First Approach</h3>
-            <p class="text-white ft-rob text-[16px] leading-[22px]">
-              Security is embedded into every layer of your app. We follow secure design standards—such as HTTPS, user
-              authentication, and protected data flows—to minimize risk while keeping the user experience smooth and
-              seamless.</p>
-          </div>
+  <!-- Card 4 -->
+  <div class="bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px] border border-white border-opacity-40 img-zoom">
+    <button 
+      class="w-full flex justify-between items-center lg:hidden text-left" 
+      @click="openIndex === 4 ? openIndex = null : openIndex = 4">
+      <div class="flex items-center gap-3">
+        <img src="./img/sm-icon/ic-mscale.svg" alt="Icon">
+        <h3 class="text-[22px] font-black ft-vit">Scalable Design Systems</h3>
+      </div>
+      <span class="text-white text-2xl font-bold" x-text="openIndex === 4 ? '-' : '↓'"></span>
+    </button>
+    <div :class="{'block': openIndex === 4, 'hidden': openIndex !== 4}" class="lg:block mt-4 lg:mt-0">
+      <img src="./img/sm-icon/ic-mscale.svg" class="mb-4 hidden lg:block" alt="Icon">
+      <h3 class="text-[22px] lg:text-[24px] font-black mb-5 ft-vit hidden lg:block">Scalable Design Systems</h3>
+      <p class="text-white ft-rob text-[16px] leading-[22px]">We use a scalable component-based structure that allows for easy expansion, ensuring visual consistency and flexibility.</p>
+    </div>
+  </div>
 
-          <div
-            class="bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px]  border border-white border-opacity-40 img-zoom">
-            <img src="./img/sm-icon/ic-maccess.svg" class=" mb-4" alt="Icon">
-            <h3 class="text-[22px]  lg:text-[24px] leading-[24px]  lg:leading-[26px] font-black ft-vit mb-5">
-              Accessibility & Inclusivity</h3>
-            <p class="text-white ft-rob text-[16px] leading-[22px]">
-              We believe great design should work for everyone. Our inclusive web app designing approach complies with
-              WCAG 2.1 guidelines—supporting keyboard navigation, screen readers, and optimized contrast—so your
-              platform is accessible to all users.</p>
-          </div>
+  <!-- Card 5 -->
+  <div class="bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px] border border-white border-opacity-40 img-zoom">
+    <button 
+      class="w-full flex justify-between items-center lg:hidden text-left" 
+      @click="openIndex === 5 ? openIndex = null : openIndex = 5">
+      <div class="flex items-center gap-3">
+        <img src="./img/sm-icon/ic-msecurity.svg" alt="Icon">
+        <h3 class="text-[22px] font-black ft-vit">Security-First Approach</h3>
+      </div>
+      <span class="text-white text-2xl font-bold" x-text="openIndex === 5 ? '-' : '↓'"></span>
+    </button>
+    <div :class="{'block': openIndex === 5, 'hidden': openIndex !== 5}" class="lg:block mt-4 lg:mt-0">
+      <img src="./img/sm-icon/ic-msecurity.svg" class="mb-4 hidden lg:block" alt="Icon">
+      <h3 class="text-[22px] lg:text-[24px] font-black mb-5 ft-vit hidden lg:block">Security-First Approach</h3>
+      <p class="text-white ft-rob text-[16px] leading-[22px]">We follow secure design standards like HTTPS, authentication, and protected data flows for a safe yet smooth experience.</p>
+    </div>
+  </div>
 
-          <div
-            class="  bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px]  border border-white border-opacity-40 img-zoom">
-            <img src="./img/sm-icon/ic-mseo.svg" class=" mb-4" alt="Icon">
-            <h3 class="text-[22px]  lg:text-[24px] leading-[24px]  lg:leading-[26px] font-black ft-vit mb-5">
-              SEO-Friendly Structure</h3>
-            <p class="text-white ft-rob text-[16px] leading-[22px]">
-              Visibility begins with structure. We implement semantic HTML, meaningful metadata, and clean URLs to
-              support search engine indexing—giving your web app better
-              discoverability and long-term visibility in organic search.</p>
-          </div>
+  <!-- Card 6 -->
+  <div class="bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px] border border-white border-opacity-40 img-zoom">
+    <button 
+      class="w-full flex justify-between items-center lg:hidden text-left" 
+      @click="openIndex === 6 ? openIndex = null : openIndex = 6">
+      <div class="flex items-center gap-3">
+        <img src="./img/sm-icon/ic-maccess.svg" alt="Icon">
+        <h3 class="text-[22px] font-black ft-vit">Accessibility & Inclusivity</h3>
+      </div>
+      <span class="text-white text-2xl font-bold" x-text="openIndex === 6 ? '-' : '↓'"></span>
+    </button>
+    <div :class="{'block': openIndex === 6, 'hidden': openIndex !== 6}" class="lg:block mt-4 lg:mt-0">
+      <img src="./img/sm-icon/ic-maccess.svg" class="mb-4 hidden lg:block" alt="Icon">
+      <h3 class="text-[22px] lg:text-[24px] font-black mb-5 ft-vit hidden lg:block">Accessibility & Inclusivity</h3>
+      <p class="text-white ft-rob text-[16px] leading-[22px]">Our inclusive design follows WCAG 2.1 guidelines, supporting screen readers, keyboard navigation, and optimized contrast.</p>
+    </div>
+  </div>
 
-          <div
-            class="  bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px]  border border-white border-opacity-40 img-zoom">
-            <img src="./img/sm-icon/ic-maction.svg" class=" mb-4" alt="Icon">
-            <h3 class="text-[22px]  lg:text-[24px] leading-[24px]  lg:leading-[26px] font-black ft-vit mb-5">Action-
-              <br /> Oriented UI
-            </h3>
-            <p class="text-white ft-rob text-[16px] leading-[22px]">
-              We design interfaces that move users toward your business goals. Through clear call-to-actions, engaging
-              layouts, and smart interaction cues, our web app designs help convert visits into meaningful
-              outcomes—whether sales, signups, or inquiries</p>
-          </div>
+  <!-- Card 7 -->
+  <div class="bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px] border border-white border-opacity-40 img-zoom">
+    <button 
+      class="w-full flex justify-between items-center lg:hidden text-left" 
+      @click="openIndex === 7 ? openIndex = null : openIndex = 7">
+      <div class="flex items-center gap-3">
+        <img src="./img/sm-icon/ic-mseo.svg" alt="Icon">
+        <h3 class="text-[22px] font-black ft-vit">SEO-Friendly Structure</h3>
+      </div>
+      <span class="text-white text-2xl font-bold" x-text="openIndex === 7 ? '-' : '↓'"></span>
+    </button>
+    <div :class="{'block': openIndex === 7, 'hidden': openIndex !== 7}" class="lg:block mt-4 lg:mt-0">
+      <img src="./img/sm-icon/ic-mseo.svg" class="mb-4 hidden lg:block" alt="Icon">
+      <h3 class="text-[22px] lg:text-[24px] font-black mb-5 ft-vit hidden lg:block">SEO-Friendly Structure</h3>
+      <p class="text-white ft-rob text-[16px] leading-[22px]">We implement semantic HTML, metadata, and clean URLs to improve search engine discoverability and visibility.</p>
+    </div>
+  </div>
 
-        </div>
+  <!-- Card 8 -->
+  <div class="bg-[url('./img/img-con/features_bg_final.svg')] bg-center bg-no-repeat p-8 rounded-[40px] border border-white border-opacity-40 img-zoom">
+    <button 
+      class="w-full flex justify-between items-center lg:hidden text-left" 
+      @click="openIndex === 8 ? openIndex = null : openIndex = 8">
+      <div class="flex items-center gap-3">
+        <img src="./img/sm-icon/ic-maction.svg" alt="Icon">
+        <h3 class="text-[22px] font-black ft-vit">Action-Oriented UI</h3>
+      </div>
+      <span class="text-white text-2xl font-bold" x-text="openIndex === 8 ? '-' : '↓'"></span>
+    </button>
+    <div :class="{'block': openIndex === 8, 'hidden': openIndex !== 8}" class="lg:block mt-4 lg:mt-0">
+      <img src="./img/sm-icon/ic-maction.svg" class="mb-4 hidden lg:block" alt="Icon">
+      <h3 class="text-[22px] lg:text-[24px] font-black mb-5 ft-vit hidden lg:block">Action-Oriented UI</h3>
+      <p class="text-white ft-rob text-[16px] leading-[22px]">Through clear CTAs, engaging layouts, and smart interaction cues, we help convert visits into meaningful outcomes.</p>
+    </div>
+  </div>
+
+</div>
+
 
         <!-- CTA Section -->
         <div class="mt-20 text-center pt-10">
@@ -3472,7 +3561,7 @@
                   <div
                     class="bg-white border-[#d6d6d6] shadow-black/25 shadow-md border-t border-b border-l border-opacity-25 w-full  rounded-[10px] focus:outline-none focus:ring-2 focus:ring-pink-500">
                     <input id="phone" placeholder="Mobile Number *" type="tel" name="phone"
-                      class="rounded-[10px] bg-white    w-full px-4 py-3     focus:outline-none focus:ring-2 focus:ring-pink-500" />
+                      class="rounded-[10px] bg-white  w-full px-4 py-3   focus:outline-none focus:ring-2 focus:ring-pink-500" />
                   </div>
                 </div>
                 <div class="w-full lg:flex-1">
@@ -3664,14 +3753,14 @@
           <li class="flex items-center gap-2 ">
             <img src="./img/img-con/footer_mail_icon.svg" alt="mail">
             <div>
-              <label class="" for=""> Email Us</label>
+              <label class=""> Email Us</label>
               <a class="opacity-40 block" href="mailto:support@amazefox.com">support@amazefox.com</a>
             </div>
           </li>
           <li class="flex items-center gap-2">
             <img src="./img/img-con/footer_whatsapp_icon.svg" alt="phone">
             <div>
-              <label class=" " for=""> Whatsapp</label><a class="opacity-40 block" href="https://wa.me/919786739966">+91
+              <label class=" "> Whatsapp</label><a class="opacity-40 block" href="https://wa.me/919786739966">+91
                 9786739966</a>
             </div>
           </li>
@@ -3679,8 +3768,8 @@
 
             <img src="./img/img-con/footer_team_icon.svg" alt="teams">
             <div>
-              <label class="text-white opacity-100" for=""> Teams or Skype </label> <a class="opacity-40 block"
-                href="mailto:support@amazefox.com">support@amazefox.com</a>
+              <label class="text-white opacity-100"> Teams or Skype </label>
+              <a class="opacity-40 block" href="mailto:support@amazefox.com">support@amazefox.com</a>
             </div>
           </li>
         </ul>
@@ -3852,37 +3941,92 @@
   </script>
 
   <!-- slider page script  -->
-  <script>
-    document.querySelectorAll(".carousel").forEach(carousel => {
-      const pages = carousel.querySelectorAll(".project-page");
-      const nextBtn = carousel.querySelector(".nextBtn");
-      const prevBtn = carousel.querySelector(".prevBtn");
-      let currentPage = 0;
+<script>
+  document.querySelectorAll(".carousel").forEach(carousel => {
+    const pages = carousel.querySelectorAll(".project-page");
+    const nextBtn = carousel.querySelector(".nextBtn");
+    const prevBtn = carousel.querySelector(".prevBtn");
+    let currentPage = 0;
+    let autoplayInterval;
 
-      function showPage(index) {
-        const current = pages[currentPage];
-        const next = pages[index];
+    function showPage(index) {
+      const current = pages[currentPage];
+      const next = pages[index];
 
-        current.classList.add("opacity-0");
-        setTimeout(() => {
-          current.classList.add("hidden");
-          next.classList.remove("hidden");
-          setTimeout(() => next.classList.remove("opacity-0"), 20);
-          currentPage = index;
-        }, 500);
-      }
+      current.classList.add("opacity-0");
+      setTimeout(() => {
+        current.classList.add("hidden");
+        next.classList.remove("hidden");
+        setTimeout(() => next.classList.remove("opacity-0"), 20);
+        currentPage = index;
+      }, 500);
+    }
 
-      nextBtn.addEventListener("click", () => {
-        const nextIndex = (currentPage + 1) % pages.length;
-        showPage(nextIndex);
-      });
+    function nextPage() {
+      const nextIndex = (currentPage + 1) % pages.length;
+      showPage(nextIndex);
+    }
 
-      prevBtn.addEventListener("click", () => {
-        const prevIndex = (currentPage - 1 + pages.length) % pages.length;
-        showPage(prevIndex);
-      });
+    function prevPage() {
+      const prevIndex = (currentPage - 1 + pages.length) % pages.length;
+      showPage(prevIndex);
+    }
+
+    // Button events (manual navigation always available)
+    nextBtn.addEventListener("click", () => {
+      nextPage();
+      resetAutoplay();
     });
-  </script>
+
+    prevBtn.addEventListener("click", () => {
+      prevPage();
+      resetAutoplay();
+    });
+
+    // Autoplay functions
+    function startAutoplay() {
+      autoplayInterval = setInterval(nextPage, 3000); // 3s
+    }
+    function stopAutoplay() {
+      clearInterval(autoplayInterval);
+    }
+    function resetAutoplay() {
+      if (isMobileOrTablet()) {
+        stopAutoplay();
+        startAutoplay();
+      }
+    }
+
+    // Tailwind lg breakpoint (only autoplay below lg)
+    function isMobileOrTablet() {
+      return window.matchMedia("(max-width: 1023px)").matches;
+    }
+
+    // Init autoplay if below lg
+    if (isMobileOrTablet()) {
+      startAutoplay();
+    }
+
+    // Re-check on resize
+    window.addEventListener("resize", () => {
+      if (isMobileOrTablet()) {
+        if (!autoplayInterval) startAutoplay();
+      } else {
+        stopAutoplay();
+      }
+    });
+
+    // Optional: pause autoplay on hover
+    carousel.addEventListener("mouseenter", stopAutoplay);
+    carousel.addEventListener("mouseleave", () => {
+      if (isMobileOrTablet()) startAutoplay();
+    });
+  });
+</script>
+
+
+
+
   <script>
     const steps = document.querySelectorAll("#steps > div");
     const stepImage = document.getElementById("stepImage");
@@ -3960,14 +4104,7 @@
     loopPhrases();
   </script>
 
-  <script>
-    const btn = document.getElementById("toggleBtn");
-    const content = document.getElementById("content");
 
-    btn.addEventListener("click", () => {
-      content.classList.toggle("hidden");
-    });
-  </script>
   <!-- enquiry testimonial swipper  -->
 
   <script>
@@ -3978,7 +4115,7 @@
 
     function updateIndicators() {
       indicators.forEach(dot => dot.classList.remove('bg-gray-800'));
-      indicators[index].classList.add('bg-gray-800');
+      <!-- indicators[index].classList.add('bg-gray-800'); -->
     }
 
     function showSlide(i) {
