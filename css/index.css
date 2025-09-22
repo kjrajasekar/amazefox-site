@@ -233,11 +233,14 @@ body {
   }
    .services .sec-width {
     width: 90%;
-    margin: 5px auto;
+    margin: 20px auto;
   }
   .techstack .sec-width{
     width: 95%;
     margin: 0 auto;
+  }
+  .step-key .sec-width {
+    width: 96%;
   }
   nav .sec-width {
     width: 100%;
@@ -270,7 +273,7 @@ body {
   }
      .services .sec-width {
     width: 90%;
-    margin: 8px auto;
+    margin: 20px auto;
   }
 }
 
