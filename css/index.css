@@ -10,13 +10,14 @@
 /* country list in contact form  */
 
 .intl-tel-input,
-.iti{
+.iti {
   width: 100%;
 }
+
 .iti__country-list {
-      color: black !important;
-      background-color: white !important;
-    }
+  color: black !important;
+  background-color: white !important;
+}
 
 /* country list in contact form  */
 .sec-width {
@@ -32,10 +33,11 @@
   font-weight: 400;
 }
 
-.ft-vit-t{
-   font-family: "Be Vietnam " !important;
+.ft-vit-t {
+  font-family: "Be Vietnam " !important;
   font-weight: 400;
 }
+
 .ft-vit,
 body {
   font-family: "Be Vietnam Pro" !important;
@@ -51,9 +53,8 @@ body {
   .gradient-border-rb div {
     background: linear-gradient(150deg,
         rgba(255, 0, 0, 0.05),
-        rgba(0, 0, 255, 0.05)
-      );
-       box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.15);
+        rgba(0, 0, 255, 0.05));
+    box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.15);
   }
 
   .gradient-border-rb {
@@ -91,8 +92,13 @@ body {
 
 /* logo scroll  */
 @keyframes infinite-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 #logo-track {
@@ -111,11 +117,6 @@ body {
   width: auto;
 }
 
-@media (min-width: 768px) {
-  #logo-track img {
-    height: 40px;
-  }
-}
 
 .icon-label {
   font-family: "Roboto" !important;
@@ -126,6 +127,7 @@ body {
 
 /* Custom flicker keyframes */
 @keyframes flicker {
+
   0%,
   100% {
     opacity: 1;
@@ -151,9 +153,12 @@ body {
     opacity: 0.8;
   }
 }
-.prevBtn:hover, .nextBtn:hover{
-      background: linear-gradient(90deg, #3800A0, #720C7D, #E61F4A);
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background: linear-gradient(90deg, #3800A0, #720C7D, #E61F4A);
 }
+
 .flicker {
   animation: flicker 3s infinite ease-in-out;
 }
@@ -193,60 +198,75 @@ body {
 }
 
 
-    .active-step {
-      background-color: #720C7D;
-      color: white;
-    }
-    .progress-line {
-      position: absolute;
-      top: 8%;
-      left: 35px;
-      width: 4px;
-      background-color: #d1d5db;
-    }
-    .progress-bar {
-      transition: height 0.3s ease-in-out;
-    }
-    .progress-line-fill {
-      position: absolute;
-      left: 35px;
-      width: 4px;
-      background-color: #720C7D;
-      height: 0;
-       transition: height 0.3s ease-in-out;
-    }
+.active-step {
+  background-color: #720C7D;
+  color: white;
+}
 
-    .mybg-grad{
-      background-image: linear-gradient(150deg,#3800A0,#720C7D,#E61F4A);
-    }
+.progress-line {
+  position: absolute;
+  top: 8%;
+  left: 35px;
+  width: 4px;
+  background-color: #d1d5db;
+}
+
+.progress-bar {
+  transition: height 0.3s ease-in-out;
+}
+
+.progress-line-fill {
+  position: absolute;
+  left: 35px;
+  width: 4px;
+  background-color: #720C7D;
+  height: 0;
+  transition: height 0.3s ease-in-out;
+}
+
+.mybg-grad {
+  background-image: linear-gradient(150deg, #3800A0, #720C7D, #E61F4A);
+}
+
+@media (min-width: 768px) {
+  #logo-track img {
+    height: 40px;
+  }
+}
 
 @media screen and (min-width: 992px) {
-    .bg-black .sec-width {
+  .bg-black .sec-width {
     width: 94%;
     margin: 0 auto;
   }
 }
+
 @media screen and (max-width: 992px) {
   .sec-width {
-    width: 80%;
-    margin: 0 auto;
-  }
-   .services .sec-width {
-    width: 90%;
-    margin: 20px auto;
-  }
-  .techstack .sec-width{
     width: 95%;
     margin: 0 auto;
   }
+
+  .services .sec-width {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .techstack .sec-width {
+    width: 95%;
+    margin: 0 auto;
+  }
+
   .step-key .sec-width {
     width: 96%;
   }
+
   nav .sec-width {
     width: 100%;
     margin: 0 auto;
   }
-    .bg-black .sec-width {
+
+  .bg-black .sec-width {
     width: 94%;
     margin: 0 auto;
   }
@@ -267,27 +287,14 @@ body {
   .marquee:after {
     width: 5rem;
   }
+
   .sec-width {
     width: 92%;
     margin: 0 auto;
   }
-     .services .sec-width {
+
+  .services .sec-width {
     width: 90%;
     margin: 20px auto;
   }
 }
-
-
-/* .br-grad {
-  border-radius: 50px;  
-  border: 10px solid transparent;  
-  background: linear-gradient(45deg,red,blue) border-box;  
-  mask:  
-    linear-gradient(#000 0 0) padding-box, 
-    linear-gradient(#000 0 0);
-  mask-composite: exclude;  
-} */
-
-
-
-/* enquiry testimonial swipper */

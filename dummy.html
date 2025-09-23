@@ -1,24 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Project Gallery</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gray-100 p-6">
 
-<body class="w-full h-screen bg-[#5CA4EA] flex items-center justify-center overflow-hidden font-sans">
+<section class="sec-width mx-auto py-20 relative carousel">
+  <!-- Section Title -->
+  <div class="mt-10 flex items-center justify-between md:px-10 xl:px-2">
+    <div>
+      <p class="text-[18px] font-semibold uppercase mb-1">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+          Portfolio</span>
+      </p>
+      <h2
+        class="w-[100%] tracking-[-1px] text-black text-[30px] leading-[30px] md:text-[40px] md:leading-[40px] font-black">
+        Our recent web design projects
+      </h2>
+      <p class="text-[#666666] text-[17px] mt-2">
+        Check out our projects where we made our clients win in the real world.
+      </p>
+    </div>
 
-  <button class="relative w-[180px] h-[60px] border border-[#91C9FF] text-white font-thin text-lg cursor-pointer overflow-hidden transition-colors duration-1000 hover:bg-[#4F95DA]">
-    <!-- SVG Border -->
-    <svg width="180" height="60" viewBox="0 0 180 60" class="absolute top-0 left-0">
-      <polyline points="179,1 179,59 1,59 1,1 179,1"
-                class="stroke-white fill-none stroke-[1px] stroke-dasharray-[150_480] stroke-dashoffset-[150] transition-all duration-[1000ms] ease-in-out group-hover:stroke-dashoffset-[-480]" />
-    </svg>
+    <!-- Navigation Arrows (lg only) -->
+    <div class="hidden lg:flex items-center space-x-2 absolute right-0 lg:top-40 top-10">
+      <button
+        class="prevBtn w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+        <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
+      </button>
+      <button
+        class="nextBtn w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+        <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
+      </button>
+    </div>
+  </div>
 
-    <span class="relative z-10">HOVER ME</span>
-  </button>
+  <!-- ================= Large screens: Slide sets ================= -->
+  <div class="hidden lg:block relative mt-10">
+    <!-- Slide set 1 -->
+    <div class="project-page transition-opacity duration-500 opacity-0 absolute inset-0">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- 4 cards -->
+        <div class="card relative rounded-3xl overflow-hidden shadow-3xl group img-zoom">
+          <img src="./img/img_phone.svg" alt="Chilliseeds" class="w-full h-auto" />
+          <div class="overlay"> <h3>Chilliseeds -1</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+        <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+          <img src="./img/img_koli.png" alt="Melodica" class="w-full h-auto" />
+          <div class="overlay"> <h3>Melodica</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+        <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+          <img src="./img/img_tab.svg" alt="AutoQ" class="w-full h-auto" />
+          <div class="overlay"> <h3>AutoQ</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+        <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+          <img src="./img/img_webs.png" alt="Look Who's Cooking" class="w-full h-auto" />
+          <div class="overlay"> <h3>Look Who’s Cooking</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide set 2 -->
+    <div class="project-page transition-opacity duration-500 opacity-0 absolute inset-0">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- 4 cards -->
+        <div class="card relative rounded-3xl overflow-hidden shadow-3xl group img-zoom">
+          <img src="./img/img_phone.svg" alt="Chilliseeds" class="w-full h-auto" />
+          <div class="overlay"> <h3>Chilliseeds -2</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+        <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+          <img src="./img/img_tab.svg" alt="AutoQ" class="w-full h-auto" />
+          <div class="overlay"> <h3>AutoQ</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+        <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+          <img src="./img/img_koli.png" alt="Melodica" class="w-full h-auto" />
+          <div class="overlay"> <h3>Melodica</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+        <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+          <img src="./img/img_webs.png" alt="Look Who's Cooking" class="w-full h-auto" />
+          <div class="overlay"> <h3>Look Who’s Cooking</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide set 3 -->
+    <div class="project-page transition-opacity duration-500 opacity-0 absolute inset-0">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- 4 cards -->
+        <div class="card relative rounded-3xl overflow-hidden shadow-3xl group img-zoom">
+          <img src="./img/img_phone.svg" alt="Chilliseeds" class="w-full h-auto" />
+          <div class="overlay"> <h3>Chilliseeds -3</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+        <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+          <img src="./img/img_webs.png" alt="Look Who's Cooking" class="w-full h-auto" />
+          <div class="overlay"> <h3>Look Who’s Cooking</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+        <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+          <img src="./img/img_koli.png" alt="Melodica" class="w-full h-auto" />
+          <div class="overlay"> <h3>Melodica</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+        <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
+          <img src="./img/img_tab.svg" alt="AutoQ" class="w-full h-auto" />
+          <div class="overlay"> <h3>AutoQ</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Small/Medium screens: Swiper ================= -->
+  <div class="lg:hidden mt-10">
+    <div id="swiper" class="flex space-x-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth">
+      <!-- repeat cards horizontally -->
+      <div class="card min-w-[80%] md:min-w-[45%] bg-white rounded-3xl overflow-hidden shadow-lg snap-center">
+        <img src="./img/img_phone.svg" alt="Chilliseeds" />
+        <div class="overlay"> <h3>Chilliseeds -1</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+      </div>
+      <div class="card min-w-[80%] md:min-w-[45%] bg-white rounded-3xl overflow-hidden shadow-lg snap-center">
+        <img src="./img/img_koli.png" alt="Melodica" />
+        <div class="overlay"> <h3>Melodica</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+      </div>
+      <div class="card min-w-[80%] md:min-w-[45%] bg-white rounded-3xl overflow-hidden shadow-lg snap-center">
+        <img src="./img/img_tab.svg" alt="AutoQ" />
+        <div class="overlay"> <h3>AutoQ</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+      </div>
+      <div class="card min-w-[80%] md:min-w-[45%] bg-white rounded-3xl overflow-hidden shadow-lg snap-center">
+        <img src="./img/img_webs.png" alt="Look Who's Cooking" />
+        <div class="overlay"> <h3>Look Who’s Cooking</h3><p>WEB DESIGN / RESPONSIVE / ECOMMERCE</p></div>
+      </div>
+      <!-- add more cards as needed -->
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="text-center mt-12 mb-20">
+    <button type="submit" class="group relative mx-auto mt-10 shadow-black shadow-sm border border-[#000000] 
+      w-[250px] h-[60px] md:w-[300px] md:h-[80px] bg-white hover:bg-black rounded-[100px] 
+      text-black hover:text-white text-[21px] font-bold transition flex items-center justify-center gap-3">
+      <img src="./img/img-con/portfoli_rightarrow -w.svg" alt="" width="20"
+        class="group-hover:inline hidden transition-transform duration-300 group-hover:translate-x-1">
+      <span>View All Works</span>
+      <img src="./img/img-con/ic_faq_rightarrow.svg" alt="" width="20"
+        class="group-hover:hidden inline transition-transform duration-300 group-hover:translate-x-1">
+    </button>
+  </div>
+</section>
+
+<!-- JS -->
+<script>
+  // Large screen slides
+  const pages = document.querySelectorAll('.project-page');
+  let currentPage = 0;
+  function showPage(index) {
+    pages.forEach((p, i) => {
+      p.style.opacity = (i === index) ? '1' : '0';
+      p.style.zIndex = (i === index) ? '1' : '0';
+    });
+    // animate cards
+    pages[index].querySelectorAll('.card').forEach(card => {
+      card.classList.add('animate-card');
+      setTimeout(() => card.classList.remove('animate-card'), 700);
+    });
+  }
+  document.querySelector('.nextBtn')?.addEventListener('click', () => {
+    currentPage = (currentPage + 1) % pages.length;
+    showPage(currentPage);
+  });
+  document.querySelector('.prevBtn')?.addEventListener('click', () => {
+    currentPage = (currentPage - 1 + pages.length) % pages.length;
+    showPage(currentPage);
+  });
+  showPage(currentPage);
+
+  // Small/Medium swiper autoplay
+  const swiper = document.getElementById('swiper');
+  let scrollX = 0;
+  function autoScroll() {
+    if (!swiper) return;
+    const cardWidth = swiper.children[0].offsetWidth + 16;
+    scrollX += cardWidth;
+    if (scrollX >= swiper.scrollWidth - swiper.clientWidth) scrollX = 0;
+    swiper.scrollTo({ left: scrollX, behavior: 'smooth' });
+  }
+  let play = setInterval(autoScroll, 3000);
+  swiper?.addEventListener('mouseenter', () => clearInterval(play));
+  swiper?.addEventListener('mouseleave', () => play = setInterval(autoScroll, 3000));
+</script>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .overlay {
+    @apply text-white absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md p-8 rounded-b-3xl;
+  }
+  .overlay h3 { @apply text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]; }
+  .overlay p { @apply text-[13px] font-bold leading-[19px]; }
+
+  .animate-card { animation: fadeScale 0.7s ease; }
+  @keyframes fadeScale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
 
 </body>
-
 </html>
