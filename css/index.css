@@ -297,4 +297,10 @@ body {
     width: 90%;
     margin: 20px auto;
   }
+  .icon-label {
+ 
+  font-size: 12px;
+  line-height: 20px;
 }
+}
+

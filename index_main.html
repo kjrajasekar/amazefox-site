@@ -27,14 +27,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
   <link rel="stylesheet" href="./css/index.css">
   <!-- disable right click  -->
-    <script>
+    <!-- <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
         document.addEventListener('keydown', function(event) {
         if (event.ctrlKey && event.key === 'u' || event.key === 'F12') {
             event.preventDefault();
         }
     });  
-  </script> 
+  </script>  -->
   <script>
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
@@ -527,7 +527,7 @@
           drives meaningful interactions that support your business growth.
         </p>
         <button
-          class="flex items-center  group  hover:opacity-90 md:flex px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-3 shadow-black shadow-sm w-[165px] h-[41px] sm:w-[175px]   lg:w-[250px] lg:h-[75px] overflow-hidden py-3 rounded-[100px] text-white text-[12px] lg:text-[17px] font-bold ">
+          class="flex items-center justify-center  group  hover:opacity-90 md:flex px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-3 shadow-black shadow-sm w-[165px] h-[41px] sm:w-[175px]   lg:w-[250px] lg:h-[75px] overflow-hidden py-3 rounded-[100px] text-white text-[12px] lg:text-[17px] font-bold ">
           <span class="flex items-center  justify-center transition-all duration-300">
             <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
             <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
@@ -1662,8 +1662,7 @@
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
           Portfolio</span>
       </p>
-      <h2
-        class="w-[100%] tracking-[-1px] text-black text-[30px] leading-[30px] md:text-[40px] md:leading-[40px] font-black">
+      <h2 class="w-[100%] tracking-[-1px] text-black text-[30px] leading-[30px] md:text-[40px] md:leading-[40px] font-black">
         Our recent web design projects
       </h2>
       <p class="text-[#666666] text-[17px] mt-2">
@@ -1685,14 +1684,14 @@
   </div>
 
   <!-- ================= Large screens: Slide sets ================= -->
-  <div class="hidden lg:block  mt-10">
+  <div class="hidden lg:block mt-10">
+
     <!-- Slide set 1 -->
-    <div class="project-page transition-opacity duration-500 opacity-0 relative inset-0">
+    <div class="project-page block opacity-100 transition-opacity duration-500">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- 4 cards -->
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
-          <img src="./img/img_phone.svg" alt="Chilliseeds" class="w-full h-auto" />
-           <div class="text-white absolute bottom-0 left-0 w-full 
+          <img src="./img/img_phone.svg" alt="Chilliseeds -1" class="w-full h-auto" />
+         <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
             <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Chilliseeds -1</h3>
@@ -1701,7 +1700,7 @@
         </div>
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
           <img src="./img/img_koli.png" alt="Melodica" class="w-full h-auto" />
-         <div class="text-white absolute bottom-0 left-0 w-full 
+          <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
             <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Melodica</h3>
@@ -1710,7 +1709,7 @@
         </div>
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
           <img src="./img/img_tab.svg" alt="AutoQ" class="w-full h-auto" />
-          <div class="text-white absolute bottom-0 left-0 w-full 
+            <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
             <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">AutoQ</h3>
@@ -1719,10 +1718,10 @@
         </div>
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
           <img src="./img/img_webs.png" alt="Look Who's Cooking" class="w-full h-auto" />
-          <div class="text-white absolute bottom-0 left-0 w-full 
+         <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
-            <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">AutoQ</h3>
+            <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Look Who’s Cooking</h3>
             <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
           </div>
         </div>
@@ -1730,12 +1729,11 @@
     </div>
 
     <!-- Slide set 2 -->
-    <div class="project-page transition-opacity duration-500 opacity-0 relative inset-0">
-         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- 4 cards -->
+     <div class="project-page block opacity-100 transition-opacity duration-500">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
-          <img src="./img/img_phone.svg" alt="Chilliseeds" class="w-full h-auto" />
-           <div class="text-white absolute bottom-0 left-0 w-full 
+          <img src="./img/img_phone.svg" alt="Chilliseeds -1" class="w-full h-auto" />
+         <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
             <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Chilliseeds -2</h3>
@@ -1744,7 +1742,7 @@
         </div>
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
           <img src="./img/img_koli.png" alt="Melodica" class="w-full h-auto" />
-         <div class="text-white absolute bottom-0 left-0 w-full 
+          <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
             <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Melodica</h3>
@@ -1753,7 +1751,7 @@
         </div>
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
           <img src="./img/img_tab.svg" alt="AutoQ" class="w-full h-auto" />
-          <div class="text-white absolute bottom-0 left-0 w-full 
+            <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
             <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">AutoQ</h3>
@@ -1762,10 +1760,10 @@
         </div>
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
           <img src="./img/img_webs.png" alt="Look Who's Cooking" class="w-full h-auto" />
-          <div class="text-white absolute bottom-0 left-0 w-full 
+         <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
-            <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">AutoQ</h3>
+            <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Look Who’s Cooking</h3>
             <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
           </div>
         </div>
@@ -1773,12 +1771,11 @@
     </div>
 
     <!-- Slide set 3 -->
-    <div class="project-page transition-opacity duration-500 opacity-0 relative inset-0">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- 4 cards -->
+      <div class="project-page block opacity-100 transition-opacity duration-500">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
-          <img src="./img/img_phone.svg" alt="Chilliseeds" class="w-full h-auto" />
-           <div class="text-white absolute bottom-0 left-0 w-full 
+          <img src="./img/img_phone.svg" alt="Chilliseeds -1" class="w-full h-auto" />
+         <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
             <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Chilliseeds -3</h3>
@@ -1787,7 +1784,7 @@
         </div>
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
           <img src="./img/img_koli.png" alt="Melodica" class="w-full h-auto" />
-         <div class="text-white absolute bottom-0 left-0 w-full 
+          <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
             <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Melodica</h3>
@@ -1796,7 +1793,7 @@
         </div>
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
           <img src="./img/img_tab.svg" alt="AutoQ" class="w-full h-auto" />
-          <div class="text-white absolute bottom-0 left-0 w-full 
+            <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
             <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">AutoQ</h3>
@@ -1805,58 +1802,58 @@
         </div>
         <div class="card relative rounded-3xl overflow-hidden shadow-lg group img-zoom">
           <img src="./img/img_webs.png" alt="Look Who's Cooking" class="w-full h-auto" />
-          <div class="text-white absolute bottom-0 left-0 w-full 
+         <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
             p-8 rounded-b-3xl">
-            <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">AutoQ</h3>
+            <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Look Who’s Cooking</h3>
             <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 
   <!-- ================= Small/Medium screens: Swiper ================= -->
   <div class="lg:hidden mt-10">
     <div id="swiper" class="flex space-x-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth">
-      <!-- repeat cards horizontally -->
-      <div class="card min-w-[80%] md:min-w-[45%] bg-white rounded-3xl overflow-hidden shadow-lg snap-center">
+      <div class="card min-w-[80%] md:min-w-[45%] rounded-3xl overflow-hidden shadow-lg snap-center relative">
         <img src="./img/img_phone.svg" alt="Chilliseeds" />
-        <div class="text-white absolute bottom-0 left-0 w-full 
+       <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
-            p-8 rounded-b-3xl">
-            <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Chilliseeds -3</h3>
-            <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+            p-2 sm:p-4 rounded-b-3xl">
+            <h3 class="text-[18px] mb-1 leading-[25px] font-bold sm:mb-2">Chilliseeds -3</h3>
+            <p class="text-[12px] font-normal leading-[19px] sm:font-semibold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
           </div>
       </div>
-      <div class="card min-w-[80%] md:min-w-[45%] bg-white rounded-3xl overflow-hidden shadow-lg snap-center">
+      <div class="card min-w-[80%] md:min-w-[45%] rounded-3xl overflow-hidden shadow-lg snap-center relative">
         <img src="./img/img_koli.png" alt="Melodica" />
         <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
-            p-8 rounded-b-3xl">
-            <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">Melodica</h3>
-            <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+           p-2 sm:p-4 rounded-b-3xl">
+            <h3 class="text-[18px] mb-1 leading-[25px] font-bold sm:mb-2">Melodica</h3>
+            <p class="text-[12px] font-normal leading-[19px] sm:font-semibold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
           </div>
       </div>
-      <div class="card min-w-[80%] md:min-w-[45%] bg-white rounded-3xl overflow-hidden shadow-lg snap-center">
+      <div class="card min-w-[80%] md:min-w-[45%] rounded-3xl overflow-hidden shadow-lg snap-center relative">
         <img src="./img/img_tab.svg" alt="AutoQ" />
+          <div class="text-white absolute bottom-0 left-0 w-full 
+            bg-black/30 backdrop-blur-md 
+            p-2 sm:p-4 rounded-b-3xl">
+            <h3 class="text-[18px] mb-1 leading-[25px] font-bold sm:mb-2">AutoQ</h3>
+            <p class="text-[12px] font-normal leading-[19px] sm:font-semibold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+          </div>
+      </div>
+  <div class="card min-w-[80%] md:min-w-[45%] rounded-3xl overflow-hidden shadow-lg snap-center relative">
+          <img src="./img/img_webs.png" alt="Look Who's Cooking" class="w-full h-auto" />
          <div class="text-white absolute bottom-0 left-0 w-full 
             bg-black/30 backdrop-blur-md 
-            p-8 rounded-b-3xl">
-            <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">AutoQ</h3>
-            <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
+          p-2 sm:p-4 rounded-b-3xl">
+            <h3 class="text-[18px] mb-1 leading-[25px] font-bold sm:mb-2 ">Look Who’s Cooking</h3>
+            <p class="text-[12px] font-normal leading-[19px] sm:font-semibold">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
           </div>
-      </div>
-      <div class="card min-w-[80%] md:min-w-[45%] bg-white rounded-3xl overflow-hidden shadow-lg snap-center">
-        <img src="./img/img_webs.png" alt="Look Who's Cooking" />
-        <div class="text-white absolute bottom-0 left-0 w-full 
-            bg-black/30 backdrop-blur-md 
-            p-8 rounded-b-3xl">
-            <h3 class="text-[31px] mb-5 leading-[25px] font-black tracking-[-1px]">AutoQ</h3>
-            <p class="text-[13px] font-bold leading-[19px]">WEB DESIGN / RESPONSIVE / ECOMMERCE</p>
-          </div>
-      </div>
-      <!-- add more cards as needed -->
+        </div>
+
     </div>
   </div>
 
@@ -1970,9 +1967,9 @@
 
     <!-- Icon Grid -->
     <section class="sec-width mx-auto">
-      <div class="grid  grid-cols-3  sm:grid-cols-4  md:grid-cols-6 xl:grid-cols-8 lg:gap-10 gap-2 place-items-center text-center">
+      <div class="grid  grid-cols-4  sm:grid-cols-6  md:grid-cols-6 xl:grid-cols-8 lg:gap-10 gap-6 place-items-center text-center">
         <div>
-          <div class="flex items-center justify-center mb-3">
+        <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -1981,7 +1978,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px] p-3 lg:p-6 shadow-black  shadow-1xl  h-[55px]  w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-fin.svg" class="icon-img  mx-auto">
+                    <img src="./img/logos/ic-fin.svg" class="icon-img h-[30px] md:h-[55px]  mx-auto">
                   </div>
                 </div>
               </div>
@@ -1991,7 +1988,7 @@
           <span class="icon-label">Finance</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div class="  grid place-items-center    relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
               <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
@@ -1999,7 +1996,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl  h-[55px]  w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-real.svg" class="icon-img   mx-auto">
+                    <img src="./img/logos/ic-real.svg" class="icon-img h-[30px] md:h-[55px]   mx-auto">
                   </div>
                 </div>
               </div>
@@ -2008,7 +2005,7 @@
           <span class="icon-label">RealEstate</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2017,7 +2014,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl h-[55px] w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-sate.svg" class="icon-img  mx-auto">
+                    <img src="./img/logos/ic-sate.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2026,7 +2023,7 @@
           <span class="icon-label">Travel</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div class="  grid place-items-center   relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
               <div class="rounded-[15px] lg:rounded-[30px] bg-white p-3 shadow-black  ">
@@ -2034,7 +2031,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl  h-[55px]  w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-b2b.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-b2b.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2043,7 +2040,7 @@
           <span class="icon-label">B2B</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2051,8 +2048,8 @@
                 <!-- Inner Card inside Outer -->
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] h-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-edu.svg" class="icon-img   mx-auto">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] h-[50px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
+                    <img src="./img/logos/ic-edu.svg" class="icon-img h-[30px] md:h-[55px]  mx-auto">
                   </div>
                 </div>
               </div>
@@ -2061,7 +2058,7 @@
           <span class="icon-label">Educations</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2070,7 +2067,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-resta.svg" class="icon-img   mx-auto">
+                    <img src="./img/logos/ic-resta.svg" class="icon-img h-[30px] md:h-[55px]  mx-auto">
                   </div>
                 </div>
               </div>
@@ -2079,7 +2076,7 @@
           <span class="icon-label">Restaurants</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2088,7 +2085,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-health.svg" class="icon-img   mx-auto">
+                    <img src="./img/logos/ic-health.svg" class="icon-img h-[30px] md:h-[55px]   mx-auto">
                   </div>
                 </div>
               </div>
@@ -2097,7 +2094,7 @@
           <span class="icon-label">Healthcare</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2106,7 +2103,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-manf.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-manf.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2115,7 +2112,7 @@
           <span class="icon-label">Manafacture</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative  rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2124,7 +2121,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-autom.svg" class="icon-img   mx-auto">
+                    <img src="./img/logos/ic-autom.svg" class="icon-img h-[30px] md:h-[55px]   mx-auto">
                   </div>
                 </div>
               </div>
@@ -2133,7 +2130,7 @@
           <span class="icon-label">Automotive</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2142,7 +2139,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-oil.svg" class="icon-img  mx-auto">
+                    <img src="./img/logos/ic-oil.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2151,7 +2148,7 @@
           <span class="icon-label">Oil & Gas</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2160,7 +2157,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-govern.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-govern.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2169,7 +2166,7 @@
           <span class="icon-label">Government</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2178,7 +2175,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-const.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-const.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2187,7 +2184,7 @@
           <span class="icon-label">Construction</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2196,7 +2193,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-ecom.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-ecom.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2205,7 +2202,7 @@
           <span class="icon-label">eCommerce</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2214,7 +2211,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-telecom.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-telecom.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2223,7 +2220,7 @@
           <span class="icon-label">Communication</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2232,7 +2229,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.2px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-hitech.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-hitech.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2241,7 +2238,7 @@
           <span class="icon-label">Hi-Tech</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2250,7 +2247,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-logis.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-logis.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2259,7 +2256,7 @@
           <span class="icon-label">Logistics</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2268,7 +2265,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-media.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-media.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2277,7 +2274,7 @@
           <span class="icon-label">Medias</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2285,8 +2282,8 @@
                 <!-- Inner Card inside Outer -->
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
-                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] h-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-enter.svg" class="icon-img   mx-auto">
+                  <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] h-[50px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
+                    <img src="./img/logos/ic-enter.svg" class="icon-img h-[30px] md:h-[55px]   mx-auto">
                   </div>
                 </div>
               </div>
@@ -2295,7 +2292,7 @@
           <span class="icon-label">Entertainment</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2304,7 +2301,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-ev.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-ev.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2313,7 +2310,7 @@
           <span class="icon-label">ElectricVehicle</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2322,7 +2319,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-saas.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-saas.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2331,7 +2328,7 @@
           <span class="icon-label">SaaS</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2340,7 +2337,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-social.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-social.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2349,7 +2346,7 @@
           <span class="icon-label">Social Media</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2358,7 +2355,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-aero.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-aero.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2367,7 +2364,7 @@
           <span class="icon-label">Aviations</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="  grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2376,7 +2373,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-agri.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-agri.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2385,7 +2382,7 @@
           <span class="icon-label">Agriculture</span>
         </div>
         <div>
-          <div class="flex items-center justify-center mb-3">
+          <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
             <div
               class="grid place-items-center  shadow-[#16181A1F] shadow-2xl relative rounded-[15px] lg:rounded-[30px] overflow-hidden p-[1px] gradient-border">
@@ -2394,7 +2391,7 @@
                 <div
                   class="relative rounded-[10px] lg:rounded-[20px] overflow-hidden p-[1.5px] gradient-border-rb shadow-[#16181A1F] shadow-1xl ">
                   <div class="bg-white rounded-[10px] lg:rounded-[20px]  p-3 lg:p-6 shadow-black  shadow-1xl w-[55px] md:h-[75px]  md:w-[75px] lg:h-[110px] lg:w-[110px]">
-                    <img src="./img/logos/ic-insure.svg" class="icon-img mx-auto">
+                    <img src="./img/logos/ic-insure.svg" class="icon-img h-[30px] md:h-[55px] mx-auto">
                   </div>
                 </div>
               </div>
@@ -2405,19 +2402,19 @@
       </div>
       <!-- CTA Box -->
          <div
-          class="sec-width mx-auto mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col md:flex-row items-center justify-between gap-4 relative"
+          class="sec-width-lg mx-auto mt-16 p-6 md:p-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col lg:flex-row items-center justify-between gap-4 relative"
           data-aos="zoom-in-up" data-aos-delay="200">
           <div
             class="absolute inset-0 -z-[1] bg-[url(/img/img-con/techstack_curve.png)] bg-center   bg-cover  bg-no-repeat">
           </div>
-          <div class="grid text-center lg:text-start  xl:grid-cols-12 place-items-center">
-            <div class="xl:col-span-1  ">
-              <img src="./img/alogo.png" alt=" " class="animate-bounce">
+          <div class="grid text-center lg:text-start  lg:grid-cols-10 place-items-center">
+            <div class="lg:col-span-1 mt-7 mb-5  md:m-0 ">
+              <img src="./img/alogo.png" alt=" " class="animate-bounce w-20">
             </div>
-            <div class="lg:pl-6 xl:col-span-11">
-              <h3 class="text-[22px] leading-[20px]  md:text-[32px] md:leading-[40px] lg:font-black font-bold">Ready to innovate and
+            <div class="lg:pl-6 lg:col-span-9">
+              <h3 class="text-[22px] leading-[24px]  md:text-[32px] md:leading-[40px] lg:font-black font-bold">Ready to innovate and
                 drive and impact?</h3>
-              <p class="text-[13px] leading-[15px] md:leading-[35px] md:mt-1 mt-5">Transforming Businesses with
+              <p class="text-[13px] leading-[17px] md:leading-[35px] md:mt-1 my-3 lg:my-0">Transforming Businesses with
                 Technology that transcends
                 geographies and Platforms</p>
             </div>
@@ -2425,7 +2422,7 @@
           
           <button class="flex items-center justify-center  group  hover:opacity-90 lg:inline px-4 py-2  
            bg-white shadow-black shadow-md w-[225px] h-[55px] md:w-[270px] md:h-[75px] 
-           overflow-hidden py-3 rounded-[100px] text-black text-[12px] md:text-[17px] font-bold ">
+           overflow-hidden py-3 rounded-[100px] text-black text-[12px] md:text-[17px] font-bold mb-7">
             <span class="flex items-center  justify-center w-full transition-all duration-300">
               <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
               <img src="./img/img-con/ic_faq_rightarrow.svg" alt="Arrow" width="20"
@@ -2480,48 +2477,186 @@
   </div>
 
   <!-- section testimonials  -->
-  <div class="bg-blend-multiply text-gray-900 carousel pt-10" style="
-       background-image: url('/img/img-con/testimonial_top_dotted.svg'),url(/img/img-con/testimonial_bg.svg), url('/img/img-con/testimonial_bottom_dotted.svg');
-       background-size: 35%,cover, 35% ;
-       background-position:  top left,center, bottom right;
-       background-repeat: no-repeat,repeat, no-repeat;
-     ">
+   
+<div class="bg-blend-multiply text-gray-900 pt-10"
+  style="
+    background-image: url('/img/img-con/testimonial_top_dotted.svg'),
+                      url(/img/img-con/testimonial_bg.svg),
+                      url('/img/img-con/testimonial_bottom_dotted.svg');
+    background-size: 35%, cover, 35%;
+    background-position: top left, center, bottom right;
+    background-repeat: no-repeat, repeat, no-repeat;
+  ">
 
-    <section class="sec-width mx-auto px-4 py-20 relative">
-      <img src="./img/alogo.png" alt="Paper Plane"
-        class="absolute top-10 right-[35%] sm:top-10 w-10 lg:w-50 lg:top-60 opacity-80 animate-bounce">
-      <!-- Navigation Arrows -->
-      <div class="  flex items-center space-x-2 absolute lg:right-6 lg:top-60 bottom-20 left-40 lg:bottom-auto lg:left-auto
-            sm:flex md:flex lg:flex xl:flex">
-        <button
-          class="prevBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-          <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
-        </button>
-        <button
-          class="nextBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-          <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
-        </button>
-      </div>
+  <section class="sec-width mx-auto px-4 py-20 relative testimonial-slider">
+    <img src="./img/alogo.png" alt="Paper Plane"
+      class="absolute top-10 right-[35%] sm:top-10 w-10 lg:w-50 lg:top-60 opacity-80 animate-bounce">
 
-      <!-- Header -->
-      <div class="mb-8 text-center lg:text-left">
-        <h5 class="text-[18px] font-semibold leading-[25px] uppercase">
-          <span
-            class="text-transparent bg-clip-text  bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Testimonials</span>
-        </h5>
-        <h2
-          class="text-[20px] tracking-[-1px] md:text-[40px] lg:max-w-2xl leading-[25px] lg:text-[40px] lg:leading-[45px] font-black my-5">
-          What do Client say about Web App Design</h2>
-        <p class=" lg:max-w-2xl  ft-rob text-[17px] leading-[23px]">
-          At Start Designs, our top priority is your satisfaction. Since the day we began, we've been committed to
-          delivering projects with 100% satisfaction for our clients.
-          We achieve this success when we fully comprehend your needs and you reciprocate our understanding.
-        </p>
-      </div>
+    <!-- Navigation Arrows (only visible from lg and above) -->
+    <div
+      class="hidden lg:flex items-center space-x-2 absolute lg:right-6 lg:top-60 bottom-20 left-40 lg:bottom-auto lg:left-auto">
+      <button
+        class="prevBtn testimonial-prev w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+        <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
+      </button>
+      <button
+        class="nextBtn testimonial-next w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+        <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
+      </button>
+    </div>
 
-      <!-- Testimonials Grid -->
-      <!-- testimonial slide  1 -->
-      <div class="grid grid-cols-1   md:grid-cols-2 gap-6 ft-rob  transition-opacity duration-500 project-page">
+    <!-- Header -->
+    <div class="mb-8 text-center lg:text-left">
+      <h5 class="text-[18px] font-semibold leading-[25px] uppercase">
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">
+          Testimonials
+        </span>
+      </h5>
+      <h2
+        class="text-[20px] tracking-[-1px] md:text-[40px] lg:max-w-2xl leading-[25px] lg:text-[40px] lg:leading-[45px] font-black my-5">
+        What do Client say about Web App Design
+      </h2>
+      <p class="lg:max-w-2xl ft-rob text-[17px] leading-[23px]">
+        At Start Designs, our top priority is your satisfaction. Since the day we began, we've been
+        committed to delivering projects with 100% satisfaction for our clients. We achieve this
+        success when we fully comprehend your needs and you reciprocate our understanding.
+      </p>
+    </div>
+
+<!-- ================= Large screens: Slide sets ================= -->
+<div class="hidden lg:block mt-10">
+
+  <!-- Slide set 1 -->
+  <div class="testimonial-slide block opacity-100 transition-opacity duration-500">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Testimonial Card -->
+       <div class="mt-6">
+
+          <!-- Top Row (Full Width) -->
+          <div class="bg-gray-100 rounded-[40px] shadow-lg  py-10  p-6 w-full">
+            <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+            <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+              "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
+              expectation, will definitely cooperate with Ravi again"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                <img src="./img/sm-icon/profile_04.svg" alt="">
+              </div>
+              <div>
+                <p class="font-bold text-[15px]">arigosoft</p>
+                <p class="text-xs text-[#666666]">china</p>
+                <p class="text-xs italic">Travel Booking</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1   my-6  lg:grid-cols-2 gap-6">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-[40px] shadow-lg  py-10 p-6 w-full bg-[#f0edf9] ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Very good web designer. Will continue to work with. He understand what you want is determine to do the
+                job right. Will hire him again for design work!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_05.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">David McClellan</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Social Catfish</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 w-full  ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
+                Designs, A Nice Guy To Work With!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_06.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">Moe Meyer</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Image Verify</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div>
+          <div class="grid grid-cols-1  my-6  lg:grid-cols-2 gap-6">
+
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-[40px] shadow-lg   py-10  p-6 w-full  ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Very good web designer. Will continue to work with. He understand what you want is determine to do the
+                job right. Will hire him again for design work!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_01.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">David McClellan</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Social Catfish</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 w-full  ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
+                Designs, A Nice Guy To Work With!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_02.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">Moe Meyer</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Image Verify</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Bottom Row (Full Width) -->
+          <div class="bg-gray-100 rounded-[40px] shadow-lg   py-10 p-6 w-full">
+            <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+            <p class="text-[17px] text-[#666666] mb-6 leading-[21px] ">
+              "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
+              expectation, will definitely cooperate with Ravi again"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                <img src="./img/sm-icon/profile_03.svg" alt="">
+              </div>
+              <div>
+                <p class="font-bold text-[15px]">arigosoft</p>
+                <p class="text-xs text-[#666666]">china</p>
+                <p class="text-xs italic">Travel Booking</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- Slide set 2 -->
+  <div class="testimonial-slide block opacity-100 transition-opacity duration-500">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Add 4 more testimonial cards here -->
         <div>
           <div class="grid grid-cols-1  my-6  lg:grid-cols-2 gap-6">
 
@@ -2634,7 +2769,7 @@
                   <img src="./img/sm-icon/profile_06.svg" alt="">
                 </div>
                 <div>
-                  <p class="font-bold text-[15px]">Moe Meyer</p>
+                  <p class="font-bold text-[15px]">222Moe Meyer</p>
                   <p class="text-xs text-[#666666]">United States</p>
                   <p class="text-xs italic">Image Verify</p>
                 </div>
@@ -2642,192 +2777,13 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- testimonial slide  2 -->
-      <div class="grid grid-cols-1   md:grid-cols-2 gap-6 ft-rob  hidden transition-opacity duration-500 project-page">
-        <div>
-          <div class="grid grid-cols-1  my-6  lg:grid-cols-2 gap-6">
-            <!-- Testimonial 2 -->
-            <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 w-full  ">
-              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
-              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
-                "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
-                Designs, A Nice Guy To Work With!"
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
-                  <img src="./img/sm-icon/profile_02.svg" alt="">
-                </div>
-                <div>
-                  <p class="font-bold text-[15px]">Moe Meyer</p>
-                  <p class="text-xs text-[#666666]">United States</p>
-                  <p class="text-xs italic">Image Verify</p>
-                </div>
-              </div>
-            </div>
-            <!-- Testimonial 1 -->
-            <div class="bg-white rounded-[40px] shadow-lg   py-10  p-6 w-full  ">
-              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
-              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
-                "Very good web designer. Will continue to work with. He understand what you want is determine to do the
-                job right. Will hire him again for design work!"
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
-                  <img src="./img/sm-icon/profile_04.svg" alt="">
-                </div>
-                <div>
-                  <p class="font-bold text-[15px]">David McClellan</p>
-                  <p class="text-xs text-[#666666]">United States</p>
-                  <p class="text-xs italic">Social Catfish</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Bottom Row (Full Width) -->
-          <div class="bg-gray-100 rounded-[40px] shadow-lg   py-10 p-6 w-full">
-            <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
-            <p class="text-[17px] text-[#666666] mb-6 leading-[21px] ">
-              "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
-              expectation, will definitely cooperate with Ravi again"
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
-                <img src="./img/sm-icon/profile_06.svg" alt="">
-              </div>
-              <div>
-                <p class="font-bold text-[15px]">arigosoft</p>
-                <p class="text-xs text-[#666666]">china</p>
-                <p class="text-xs italic">Travel Booking</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-6">
-
-          <!-- Top Row (Full Width) -->
-          <div class="bg-gray-100 rounded-[40px] shadow-lg  py-10  p-6 w-full">
-            <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
-            <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
-              "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
-              expectation, will definitely cooperate with Ravi again"
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
-                <img src="./img/sm-icon/profile_01.svg" alt="">
-              </div>
-              <div>
-                <p class="font-bold text-[15px]">arigosoft</p>
-                <p class="text-xs text-[#666666]">china</p>
-                <p class="text-xs italic">Travel Booking</p>
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-cols-1   my-6  lg:grid-cols-2 gap-6">
-            <!-- Testimonial 2 -->
-            <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 w-full  ">
-              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
-              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
-                "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
-                Designs, A Nice Guy To Work With!"
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
-                  <img src="./img/sm-icon/profile_05.svg" alt="">
-                </div>
-                <div>
-                  <p class="font-bold text-[15px]">Moe Meyer</p>
-                  <p class="text-xs text-[#666666]">United States</p>
-                  <p class="text-xs italic">Image Verify</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testimonial 1 -->
-            <div class="bg-white rounded-[40px] shadow-lg  py-10 p-6 w-full bg-[#f0edf9] ">
-              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
-              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
-                "Very good web designer. Will continue to work with. He understand what you want is determine to do the
-                job right. Will hire him again for design work!"
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
-                  <img src="./img/sm-icon/profile_03.svg" alt="">
-                </div>
-                <div>
-                  <p class="font-bold text-[15px]">David McClellan</p>
-                  <p class="text-xs text-[#666666]">United States</p>
-                  <p class="text-xs italic">Social Catfish</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <!-- testimonial slide  3 -->
-      <div class="grid grid-cols-1   md:grid-cols-2 gap-6 ft-rob hidden transition-opacity duration-500 project-page">
-        <div>
-          <div class="grid grid-cols-1  my-6  lg:grid-cols-2 gap-6">
-
-            <!-- Testimonial 1 -->
-            <div class="bg-white rounded-[40px] shadow-lg   py-10  p-6 w-full  ">
-              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
-              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
-                "Very good web designer. Will continue to work with. He understand what you want is determine to do the
-                job right. Will hire him again for design work!"
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
-                  <img src="./img/sm-icon/profile_02.svg" alt="">
-                </div>
-                <div>
-                  <p class="font-bold text-[15px]">David McClellan</p>
-                  <p class="text-xs text-[#666666]">United States</p>
-                  <p class="text-xs italic">Social Catfish</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 w-full  ">
-              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
-              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
-                "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
-                Designs, A Nice Guy To Work With!"
-              </p>
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
-                  <img src="./img/sm-icon/profile_01.svg" alt="">
-                </div>
-                <div>
-                  <p class="font-bold text-[15px]">Moe Meyer</p>
-                  <p class="text-xs text-[#666666]">United States</p>
-                  <p class="text-xs italic">Image Verify</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Bottom Row (Full Width) -->
-          <div class="bg-gray-100 rounded-[40px] shadow-lg   py-10 p-6 w-full">
-            <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
-            <p class="text-[17px] text-[#666666] mb-6 leading-[21px] ">
-              "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
-              expectation, will definitely cooperate with Ravi again"
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
-                <img src="./img/sm-icon/profile_02.svg" alt="">
-              </div>
-              <div>
-                <p class="font-bold text-[15px]">arigosoft</p>
-                <p class="text-xs text-[#666666]">china</p>
-                <p class="text-xs italic">Travel Booking</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-6">
+    </div>
+  </div>
+  <!-- Slide set 3 -->
+  <div class="testimonial-slide block opacity-100 transition-opacity duration-500">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Add 4 more testimonial cards here -->
+         <div class="mt-6">
 
           <!-- Top Row (Full Width) -->
           <div class="bg-gray-100 rounded-[40px] shadow-lg  py-10  p-6 w-full">
@@ -2876,7 +2832,7 @@
               </p>
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
-                  <img src="./img/sm-icon/profile_04.svg" alt="">
+                  <img src="./img/sm-icon/profile_06.svg" alt="">
                 </div>
                 <div>
                   <p class="font-bold text-[15px]">Moe Meyer</p>
@@ -2887,131 +2843,396 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+          <div>
+          <div class="grid grid-cols-1  my-6  lg:grid-cols-2 gap-6">
+
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-[40px] shadow-lg   py-10  p-6 w-full  ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Very good web designer. Will continue to work with. He understand what you want is determine to do the
+                job right. Will hire him again for design work!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_01.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">David McClellan</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Social Catfish</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 w-full  ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
+                Designs, A Nice Guy To Work With!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_02.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">Moe Meyer</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Image Verify</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Bottom Row (Full Width) -->
+          <div class="bg-gray-100 rounded-[40px] shadow-lg   py-10 p-6 w-full">
+            <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+            <p class="text-[17px] text-[#666666] mb-6 leading-[21px] ">
+              "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
+              expectation, will definitely cooperate with Ravi again"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                <img src="./img/sm-icon/profile_03.svg" alt="">
+              </div>
+              <div>
+                <p class="font-bold text-[15px]">arigosoft</p>
+                <p class="text-xs text-[#666666]">china</p>
+                <p class="text-xs italic">Travel Booking</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
   </div>
+</div>
+
+<!-- ================= Small/Medium screens: Horizontal scroll ================= -->
+<div class="lg:hidden mt-10">
+  <div id="testimonial-slide"
+       class="flex p-5 space-x-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth">
+
+    <!-- Testimonial Card -->
+    <div class="testimonial-card min-w-[85%] md:min-w-[45%]    snap-center">
+      <div class="bg-gray-100 rounded-[40px] shadow-lg   py-10 p-6 h-full flex flex-col">
+            <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+            <p class="text-[17px] text-[#666666] mb-6 leading-[21px] ">
+              "I am very pleased with the work delivered by Ravi, great communication, and the result always beyond my
+              expectation, will definitely cooperate with Ravi again"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                <img src="./img/sm-icon/profile_03.svg" alt="">
+              </div>
+              <div>
+                <p class="font-bold text-[15px]">arigosoft</p>
+                <p class="text-xs text-[#666666]">china</p>
+                <p class="text-xs italic">Travel Booking</p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="testimonial-card min-w-[85%] md:min-w-[45%]    snap-center">
+      <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 h-full flex flex-col  ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
+                Designs, A Nice Guy To Work With!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_02.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">Moe Meyer</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Image Verify</p>
+                </div>
+              </div>
+            </div>
+    </div>
+
+    <div class="testimonial-card min-w-[85%] md:min-w-[45%]     snap-center">
+          <div class="bg-white rounded-[40px] shadow-lg   py-10  p-6 h-full flex flex-col  ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Very good web designer. Will continue to work with. He understand what you want is determine to do the
+                job right. Will hire him again for design work!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_01.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">David McClellan</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Social Catfish</p>
+                </div>
+              </div>
+            </div>
+    </div>
+    <div class="testimonial-card min-w-[85%] md:min-w-[45%]     snap-center">
+      <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 h-full flex flex-col  ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
+                Designs, A Nice Guy To Work With!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_02.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">Moe Meyer</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Image Verify</p>
+                </div>
+              </div>
+            </div>
+    </div>
+    <div class="testimonial-card min-w-[85%] md:min-w-[45%]     snap-center">
+          <div class="bg-white rounded-[40px] shadow-lg   py-10  p-6 h-full flex flex-col  ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Very good web designer. Will continue to work with. He understand what you want is determine to do the
+                job right. Will hire him again for design work!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_01.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">David McClellan</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Social Catfish</p>
+                </div>
+              </div>
+            </div>
+    </div>
+    <div class="testimonial-card min-w-[85%] md:min-w-[45%]     snap-center">
+      <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 h-full flex flex-col  ">
+              <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
+              <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
+                "Great Job, Very Professional, All Communications Were Quick And Responsive. He Gives Many Alternatives
+                Designs, A Nice Guy To Work With!"
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white p-1 border-1 border-gray">
+                  <img src="./img/sm-icon/profile_02.svg" alt="">
+                </div>
+                <div>
+                  <p class="font-bold text-[15px]">Moe Meyer</p>
+                  <p class="text-xs text-[#666666]">United States</p>
+                  <p class="text-xs italic">Image Verify</p>
+                </div>
+              </div>
+            </div>
+    </div>
+
+    <!-- Add more testimonials -->
+  </div>
+</div>
+
+  </section>
+
+
+</div>
 
   <!-- Video Testimonial section  -->
-  <div class="bg-cover text-white bg-[url(./img/video_bg.svg)]    bg-no-repeat carousel  "
-    style="background-image: url('./img/video_bg.svg'),url('/img/icons/fv_dotted_left\(1\).svg'), url('./img/img-con/video_curve_top.png'), url('./img/img-con/video_curve_botom.png'); 
-     background-blend-mode:  lighten;background-size:cover,30%,50%,50%; background-repeat:no-repeat; background-position:center,top left, top right,bottom left">
-    <section class="sec-width mx-auto px-6 py-16 md:py-20    relative">
-      <!-- Arrows -->
-      <div class="flex items-center space-x-2 absolute lg:right-10 lg:top-40 bottom-10 left-40 lg:bottom-auto lg:left-auto
-            sm:flex md:flex lg:flex xl:flex">
-        <button
-          class="prevBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-          <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
-        </button>
-        <button
-          class="nextBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
-          <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
-        </button>
-      </div>
+<div class="bg-cover text-white carousel"
+  style="background-image: url('./img/video_bg.svg'),
+  url('/img/icons/fv_dotted_left(1).svg'),
+  url('./img/img-con/video_curve_top.png'),
+  url('./img/img-con/video_curve_botom.png');
+  background-blend-mode: lighten; background-size: cover,30%,50%,50%;
+  background-repeat: no-repeat; background-position: center,top left, top right,bottom left">
 
-      <!-- Heading -->
-      <div class="mb-12 mt-10">
-        <h4 class="uppercase text-[18px] leading-[25px] mb-5 font-semibold">Video Testimonial</h4>
-        <h2
-          class="ft-vit font-extrabold text-[20px] leading-[21px] lg:text-[50px] lg:leading-[53px] max-w-6xl  lg:text-left tracking-[-1px]">
-          Our Clients are superheroes. We priorities
-          Delivering excellent Products, through
-          Training and Optimal Excusions
-        </h2>
-      </div>
-
-      <!-- Video Testimonials 1-->
-      <div class="flex flex-col xl:flex-row gap-6 justify-center mb-10 project-page">
-        <!-- Card 1 -->
-        <div class="relative mx-auto w-full max-w-[650px] rounded-2xl overflow-hidden ">
-          <!-- Background Image -->
-          <img src="./img/img-con/video_test_1.svg" alt="testimonial background" class="w-full h-full object-contain">
-
-          <!-- Content Overlay -->
-          <a class="popup-youtube absolute inset-0" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
-            <div class="absolute inset-0 flex flex-col justify-between p-6 text-white z-10 px-10">
-
-              <!-- Logo -->
-              <div class="flex items-center space-x-2">
-                <img src="./img/icons/test_video_logo.svg" alt="amazefox" class=" ">
-
-              </div>
-
-              <!-- Quote -->
-              <img src="./img/img-con/c_review_quote.svg" alt="" width="75" class="opacity-40 ">
-              <div class="grid-cols-2 grid  mt-2 w-[80%] hidden lg:grid">
-                <p
-                  class="text-[18px] leading-[23px] text-purple-200 font-semibold border-b-[0.5px] border-[#9BA5e3] border-solid   pb-10 ">
-                  Our Clients are superheroes. We prioritize delivering excellent products,
-                  through training and optimal executions.
-                </p>
-              </div>
-
-              <!-- Client Info -->
-              <div class=" text-white hidden lg:block">
-                <p class="font-bold  text-[16px]">truecare24</p>
-                <p class="text-[13px]  ">CTO, Healthcare Solutions</p>
-              </div>
-            </div>
-
-            <!-- Play Button -->
-            <button class="absolute inset-0 flex items-center justify-center z-20">
-              <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="currentColor"
-                  viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </button>
-          </a>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="relative mx-auto w-full max-w-[650px] rounded-2xl overflow-hidden ">
-          <!-- Background Image -->
-          <img src="./img/img-con/video_test_2.svg" alt="testimonial background" class="w-full h-full object-contain">
-
-          <!-- Content Overlay -->
-          <a class="popup-youtube absolute inset-0" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
-            <div class="absolute inset-0 flex flex-col justify-between p-6 text-white z-10 px-10">
-
-              <!-- Logo -->
-              <div class="flex items-center space-x-2">
-                <img src="./img/icons/test_video_logo.svg" alt="amazefox" class=" ">
-
-              </div>
-
-              <!-- Quote -->
-              <img src="./img/img-con/c_review_quote.svg" alt="" width="75" class="opacity-40 ">
-              <div class="grid-cols-2 grid  mt-2 w-[80%] hidden lg:grid">
-                <p
-                  class="text-[18px] leading-[23px] text-purple-200 font-semibold border-b-[0.5px] border-[#9BA5e3] border-solid   pb-10 ">
-                  Our Clients are superheroes. We prioritize delivering excellent products,
-                  through training and optimal executions.
-                </p>
-              </div>
-
-              <!-- Client Info -->
-              <div class=" text-white hidden lg:block">
-                <p class="font-bold  text-[16px]">truecare24</p>
-                <p class="text-[13px]  ">CTO, Healthcare Solutions</p>
-              </div>
-            </div>
-
-            <!-- Play Button -->
-            <button class="absolute inset-0 flex items-center justify-center z-20">
-              <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="currentColor"
-                  viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </button>
-          </a>
-        </div>
-      </div>
-    </section>
+ <section class="sec-width mx-auto px-6 py-16 md:py-20 relative">
+  <!-- Arrows (only show lg and above) -->
+  <div
+    class="hidden lg:flex items-center space-x-2 absolute lg:right-10 lg:top-40 ">      
+    <button
+      class=" swiper-button-prev prevBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+      <img src="./img/img-con/p_rightarrow.svg" alt="" width="20">
+    </button>
+   <button
+      class="swiper-button-next nextBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
+      <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
+    </button>
   </div>
+
+  <!-- Heading -->
+  <div class="mb-12 mt-10">
+    <h4 class="uppercase text-[18px] leading-[25px] mb-5 font-semibold">Video Testimonial</h4>
+    <h2
+      class="ft-vit font-extrabold text-[20px] leading-[21px] lg:text-[50px] lg:leading-[53px] max-w-6xl tracking-[-1px]">
+      Our Clients are superheroes. We prioritise Delivering excellent Products,
+      through Training and Optimal Excursions
+    </h2>
+  </div>
+
+ <!-- Swiper Container -->
+  <div class="swiper video-swiper relative">
+    <div class="swiper-wrapper">
+
+      <!-- Slide Example -->
+      <div class="swiper-slide">
+        <div class="relative w-full max-w-[650px] rounded-2xl overflow-hidden mx-auto">
+          <img src="./img/img-con/video_test_1.svg" class="w-full object-contain" alt="">
+          <a class="popup-youtube absolute inset-0" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+            <div class="absolute inset-0 flex flex-col justify-between p-6 text-white z-10 px-10">
+              <div class="flex items-center space-x-2">
+                <img src="./img/icons/test_video_logo.svg" alt="amazefox">
+              </div>
+              <img src="./img/img-con/c_review_quote.svg" alt="" width="75" class="opacity-40">
+              <!-- Text always visible -->
+              <div class="grid grid-cols-2 mt-2 w-[80%]">
+                <p class="text-[14px] md:text-[18px] leading-[18px] md:leading-[23px] text-purple-200 font-semibold border-b border-[#9BA5e3] pb-10">
+                  Our Clients are superheroes. We prioritize delivering excellent products, through training and optimal executions.
+                </p>
+              </div>
+              <div>
+                <p class="font-bold text-[12px] md:text-[16px]">truecare24</p>
+                <p class="text-[12px] md:text-[13px]">CTO, Healthcare Solutions</p>
+              </div>
+            </div>
+            <button class="absolute inset-0 flex items-center justify-center z-20">
+              <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="relative w-full max-w-[650px] rounded-2xl overflow-hidden mx-auto">
+          <img src="./img/img-con/video_test_2.svg" class="w-full object-contain" alt="">
+          <a class="popup-youtube absolute inset-0" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+            <div class="absolute inset-0 flex flex-col justify-between p-6 text-white z-10 px-10">
+              <div class="flex items-center space-x-2">
+                <img src="./img/icons/test_video_logo.svg" alt="amazefox">
+              </div>
+              <img src="./img/img-con/c_review_quote.svg" alt="" width="75" class="opacity-40">
+              <!-- Text always visible -->
+              <div class="grid grid-cols-2 mt-2 w-[80%]">
+                <p class="text-[14px] md:text-[18px] leading-[18px] md:leading-[23px] text-purple-200 font-semibold border-b border-[#9BA5e3] pb-10">
+                  Our Clients are superheroes. We prioritize delivering excellent products, through training and optimal executions.
+                </p>
+              </div>
+              <div>
+                <p class="font-bold text-[12px] md:text-[16px]">truecare24</p>
+                <p class="text-[12px] md:text-[13px]">CTO, Healthcare Solutions</p>
+              </div>
+            </div>
+            <button class="absolute inset-0 flex items-center justify-center z-20">
+              <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="relative w-full max-w-[650px] rounded-2xl overflow-hidden mx-auto">
+          <img src="./img/img-con/video_test_1.svg" class="w-full object-contain" alt="">
+          <a class="popup-youtube absolute inset-0" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+            <div class="absolute inset-0 flex flex-col justify-between p-6 text-white z-10 px-10">
+              <div class="flex items-center space-x-2">
+                <img src="./img/icons/test_video_logo.svg" alt="amazefox">
+              </div>
+              <img src="./img/img-con/c_review_quote.svg" alt="" width="75" class="opacity-40">
+              <!-- Text always visible -->
+              <div class="grid grid-cols-2 mt-2 w-[80%]">
+                <p class="text-[14px] md:text-[18px] leading-[18px] md:leading-[23px] text-purple-200 font-semibold border-b border-[#9BA5e3] pb-10">
+                  Our Clients are superheroes. We prioritize delivering excellent products, through training and optimal executions.
+                </p>
+              </div>
+              <div>
+                <p class="font-bold text-[12px] md:text-[16px]">truecare24</p>
+                <p class="text-[12px] md:text-[13px]">CTO, Healthcare Solutions</p>
+              </div>
+            </div>
+            <button class="absolute inset-0 flex items-center justify-center z-20">
+              <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="relative w-full max-w-[650px] rounded-2xl overflow-hidden mx-auto">
+          <img src="./img/img-con/video_test_2.svg" class="w-full object-contain" alt="">
+          <a class="popup-youtube absolute inset-0" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
+            <div class="absolute inset-0 flex flex-col justify-between p-6 text-white z-10 px-10">
+              <div class="flex items-center space-x-2">
+                <img src="./img/icons/test_video_logo.svg" alt="amazefox">
+              </div>
+              <img src="./img/img-con/c_review_quote.svg" alt="" width="75" class="opacity-40">
+              <!-- Text always visible -->
+              <div class="grid grid-cols-2 mt-2 w-[80%]">
+                <p class="text-[14px] md:text-[18px] leading-[18px] md:leading-[23px] text-purple-200 font-semibold border-b border-[#9BA5e3] pb-10">
+                  Our Clients are superheroes. We prioritize delivering excellent products, through training and optimal executions.
+                </p>
+              </div>
+              <div>
+                <p class="font-bold text-[12px] md:text-[16px]">truecare24</p>
+                <p class="text-[12px] md:text-[13px]">CTO, Healthcare Solutions</p>
+              </div>
+            </div>
+            <button class="absolute inset-0 flex items-center justify-center z-20">
+              <div class="bg-black bg-opacity-50 p-4 rounded-full hover:bg-opacity-70 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Add more swiper-slide for each video -->
+    </div>
+
+  </div>
+</section>
+
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".video-swiper", {
+    loop: true,
+    spaceBetween: 24,
+    slidesPerView: 1, // default for mobile
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 2, // desktop shows 2 slides per view
+        autoplay: false,   // disable autoplay on lg and above
+      },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 
   <!--Features - what make us section  -->
   <div class=" relative bg-no-repeat w-full bg-[length:100%_auto] text-white pt-10" style="
@@ -3948,46 +4169,6 @@
     // Swap a logo every 1 second
     setInterval(swapRandomLogo, 500);
   </script>
-  <!-- project page script  -->
-<script>
-  // Large screen slides
-  const pages = document.querySelectorAll('.project-page');
-  let currentPage = 0;
-  function showPage(index) {
-    pages.forEach((p, i) => {
-      p.style.opacity = (i === index) ? '1' : '0';
-      p.style.zIndex = (i === index) ? '1' : '0';
-    });
-    // animate cards
-    pages[index].querySelectorAll('.card').forEach(card => {
-      card.classList.add('animate-card');
-      setTimeout(() => card.classList.remove('animate-card'), 700);
-    });
-  }
-  document.querySelector('.nextBtn')?.addEventListener('click', () => {
-    currentPage = (currentPage + 1) % pages.length;
-    showPage(currentPage);
-  });
-  document.querySelector('.prevBtn')?.addEventListener('click', () => {
-    currentPage = (currentPage - 1 + pages.length) % pages.length;
-    showPage(currentPage);
-  });
-  showPage(currentPage);
-
-  // Small/Medium swiper autoplay
-  const swiper = document.getElementById('swiper');
-  let scrollX = 0;
-  function autoScroll() {
-    if (!swiper) return;
-    const cardWidth = swiper.children[0].offsetWidth + 16;
-    scrollX += cardWidth;
-    if (scrollX >= swiper.scrollWidth - swiper.clientWidth) scrollX = 0;
-    swiper.scrollTo({ left: scrollX, behavior: 'smooth' });
-  }
-  let play = setInterval(autoScroll, 3000);
-  swiper?.addEventListener('mouseenter', () => clearInterval(play));
-  swiper?.addEventListener('mouseleave', () => play = setInterval(autoScroll, 3000));
-</script>
   <script>
     const steps = document.querySelectorAll("#steps > div");
     const stepImage = document.getElementById("stepImage");
@@ -4099,6 +4280,141 @@
     // Initialize
     showSlide(index);
   </script>
+
+<!-- testimonial screen slider -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const slides = document.querySelectorAll(".testimonial-slide");
+      const nextBtn = document.querySelector(".testimonial-next");
+      const prevBtn = document.querySelector(".testimonial-prev");
+      let current = 0;
+      let autoPlay;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("hidden", i !== index);
+        });
+      }
+
+      function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }
+
+      function prevSlide() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      }
+
+      if (nextBtn && prevBtn) {
+        nextBtn.addEventListener("click", () => {
+          nextSlide();
+          resetAutoplay();
+        });
+
+        prevBtn.addEventListener("click", () => {
+          prevSlide();
+          resetAutoplay();
+        });
+      }
+
+      function startAutoplay() {
+        if (window.innerWidth < 1024) { // autoplay only below lg
+          autoPlay = setInterval(nextSlide, 4000);
+        }
+      }
+
+      function resetAutoplay() {
+        clearInterval(autoPlay);
+        startAutoplay();
+      }
+
+      // Init
+      showSlide(current);
+      startAutoplay();
+
+      // Restart autoplay on resize
+      window.addEventListener("resize", () => {
+        clearInterval(autoPlay);
+        startAutoplay();
+      });
+    });
+    
+  </script>
+
+ <script>
+  // project Large screen slides
+
+const pages = document.querySelectorAll('.project-page');
+let currentPage = 0;
+
+function showPage(index) {
+  pages.forEach((p, i) => {
+    if (i === index) {
+      p.classList.remove('hidden');
+      // Wait a tick before adding "active" for smooth fade-in
+      requestAnimationFrame(() => p.classList.add('active'));
+    } else {
+      p.classList.remove('active');
+      // After fade-out finishes, hide element
+      setTimeout(() => {
+        if (!p.classList.contains('active')) {
+          p.classList.add('hidden');
+        }
+      }, 500);
+    }
+  });
+
+  // Animate cards
+  pages[index].querySelectorAll('.card').forEach(card => {
+    card.classList.add('animate-card');
+    setTimeout(() => card.classList.remove('animate-card'), 700);
+  });
+}
+
+// Next / Prev buttons
+document.querySelector('.nextBtn')?.addEventListener('click', () => {
+  currentPage = (currentPage + 1) % 3;
+  showPage(currentPage);
+});
+document.querySelector('.prevBtn')?.addEventListener('click', () => {
+  currentPage = (currentPage - 1 + pages.length) % 3;
+  showPage(currentPage);
+});
+
+// Init
+showPage(currentPage);
+ 
+// Small/Medium swiper autoplay
+const swipers = document.getElementById('swiper');
+let currentIndex = 0;
+
+function autoScroll() {
+  if (!swipers) return;
+
+  const children = swipers.children;
+  if (children.length === 0) return;
+
+  // Width of one card including gap (margin-right or Tailwind space-x-4 ~16px)
+  const cardWidth = children[0].offsetWidth + 16;
+
+  swipers.scrollTo({
+    left: currentIndex * cardWidth,
+    behavior: 'smooth'
+  });
+
+  currentIndex++;
+  if (currentIndex >= children.length) currentIndex = 0; // loop back
+}
+
+let play = setInterval(autoScroll, 3000);
+
+// Pause on hover
+swipers?.addEventListener('mouseenter', () => clearInterval(play));
+swipers?.addEventListener('mouseleave', () => play = setInterval(autoScroll, 3000));
+
+</script>
 <style>
   .scrollbar-hide::-webkit-scrollbar { display: none; }
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
@@ -4113,7 +4429,22 @@
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
   }
+  .project-page {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.project-page.active {
+  opacity: 1;
+}
+.animate-card {
+  animation: fadeScale 0.7s ease forwards;
+}
+@keyframes fadeScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
 </style>
+ 
 </body>
 
 </html>
