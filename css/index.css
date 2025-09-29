@@ -8,7 +8,6 @@
 
 
 /* country list in contact form  */
-
 .intl-tel-input,
 .iti {
   width: 100%;
@@ -69,7 +68,6 @@ body {
   }
 }
 
-
 .footer li {
   font-family: "Roboto" !important;
   font-weight: 400;
@@ -116,7 +114,6 @@ body {
   height: 30px;
   width: auto;
 }
-
 
 .icon-label {
   font-family: "Roboto" !important;
@@ -232,7 +229,7 @@ body {
   #logo-track img {
     height: 40px;
   }
-    .vid-text{
+  .vid-text{
     font-size: 11px;
     line-height: 13px;
     padding-bottom: 25px;
@@ -283,7 +280,7 @@ body {
   }
 
   .bg-black .sec-width {
-    width: 94%;
+    width: 92%;
     margin: 0 auto;
   }
 }
@@ -337,6 +334,11 @@ body {
     font-size: 18px;
     line-height: 22px;
     padding-bottom: 15px;
+  }
+  .footer li {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 2px;
   }
 }
 @media screen and (max-width:560px) {
