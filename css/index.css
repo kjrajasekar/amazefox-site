@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-
 /* country list in contact form  */
 .intl-tel-input,
 .iti {
@@ -16,9 +15,18 @@
 .iti__country-list {
   color: black !important;
   background-color: white !important;
+ 
+}
+.iti__selected-flag{
+   border-radius: 10px;
+   background-color: white !important;
+   
 }
 
-/* country list in contact form  */
+/* end - country list in contact form  */
+
+
+
 .sec-width {
   max-width: 87.5rem;
 }
@@ -124,7 +132,6 @@ body {
 
 /* Custom flicker keyframes */
 @keyframes flicker {
-
   0%,
   100% {
     opacity: 1;
@@ -194,7 +201,6 @@ body {
   clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
 }
 
-
 .active-step {
   background-color: #720C7D;
   color: white;
@@ -248,7 +254,9 @@ body {
     width: 94%;
     margin: 0 auto;
   }
+ 
 }
+
 
 @media screen and (max-width: 992px) {
   .sec-width {
@@ -257,7 +265,7 @@ body {
   }
 
   .services .sec-width {
-    width: 90%;
+    width: 94%;
     margin: 20px auto;
   }
   .feature .sec-width {
@@ -307,21 +315,23 @@ body {
   }
 
   .video-test .sec-width {
-    width: 95%;
+    width: 92%;
   }
   .services .sec-width {
-    width: 90%;
+    width: 92%;
+    margin: 20px auto;
+  }
+    .feature .sec-width {
+    width: 92%;
     margin: 20px auto;
   }
   .icon-label {
- 
-  font-size: 12px;
+  font-size: 11px;
   line-height: 20px;
 }
 }
 
 @media screen and (max-width:768px) {
-
    .vid-text{
     font-size: 10px;
     line-height: 12px;
@@ -356,7 +366,6 @@ body {
     padding-bottom: 13px;
   }
  
-  
 }
 
 
