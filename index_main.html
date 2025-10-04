@@ -33,7 +33,7 @@
             event.preventDefault();
         }
     });  
-  </script>     
+  </script>    
   <script>
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
@@ -131,7 +131,7 @@
       x-data="{ open: false, megaOpen: false, activeTab: null }"
       class="relative bg-white px-4 py-4 xl:px-10 xl:py-6 transition duration-300">
 
-      <div class="sec-width mx-auto flex  justify-between items-center">
+      <div class="sec-width-lg mx-auto flex  justify-between items-center">
         <!-- Left side (Mobile & Tablet: Menu + Logo) -->
         <div class="flex items-center gap-4 md:gap-4">
           <!-- Mobile Menu Icon -->
@@ -185,7 +185,7 @@
         x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4"
         x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200"
         x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
-        class="hidden absolute inset-x-0 left-0 top-full max-w-[100%] bg-white shadow-lg border-t border-gray-200 z-50 overflow-visible">
+        class=" absolute inset-x-0 left-0 top-full max-w-[100%] bg-white shadow-lg border-t border-gray-200 z-50 overflow-visible">
 
         <div x-data="{ activeTab: 'web-app' }" class="flex max-w-[95%] mx-auto text-[14px]">
           <!-- Left Tab -->
@@ -507,16 +507,16 @@
   <!-- Hero Section -->
   <section class="hero w-full bg-no-repeat bg-cover bg-[url(/img/banner_bg_01.svg)] ">
     <section
-      class="relative sec-width md:py-10 lg:px-6 xl:px-0  mx-auto grid grid-cols-1 sm:grid-cols-9 items-center gap-1 ">
+      class="relative sec-width md:py-10 lg:px-6 xl:px-0 xl:mx-10 2xl:mx-auto mx-auto grid grid-cols-1 sm:grid-cols-9 items-center gap-1 ">
       <!-- Left Content -->
-      <div data-aos="fade-left" class="sm:col-span-4 md:col-span-3 py-5 md:py-0">
+      <div data-aos="fade-left" class="sm:col-span-4  xl:col-span-3 py-5 md:py-0">
         <button
           class="px-4  w-[200px] h-[25px] text-[11px] lg:h-[35px] lg:text-[12px] font-bold bg-gradient-to-r from-[#09CF83] ft-vit to-[#A259FF] text-white rounded-full font-medium shadow hover:opacity-90 transition">
           No. 1 Web design Company
         </button>
         <span id="fancy-text"
           class="flex  space-x-[2px] uppercase text-wrap  lg:text-[12px] text-[10px]  lg:font-normal mt-3 lg:mt-5 ft-rob"></span>
-        <h1 class="mt-2 lg:text-[50px] text-[35px] tracking-[-2px] font-black leading-[35px] lg:leading-[45px]">
+        <h1 class="mt-2 lg:text-[40px] xl:text-[50px] text-[35px] tracking-[-2px] font-black leading-[35px] lg:leading-[45px] xl:leading-[50px]">
           <span class="text-transparent  bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Best
             Web App
             Designing</span>
@@ -527,7 +527,7 @@
           drives meaningful interactions that support your business growth.
         </p>
         <button
-          class="flex items-center justify-center  group  hover:opacity-90 md:flex px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-3 shadow-black shadow-sm w-[165px] h-[41px] sm:w-[175px]   lg:w-[250px] lg:h-[75px] overflow-hidden py-3 rounded-[100px] text-white text-[12px] lg:text-[17px] font-bold ">
+          class="flex items-center justify-center  group  hover:opacity-90 md:flex px-4 py-2   bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]  mt-3 shadow-black shadow-sm w-[165px] h-[41px] sm:w-[175px]   lg:w-[220px] lg:h-[65px] xl:w-[250px] xl:h-[75px] overflow-hidden py-3 rounded-[100px] text-white text-[12px] lg:text-[15px] xl:text-[17px] font-bold ">
           <span class="flex items-center  justify-center transition-all duration-300">
             <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
             <img src="./img/img-con/btn_arrow.svg" alt="Arrow" width="20"
@@ -536,7 +536,7 @@
         </button>
       </div>
       <!-- Right Image -->
-      <div data-aos="fade-up" class="relative sm:col-span-5 md:col-span-6  items-center  justify-center py-5 lg:py-0   w-auto h-auto">
+      <div data-aos="fade-up" class="relative sm:col-span-5 xl:col-span-6   items-center  justify-center py-5 lg:py-0   w-auto h-auto">
         <!-- Main device mockup -->
         <img src="./img/banner-right.png" alt="Web App UI" class="w-[100%] mx-auto md:w-full" />
       </div>
@@ -581,14 +581,14 @@
     <!-- Content -->
     <div class="relative z-10 lg:mb-5">
       <!-- Top Section -->
-      <section data-aos="fade-up" class="sec-width mx-auto text-center px-4 py-16 from-gray-100 via-white to-gray-100">
+      <section data-aos="fade-up" class="sec-width mx-auto text-center px-4 py-16 md:py-10 xl:py-16 from-gray-100 via-white to-gray-100">
         <div class="lg:max-w-5xl xl:max-w-7xl mx-auto ft-vit">
           <img src="./img/alogo.png" alt="Logo" class="mx-auto md:w-20 mb-4 animate-bounce">
-          <h1 class="text-[15px] md:text-[18px] lg:mb-4 "><span
+          <h1 class="text-[15px] md:text-[18px] xl:mb-4 "><span
               class="uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]">Web
               App Design </span></h1>
           <h1
-            class="text-[24px] sm:text-[35px] lg:text-[50px] leading-[35px] md:leading-[60px] mb-4 tracking-[-1px] md:tracking-[-2px]">
+            class="text-[24px] sm:text-[35px] xl:text-[50px] leading-[40px] md:leading-[60px] mb-4 tracking-[-1px] md:tracking-[-2px]">
             <span class="font-bold sm:font-black">Web App
               Design
               Services</span>
@@ -611,7 +611,7 @@
         </div>
         <div class="col-span-8 lg:col-span-7 ft-vit">
           <h1
-            class="tracking-[-1px] text-[18px] sm:text-[28px] sm:leading-[32px] lg:text-[40px]  text-left  leading-[18px] sm:leading-[18px] lg:leading-[44px] font-bold sm:font-black mb-2 lg:w-[80%]     ">
+            class="tracking-[-1px] text-[18px] sm:text-[28px] sm:leading-[32px] xl:text-[40px]  text-left  leading-[18px] sm:leading-[18px] xl:leading-[44px] font-bold sm:font-black mb-2 lg:w-[80%]     ">
             Explore Web App Design Services designed around your business needs
           </h1>
           <p class="text-[13px] lg:text-[16px] leading-[16px] sm:text-[15px] sm:leading-[20px]  lg:leading-[21px]   text-[#666666]">
@@ -637,7 +637,7 @@
               background-repeat: no-repeat;">
 
           <!-- Left Side (Always visible) -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 sm:my-0   text-start">
+          <div class="lg:col-span-4 xl:col-span-3 ft-vit p-5 my-5 sm:my-0   text-start">
             <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black 
             mb-4 lg:mb-4 tracking-[-1px]">UI / UX Design</h3>
             <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
@@ -659,8 +659,8 @@
           </div>
 
           <!-- Middle Side (Only visible on lg and above) -->
-          <div class="hidden lg:block lg:col-span-4   ">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
+          <div class="hidden lg:block lg:col-span-3 xl:col-span-4  ">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 text-sm text-gray-700 ">
               <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Website Design </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile App Design </li>
@@ -670,7 +670,7 @@
                 </li>
               </ul>
 
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+              <ul class="hidden xl:block space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Landing Page Design</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> SaaS Platform Design</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Wearable App Design</li>
@@ -704,7 +704,7 @@
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 sm:my-0   text-start">
+          <div class="lg:col-span-4 xl:col-span-3 ft-vit p-5 my-5 sm:my-0   text-start">
             <h3 class="text-[24px] lg:text-[30px] leading-[25px] lg:leading-[33px]  ft-vit font-black  
             mb-4 lg:mb-4 tracking-[-1px]">Mobile
               Responsive Design</h3>
@@ -726,9 +726,9 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="hidden lg:block lg:col-span-4  ">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+          <div class="hidden lg:block lg:col-span-3 xl:col-span-4 ">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 text-sm text-gray-700">
+              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666] ">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Mobile-Friendly Website
                   Design</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Responsive Web App Design
@@ -741,7 +741,7 @@
                 </li>
               </ul>
 
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+              <ul class="hidden xl:block space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Fluid Grid Systems</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Touch Optimized
                   Interfaces</li>
@@ -776,7 +776,7 @@
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 sm:my-0   text-start">
+          <div class="lg:col-span-4 xl:col-span-3 ft-vit p-5 my-5 sm:my-0   text-start">
             <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black 
             mb-4 lg:mb-4 tracking-[-1px]">eCommerce Solutions</h3>
             <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
@@ -798,9 +798,9 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="hidden lg:block lg:col-span-4  ">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+          <div class="hidden lg:block lg:col-span-3 xl:col-span-4 ">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 text-sm text-gray-700">
+              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666] ">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Fashion Websites </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Electronics Websites
                 </li>
@@ -809,7 +809,7 @@
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Furniture Websites</li>
               </ul>
 
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+              <ul class="hidden xl:block space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Jewellery Websites </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Fitness Websites </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Baby Products Websites
@@ -844,7 +844,7 @@
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5  text-start">
+          <div class="lg:col-span-4 xl:col-span-3 ft-vit p-5 my-5  text-start">
             <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black   
             mb-4 lg:mb-4 tracking-[-1px]">Custom Web Design</h3>
             <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
@@ -868,10 +868,9 @@
 
           </div>
           <!-- mid Side -->
-          <div class="hidden lg:block lg:col-span-4 ">
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+          <div class="hidden lg:block lg:col-span-3 xl:col-span-4 ">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 text-sm text-gray-700">
+              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666] ">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Business Website Design
                 </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Portfolio Website Design
@@ -882,7 +881,7 @@
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Landing Page Design</li>
               </ul>
 
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+              <ul class="hidden xl:block space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Blog & News Website
                   Design</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Responsive Website Design
@@ -917,7 +916,7 @@
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 sm:my-0   text-start">
+          <div class="lg:col-span-4 xl:col-span-3 ft-vit p-5 my-5 sm:my-0   text-start">
             <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black  
             mb-4 lg:mb-4 tracking-[-1px]">Website Redesign</h3>
             <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
@@ -939,9 +938,9 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="hidden lg:block lg:col-span-4 ">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+          <div class="hidden lg:block lg:col-span-3 xl:col-span-4 ">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 text-sm text-gray-700">
+              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666] ">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Corporate Websites</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Landing Pages</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Educational Websites
@@ -951,7 +950,7 @@
               </ul>
 
 
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+              <ul class="hidden xl:block space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Healthcare/Clinic
                   Websites </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Real Estate Listing Sites
@@ -988,7 +987,7 @@
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 sm:my-0    text-start">
+          <div class="lg:col-span-4 xl:col-span-3 ft-vit p-5 my-5 sm:my-0    text-start">
             <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black  
              mb-4 lg:mb-4 tracking-[-1px]">Product Design</h3>
             <p class="text-[#666666] text-[14px] mb-4 leading-[18px] lg:leading-[20px]">
@@ -1009,10 +1008,10 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="hidden lg:block lg:col-span-4 ">
+          <div class="hidden lg:block lg:col-span-3 xl:col-span-4 ">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 text-sm text-gray-700">
+              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666] ">
 
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Digital Product Design
                 </li>
@@ -1024,8 +1023,7 @@
                 </li>
               </ul>
 
-
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+              <ul class="hidden xl:block space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Cross-Platform Product
                   Design</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> User Flow & Journey
@@ -1064,7 +1062,7 @@
        background-repeat:no-repeat;
      ">
           <!-- Left Side -->
-          <div class="lg:col-span-3 ft-vit p-5 my-5 sm:my-0  text-start">
+          <div class="lg:col-span-4 xl:col-span-3 ft-vit p-5 my-5 sm:my-0  text-start">
             <h3 class="text-[24px] lg:text-[30px] leading-[28px] lg:leading-[33px] ft-vit font-black  
              mb-4 lg:mb-4 tracking-[-1px]">
               Brand & Marketing Design</h3>
@@ -1085,10 +1083,10 @@
             </button>
           </div>
           <!-- mid Side -->
-          <div class="hidden lg:block lg:col-span-4 ">
+          <div class="hidden lg:block  lg:col-span-3 xl:col-span-4 ">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 text-sm text-gray-700">
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 text-sm text-gray-700">
+              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666] ">
 
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Logo Design</li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Brand Style Guide</li>
@@ -1101,7 +1099,7 @@
               </ul>
 
 
-              <ul class="space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
+              <ul class="hidden xl:block space-y-1 text-[15px] font-medium leading-[28px] text-[#666666]">
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Brochure & Flyer Design
                 </li>
                 <li class="flex gap-2"><img src="./img/service/service_list_arrow.svg" alt=""> Banner & Poster Design
@@ -1126,7 +1124,7 @@
   <!-- section 3 team--------------   -->
   <div class="mx-auto bg-[#090229] relative overflow-hidden">
     <!-- Main Section with background patterns -->
-    <div class="mx-auto text-white lg:py-8 relative 
+    <div class="mx-auto text-white xl:py-8 relative 
            bg-[url('/img/img-con/design_dotted_left.svg'),url('/img/img-con/need_designer_bg.svg')] 
            bg-[position:top_left,center] 
            bg-[length:29%,cover] 
@@ -1138,14 +1136,14 @@
 
         <!-- CTA Section -->
         <section class="pt-10 pb-5 max-w-[85%] sm:max-w-[55%] mx-auto text-center xl:mb-20 mb-1 mt-1">
-          <p class="text-[14px]   sm:leading-[21px] lg:text-[16px] md:leading-[65px] leading-[18px] tracking-widest uppercase mb-5"
+          <p class="text-[14px]  sm:leading-[21px] xl:text-[16px] xl:leading-[65px] leading-[18px] tracking-widest uppercase mb-5"
             data-aos="fade-up">
             Ready to make your website work for your business with us?
           </p>
 
           <h2 class="tracking-[-1px] max-w-2xl mx-auto  mb-8
                  text-[35px] leading-[34px]  sm:text-[45px] sm:leading-[49px] 
-                 md:text-[65px] md:leading-[60px] 
+                 xl:text-[65px] xl:leading-[60px] 
                  font-extrabold  " data-aos="fade-up" data-aos-delay="100">
             Need Dedicated Designer a Team?
           </h2>
@@ -1170,7 +1168,7 @@
 
           <!-- Feature Item -->
           <div class="text-gray-300 sm:text-center mb-5 sm:mb-1 lg:mb-0">
-            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] md:text-[33px] leading-[21px] md:leading-[35px] uppercase opacity-60 
+            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] lg:text-[25px] lg:leading-[29px] xl:text-[33px] leading-[21px] xl:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1179,7 +1177,7 @@
           </div>
 
           <div class="text-gray-300 sm:text-center mb-5 sm:mb-1 lg:mb-0">
-            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] md:text-[33px] leading-[21px] md:leading-[35px] uppercase opacity-60 
+            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] xl:text-[33px] lg:text-[25px] lg:leading-[29px] leading-[21px] xl:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1188,7 +1186,7 @@
           </div>
 
           <div class="text-gray-300 sm:text-center mb-5 sm:mb-1 lg:mb-0">
-            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] md:text-[33px] leading-[21px] md:leading-[35px] uppercase opacity-60 
+            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] lg:text-[25px] lg:leading-[29px] xl:text-[33px] leading-[21px] xl:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1198,7 +1196,7 @@
 
           
           <div class="text-gray-300 sm:text-center mb-5 sm:mb-1 lg:mb-0">
-            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] md:text-[33px] leading-[21px] md:leading-[35px] uppercase opacity-60 
+            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] lg:text-[25px] lg:leading-[29px] xl:text-[33px] leading-[21px] xl:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1207,7 +1205,7 @@
           </div>
 
           <div class="text-gray-300 sm:text-center mb-1 lg:mb-0">
-            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] md:text-[33px] leading-[21px] md:leading-[35px] uppercase opacity-60 
+            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] lg:text-[25px] lg:leading-[29px] xl:text-[33px] leading-[21px] xl:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
@@ -1216,14 +1214,13 @@
           </div>
 
           <div class="text-gray-300 sm:text-center mb-1 lg:mb-0 ">
-            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] md:text-[33px] leading-[21px] md:leading-[35px] uppercase opacity-60 
+            <h3 class="pl-5 md:px-5 md:py-8 font-extrabold text-[23px] sm:text-[16px] lg:text-[25px] lg:leading-[29px] xl:text-[33px] leading-[21px] xl:leading-[35px] uppercase opacity-60 
                      bg-clip-text text-transparent 
                      bg-[linear-gradient(120deg,white_15%,gray_38%,white_48%,gray_75%,white_100%)] 
                      drop-shadow-[0_0_6px_black]">
               User <br /> Oriented
             </h3>
           </div>
-
         </div>
       </div>
     </div>
@@ -1233,7 +1230,7 @@
   <div class="step-key bg-white text-[#666666] ">
     <!-- Section -->
     <section id="steps-section"
-      class="px-3 py-10 lg:py-20  md:px-20 lg:px-5 bg-white relative bg-[url(/img/img-con/process_bg_01.svg)]   bg-no-repeat bg-center">
+      class="px-3 py-10 xl:py-20  md:px-20 lg:px-5 bg-white relative bg-[url(/img/img-con/process_bg_01.svg)]   bg-no-repeat bg-center">
       <div class="absolute inset-0 bg-[url(/img/service/sub_service_left_dotted.svg)] bg-no-repeat "
         style="background-size: 35%;"></div>
       <div class="sec-width  mx-auto relative py-10">
@@ -1512,7 +1509,7 @@
      ">
 
     <div class="text-white sec-width-lg  mx-auto ">
-      <section class="py-10 lg:py-20  sec-width mx-auto relative overflow-hidden">
+      <section class="py-10 xl:py-20  sec-width mx-auto relative overflow-hidden">
         <div class="mt-10 grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-2 px-0 md:px-5 xl:px-2   lg:gap-5  text-black">
           <div>
             <h3 class="text-sm text-red-500 font-semibold mb-5" data-aos="fade-up">
@@ -1521,7 +1518,7 @@
                 STACK</span>
             </h3>
             <h2
-              class="w-[90%] tracking-[-0.5px] lg:tracking-[-1px] text-black text-[23px] leading-[25px]   sm:text-[40px] sm:leading-[40px] sm:font-black font-bold lg:mb-10 mb-5"
+              class="w-[90%] tracking-[-0.5px] lg:tracking-[-1px] text-black text-[23px] leading-[25px]   sm:text-[40px] sm:leading-[40px] sm:font-black font-bold lg:mb-2 xl:mb-10 mb-5"
               data-aos="fade-up" data-aos-delay="100">
               Why choose Amazefox Web as your ideal partner?
             </h2>
@@ -1632,7 +1629,7 @@
 
         <!-- CTA Box -->
         <div
-          class="sec-width-lg mx-auto mt-16 p-6 md:p-10 mb-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col lg:flex-row items-center justify-between gap-4 relative"
+          class="sec-width lg:mx-5 xl:mx-auto  mx-auto mt-16 p-6 md:p-10 mb-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col lg:flex-row items-center justify-between gap-4 relative"
           data-aos="zoom-in-up" data-aos-delay="200">
           <div
             class="absolute inset-0 -z-[1] bg-[url(/img/img-con/techstack_curve.png)] bg-center   bg-cover  bg-no-repeat">
@@ -1642,7 +1639,7 @@
               <img src="./img/alogo.png" alt=" " class="animate-bounce w-20">
             </div>
             <div class="lg:pl-6 lg:col-span-9">
-              <h3 class="text-[22px] leading-[24px]  sm:text-[32px] sm:leading-[37px] sm:font-black font-bold">
+              <h3 class="text-[22px] leading-[24px]  sm:text-[32px] sm:leading-[37px]  lg:text-[22px] lg:leading-[27px] xl:text-[28px] xl:leading-[33px] 2xl:text-[32px] 2xl:leading-[37px] sm:font-black font-bold">
                 Ready to turn ideas into innovation and impact?</h3>
               <p class="text-[13px] leading-[17px] sm:leading-[35px] sm:mt-1 my-3 lg:my-0">Transforming Businesses with
                 Technology that transcends
@@ -1651,8 +1648,8 @@
           </div>  
 
           <button class="flex items-center justify-center  group  hover:opacity-90 lg:inline px-4 py-2  
-           bg-white shadow-black shadow-md w-[225px] h-[55px] md:w-[270px] md:h-[75px] 
-           overflow-hidden py-3 rounded-[100px] text-black text-[12px] md:text-[17px] font-bold mb-7 lg:mb-0">
+           bg-white shadow-black shadow-md w-[225px] h-[55px] 2xl:w-[270px] 2xl:h-[75px] 
+           overflow-hidden py-3 rounded-[100px] text-black text-[12px] 2xl:text-[17px] font-bold mb-7 lg:mb-0">
             <span class="flex items-center  justify-center w-full transition-all duration-300">
               <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
               <img src="./img/img-con/ic_faq_rightarrow.svg" alt="Arrow" width="20"
@@ -1686,7 +1683,7 @@
       </div>
 
       <!-- Navigation Arrows (lg only) -->
-      <div class="hidden lg:flex items-center space-x-2 absolute right-0 lg:top-20 xl:top-40 top-10">
+      <div class="hidden lg:flex items-center space-x-2 absolute right-0 lg:top-20  top-10">
         <button
           class="prevBtn w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
           <img src="./img/img-con/p_leftarrow.svg" alt="" width="20">
@@ -1961,7 +1958,7 @@
 
   <!-- *****section 8 industry expertise  -->
   <div
-    class="techstack bg-[url(/img/img-con/industry_bg.svg)]   bg-center bg-cover bg-no-repeat w-full  pt-0 pb-10 lg:pb-20">
+    class="techstack bg-[url(/img/img-con/industry_bg.svg)]   bg-center bg-cover bg-no-repeat w-full  pt-0 pb-10 xl:pb-20">
     <!-- Header -->
     <section class="text-center px-4 pt-20 lg:py-5   relative sec-width mx-auto">
       <img src="./img/alogo.png" alt="Paper Plane"
@@ -1985,9 +1982,9 @@
     </section>
 
     <!-- Icon Grid -->
-    <section class="sec-width mx-auto">
+    <section class="sec-width mx-auto lg:mx-5 xl:mx-auto">
       <div
-        class="grid  grid-cols-4  sm:grid-cols-6  md:grid-cols-6 xl:grid-cols-8 xl:mx-5 gap-6 place-items-center text-center">
+        class="pb-10 lg:pb-0 grid  grid-cols-4  sm:grid-cols-6  md:grid-cols-6 xl:grid-cols-8 xl:mx-5 gap-6 place-items-center text-center">
         <div>
           <div class="flex items-center justify-center mb-2">
             <!-- Outer Card with Gradient Border -->
@@ -2446,8 +2443,8 @@
         </div>
       </div>
       <!-- CTA Box -->
-       <div
-          class="sec-width-lg mx-auto mt-16 p-6 md:p-10 mb-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col lg:flex-row items-center justify-between gap-4 relative"
+      <div
+          class="sec-width lg:mx-5 xl:mx-auto  mx-auto mt-16 p-6 md:p-10 mb-10 rounded-3xl bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A] text-white flex flex-col lg:flex-row items-center justify-between gap-4 relative"
           data-aos="zoom-in-up" data-aos-delay="200">
           <div
             class="absolute inset-0 -z-[1] bg-[url(/img/img-con/techstack_curve.png)] bg-center   bg-cover  bg-no-repeat">
@@ -2457,7 +2454,7 @@
               <img src="./img/alogo.png" alt=" " class="animate-bounce w-20">
             </div>
             <div class="lg:pl-6 lg:col-span-9">
-              <h3 class="text-[22px] leading-[24px]  sm:text-[32px] sm:leading-[37px] sm:font-black font-bold">
+              <h3 class="text-[22px] leading-[24px]  sm:text-[32px] sm:leading-[37px]  lg:text-[22px] lg:leading-[27px] xl:text-[28px] xl:leading-[33px] 2xl:text-[32px] 2xl:leading-[37px] sm:font-black font-bold">
                 Ready to turn ideas into innovation and impact?</h3>
               <p class="text-[13px] leading-[17px] sm:leading-[35px] sm:mt-1 my-3 lg:my-0">Transforming Businesses with
                 Technology that transcends
@@ -2466,20 +2463,21 @@
           </div>  
 
           <button class="flex items-center justify-center  group  hover:opacity-90 lg:inline px-4 py-2  
-           bg-white shadow-black shadow-md w-[225px] h-[55px] md:w-[270px] md:h-[75px] 
-           overflow-hidden py-3 rounded-[100px] text-black text-[12px] md:text-[17px] font-bold mb-7 lg:mb-0">
+           bg-white shadow-black shadow-md w-[225px] h-[55px] 2xl:w-[270px] 2xl:h-[75px] 
+           overflow-hidden py-3 rounded-[100px] text-black text-[12px] 2xl:text-[17px] font-bold mb-7 lg:mb-0">
             <span class="flex items-center  justify-center w-full transition-all duration-300">
               <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
               <img src="./img/img-con/ic_faq_rightarrow.svg" alt="Arrow" width="20"
                 class=" opacity-100 transition-opacity duration-300" />
             </span>
           </button>
+
         </div>
     </section>
   </div>
 
   <!-- technology stack section  -->
-  <div class=" text-white  bg-[url(/img/img-con/techstack_bg.svg)] py-16"
+  <div class=" text-white  bg-[url(/img/img-con/techstack_bg.svg)] py-16 sm:py-10"
     style="background-image: url('./img/img-con/techstack-curve.png'), url('./img/img-con/techstack_bg.svg'), url('/img/img-con/design_dotted_left.svg'); 
      background-blend-mode:  screen, screen, screen; background-repeat:no-repeat; background-position:left bottom,bottom, top left ;background-size:50%, cover,30%">
     <section
@@ -2488,7 +2486,7 @@
       <div class="sm:w-1/2 z-10 text-center sm:text-left " data-aos="zoom-in-up" data-aos-delay="200">
         <h4 class="uppercase text-[15px] md:text-[18px] leading-[25px] mb-5 font-normal">Technology Stack</h4>
         <h1
-          class="text-[33px]  tracking-[-1px] md:text-[40px] xl:max-w-xl xl:text-[50px] font-black leading-[38px] xl:leading-[52px] mb-6">
+          class="text-[33px]  tracking-[-1px] sm:text-[30px] sm:leading-[35px]  xl:max-w-xl xl:text-[50px] font-black leading-[38px] xl:leading-[52px] mb-6">
           Elevating Software with a Website Design
         </h1>
         <p class="text-[14px] lg:text-[16px] mb-4 xl:max-w-xl leading-[18px] lg:leading-[21px] font-normal">
@@ -2498,7 +2496,7 @@
           to commercial success.
         </p>
         <button class="flex items-center justify-center  group  hover:opacity-90 lg:inline px-4 py-2  
-           bg-white shadow-black shadow-md w-[225px] h-[55px] md:w-[270px] md:h-[75px] mx-auto lg:mx-0
+           bg-white shadow-black shadow-md w-[225px] h-[55px] md:w-[270px] md:h-[75px] mx-auto sm:mx-0 lg:mx-auto lg:mx-0
            overflow-hidden py-3 rounded-[100px] text-black text-[12px] md:text-[17px] font-bold mb-7">
           <span class="flex items-center  justify-center w-full transition-all duration-300">
             <span class="transition-all duration-300 group-hover:ms-2 me-3 text-center">Get Free Quotes</span>
@@ -2514,13 +2512,13 @@
       </div>
 
       <!-- Decorative elements -->
-      <img src="./img/alogo.png" alt="Paper Plane" class="absolute bottom-5 left-10 w-8 opacity-80 animate-bounce" />
+      <img src="./img/alogo.png" alt="Paper Plane" class="absolute bottom-5 left-10 w-8 opacity-80 animate-bounce sm:left-80" />
       <img src="./img/alogo.png" alt="Paper Plane" class="absolute top-10 right-10 w-8 opacity-80 animate-bounce" />
     </section>
   </div>
 
   <!-- section testimonials  -->
-  <div class="bg-blend-multiply text-gray-900 pt-10" style="
+  <div class="bg-blend-multiply text-gray-900 xl:pt-10" style="
     background-image: url('/img/img-con/testimonial_top_dotted.svg'),
                       url(/img/img-con/testimonial_bg.svg),
                       url('/img/img-con/testimonial_bottom_dotted.svg');
@@ -2971,7 +2969,7 @@
           class="flex py-5 space-x-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth">
 
           <!-- Testimonial Card -->
-          <div class="testimonial-card min-w-[85%] sm:min-w-[45%]    snap-center">
+          <div class="testimonial-card min-w-[85%] sm:min-w-[40%]    snap-center">
             <div class="bg-gray-100 rounded-[40px] shadow-lg   py-10 p-6 h-full flex flex-col">
               <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
               <p class="text-[17px] text-[#666666] mb-6 leading-[21px] ">
@@ -2991,7 +2989,7 @@
             </div>
           </div>
 
-          <div class="testimonial-card min-w-[85%] sm:min-w-[45%]    snap-center">
+          <div class="testimonial-card min-w-[85%] sm:min-w-[40%]    snap-center">
             <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 h-full flex flex-col  ">
               <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
               <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
@@ -3011,7 +3009,7 @@
             </div>
           </div>
 
-          <div class="testimonial-card min-w-[85%] sm:min-w-[45%]     snap-center">
+          <div class="testimonial-card min-w-[85%] sm:min-w-[40%]     snap-center">
             <div class="bg-white rounded-[40px] shadow-lg   py-10  p-6 h-full flex flex-col  ">
               <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
               <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
@@ -3030,7 +3028,7 @@
               </div>
             </div>
           </div>
-          <div class="testimonial-card min-w-[85%] sm:min-w-[45%]     snap-center">
+          <div class="testimonial-card min-w-[85%] sm:min-w-[40%]     snap-center">
             <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 h-full flex flex-col  ">
               <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
               <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
@@ -3049,7 +3047,7 @@
               </div>
             </div>
           </div>
-          <div class="testimonial-card min-w-[85%] sm:min-w-[45%]     snap-center">
+          <div class="testimonial-card min-w-[85%] sm:min-w-[40%]     snap-center">
             <div class="bg-white rounded-[40px] shadow-lg   py-10  p-6 h-full flex flex-col  ">
               <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
               <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
@@ -3068,7 +3066,7 @@
               </div>
             </div>
           </div>
-          <div class="testimonial-card min-w-[85%] sm:min-w-[45%]     snap-center">
+          <div class="testimonial-card min-w-[85%] sm:min-w-[40%]     snap-center">
             <div class="bg-blue-100 rounded-[40px] shadow-lg  py-10   p-6 h-full flex flex-col  ">
               <div class="mb-5"><img src="./img/icons/testimonial_quote.svg" alt="quote"></div>
               <p class="text-[17px] text-[#666666] mb-6 leading-[21px]">
@@ -3105,8 +3103,8 @@
   background-blend-mode: lighten; background-size: cover,30%,50%,50%;
   background-repeat: no-repeat; background-position: center,top left, top right,bottom left">
 
-    <section class="sec-width mx-auto px-1 lg:px-6 py-10 lg:py-16 md:py-20 relative">
-      <div class="hidden lg:flex items-center space-x-2 absolute lg:right-20 lg:top-60 mr-10 mt-10">
+    <section class="sec-width mx-auto px-1 lg:px-6 py-10 xl:py-16 md:py-20 lg:py-10 relative">
+      <div class="hidden lg:flex items-center space-x-2 absolute lg:right-20 lg:top-40  mr-10 mt-10">
         <!-- Prev (left) -->
         <button
           class="swiper-button-prev prevBtn w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800">
@@ -3122,10 +3120,10 @@
 
 
       <!-- Heading -->
-      <div class="mb-12 mt-10">
+      <div class="mb-12 mt-10 sm:mb-8">
         <h4 class="uppercase text-[15px] md:text-[18px] leading-[25px] mb-5 lg:font-semibold">Video Testimonials</h4>
         <h2
-          class="ft-vit sm:font-extrabold font-bold text-[20px] leading-[23px] sm:text-[35px] sm:leading-[38px] lg:text-[50px] lg:leading-[53px] max-w-4xl xl:max-w-6xl tracking-[-0.5px] lg:tracking-[-1px]">
+          class="ft-vit sm:font-extrabold font-bold text-[20px] leading-[23px] sm:text-[35px] sm:leading-[38px] xl:text-[45px] xl:leading-[45px] max-w-4xl lg:max-w-3xl xl:max-w-4xl tracking-[-0.5px] lg:tracking-[-1px]">
           Our Clients are superheroes. We prioritise Delivering excellent Products,
           through Training and Optimal Excursions
         </h2>
@@ -3146,7 +3144,7 @@
                   </div>
                   <!-- Text always visible -->
                   <div class="grid grid-cols-2 mt-2 w-[80%]">
-                    <p class=" vid-text text-purple-200 md:font-semibold sm:border-b border-[#9BA5e3]   md:pb-10">
+                    <p class=" vid-text text-purple-200 md:font-semibold sm:border-b border-[#9BA5e3] lg:pb-5  xl:pb-10   md:pb-10">
                       <img src="./img/img-con/c_review_quote.svg" alt="" class="opacity-40 w-5 lg:w-10 sm:mb-1   mb-5">
                       Ours my Clients are superheroes. We prioritize delivering excellent products, through training and
                       optimal executions.
@@ -3179,7 +3177,7 @@
                   </div>
                   <!-- Text always visible -->
                   <div class="grid grid-cols-2 mt-2 w-[80%]">
-                    <p class=" vid-text text-purple-200 md:font-semibold sm:border-b border-[#9BA5e3]   md:pb-10">
+                    <p class=" vid-text text-purple-200 md:font-semibold sm:border-b border-[#9BA5e3]  lg:pb-5  xl:pb-10  md:pb-10">
                       <img src="./img/img-con/c_review_quote.svg" alt="" class="opacity-40 w-5 lg:w-10 sm:mb-1   mb-5">
                       Ours my Clients are superheroes. We prioritize delivering excellent products, through training and
                       optimal executions.
@@ -3211,7 +3209,7 @@
                   </div>
                   <!-- Text always visible -->
                   <div class="grid grid-cols-2 mt-2 w-[80%]">
-                    <p class=" vid-text text-purple-200 md:font-semibold sm:border-b border-[#9BA5e3]   md:pb-10">
+                    <p class=" vid-text text-purple-200 md:font-semibold sm:border-b border-[#9BA5e3] lg:pb-5  xl:pb-10   md:pb-10">
                       <img src="./img/img-con/c_review_quote.svg" alt="" class="opacity-40 w-5 lg:w-10 sm:mb-1   mb-5">
                       Ours my Clients are superheroes. We prioritize delivering excellent products, through training and
                       optimal executions.
@@ -3245,7 +3243,7 @@
                   </div>
                   <!-- Text always visible -->
                   <div class="grid grid-cols-2 mt-2 w-[80%]">
-                    <p class=" vid-text text-purple-200 md:font-semibold sm:border-b border-[#9BA5e3]   md:pb-10">
+                    <p class=" vid-text text-purple-200 md:font-semibold sm:border-b border-[#9BA5e3]  lg:pb-5  xl:pb-10  md:pb-10">
                       <img src="./img/img-con/c_review_quote.svg" alt="" class="opacity-40 w-5 lg:w-10 sm:mb-1   mb-5">
                       Ours my Clients are superheroes. We prioritize delivering excellent products, through training and
                       optimal executions.
@@ -3289,19 +3287,18 @@
     <section class="sec-width  mx-auto lg:px-4 py-5">
       <!-- Headings -->
       <div class="mb-12">
-        <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-2 ">
+        <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-2 xl:gap-10 ">
           <div class=" col-span-3  lg:text-left">
             <p class="uppercase text-[15px] md:text-[18px] text-white opacity-80 font-semibold lg:mb-5 ft-vit">What
               Makes
               Us Different</p>
             <h2
-              class="text-[24px] tracking-[-0.5px] lg:text-[40px] font-bold lg:font-black leading-[28px] lg:leading-[45px] lg:mb-6 ft-vit">
+              class="text-[24px] sm:text-[35px] sm:font-black leading-[28px]  sm:leading-[40px] lg:leading-[45px] tracking-[-0.5px] lg:text-[40px] font-bold  lg:mb-6 ft-vit">
               What makes
               every Amazfox Web App Design Stand
               Out</h2>
           </div>
           <div class="col-span-2">
-
             <p class="hidden lg:block  text-center lg:text-left text-white text-[17px] ft-rob leading-[21px]">
               At Amazefox, we take a strategic, user-focused approach to every digital product we craft. Our web app
               designs are built not just for visual impact—but for usability,
@@ -3486,15 +3483,13 @@
                   layouts, and smart interaction cues, we help convert visits into meaningful outcomes.</p>
               </div>
             </div>
-
           </div>
 
-
           <!-- CTA Section -->
-          <div class="mt-20 text-center pt-8 max-w-[80%] mx-auto">
+          <div class="mt-20 text-center pt-8 max-w-[80%] sm:max-w-[95%] mx-auto">
             <img src="./img/alogo.png" alt="logo" class="mx-auto mb-6 w-16 animate-bounce">
             <h2
-              class="text-[25px] lg:text-[55px] font-bold lg:font-black ft-vit leading-[27px] lg:leading-[40px] text-white mb-2 tracking-[-1px]">
+              class="text-[25px]      sm:font-black sm:text-[40px] xl:text-[45px] sm:leading-[40px] xl:leading-[50px] font-bold lg:font-black ft-vit leading-[27px]  text-white mb-2 tracking-[-1px]">
               Ready to turn ideas into innovation and impact?</h2>
             <p class=" ft-vit text-[14px] leading-[18px] lg:text-[20px] lg:leading-[35px] my-6">Transforming Businesses
               with Technology that transcends
@@ -3530,11 +3525,11 @@
             Questions & Answers</span>
         </p>
         <h2
-          class="lg:text-[40px] text-[24px] lg:font-black font-bold lg:leading-[45px] leading-[28px] tracking-[-0.5px]">
+          class="sm:text-[35px] lg:text-[40px] text-[24px] sm:font-black font-bold lg:leading-[45px] sm:leading-[45px] leading-[28px] tracking-[-0.5px]">
           Frequently
           Asked Questions
         </h2>
-        <p class="ft-rob text-[14px] leading-[18px] lg:text-[17px] lg:leading-[23px] mt-2  max-w-3xl  ">We hope these
+        <p class="ft-rob text-[14px] leading-[18px] sm:text-[17px] sm:leading-[23px] mt-2  max-w-3xl  ">We hope these
           questions and answers guide
           you in
           choosing the right web design partner for your business’s digital transformation. If you have any more
@@ -3543,13 +3538,13 @@
       </div>
 
       <!-- FAQ Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start" id="faq-container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-2 gap-6 xl:gap-6 items-start" id="faq-container">
         <!-- Item -->
         <div
-          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
+          class="bg-white h-full rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3
-            class="font-semibold lg:text-[18px] text-[16px]  leading-[19px]  lg:leading-[24px] flex justify-between items-center">
+            class=" font-semibold lg:text-[18px] text-[16px]  leading-[19px]  lg:leading-[24px] flex justify-between items-center">
             How long does the web design process take?
             <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
@@ -3574,10 +3569,10 @@
 
         <!-- More Items (You can duplicate this block as needed) -->
         <div
-          class="bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
+          class="   bg-white rounded-xl border-[1.5px] border-[#d1d1d1] shadow-[0px_0px_21px_5px_rgba(199,199,199,0.6)] p-6 cursor-pointer transition"
           onclick="toggleAccordion(this)">
           <h3
-            class="font-semibold lg:text-[18px] text-[16px]  leading-[19px]  lg:leading-[24px] flex justify-between items-center">
+            class=" font-semibold lg:text-[18px] text-[16px]  leading-[19px]  lg:leading-[24px] flex justify-between items-center">
             Can you redesign my existing website?
             <img src='./img/img-con/ic_faq_downarrow.svg' class="toggle-icon" />
           </h3>
@@ -3708,21 +3703,21 @@
               Contact Us</span>
           </p>
           <h2
-            class="text-[24px] text-black md:text-[36px] font-bold lg:font-black leading-[28px] lg:leading-[40px]  tracking-[-0.5px]">
+            class="text-[24px] text-black sm:text-[36px] font-bold lg:font-black leading-[28px] sm:leading-[40px]  tracking-[-0.5px]">
             Let's Talk Business
           </h2>
-          <p class="text-[15px] leading-[20px] md:text-[20px] md:leading-[25px] text-[#777777] mt-1">Book your free
+          <p class="text-[15px] leading-[20px] sm:text-[20px] sm:leading-[25px] text-[#777777] mt-1">Book your free
             consultation with us</p>
         </div>
 
         <!-- CONTACT INFO -->
-       <div class="flex flex-col lg:flex-col sm:flex-row sm:justify-between lg:items-start sm:items-center  gap-6 text-[#777777] ft-rob mt-5">
+       <div class="flex flex-col lg:flex-col sm:flex-row sm:justify-between lg:items-start sm:items-center  gap-6 text-[#777777] ft-rob my-5">
   <!-- Email -->
-  <div class="flex items-center lg:items-start gap-4">
+  <div class="flex items-center lg:items-start gap-4 sm:gap-2">
     <img src="./img/img-con/c_mails.svg" alt="" class="w-[45px] sm:w-[55px]">
     <div>
-      <p class="text-[16px] lg:text-[21px] text-black font-semibold">Email us</p>
-      <p class="text-[13px] lg:text-[18px]">support@amazefox.com</p>
+      <p class="text-[16px] sm:text-[21px] text-black font-semibold">Email us</p>
+      <p class="text-[13px] sm:text-[18px]">support@amazefox.com</p>
     </div>
   </div>
 
@@ -3730,22 +3725,22 @@
   <hr class="w-full sm:hidden">
 
   <!-- WhatsApp -->
-  <div class="flex items-center lg:items-start gap-4">
+  <div class="flex items-center lg:items-start gap-4 sm:gap-2">
     <img src="./img/img-con/c_whatssapp.svg" alt="" class="w-[45px] sm:w-[55px]">
     <div>
-      <p class="text-[16px] lg:text-[21px] text-black font-semibold">Whatsapp</p>
-      <p class="text-[13px] lg:text-[18px]">+91 9786739966</p>
+      <p class="text-[16px] sm:text-[21px] text-black font-semibold">Whatsapp</p>
+      <p class="text-[13px] sm:text-[18px]">+91 9786739966</p>
     </div>
   </div>
 
   <hr class="w-full sm:hidden">
 
   <!-- Teams -->
-  <div class="flex items-center lg:items-start gap-4">
+  <div class="flex items-center lg:items-start gap-4 sm:gap-2">
     <img src="./img/img-con/cteam_ss.svg" alt="" class="w-[45px] sm:w-[55px]">
     <div>
-      <p class="text-[16px] lg:text-[21px] text-black font-semibold">Teams</p>
-      <p class="text-[13px] lg:text-[18px]">nikilfox / amazefox</p>
+      <p class="text-[16px] sm:text-[21px] text-black font-semibold">Teams</p>
+      <p class="text-[13px] sm:text-[18px]">nikilfox / amazefox</p>
     </div>
   </div>
 </div>
@@ -3761,20 +3756,20 @@
                     <div class="py-4  w-full">
                       <div class=" flex items-start lg:items-center gap-1">
                         <div
-                          class="bg-white rounded-full w-[45px] h-[45px] lg:w-[65px] lg:h-[65px] flex items-start lg:items-center justify-center shadow-md shadow-black/25">
+                          class="bg-white rounded-full w-[45px] h-[45px] sm:w-[55px] sm:h-[55px] lg:w-[65px] lg:h-[65px] flex items-start lg:items-center justify-center shadow-md shadow-black/25">
                           <img src="./img/sm-icon/profile_03.svg" alt="Client photo" class="w-full h-full rounded-full">
                         </div>
                         <div class="text-[#777777]  w-full ">
                           <p
-                            class="text-[13px] leading-[18px] lg:text-[16px] lg:leading-[21px] text-black font-normal    ml-5">
+                            class="text-[13px] leading-[18px] sm:text-[16px] sm:leading-[21px] text-black font-normal    ml-5">
                             Very good web designer. Will continue to work with.
                             He understand what you want is determine to do the job right.
                             Will hire him again for design work!
                           </p>
                         </div>
                       </div>
-                      <div class="mt-3 ml-[60px] lg:ml-[90px] text-[#777777] ft-rob ">
-                        <p class="font-semibold  text-[13px]  lg:text-[16px]">David McClellan</p>
+                      <div class="mt-3 sm:mt-0 ml-[60px] sm:ml-[80px] text-[#777777] ft-rob ">
+                        <p class="font-semibold  text-[13px]  sm:text-[16px]">David McClellan</p>
                         <p class="text-[13px]   italic">United States, <span class="not-italic">Social Catfish</span>
                         </p>
                       </div>
@@ -3788,20 +3783,20 @@
                     <div class="py-4 w-full ">
                       <div class=" flex  items-start lg:items-center gap-1">
                         <div
-                          class="bg-white rounded-full w-[45px] h-[45px] lg:w-[65px] lg:h-[65px] flex items-start lg:items-center justify-center shadow-md shadow-black/25">
+                          class="bg-white rounded-full w-[45px] h-[45px] sm:w-[55px] sm:h-[55px] lg:w-[65px] lg:h-[65px] flex items-start lg:items-center justify-center shadow-md shadow-black/25">
                           <img src="./img/sm-icon/profile_02.svg" alt="Client photo" class="w-full h-full rounded-full">
                         </div>
                         <div class="text-[#777777]   w-full">
                           <p
-                            class="text-[13px] leading-[18px] lg:text-[16px] lg:leading-[21px] text-black font-normal    ml-5">
+                            class="text-[13px] leading-[18px] sm:text-[16px] sm:leading-[21px] text-black font-normal    ml-5">
                             Very good web designer. Will continue to work with.
                             He understand what you want is determine to do the job right.
                             Will hire him again for design work!
                           </p>
                         </div>
                       </div>
-                      <div class="mt-3 ml-[60px] lg:ml-[90px] text-[#777777] ft-rob ">
-                        <p class="font-semibold  text-[13px]  lg:text-[16px]">David McClellan</p>
+                      <div class="mt-3 sm:mt-0 ml-[60px] sm:ml-[80px] text-[#777777] ft-rob ">
+                        <p class="font-semibold  text-[13px]  sm:text-[16px]">David McClellan</p>
                         <p class="text-[13px]   italic">United States, <span class="not-italic">Social Catfish</span>
                         </p>
                       </div>
@@ -3815,38 +3810,34 @@
                     <div class="py-4  w-full">
                       <div class=" flex  items-start lg:items-center gap-1">
                         <div
-                          class="bg-white rounded-full w-[45px] h-[45px] lg:w-[65px] lg:h-[65px] flex items-start lg:items-center justify-center shadow-md shadow-black/25">
+                          class="bg-white rounded-full w-[45px] h-[45px] sm:w-[55px] sm:h-[55px] lg:w-[65px] lg:h-[65px] flex items-start lg:items-center justify-center shadow-md shadow-black/25">
                           <img src="./img/sm-icon/profile_03.svg" alt="Client photo" class="w-full h-full rounded-full">
                         </div>
                         <div class="text-[#777777]  w-full ">
                           <p
-                            class="text-[13px] leading-[18px] lg:text-[16px] lg:leading-[21px] text-black font-normal  ml-5">
+                            class="text-[13px] leading-[18px] sm:text-[16px] sm:leading-[21px] text-black font-normal  ml-5">
                             Very good web designer. Will continue to work with.
                             He understand what you want is determine to do the job right.
                             Will hire him again for design work!
                           </p>
                         </div>
                       </div>
-                      <div class="mt-3 ml-[60px] lg:ml-[90px] text-[#777777] ft-rob ">
-                        <p class="font-semibold  text-[13px]  lg:text-[16px]">David McClellan</p>
+                      <div class="mt-3 sm:mt-0 ml-[60px] sm:ml-[80px] text-[#777777] ft-rob ">
+                        <p class="font-semibold  text-[13px]  sm:text-[16px]">David McClellan</p>
                         <p class="text-[13px]   italic">United States, <span class="not-italic">Social Catfish</span>
                         </p>
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
-
-
             </div>
           </section>
-
         </div>
       </div>
       <!-- RIGHT SECTION - FORM -->
       <div
-        class="bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   w-full lg:w-[60%]   p-[1.5px] rounded-[20px] lg:rounded-[40px]   shadow-xl shadow-[#000]/25 mt-5 mb-10 lg:mb-0">
+        class="bg-gradient-to-r from-[#3800A0] via-[#720C7D] to-[#E61F4A]   w-full lg:w-[60%]   p-[1.5px] rounded-[20px] lg:rounded-[40px]   shadow-xl shadow-[#000]/25 mt-5 sm:mt-0 mb-10 lg:mb-0">
         <div class=" bg-[linear-gradient(120deg,#ffffff_15%,#F0EEF8_38%,#F3F1F9_48%,#EEECF8_75%,#ffffff_100%)]
  relative  -z-[0] p-6  rounded-[20px] lg:rounded-[40px]  space-y-6">
           <div class="py-4 lg:px-4  ">
@@ -3953,7 +3944,7 @@
         <div class="flex flex-col xl:flex-row justify-between items-center gap-1 w-full">
           <img src="./img/alogo.png" alt="logo" class="animate-bounce mb-2 md:mb-0">
           <h2
-            class=" w-full  text-[25px] leading-[30px] md:text-[35px] md:leading-[40px] font-bold tracking-[-1px] pl-6 mb-5   xl:mb-0 sm:text-center xl:text-start">
+            class=" w-full  text-[25px] leading-[30px] md:text-[35px] md:leading-[25px] xl:text-[28px] xl:leading-[33px] font-bold tracking-[-1px] pl-6 mb-5   xl:mb-0 sm:text-center xl:text-start">
             Speak with a Quick <br class="inline sm:hidden xl:inline">Contact our Team
           </h2>
         </div>

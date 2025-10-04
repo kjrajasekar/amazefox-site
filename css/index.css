@@ -254,7 +254,10 @@ body {
     width: 94%;
     margin: 0 auto;
   }
- 
+ .sec-width {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 
 
